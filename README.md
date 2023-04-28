@@ -15,11 +15,14 @@ Fretica’s extensive documentation is integrated into the Mathematica documenta
 
 ## Intallation
 For installing Fretica, simply execute within Mathematica:
-PacletInstall["https://schuler.bioc.uzh.ch/fretica/"]
-(For uninstalling PacletUninstall["Fretica"].)
 
-Fretica is started by executing: Needs["Fretica`"]
-Type “Fretica” and press F1 to open the documentation.
+`PacletInstall["https://schuler.bioc.uzh.ch/fretica/"]`
+
+(For uninstalling `PacletUninstall["Fretica"]`.)
+
+Fretica is started by executing: ``Needs["Fretica`"]``
+
+Type `Fretica` and press `F1` to open the documentation.
 
 
 ## License
