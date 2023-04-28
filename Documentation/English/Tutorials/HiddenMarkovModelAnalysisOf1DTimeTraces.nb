@@ -1,0 +1,230 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 13.1' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      8698,        222]
+NotebookOptionsPosition[      5590,        149]
+NotebookOutlinePosition[      7855,        206]
+CellTagsIndexPosition[      7812,        203]
+WindowTitle->Hidden Markov Model analysis of 1D time traces
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[GridBox[{
+   {GridBox[{
+      {
+       ItemBox[Cell[BoxData[
+         RowBox[{
+          TemplateBox[{12},
+           "Spacer1"], Cell["FRETICA TECH NOTE", "PacletNameCell",
+           TextAlignment->Center,ExpressionUUID->
+           "30aea703-f4c4-4b84-8487-90b949126b13"], 
+          TemplateBox[{8},
+           "Spacer1"]}]],
+         TextAlignment->Center,ExpressionUUID->
+         "2e7d6f49-3251-41d3-bfc4-939c9501a50f"],
+        Background->RGBColor[
+         0.3843137254901961, 0.4627450980392157, 0.7019607843137254],
+        ItemSize->Full], ""}
+     },
+     GridBoxAlignment->{"Rows" -> {{Center}}},
+     GridBoxItemSize->{"Columns" -> {Full, 
+         Scaled[0.02]}, "Rows" -> {{2.5}}}], Cell[TextData[Cell[BoxData[
+     TagBox[
+      ActionMenuBox[
+       FrameBox[Cell[TextData[{
+         "URL",
+         " ",
+         Cell[BoxData[
+          GraphicsBox[
+           {GrayLevel[0.66667], Thickness[0.13], 
+            LineBox[{{-1.8, 0.5}, {0, 0}, {1.8, 0.5}}]},
+           AspectRatio->1,
+           ImageSize->20,
+           PlotRange->{{-3, 4}, {-1, 1}}]],ExpressionUUID->
+          "2a4c91cc-2d56-48f7-8b37-f50384cb872a"]
+        }],ExpressionUUID->"16ebc3ac-1c95-408c-94ee-524881ad68a3"],
+        StripOnInput->
+         False], {"\<\"Fretica/tutorial/\
+HiddenMarkovModelAnalysisOf1DTimeTraces\"\>":>
+       None, "\<\"Copy Wolfram Documentation Center URL\"\>":>
+       Module[{DocumentationSearch`Private`nb$}, 
+        DocumentationSearch`Private`nb$ = NotebookPut[
+           Notebook[{
+             Cell[
+             "Fretica/tutorial/HiddenMarkovModelAnalysisOf1DTimeTraces"]}, 
+            Visible -> False]]; 
+        SelectionMove[DocumentationSearch`Private`nb$, All, Notebook]; 
+        FrontEndTokenExecute[DocumentationSearch`Private`nb$, "Copy"]; 
+        NotebookClose[DocumentationSearch`Private`nb$]; Null], 
+       Delimiter, "\<\"Copy web URL\"\>":>
+       Module[{DocumentationSearch`Private`nb$}, 
+        DocumentationSearch`Private`nb$ = NotebookPut[
+           Notebook[{
+             Cell[
+              BoxData[
+               MakeBoxes[
+                Hyperlink[
+                "http://reference.wolfram.com/language/Fretica/tutorial/\
+HiddenMarkovModelAnalysisOf1DTimeTraces.html"], StandardForm]], "Input", 
+              TextClipboardType -> "PlainText"]}, Visible -> False]]; 
+        SelectionMove[DocumentationSearch`Private`nb$, All, Notebook]; 
+        FrontEndTokenExecute[DocumentationSearch`Private`nb$, "Copy"]; 
+        NotebookClose[DocumentationSearch`Private`nb$]; 
+        Null], "\<\"Go to web URL\"\>":>FrontEndExecute[{
+         NotebookLocate[{
+           URL[If[
+              TrueQ[DocumentationBuild`Make`Private`wsmlinkQ$283986], 
+              "http://reference.wolfram.com/system-modeler/", 
+              "http://reference.wolfram.com/language/"] <> 
+            "Fretica/tutorial/HiddenMarkovModelAnalysisOf1DTimeTraces" <> 
+            ".html"], None}]}]},
+       Appearance->None,
+       MenuAppearance->Automatic,
+       MenuStyle->"URLMenu"],
+      MouseAppearanceTag["LinkHand"]]],
+     LineSpacing->{1.4, 0},ExpressionUUID->
+     "75f19877-f84b-44e9-ad59-87b3e9bb8430"]], "AnchorBar",
+     CacheGraphics->False,ExpressionUUID->
+     "1f8051a0-912c-444c-a71a-1f4eb7d286b6"]}
+  }]], "AnchorBarGrid",
+ GridBoxOptions->{GridBoxItemSize->{"Columns" -> {
+     Scaled[0.65], {
+      Scaled[0.34]}}, "ColumnsIndexed" -> {}, "Rows" -> {{1.}}, 
+   "RowsIndexed" -> {}}},
+ CellID->1,ExpressionUUID->"7608a6bd-4561-44c0-b2f0-b210d316998d"],
+
+Cell[CellGroupData[{
+
+Cell["Hidden Markov Model analysis of 1D time traces", "TechNoteTitle",
+ CellID->153429808,ExpressionUUID->"f17243ed-53b4-4721-873c-a9454f68528f"],
+
+Cell["XXXX.", "TechNoteCaption",
+ CellID->23368980,ExpressionUUID->"c0c9ce37-2c02-4f79-9867-2ac30d87e88e"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData["XXXX"], "Input",
+ CellLabel->"In[1]:=",
+ CellID->77621583,ExpressionUUID->"e326bb2b-707c-4254-9d74-5b90d2697967"],
+
+Cell[BoxData["XXXX"], "Output",
+ CellLabel->"Out[1]=",
+ CellID->89598043,ExpressionUUID->"910e2f1d-44ba-4d57-a534-eca4925415b4"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[GridBox[{
+   {
+    DynamicBox[FEPrivate`ImportImage[
+      FrontEnd`FileName[{"Documentation", "FooterIcons"}, "RelatedGuide.png"]],
+     ImageSizeCache->{50., {27., 33.}}], GridBox[{
+      {
+       StyleBox[
+        RowBox[{"Related", " ", "Guides"}], "TutorialMoreAboutSection"]},
+      {
+       RowBox[{"\[FilledVerySmallSquare]", Cell[TextData[ButtonBox["Fretica",
+         BaseStyle->"Link",
+         ButtonData->"paclet:Fretica/guide/Fretica"]], "TutorialMoreAbout",
+         ExpressionUUID->"e9e93330-4104-4c97-a6b5-189199799ad0"]}]}
+     }]}
+  }]], "TutorialMoreAboutSection",ExpressionUUID->"ba3c3251-c227-4028-8314-\
+ca8f6e5e6c4a"],
+
+Cell[BoxData[""], "Input",ExpressionUUID->"86399b6a-ecdf-4af8-bffc-f94a1b60568c"]
+}, Open  ]]
+}, Open  ]],
+
+Cell[" ", "FooterCell",ExpressionUUID->"76be83a7-0565-4ae0-b81e-67aaf996b7c2"]
+},
+Saveable->False,
+ScreenStyleEnvironment->"Working",
+Evaluator->"FreticaDocumentation",
+WindowSize->{900., 604.8},
+WindowMargins->{{0, Automatic}, {Automatic, 0}},
+WindowTitle->"Hidden Markov Model analysis of 1D time traces",
+Visible->False,
+TaggingRules->{
+ "ModificationHighlight" -> False, "ColorType" -> "", "LinkTrails" -> "", 
+  "ExampleCounter" -> 1, 
+  "Openers" -> {
+   "PrimaryExamplesSection" -> Open, "ExampleSection" -> {"0" -> Open}}, 
+  "NewStyles" -> True, "CitationPopupData" -> {"", ""}, "ShowCitation" -> 
+  False, "RootCaptions" -> "", 
+  "Metadata" -> {
+   "built" -> "{2022, 7, 26, 15, 37, 25.1121769}", 
+    "history" -> {"", "", "", ""}, "context" -> "Fretica`", "keywords" -> {}, 
+    "specialkeywords" -> {}, "tutorialcollectionlinks" -> {}, "index" -> True,
+     "label" -> "Fretica Tech Note", "language" -> "en", "paclet" -> 
+    "Fretica", "status" -> "None", "summary" -> " ", "synonyms" -> {}, 
+    "tabletags" -> DocumentationBuild`Make`Private`tabletaggingrules$283955, 
+    "title" -> "Hidden Markov Model analysis of 1D time traces", 
+    "titlemodifier" -> "", "windowtitle" -> 
+    "Hidden Markov Model analysis of 1D time traces", "type" -> "Tech Note", 
+    "uri" -> "Fretica/tutorial/HiddenMarkovModelAnalysisOf1DTimeTraces"}},
+FrontEndVersion->"13.2 for Microsoft Windows (64-bit) (January 30, 2023)",
+StyleDefinitions->Notebook[{
+   Cell[
+    StyleData[
+    StyleDefinitions -> FrontEnd`FileName[{"Wolfram"}, "Reference.nb"]]], 
+   Cell[
+    StyleData["Input"], CellContext -> Notebook], 
+   Cell[
+    StyleData["Output"], CellContext -> Notebook], 
+   Cell[
+    StyleData["TutorialMoreAboutSection"], 
+    CellGroupingRules -> {"SectionGrouping", 30}], 
+   Cell[
+    StyleData["RelatedTutorialsSection"], 
+    CellGroupingRules -> {"SectionGrouping", 30}], 
+   Cell[
+    StyleData["TutorialRelatedLinksSection"], 
+    CellGroupingRules -> {"SectionGrouping", 30}]}, Visible -> False, 
+  FrontEndVersion -> "13.2 for Microsoft Windows (64-bit) (January 30, 2023)",
+   StyleDefinitions -> "Default.nb"],
+ExpressionUUID->"ec11a559-8ff8-42b4-a49d-12d20986ce78"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[618, 21, 3525, 82, 56, "AnchorBarGrid",ExpressionUUID->"7608a6bd-4561-44c0-b2f0-b210d316998d",
+ CellID->1],
+Cell[CellGroupData[{
+Cell[4168, 107, 146, 1, 120, "TechNoteTitle",ExpressionUUID->"f17243ed-53b4-4721-873c-a9454f68528f",
+ CellID->153429808],
+Cell[4317, 110, 106, 1, 31, "TechNoteCaption",ExpressionUUID->"c0c9ce37-2c02-4f79-9867-2ac30d87e88e",
+ CellID->23368980],
+Cell[CellGroupData[{
+Cell[4448, 115, 127, 2, 26, "Input",ExpressionUUID->"e326bb2b-707c-4254-9d74-5b90d2697967",
+ CellID->77621583],
+Cell[4578, 119, 128, 2, 35, "Output",ExpressionUUID->"910e2f1d-44ba-4d57-a534-eca4925415b4",
+ CellID->89598043]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[4743, 126, 654, 15, 114, "TutorialMoreAboutSection",ExpressionUUID->"ba3c3251-c227-4028-8314-ca8f6e5e6c4a"],
+Cell[5400, 143, 81, 0, 23, "Input",ExpressionUUID->"86399b6a-ecdf-4af8-bffc-f94a1b60568c"]
+}, Open  ]]
+}, Open  ]],
+Cell[5508, 147, 78, 0, 41, "FooterCell",ExpressionUUID->"76be83a7-0565-4ae0-b81e-67aaf996b7c2"]
+}
+]
+*)
+

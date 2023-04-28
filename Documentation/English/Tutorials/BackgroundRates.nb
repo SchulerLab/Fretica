@@ -1,0 +1,1174 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 13.1' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     46217,       1166]
+NotebookOptionsPosition[     41222,       1052]
+NotebookOutlinePosition[     43368,       1108]
+CellTagsIndexPosition[     43325,       1105]
+WindowTitle->Background rates
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[GridBox[{
+   {GridBox[{
+      {
+       ItemBox[Cell[BoxData[
+         RowBox[{
+          TemplateBox[{12},
+           "Spacer1"], Cell["FRETICA TECH NOTE", "PacletNameCell",
+           TextAlignment->Center,ExpressionUUID->
+           "a8980e3d-0c89-480b-b216-d1155da3c671"], 
+          TemplateBox[{8},
+           "Spacer1"]}]],
+         TextAlignment->Center,ExpressionUUID->
+         "d253bbdf-7c8c-4d19-88f6-cfdc3ccab7fd"],
+        Background->RGBColor[
+         0.3843137254901961, 0.4627450980392157, 0.7019607843137254],
+        ItemSize->Full], ""}
+     },
+     GridBoxAlignment->{"Rows" -> {{Center}}},
+     GridBoxItemSize->{"Columns" -> {Full, 
+         Scaled[0.02]}, "Rows" -> {{2.5}}}], Cell[TextData[Cell[BoxData[
+     TagBox[
+      ActionMenuBox[
+       FrameBox[Cell[TextData[{
+         "URL",
+         " ",
+         Cell[BoxData[
+          GraphicsBox[
+           {GrayLevel[0.66667], Thickness[0.13], 
+            LineBox[{{-1.8, 0.5}, {0, 0}, {1.8, 0.5}}]},
+           AspectRatio->1,
+           ImageSize->20,
+           PlotRange->{{-3, 4}, {-1, 1}}]],ExpressionUUID->
+          "0a431d3d-8732-4f4d-a086-6809b37797a5"]
+        }],ExpressionUUID->"4a4548d5-5e33-4767-b68b-8c4b3e94725e"],
+        StripOnInput->False], {"\<\"Fretica/tutorial/BackgroundRates\"\>":>
+       None, "\<\"Copy Wolfram Documentation Center URL\"\>":>
+       Module[{DocumentationSearch`Private`nb$}, 
+        DocumentationSearch`Private`nb$ = NotebookPut[
+           Notebook[{
+             Cell["Fretica/tutorial/BackgroundRates"]}, Visible -> False]]; 
+        SelectionMove[DocumentationSearch`Private`nb$, All, Notebook]; 
+        FrontEndTokenExecute[DocumentationSearch`Private`nb$, "Copy"]; 
+        NotebookClose[DocumentationSearch`Private`nb$]; Null], 
+       Delimiter, "\<\"Copy web URL\"\>":>
+       Module[{DocumentationSearch`Private`nb$}, 
+        DocumentationSearch`Private`nb$ = NotebookPut[
+           Notebook[{
+             Cell[
+              BoxData[
+               MakeBoxes[
+                Hyperlink[
+                "http://reference.wolfram.com/language/Fretica/tutorial/\
+BackgroundRates.html"], StandardForm]], "Input", TextClipboardType -> 
+              "PlainText"]}, Visible -> False]]; 
+        SelectionMove[DocumentationSearch`Private`nb$, All, Notebook]; 
+        FrontEndTokenExecute[DocumentationSearch`Private`nb$, "Copy"]; 
+        NotebookClose[DocumentationSearch`Private`nb$]; 
+        Null], "\<\"Go to web URL\"\>":>FrontEndExecute[{
+         NotebookLocate[{
+           URL[If[
+              TrueQ[DocumentationBuild`Make`Private`wsmlinkQ$278245], 
+              "http://reference.wolfram.com/system-modeler/", 
+              "http://reference.wolfram.com/language/"] <> 
+            "Fretica/tutorial/BackgroundRates" <> ".html"], None}]}]},
+       Appearance->None,
+       MenuAppearance->Automatic,
+       MenuStyle->"URLMenu"],
+      MouseAppearanceTag["LinkHand"]]],
+     LineSpacing->{1.4, 0},ExpressionUUID->
+     "f6af1795-0c3e-49eb-bf0e-06737e239baa"]], "AnchorBar",
+     CacheGraphics->False,ExpressionUUID->
+     "0529ad66-63c1-4b75-b5eb-e6a3a25ae0b9"]}
+  }]], "AnchorBarGrid",
+ GridBoxOptions->{GridBoxItemSize->{"Columns" -> {
+     Scaled[0.65], {
+      Scaled[0.34]}}, "ColumnsIndexed" -> {}, "Rows" -> {{1.}}, 
+   "RowsIndexed" -> {}}},
+ CellID->1,ExpressionUUID->"da054333-db1d-4680-9880-d6a14a39c429"],
+
+Cell[CellGroupData[{
+
+Cell["Background rates", "TechNoteTitle",
+ CellID->354914490,ExpressionUUID->"6ca81f8b-2936-4114-8424-f37dda0ad0ab"],
+
+Cell[BoxData[
+ RowBox[{"Needs", "[", "\"\<Fretica`\>\"", "]"}]], "Input",
+ CellLabel->"In[209]:=",
+ CellID->82800826,ExpressionUUID->"4c3c983f-5a5f-4959-a184-d1ffba43c526"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"?", "FDetermineBackground"}]], "Input",
+ CellLabel->"In[210]:=",
+ CellID->370315688,ExpressionUUID->"a14d0843-90bf-4038-a4ac-3de35dbbb244"],
+
+Cell[BoxData[
+ InterpretationBox[
+  StyleBox[
+   FrameBox[
+    DynamicModuleBox[{System`InformationDump`open$$ = False, 
+     System`InformationDump`mouseOver$$ = False}, 
+     PaneSelectorBox[{True->
+      TagBox[GridBox[{
+         {
+          ItemBox[
+           PaneBox[
+            StyleBox["\<\" Symbol\"\>", "InformationTitleText",
+             StripOnInput->False,
+             BaseStyle -> None],
+            FrameMargins->{{4, 0}, {-1, 1}}],
+           BaseStyle->"InformationTitleBackground",
+           StripOnInput->False], 
+          ItemBox["\<\"\"\>",
+           BaseStyle->"InformationTitleBackground",
+           StripOnInput->False]},
+         {
+          ItemBox[
+           PaneBox[
+            
+            StyleBox["\<\"FDetermineBackground[] estimates and sets \
+background count rates for all detection routes from the total of all non\
+\[Hyphen]burst photons divided by the total measurement time excluding \
+bursts.\\nIf applied iteratively following photon burst identification, the \
+resulting background rates converge to meaningful values. If PIE is enabled, \
+the background rates in the PIE channels are also determined (see also: \
+FGetPIEBackground). \"\>", "InformationUsageText",
+             StripOnInput->False,
+             LineSpacing->{1.5, 1.5, 3.}],
+            FrameMargins->{{10, 10}, {8, 10}}],
+           BaseStyle->"InformationUsageSubtitleBackground",
+           StripOnInput->False], 
+          ItemBox["\<\"\"\>",
+           BaseStyle->"InformationUsageSubtitleBackground",
+           StripOnInput->False]},
+         {
+          PaneBox[
+           TagBox[GridBox[{
+              {
+               StyleBox[
+                TagBox[
+                 TooltipBox[
+                  StyleBox["\<\" Definitions\"\>", "InformationRowLabel",
+                   StripOnInput->False],
+                  "\"Definitions\"",
+                  TooltipStyle->"TextStyling"],
+                 Annotation[#, "Definitions", "Tooltip"]& ], "DialogStyle",
+                StripOnInput->False]},
+              {
+               TemplateBox[{"\"\[ThinSpace]\"", 
+                 GridBox[{{
+                    RowBox[{
+                    RowBox[{"FDetermineBackground", "[", "]"}], ":=", 
+                    
+                    RowBox[{
+                    "Fretica`Private`FPDetermineBackground", "[", "]"}]}]}, {
+                   " "}}, GridBoxAlignment -> {"Columns" -> {{Left}}}, 
+                  DefaultBaseStyle -> "Column", 
+                  GridBoxItemSize -> {
+                   "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}]},
+                "RowDefault"]}
+             },
+             DefaultBaseStyle->"Column",
+             GridBoxAlignment->{"Columns" -> {{Left}}},
+             
+             GridBoxItemSize->{
+              "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+            "Column"],
+           FrameMargins->{{6, 0}, {3, 6}}], "\<\"\"\>"},
+         {
+          PaneBox[GridBox[{
+             {
+              
+              DynamicModuleBox[{System`InformationDump`open$$ = {
+               False, False, False, False, False, False}}, 
+               StyleBox[GridBox[{
+                  {
+                   TagBox[
+                    TooltipBox[
+                    StyleBox["\<\" Full Name\"\>", "InformationRowLabel",
+                    StripOnInput->False],
+                    "\"FullName\"",
+                    TooltipStyle->"TextStyling"],
+                    
+                    Annotation[#, "FullName", 
+                    "Tooltip"]& ], "\<\"Fretica`FDetermineBackground\"\>"}
+                 },
+                 AutoDelete->False,
+                 GridBoxAlignment->{"Columns" -> {Right, Left}},
+                 GridBoxDividers->None,
+                 GridBoxItemSize->{"Columns" -> {Automatic, Automatic}},
+                 GridBoxSpacings->{"Columns" -> {
+                    Offset[0.27999999999999997`], {
+                    Offset[0.5599999999999999]}, 
+                    Offset[0.27999999999999997`]}, "Rows" -> {
+                    Offset[0.2], {
+                    Offset[0.8]}, 
+                    Offset[0.2]}}], "DialogStyle",
+                StripOnInput->False],
+               DynamicModuleValues:>{}]}
+            },
+            DefaultBaseStyle->"Column",
+            GridBoxAlignment->{"Columns" -> {{Left}}},
+            GridBoxDividers->{"Columns" -> {{False}}, "Rows" -> {{False}}},
+            
+            GridBoxItemSize->{
+             "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}},
+            GridBoxSpacings->{"Columns" -> {
+                Offset[0.27999999999999997`], {
+                 Offset[0.5599999999999999]}, 
+                Offset[0.27999999999999997`]}, "Rows" -> {
+                Offset[0.2], {
+                 Offset[3.6]}, 
+                Offset[0.2]}}],
+           FrameMargins->{{6, 6}, {6, 3}}], ""},
+         {
+          ItemBox[
+           TagBox[
+            ButtonBox[
+             PaneSelectorBox[{False->
+              
+              DynamicBox[FEPrivate`FrontEndResource[
+               "FEBitmaps", "UpPointerOpener"]], True->
+              
+              DynamicBox[FEPrivate`FrontEndResource[
+               "FEBitmaps", "UpPointerOpenerHot"]]}, Dynamic[
+              System`InformationDump`mouseOver$$]],
+             Alignment->Left,
+             Appearance->{"Default" -> None},
+             
+             ButtonFunction:>FEPrivate`Set[
+              System`InformationDump`open$$, False],
+             Evaluator->Automatic,
+             FrameMargins->{{9, 0}, {0, 0}},
+             ImageMargins->0,
+             ImageSize->Full,
+             Method->"Preemptive"],
+            
+            EventHandlerTag[{
+             "MouseEntered" :> 
+              FEPrivate`Set[System`InformationDump`mouseOver$$, True], 
+              "MouseExited" :> 
+              FEPrivate`Set[System`InformationDump`mouseOver$$, False], 
+              Method -> "Preemptive", PassEventsDown -> Automatic, 
+              PassEventsUp -> True}]],
+           BaseStyle->"InformationTitleBackground",
+           StripOnInput->False], "\[SpanFromLeft]"}
+        },
+        AutoDelete->False,
+        FrameStyle->Directive[
+          GrayLevel[0.8], 
+          Thickness[Tiny]],
+        GridBoxAlignment->{"Columns" -> {Left, Right}, "Rows" -> {{Center}}},
+        GridBoxDividers->{
+         "Columns" -> {{None}}, "Rows" -> {False, {True}, False}},
+        GridBoxItemSize->{
+         "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+       "Grid"], False->
+      TagBox[GridBox[{
+         {
+          ItemBox[
+           PaneBox[
+            StyleBox["\<\" Symbol\"\>", "InformationTitleText",
+             StripOnInput->False],
+            FrameMargins->{{4, 0}, {-1, 1}}],
+           BaseStyle->"InformationTitleBackground",
+           StripOnInput->False], 
+          ItemBox["\<\"\"\>",
+           BaseStyle->"InformationTitleBackground",
+           StripOnInput->False]},
+         {
+          ItemBox[
+           PaneBox[
+            
+            StyleBox["\<\"FDetermineBackground[] estimates and sets \
+background count rates for all detection routes from the total of all non\
+\[Hyphen]burst photons divided by the total measurement time excluding \
+bursts.\\nIf applied iteratively following photon burst identification, the \
+resulting background rates converge to meaningful values. If PIE is enabled, \
+the background rates in the PIE channels are also determined (see also: \
+FGetPIEBackground). \"\>", "InformationUsageText",
+             StripOnInput->False,
+             LineSpacing->{1.5, 1.5, 3.}],
+            FrameMargins->{{10, 10}, {8, 10}}],
+           BaseStyle->"InformationUsageSubtitleBackground",
+           StripOnInput->False], 
+          ItemBox["\<\"\"\>",
+           BaseStyle->"InformationUsageSubtitleBackground",
+           StripOnInput->False]},
+         {
+          ItemBox[
+           TagBox[
+            ButtonBox[
+             PaneSelectorBox[{False->
+              
+              DynamicBox[FEPrivate`FrontEndResource[
+               "FEBitmaps", "DownPointerOpener"],
+               ImageSizeCache->{10., {3., 7.}}], True->
+              DynamicBox[FEPrivate`FrontEndResource[
+               "FEBitmaps", "DownPointerOpenerHot"],
+               ImageSizeCache->{10., {3., 7.}}]}, Dynamic[
+              System`InformationDump`mouseOver$$]],
+             Alignment->Left,
+             Appearance->{"Default" -> None},
+             
+             ButtonFunction:>FEPrivate`Set[
+              System`InformationDump`open$$, True],
+             Evaluator->Automatic,
+             FrameMargins->{{9, 0}, {0, 0}},
+             ImageMargins->0,
+             ImageSize->Full,
+             Method->"Preemptive"],
+            
+            EventHandlerTag[{
+             "MouseEntered" :> 
+              FEPrivate`Set[System`InformationDump`mouseOver$$, True], 
+              "MouseExited" :> 
+              FEPrivate`Set[System`InformationDump`mouseOver$$, False], 
+              Method -> "Preemptive", PassEventsDown -> Automatic, 
+              PassEventsUp -> True}]],
+           BaseStyle->"InformationTitleBackground",
+           StripOnInput->False], "\[SpanFromLeft]"}
+        },
+        AutoDelete->False,
+        FrameStyle->Directive[
+          GrayLevel[0.8], 
+          Thickness[Tiny]],
+        GridBoxAlignment->{"Columns" -> {Left, Right}, "Rows" -> {{Center}}},
+        GridBoxDividers->{
+         "Columns" -> {{None}}, "Rows" -> {False, {True}, False}},
+        GridBoxItemSize->{
+         "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+       "Grid"]}, Dynamic[System`InformationDump`open$$],
+      BaselinePosition->Baseline,
+      FrameMargins->0,
+      ImageSize->Automatic],
+     DynamicModuleValues:>{}],
+    BaseStyle->"InformationGridFrame",
+    StripOnInput->False], "InformationGridPlain",
+   StripOnInput->False],
+  InformationData[<|
+   "ObjectType" -> "Symbol", "Usage" -> 
+    "FDetermineBackground[] estimates and sets background count rates for all \
+detection routes from the total of all non\[Hyphen]burst photons divided by \
+the total measurement time excluding bursts.\nIf applied iteratively \
+following photon burst identification, the resulting background rates \
+converge to meaningful values. If PIE is enabled, the background rates in the \
+PIE channels are also determined (see also: FGetPIEBackground). ", 
+    "Documentation" -> None, "OwnValues" -> None, "UpValues" -> None, 
+    "DownValues" -> 
+    Information`InformationValueForm[
+     DownValues, Fretica`FDetermineBackground, {
+      Fretica`FDetermineBackground[] :> 
+       Fretica`Private`FPDetermineBackground[]}], "SubValues" -> None, 
+    "DefaultValues" -> None, "NValues" -> None, "FormatValues" -> None, 
+    "Options" -> None, "Attributes" -> {}, "FullName" -> 
+    "Fretica`FDetermineBackground"|>, False]]], "Output",
+ CellLabel->"Out[210]=",
+ CellID->43189386,ExpressionUUID->"d81e628f-ae3c-49e9-b94d-1cd1b91fa31c"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"FOpenTTTR", "[", 
+   RowBox[{"$FreticaExamples", "<>", "\"\<\\\\1.00GdmClA.t3r\>\""}], "]"}], 
+  " ", 
+  RowBox[{"(*", 
+   RowBox[{"Csp", " ", "near", " ", "the", " ", "folding", " ", "midpoint"}], 
+   "*)"}]}], "\[IndentingNewLine]", 
+ RowBox[{"FDetermineBackground", "[", "]"}], "\[IndentingNewLine]", 
+ RowBox[{"FFindBurstsDeltaT", "[", 
+  RowBox[{"0.00015", ",", "100", ",", "10000"}], "]"}], "\[IndentingNewLine]", 
+ RowBox[{"FDetermineBackground", "[", "]"}], "\[IndentingNewLine]", 
+ RowBox[{"FFindBurstsDeltaT", "[", 
+  RowBox[{"0.00015", ",", "100", ",", "10000"}], "]"}], "\[IndentingNewLine]", 
+ RowBox[{"FDetermineBackground", "[", "]"}]}], "Input",
+ CellLabel->"In[211]:=",
+ CellID->745952607,ExpressionUUID->"cad01688-7929-48cf-a42f-4c2943766642"],
+
+Cell[BoxData["1"], "Output",
+ CellContext->"Notebook$$51$935122`",
+ CellLabel->"Out[211]=",
+ CellID->74413663,ExpressionUUID->"66c84cec-2d44-4759-a47a-001063faebb5"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+  "2751.1286111111112`", ",", "3067.2455555555557`", ",", "0.`", ",", "0.`", 
+   ",", "0.`", ",", "0.`"}], "}"}]], "Output",
+ CellContext->"Notebook$$51$935122`",
+ CellLabel->"Out[212]=",
+ CellID->531939105,ExpressionUUID->"f093f3c1-3243-404b-92bb-b7722ac306e7"],
+
+Cell[BoxData["3784"], "Output",
+ CellContext->"Notebook$$51$935122`",
+ CellLabel->"Out[213]=",
+ CellID->9973105,ExpressionUUID->"3ce19a73-e5a9-47f4-b61e-265df731eb7c"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+  "2672.0243415849145`", ",", "3012.817584314431`", ",", "0.`", ",", "0.`", 
+   ",", "0.`", ",", "0.`"}], "}"}]], "Output",
+ CellContext->"Notebook$$51$935122`",
+ CellLabel->"Out[214]=",
+ CellID->804255766,ExpressionUUID->"d95626b0-8db7-44ec-b93f-cd31cb25676a"],
+
+Cell[BoxData["3826"], "Output",
+ CellContext->"Notebook$$51$935122`",
+ CellLabel->"Out[215]=",
+ CellID->500925745,ExpressionUUID->"2ffdeab3-cf57-4cb7-9338-3f6347806185"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+  "2671.3926706924235`", ",", "3012.3780482940965`", ",", "0.`", ",", "0.`", 
+   ",", "0.`", ",", "0.`"}], "}"}]], "Output",
+ CellContext->"Notebook$$51$935122`",
+ CellLabel->"Out[216]=",
+ CellID->397297321,ExpressionUUID->"008a2f67-8f7c-4413-a218-f4f77635c089"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{"?", "FSetBackground"}], "\[IndentingNewLine]", 
+ RowBox[{"?", "FGetBackground"}]}], "Input",
+ CellLabel->"In[217]:=",
+ CellID->136941393,ExpressionUUID->"752d1863-43a2-4168-8a73-e6f009610b66"],
+
+Cell[BoxData[
+ InterpretationBox[
+  StyleBox[
+   FrameBox[
+    DynamicModuleBox[{System`InformationDump`open$$ = False, 
+     System`InformationDump`mouseOver$$ = False}, 
+     PaneSelectorBox[{True->
+      TagBox[GridBox[{
+         {
+          ItemBox[
+           PaneBox[
+            StyleBox["\<\" Symbol\"\>", "InformationTitleText",
+             StripOnInput->False,
+             BaseStyle -> None],
+            FrameMargins->{{4, 0}, {-1, 1}}],
+           BaseStyle->"InformationTitleBackground",
+           StripOnInput->False], 
+          ItemBox["\<\"\"\>",
+           BaseStyle->"InformationTitleBackground",
+           StripOnInput->False]},
+         {
+          ItemBox[
+           PaneBox[
+            
+            StyleBox["\<\"FSetBackground[bglist] sets the background photon \
+count rates (in sec\\!\\(\\*FormBox[SuperscriptBox[\\(\[Null]\\), \
+\\(-1\\)],\\nTraditionalForm]\\)) for the detection routes. \"\>", 
+             "InformationUsageText",
+             StripOnInput->False,
+             LineSpacing->{1.5, 1.5, 3.}],
+            FrameMargins->{{10, 10}, {8, 10}}],
+           BaseStyle->"InformationUsageSubtitleBackground",
+           StripOnInput->False], 
+          ItemBox["\<\"\"\>",
+           BaseStyle->"InformationUsageSubtitleBackground",
+           StripOnInput->False]},
+         {
+          PaneBox[
+           TagBox[GridBox[{
+              {
+               StyleBox[
+                TagBox[
+                 TooltipBox[
+                  StyleBox["\<\" Definitions\"\>", "InformationRowLabel",
+                   StripOnInput->False],
+                  "\"Definitions\"",
+                  TooltipStyle->"TextStyling"],
+                 Annotation[#, "Definitions", "Tooltip"]& ], "DialogStyle",
+                StripOnInput->False]},
+              {
+               TemplateBox[{"\"\[ThinSpace]\"", 
+                 GridBox[{{
+                    RowBox[{
+                    RowBox[{"FSetBackground", "[", 
+                    RowBox[{"Fretica`Private`bg", ":", 
+                    RowBox[{"{", 
+                    RowBox[{"Repeated", "[", 
+                    RowBox[{
+                    RowBox[{"_", "?", "NumberQ"}], ",", "6"}], "]"}], "}"}]}],
+                     "]"}], ":=", 
+                    RowBox[{"Fretica`Private`FPSetBackground", "[", 
+                    RowBox[{"N", "/@", 
+                    
+                    RowBox[{
+                    "Fretica`Private`FExpandRoutelist", "[", 
+                    "Fretica`Private`bg", "]"}]}], "]"}]}]}, {" "}}, 
+                  GridBoxAlignment -> {"Columns" -> {{Left}}}, 
+                  DefaultBaseStyle -> "Column", 
+                  GridBoxItemSize -> {
+                   "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}]},
+                "RowDefault"]}
+             },
+             DefaultBaseStyle->"Column",
+             GridBoxAlignment->{"Columns" -> {{Left}}},
+             
+             GridBoxItemSize->{
+              "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+            "Column"],
+           FrameMargins->{{6, 0}, {3, 6}}], "\<\"\"\>"},
+         {
+          PaneBox[GridBox[{
+             {
+              
+              DynamicModuleBox[{System`InformationDump`open$$ = {
+               False, False, False, False, False, False}}, 
+               StyleBox[GridBox[{
+                  {
+                   TagBox[
+                    TooltipBox[
+                    StyleBox["\<\" Full Name\"\>", "InformationRowLabel",
+                    StripOnInput->False],
+                    "\"FullName\"",
+                    TooltipStyle->"TextStyling"],
+                    
+                    Annotation[#, "FullName", 
+                    "Tooltip"]& ], "\<\"Fretica`FSetBackground\"\>"}
+                 },
+                 AutoDelete->False,
+                 GridBoxAlignment->{"Columns" -> {Right, Left}},
+                 GridBoxDividers->None,
+                 GridBoxItemSize->{"Columns" -> {Automatic, Automatic}},
+                 GridBoxSpacings->{"Columns" -> {
+                    Offset[0.27999999999999997`], {
+                    Offset[0.5599999999999999]}, 
+                    Offset[0.27999999999999997`]}, "Rows" -> {
+                    Offset[0.2], {
+                    Offset[0.8]}, 
+                    Offset[0.2]}}], "DialogStyle",
+                StripOnInput->False],
+               DynamicModuleValues:>{}]}
+            },
+            DefaultBaseStyle->"Column",
+            GridBoxAlignment->{"Columns" -> {{Left}}},
+            GridBoxDividers->{"Columns" -> {{False}}, "Rows" -> {{False}}},
+            
+            GridBoxItemSize->{
+             "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}},
+            GridBoxSpacings->{"Columns" -> {
+                Offset[0.27999999999999997`], {
+                 Offset[0.5599999999999999]}, 
+                Offset[0.27999999999999997`]}, "Rows" -> {
+                Offset[0.2], {
+                 Offset[3.6]}, 
+                Offset[0.2]}}],
+           FrameMargins->{{6, 6}, {6, 3}}], ""},
+         {
+          ItemBox[
+           TagBox[
+            ButtonBox[
+             PaneSelectorBox[{False->
+              
+              DynamicBox[FEPrivate`FrontEndResource[
+               "FEBitmaps", "UpPointerOpener"]], True->
+              
+              DynamicBox[FEPrivate`FrontEndResource[
+               "FEBitmaps", "UpPointerOpenerHot"]]}, Dynamic[
+              System`InformationDump`mouseOver$$]],
+             Alignment->Left,
+             Appearance->{"Default" -> None},
+             
+             ButtonFunction:>FEPrivate`Set[
+              System`InformationDump`open$$, False],
+             Evaluator->Automatic,
+             FrameMargins->{{9, 0}, {0, 0}},
+             ImageMargins->0,
+             ImageSize->Full,
+             Method->"Preemptive"],
+            
+            EventHandlerTag[{
+             "MouseEntered" :> 
+              FEPrivate`Set[System`InformationDump`mouseOver$$, True], 
+              "MouseExited" :> 
+              FEPrivate`Set[System`InformationDump`mouseOver$$, False], 
+              Method -> "Preemptive", PassEventsDown -> Automatic, 
+              PassEventsUp -> True}]],
+           BaseStyle->"InformationTitleBackground",
+           StripOnInput->False], "\[SpanFromLeft]"}
+        },
+        AutoDelete->False,
+        FrameStyle->Directive[
+          GrayLevel[0.8], 
+          Thickness[Tiny]],
+        GridBoxAlignment->{"Columns" -> {Left, Right}, "Rows" -> {{Center}}},
+        GridBoxDividers->{
+         "Columns" -> {{None}}, "Rows" -> {False, {True}, False}},
+        GridBoxItemSize->{
+         "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+       "Grid"], False->
+      TagBox[GridBox[{
+         {
+          ItemBox[
+           PaneBox[
+            StyleBox["\<\" Symbol\"\>", "InformationTitleText",
+             StripOnInput->False],
+            FrameMargins->{{4, 0}, {-1, 1}}],
+           BaseStyle->"InformationTitleBackground",
+           StripOnInput->False], 
+          ItemBox["\<\"\"\>",
+           BaseStyle->"InformationTitleBackground",
+           StripOnInput->False]},
+         {
+          ItemBox[
+           PaneBox[
+            
+            StyleBox["\<\"FSetBackground[bglist] sets the background photon \
+count rates (in sec\\!\\(\\*FormBox[SuperscriptBox[\\(\[Null]\\), \
+\\(-1\\)],\\nTraditionalForm]\\)) for the detection routes. \"\>", 
+             "InformationUsageText",
+             StripOnInput->False,
+             LineSpacing->{1.5, 1.5, 3.}],
+            FrameMargins->{{10, 10}, {8, 10}}],
+           BaseStyle->"InformationUsageSubtitleBackground",
+           StripOnInput->False], 
+          ItemBox["\<\"\"\>",
+           BaseStyle->"InformationUsageSubtitleBackground",
+           StripOnInput->False]},
+         {
+          ItemBox[
+           TagBox[
+            ButtonBox[
+             PaneSelectorBox[{False->
+              
+              DynamicBox[FEPrivate`FrontEndResource[
+               "FEBitmaps", "DownPointerOpener"],
+               ImageSizeCache->{10., {3., 7.}}], True->
+              
+              DynamicBox[FEPrivate`FrontEndResource[
+               "FEBitmaps", "DownPointerOpenerHot"],
+               ImageSizeCache->{10., {3., 7.}}]}, Dynamic[
+              System`InformationDump`mouseOver$$]],
+             Alignment->Left,
+             Appearance->{"Default" -> None},
+             
+             ButtonFunction:>FEPrivate`Set[
+              System`InformationDump`open$$, True],
+             Evaluator->Automatic,
+             FrameMargins->{{9, 0}, {0, 0}},
+             ImageMargins->0,
+             ImageSize->Full,
+             Method->"Preemptive"],
+            
+            EventHandlerTag[{
+             "MouseEntered" :> 
+              FEPrivate`Set[System`InformationDump`mouseOver$$, True], 
+              "MouseExited" :> 
+              FEPrivate`Set[System`InformationDump`mouseOver$$, False], 
+              Method -> "Preemptive", PassEventsDown -> Automatic, 
+              PassEventsUp -> True}]],
+           BaseStyle->"InformationTitleBackground",
+           StripOnInput->False], "\[SpanFromLeft]"}
+        },
+        AutoDelete->False,
+        FrameStyle->Directive[
+          GrayLevel[0.8], 
+          Thickness[Tiny]],
+        GridBoxAlignment->{"Columns" -> {Left, Right}, "Rows" -> {{Center}}},
+        GridBoxDividers->{
+         "Columns" -> {{None}}, "Rows" -> {False, {True}, False}},
+        GridBoxItemSize->{
+         "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+       "Grid"]}, Dynamic[System`InformationDump`open$$],
+      BaselinePosition->Baseline,
+      FrameMargins->0,
+      ImageSize->Automatic],
+     DynamicModuleValues:>{}],
+    BaseStyle->"InformationGridFrame",
+    StripOnInput->False], "InformationGridPlain",
+   StripOnInput->False],
+  InformationData[<|
+   "ObjectType" -> "Symbol", "Usage" -> 
+    "FSetBackground[bglist] sets the background photon count rates (in \
+sec\!\(\*FormBox[SuperscriptBox[\(\[Null]\), \(-1\)],\nTraditionalForm]\)) \
+for the detection routes. ", "Documentation" -> None, "OwnValues" -> None, 
+    "UpValues" -> None, "DownValues" -> 
+    Information`InformationValueForm[
+     DownValues, Fretica`FSetBackground, {Fretica`FSetBackground[
+         Pattern[Fretica`Private`bg, {
+           Repeated[
+            PatternTest[
+             Blank[], NumberQ], 6]}]] :> Fretica`Private`FPSetBackground[
+         Map[N, 
+          Fretica`Private`FExpandRoutelist[Fretica`Private`bg]]]}], 
+    "SubValues" -> None, "DefaultValues" -> None, "NValues" -> None, 
+    "FormatValues" -> None, "Options" -> None, "Attributes" -> {}, "FullName" -> 
+    "Fretica`FSetBackground"|>, False]]], "Output",
+ CellLabel->"Out[217]=",
+ CellID->80567414,ExpressionUUID->"e9e3550f-2609-44d6-a12c-442dedb0b1c1"],
+
+Cell[BoxData[
+ InterpretationBox[
+  StyleBox[
+   FrameBox[
+    DynamicModuleBox[{System`InformationDump`open$$ = False, 
+     System`InformationDump`mouseOver$$ = False}, 
+     PaneSelectorBox[{True->
+      TagBox[GridBox[{
+         {
+          ItemBox[
+           PaneBox[
+            StyleBox["\<\" Symbol\"\>", "InformationTitleText",
+             StripOnInput->False,
+             BaseStyle -> None],
+            FrameMargins->{{4, 0}, {-1, 1}}],
+           BaseStyle->"InformationTitleBackground",
+           StripOnInput->False], 
+          ItemBox["\<\"\"\>",
+           BaseStyle->"InformationTitleBackground",
+           StripOnInput->False]},
+         {
+          ItemBox[
+           PaneBox[
+            
+            StyleBox["\<\"FGetBackground[] returns a list of the background \
+photon count rates (in sec\\!\\(\\*FormBox[SuperscriptBox[\\(\[Null]\\), \
+\\(-1\\)],\\nTraditionalForm]\\)) for all detection routes. \"\>", 
+             "InformationUsageText",
+             StripOnInput->False,
+             LineSpacing->{1.5, 1.5, 3.}],
+            FrameMargins->{{10, 10}, {8, 10}}],
+           BaseStyle->"InformationUsageSubtitleBackground",
+           StripOnInput->False], 
+          ItemBox["\<\"\"\>",
+           BaseStyle->"InformationUsageSubtitleBackground",
+           StripOnInput->False]},
+         {
+          PaneBox[
+           TagBox[GridBox[{
+              {
+               StyleBox[
+                TagBox[
+                 TooltipBox[
+                  StyleBox["\<\" Definitions\"\>", "InformationRowLabel",
+                   StripOnInput->False],
+                  "\"Definitions\"",
+                  TooltipStyle->"TextStyling"],
+                 Annotation[#, "Definitions", "Tooltip"]& ], "DialogStyle",
+                StripOnInput->False]},
+              {
+               TemplateBox[{"\"\[ThinSpace]\"", 
+                 GridBox[{{
+                    RowBox[{
+                    RowBox[{"FGetBackground", "[", "]"}], ":=", 
+                    
+                    RowBox[{
+                    "Fretica`Private`FPGetBackground", "[", "]"}]}]}, {" "}}, 
+                  GridBoxAlignment -> {"Columns" -> {{Left}}}, 
+                  DefaultBaseStyle -> "Column", 
+                  GridBoxItemSize -> {
+                   "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}]},
+                "RowDefault"]}
+             },
+             DefaultBaseStyle->"Column",
+             GridBoxAlignment->{"Columns" -> {{Left}}},
+             
+             GridBoxItemSize->{
+              "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+            "Column"],
+           FrameMargins->{{6, 0}, {3, 6}}], "\<\"\"\>"},
+         {
+          PaneBox[GridBox[{
+             {
+              
+              DynamicModuleBox[{System`InformationDump`open$$ = {
+               False, False, False, False, False, False}}, 
+               StyleBox[GridBox[{
+                  {
+                   TagBox[
+                    TooltipBox[
+                    StyleBox["\<\" Full Name\"\>", "InformationRowLabel",
+                    StripOnInput->False],
+                    "\"FullName\"",
+                    TooltipStyle->"TextStyling"],
+                    
+                    Annotation[#, "FullName", 
+                    "Tooltip"]& ], "\<\"Fretica`FGetBackground\"\>"}
+                 },
+                 AutoDelete->False,
+                 GridBoxAlignment->{"Columns" -> {Right, Left}},
+                 GridBoxDividers->None,
+                 GridBoxItemSize->{"Columns" -> {Automatic, Automatic}},
+                 GridBoxSpacings->{"Columns" -> {
+                    Offset[0.27999999999999997`], {
+                    Offset[0.5599999999999999]}, 
+                    Offset[0.27999999999999997`]}, "Rows" -> {
+                    Offset[0.2], {
+                    Offset[0.8]}, 
+                    Offset[0.2]}}], "DialogStyle",
+                StripOnInput->False],
+               DynamicModuleValues:>{}]}
+            },
+            DefaultBaseStyle->"Column",
+            GridBoxAlignment->{"Columns" -> {{Left}}},
+            GridBoxDividers->{"Columns" -> {{False}}, "Rows" -> {{False}}},
+            
+            GridBoxItemSize->{
+             "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}},
+            GridBoxSpacings->{"Columns" -> {
+                Offset[0.27999999999999997`], {
+                 Offset[0.5599999999999999]}, 
+                Offset[0.27999999999999997`]}, "Rows" -> {
+                Offset[0.2], {
+                 Offset[3.6]}, 
+                Offset[0.2]}}],
+           FrameMargins->{{6, 6}, {6, 3}}], ""},
+         {
+          ItemBox[
+           TagBox[
+            ButtonBox[
+             PaneSelectorBox[{False->
+              
+              DynamicBox[FEPrivate`FrontEndResource[
+               "FEBitmaps", "UpPointerOpener"]], True->
+              
+              DynamicBox[FEPrivate`FrontEndResource[
+               "FEBitmaps", "UpPointerOpenerHot"]]}, Dynamic[
+              System`InformationDump`mouseOver$$]],
+             Alignment->Left,
+             Appearance->{"Default" -> None},
+             
+             ButtonFunction:>FEPrivate`Set[
+              System`InformationDump`open$$, False],
+             Evaluator->Automatic,
+             FrameMargins->{{9, 0}, {0, 0}},
+             ImageMargins->0,
+             ImageSize->Full,
+             Method->"Preemptive"],
+            
+            EventHandlerTag[{
+             "MouseEntered" :> 
+              FEPrivate`Set[System`InformationDump`mouseOver$$, True], 
+              "MouseExited" :> 
+              FEPrivate`Set[System`InformationDump`mouseOver$$, False], 
+              Method -> "Preemptive", PassEventsDown -> Automatic, 
+              PassEventsUp -> True}]],
+           BaseStyle->"InformationTitleBackground",
+           StripOnInput->False], "\[SpanFromLeft]"}
+        },
+        AutoDelete->False,
+        FrameStyle->Directive[
+          GrayLevel[0.8], 
+          Thickness[Tiny]],
+        GridBoxAlignment->{"Columns" -> {Left, Right}, "Rows" -> {{Center}}},
+        GridBoxDividers->{
+         "Columns" -> {{None}}, "Rows" -> {False, {True}, False}},
+        GridBoxItemSize->{
+         "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+       "Grid"], False->
+      TagBox[GridBox[{
+         {
+          ItemBox[
+           PaneBox[
+            StyleBox["\<\" Symbol\"\>", "InformationTitleText",
+             StripOnInput->False],
+            FrameMargins->{{4, 0}, {-1, 1}}],
+           BaseStyle->"InformationTitleBackground",
+           StripOnInput->False], 
+          ItemBox["\<\"\"\>",
+           BaseStyle->"InformationTitleBackground",
+           StripOnInput->False]},
+         {
+          ItemBox[
+           PaneBox[
+            
+            StyleBox["\<\"FGetBackground[] returns a list of the background \
+photon count rates (in sec\\!\\(\\*FormBox[SuperscriptBox[\\(\[Null]\\), \
+\\(-1\\)],\\nTraditionalForm]\\)) for all detection routes. \"\>", 
+             "InformationUsageText",
+             StripOnInput->False,
+             LineSpacing->{1.5, 1.5, 3.}],
+            FrameMargins->{{10, 10}, {8, 10}}],
+           BaseStyle->"InformationUsageSubtitleBackground",
+           StripOnInput->False], 
+          ItemBox["\<\"\"\>",
+           BaseStyle->"InformationUsageSubtitleBackground",
+           StripOnInput->False]},
+         {
+          ItemBox[
+           TagBox[
+            ButtonBox[
+             PaneSelectorBox[{False->
+              
+              DynamicBox[FEPrivate`FrontEndResource[
+               "FEBitmaps", "DownPointerOpener"],
+               ImageSizeCache->{10., {3., 7.}}], True->
+              
+              DynamicBox[FEPrivate`FrontEndResource[
+               "FEBitmaps", "DownPointerOpenerHot"],
+               ImageSizeCache->{10., {3., 7.}}]}, Dynamic[
+              System`InformationDump`mouseOver$$]],
+             Alignment->Left,
+             Appearance->{"Default" -> None},
+             
+             ButtonFunction:>FEPrivate`Set[
+              System`InformationDump`open$$, True],
+             Evaluator->Automatic,
+             FrameMargins->{{9, 0}, {0, 0}},
+             ImageMargins->0,
+             ImageSize->Full,
+             Method->"Preemptive"],
+            
+            EventHandlerTag[{
+             "MouseEntered" :> 
+              FEPrivate`Set[System`InformationDump`mouseOver$$, True], 
+              "MouseExited" :> 
+              FEPrivate`Set[System`InformationDump`mouseOver$$, False], 
+              Method -> "Preemptive", PassEventsDown -> Automatic, 
+              PassEventsUp -> True}]],
+           BaseStyle->"InformationTitleBackground",
+           StripOnInput->False], "\[SpanFromLeft]"}
+        },
+        AutoDelete->False,
+        FrameStyle->Directive[
+          GrayLevel[0.8], 
+          Thickness[Tiny]],
+        GridBoxAlignment->{"Columns" -> {Left, Right}, "Rows" -> {{Center}}},
+        GridBoxDividers->{
+         "Columns" -> {{None}}, "Rows" -> {False, {True}, False}},
+        GridBoxItemSize->{
+         "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+       "Grid"]}, Dynamic[System`InformationDump`open$$],
+      BaselinePosition->Baseline,
+      FrameMargins->0,
+      ImageSize->Automatic],
+     DynamicModuleValues:>{}],
+    BaseStyle->"InformationGridFrame",
+    StripOnInput->False], "InformationGridPlain",
+   StripOnInput->False],
+  InformationData[<|
+   "ObjectType" -> "Symbol", "Usage" -> 
+    "FGetBackground[] returns a list of the background photon count rates (in \
+sec\!\(\*FormBox[SuperscriptBox[\(\[Null]\), \(-1\)],\nTraditionalForm]\)) \
+for all detection routes. ", "Documentation" -> None, "OwnValues" -> None, 
+    "UpValues" -> None, "DownValues" -> 
+    Information`InformationValueForm[
+     DownValues, Fretica`FGetBackground, {
+      Fretica`FGetBackground[] :> Fretica`Private`FPGetBackground[]}], 
+    "SubValues" -> None, "DefaultValues" -> None, "NValues" -> None, 
+    "FormatValues" -> None, "Options" -> None, "Attributes" -> {}, "FullName" -> 
+    "Fretica`FGetBackground"|>, False]]], "Output",
+ CellLabel->"Out[218]=",
+ CellID->2091571,ExpressionUUID->"5da3ba51-e541-499c-b461-c111f2b8ebb2"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"FSetBackground", "[", 
+  RowBox[{"{", 
+   RowBox[{"0.", ",", "0.", ",", "0.", ",", "0."}], "}"}], "]"}]], "Input",
+ CellLabel->"In[219]:=",
+ CellID->49163678,ExpressionUUID->"b74fb4e8-e20c-4b00-9e44-12341397a0d6"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"0.`", ",", "0.`", ",", "0.`", ",", "0.`", ",", "0.`", ",", "0.`"}],
+   "}"}]], "Output",
+ CellContext->"Notebook$$51$935122`",
+ CellLabel->"Out[219]=",
+ CellID->170041241,ExpressionUUID->"ea941347-2703-4825-adf7-e4193a7fdc7f"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"FGetBackground", "[", "]"}]], "Input",
+ CellLabel->"In[220]:=",
+ CellID->936763009,ExpressionUUID->"5bbfb70c-2509-4135-aeab-4547a97f341d"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"0.`", ",", "0.`", ",", "0.`", ",", "0.`", ",", "0.`", ",", "0.`"}],
+   "}"}]], "Output",
+ CellContext->"Notebook$$51$935122`",
+ CellLabel->"Out[220]=",
+ CellID->716031230,ExpressionUUID->"9cd19cd7-6327-425c-a202-b7ab9ef1b159"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"FDetermineBackground", "[", "]"}]], "Input",
+ CellLabel->"In[221]:=",
+ CellID->194633316,ExpressionUUID->"cd13edf6-e17e-4009-986e-fd1dd7ad70d8"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+  "2671.3926706924235`", ",", "3012.3780482940965`", ",", "0.`", ",", "0.`", 
+   ",", "0.`", ",", "0.`"}], "}"}]], "Output",
+ CellContext->"Notebook$$51$935122`",
+ CellLabel->"Out[221]=",
+ CellID->126221824,ExpressionUUID->"3926fc6c-c708-41bb-aabb-ac95707f55fc"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[GridBox[{
+   {
+    DynamicBox[FEPrivate`ImportImage[
+      FrontEnd`FileName[{"Documentation", "FooterIcons"}, "RelatedGuide.png"]],
+     ImageSizeCache->{50., {27., 33.}}], GridBox[{
+      {
+       StyleBox[
+        RowBox[{"Related", " ", "Guides"}], "TutorialMoreAboutSection"]},
+      {
+       RowBox[{"\[FilledVerySmallSquare]", Cell[TextData[ButtonBox["Fretica",
+         BaseStyle->"Link",
+         ButtonData->"paclet:Fretica/guide/Fretica"]], "TutorialMoreAbout",
+         ExpressionUUID->"72a54942-b030-47fe-97e8-7581969d39d7"]}]}
+     }]}
+  }]], "TutorialMoreAboutSection",ExpressionUUID->"c6f3388b-dbcf-49a9-b9e8-\
+3fe7a112c231"],
+
+Cell[BoxData[""], "Input",ExpressionUUID->"a8fe5aa4-b7b7-4573-bf88-7f8ea21ebf04"]
+}, Open  ]]
+}, Open  ]],
+
+Cell[" ", "FooterCell",ExpressionUUID->"612b989b-f0fd-4355-a675-f77f770d3bf0"]
+},
+Saveable->False,
+ScreenStyleEnvironment->"Working",
+Evaluator->"FreticaDocumentation",
+WindowSize->{900., 604.8},
+WindowMargins->{{0, Automatic}, {Automatic, 0}},
+WindowTitle->"Background rates",
+Visible->False,
+TaggingRules->{
+ "ModificationHighlight" -> False, "ColorType" -> "", "LinkTrails" -> "", 
+  "ExampleCounter" -> 1, 
+  "Openers" -> {
+   "PrimaryExamplesSection" -> Open, "ExampleSection" -> {"0" -> Open}}, 
+  "NewStyles" -> True, "CitationPopupData" -> {"", ""}, "ShowCitation" -> 
+  False, "RootCaptions" -> "", 
+  "Metadata" -> {
+   "built" -> "{2022, 7, 26, 15, 36, 35.9933393}", 
+    "history" -> {"", "", "", ""}, "context" -> "Fretica`", "keywords" -> {}, 
+    "specialkeywords" -> {}, "tutorialcollectionlinks" -> {}, "index" -> True,
+     "label" -> "Fretica Tech Note", "language" -> "en", "paclet" -> 
+    "Fretica", "status" -> "None", "summary" -> " ", "synonyms" -> {}, 
+    "tabletags" -> DocumentationBuild`Make`Private`tabletaggingrules$278198, 
+    "title" -> "Background rates", "titlemodifier" -> "", "windowtitle" -> 
+    "Background rates", "type" -> "Tech Note", "uri" -> 
+    "Fretica/tutorial/BackgroundRates"}},
+FrontEndVersion->"13.2 for Microsoft Windows (64-bit) (January 30, 2023)",
+StyleDefinitions->Notebook[{
+   Cell[
+    StyleData[
+    StyleDefinitions -> FrontEnd`FileName[{"Wolfram"}, "Reference.nb"]]], 
+   Cell[
+    StyleData["Input"], CellContext -> Notebook], 
+   Cell[
+    StyleData["Output"], CellContext -> Notebook], 
+   Cell[
+    StyleData["TutorialMoreAboutSection"], 
+    CellGroupingRules -> {"SectionGrouping", 30}], 
+   Cell[
+    StyleData["RelatedTutorialsSection"], 
+    CellGroupingRules -> {"SectionGrouping", 30}], 
+   Cell[
+    StyleData["TutorialRelatedLinksSection"], 
+    CellGroupingRules -> {"SectionGrouping", 30}]}, Visible -> False, 
+  FrontEndVersion -> "13.2 for Microsoft Windows (64-bit) (January 30, 2023)",
+   StyleDefinitions -> "Default.nb"],
+ExpressionUUID->"ffd42e67-a351-42ac-a5a2-db96ad01b1a1"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[588, 21, 3377, 77, 56, "AnchorBarGrid",ExpressionUUID->"da054333-db1d-4680-9880-d6a14a39c429",
+ CellID->1],
+Cell[CellGroupData[{
+Cell[3990, 102, 116, 1, 68, "TechNoteTitle",ExpressionUUID->"6ca81f8b-2936-4114-8424-f37dda0ad0ab",
+ CellID->354914490],
+Cell[4109, 105, 172, 3, 26, "Input",ExpressionUUID->"4c3c983f-5a5f-4959-a184-d1ffba43c526",
+ CellID->82800826],
+Cell[CellGroupData[{
+Cell[4306, 112, 163, 3, 26, "Input",ExpressionUUID->"a14d0843-90bf-4038-a4ac-3de35dbbb244",
+ CellID->370315688],
+Cell[4472, 117, 10933, 262, 171, "Output",ExpressionUUID->"d81e628f-ae3c-49e9-b94d-1cd1b91fa31c",
+ CellID->43189386]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[15442, 384, 797, 16, 102, "Input",ExpressionUUID->"cad01688-7929-48cf-a42f-4c2943766642",
+ CellID->745952607],
+Cell[16242, 402, 165, 3, 35, "Output",ExpressionUUID->"66c84cec-2d44-4759-a47a-001063faebb5",
+ CellID->74413663],
+Cell[16410, 407, 302, 7, 35, "Output",ExpressionUUID->"f093f3c1-3243-404b-92bb-b7722ac306e7",
+ CellID->531939105],
+Cell[16715, 416, 167, 3, 35, "Output",ExpressionUUID->"3ce19a73-e5a9-47f4-b61e-265df731eb7c",
+ CellID->9973105],
+Cell[16885, 421, 301, 7, 35, "Output",ExpressionUUID->"d95626b0-8db7-44ec-b93f-cd31cb25676a",
+ CellID->804255766],
+Cell[17189, 430, 169, 3, 35, "Output",ExpressionUUID->"2ffdeab3-cf57-4cb7-9338-3f6347806185",
+ CellID->500925745],
+Cell[17361, 435, 302, 7, 35, "Output",ExpressionUUID->"008a2f67-8f7c-4413-a218-f4f77635c089",
+ CellID->397297321]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[17700, 447, 217, 4, 70, "Input",ExpressionUUID->"752d1863-43a2-4168-8a73-e6f009610b66",
+ CellID->136941393],
+Cell[17920, 453, 10749, 266, 70, "Output",ExpressionUUID->"e9e3550f-2609-44d6-a12c-442dedb0b1c1",
+ CellID->80567414],
+Cell[28672, 721, 10145, 252, 70, "Output",ExpressionUUID->"5da3ba51-e541-499c-b461-c111f2b8ebb2",
+ CellID->2091571]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[38854, 978, 237, 5, 70, "Input",ExpressionUUID->"b74fb4e8-e20c-4b00-9e44-12341397a0d6",
+ CellID->49163678],
+Cell[39094, 985, 266, 6, 35, "Output",ExpressionUUID->"ea941347-2703-4825-adf7-e4193a7fdc7f",
+ CellID->170041241]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[39397, 996, 162, 3, 70, "Input",ExpressionUUID->"5bbfb70c-2509-4135-aeab-4547a97f341d",
+ CellID->936763009],
+Cell[39562, 1001, 266, 6, 35, "Output",ExpressionUUID->"9cd19cd7-6327-425c-a202-b7ab9ef1b159",
+ CellID->716031230]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[39865, 1012, 168, 3, 70, "Input",ExpressionUUID->"cd13edf6-e17e-4009-986e-fd1dd7ad70d8",
+ CellID->194633316],
+Cell[40036, 1017, 302, 7, 35, "Output",ExpressionUUID->"3926fc6c-c708-41bb-aabb-ac95707f55fc",
+ CellID->126221824]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[40375, 1029, 654, 15, 70, "TutorialMoreAboutSection",ExpressionUUID->"c6f3388b-dbcf-49a9-b9e8-3fe7a112c231"],
+Cell[41032, 1046, 81, 0, 70, "Input",ExpressionUUID->"a8fe5aa4-b7b7-4573-bf88-7f8ea21ebf04"]
+}, Open  ]]
+}, Open  ]],
+Cell[41140, 1050, 78, 0, 70, "FooterCell",ExpressionUUID->"612b989b-f0fd-4355-a675-f77f770d3bf0"]
+}
+]
+*)
+

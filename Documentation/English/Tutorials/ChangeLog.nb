@@ -1,0 +1,1570 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 13.2' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     64777,       1562]
+NotebookOptionsPosition[     51460,       1279]
+NotebookOutlinePosition[     53888,       1339]
+CellTagsIndexPosition[     53845,       1336]
+WindowTitle->Change Log
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[GridBox[{
+   {GridBox[{
+      {
+       ItemBox[Cell[BoxData[
+         RowBox[{
+          TemplateBox[{12},
+           "Spacer1"], Cell["FRETICA TECH NOTE", "PacletNameCell",
+           TextAlignment->Center,ExpressionUUID->
+           "1bae906b-c633-47c3-9b8d-8f12708d0de6"], 
+          TemplateBox[{8},
+           "Spacer1"]}]],
+         TextAlignment->Center,ExpressionUUID->
+         "9992ee1f-fee1-4a12-9ff4-f3e7bd74a231"],
+        Background->RGBColor[
+         0.3843137254901961, 0.4627450980392157, 0.7019607843137254],
+        ItemSize->Full], ""}
+     },
+     GridBoxAlignment->{"Rows" -> {{Center}}},
+     GridBoxItemSize->{"Columns" -> {Full, 
+         Scaled[0.02]}, "Rows" -> {{2.5}}}], Cell[TextData[Cell[BoxData[
+     TagBox[
+      ActionMenuBox[
+       FrameBox[Cell[TextData[{
+         "URL",
+         " ",
+         Cell[BoxData[
+          GraphicsBox[
+           {GrayLevel[0.66667], Thickness[0.13], 
+            LineBox[{{-1.8, 0.5}, {0, 0}, {1.8, 0.5}}]},
+           AspectRatio->1,
+           ImageSize->20,
+           PlotRange->{{-3, 4}, {-1, 1}}]],ExpressionUUID->
+          "9cab279a-71ef-4805-bf8a-95d81d6c4769"]
+        }],ExpressionUUID->"97de262b-a12d-4b4a-b7eb-428e1772d29d"],
+        StripOnInput->False], {"\<\"Fretica/tutorial/ChangeLog\"\>":>
+       None, "\<\"Copy Wolfram Documentation Center URL\"\>":>
+       Module[{DocumentationSearch`Private`nb$}, 
+        DocumentationSearch`Private`nb$ = NotebookPut[
+           Notebook[{
+             Cell["Fretica/tutorial/ChangeLog"]}, Visible -> False]]; 
+        SelectionMove[DocumentationSearch`Private`nb$, All, Notebook]; 
+        FrontEndTokenExecute[DocumentationSearch`Private`nb$, "Copy"]; 
+        NotebookClose[DocumentationSearch`Private`nb$]; Null], 
+       Delimiter, "\<\"Copy web URL\"\>":>
+       Module[{DocumentationSearch`Private`nb$}, 
+        DocumentationSearch`Private`nb$ = NotebookPut[
+           Notebook[{
+             Cell[
+              BoxData[
+               MakeBoxes[
+                Hyperlink[
+                "http://reference.wolfram.com/language/Fretica/tutorial/\
+ChangeLog.html"], StandardForm]], "Input", TextClipboardType -> "PlainText"]},
+             Visible -> False]]; 
+        SelectionMove[DocumentationSearch`Private`nb$, All, Notebook]; 
+        FrontEndTokenExecute[DocumentationSearch`Private`nb$, "Copy"]; 
+        NotebookClose[DocumentationSearch`Private`nb$]; 
+        Null], "\<\"Go to web URL\"\>":>FrontEndExecute[{
+         NotebookLocate[{
+           URL[If[
+              TrueQ[DocumentationBuild`Make`Private`wsmlinkQ$42465], 
+              "http://reference.wolfram.com/system-modeler/", 
+              "http://reference.wolfram.com/language/"] <> 
+            "Fretica/tutorial/ChangeLog" <> ".html"], None}]}]},
+       Appearance->None,
+       MenuAppearance->Automatic,
+       MenuStyle->"URLMenu"],
+      MouseAppearanceTag["LinkHand"]]],
+     LineSpacing->{1.4, 0},ExpressionUUID->
+     "2b27c330-2382-4604-9f78-0d9e3ef3fd90"]], "AnchorBar",
+     CacheGraphics->False,ExpressionUUID->
+     "f3eb965e-7f5b-4034-bcab-33aad0685cee"]}
+  }]], "AnchorBarGrid",
+ GridBoxOptions->{GridBoxItemSize->{"Columns" -> {
+     Scaled[0.65], {
+      Scaled[0.34]}}, "ColumnsIndexed" -> {}, "Rows" -> {{1.}}, 
+   "RowsIndexed" -> {}}},
+ CellID->1,ExpressionUUID->"02748464-bb17-4bfc-b733-f1cd5e3ff192"],
+
+Cell[CellGroupData[{
+
+Cell["Change Log", "TechNoteTitle",
+ CellID->49631738,ExpressionUUID->"d63887b5-bd9a-4324-8b85-46a699d37681"],
+
+Cell[BoxData[GridBox[{
+   {
+    TemplateBox[{
+      Cell["April 2023"], "paclet:Fretica/tutorial/ChangeLog#232087442", 
+      StyleBox[
+       GraphicsBox[{
+         Thickness[0.18], 
+         RGBColor[0.3843137254901961, 0.4627450980392157, 0.7019607843137254], 
+         LineBox[{{-1.8, 0.5}, {0, 0}, {1.8, 0.5}}]}, AspectRatio -> 1, 
+        PlotRange -> {{-3, 4}, {-1, 1}}, ImageSize -> 20], Magnification -> 
+       0.68 Inherited, StripOnInput -> False], 
+      StyleBox[
+       GraphicsBox[{
+         Thickness[0.18], 
+         RGBColor[0.9686274509803922, 0.4666666666666667, 0.], 
+         LineBox[{{-1.8, 0.5}, {0, 0}, {1.8, 0.5}}]}, AspectRatio -> 1, 
+        PlotRange -> {{-3, 4}, {-1, 1}}, ImageSize -> 20], Magnification -> 
+       0.68 Inherited, StripOnInput -> False]},
+     "GrayLinkWithIcon",
+     BaseStyle->{"TutorialJumpBoxLink"}], 
+    TemplateBox[{
+      Cell["28.08.2020"], "paclet:Fretica/tutorial/ChangeLog#431513219", 
+      StyleBox[
+       GraphicsBox[{
+         Thickness[0.18], 
+         RGBColor[0.3843137254901961, 0.4627450980392157, 0.7019607843137254], 
+         LineBox[{{-1.8, 0.5}, {0, 0}, {1.8, 0.5}}]}, AspectRatio -> 1, 
+        PlotRange -> {{-3, 4}, {-1, 1}}, ImageSize -> 20], Magnification -> 
+       0.68 Inherited, StripOnInput -> False], 
+      StyleBox[
+       GraphicsBox[{
+         Thickness[0.18], 
+         RGBColor[0.9686274509803922, 0.4666666666666667, 0.], 
+         LineBox[{{-1.8, 0.5}, {0, 0}, {1.8, 0.5}}]}, AspectRatio -> 1, 
+        PlotRange -> {{-3, 4}, {-1, 1}}, ImageSize -> 20], Magnification -> 
+       0.68 Inherited, StripOnInput -> False]},
+     "GrayLinkWithIcon",
+     BaseStyle->{"TutorialJumpBoxLink"}]},
+   {
+    TemplateBox[{
+      Cell["March 2023"], "paclet:Fretica/tutorial/ChangeLog#15577491", 
+      StyleBox[
+       GraphicsBox[{
+         Thickness[0.18], 
+         RGBColor[0.3843137254901961, 0.4627450980392157, 0.7019607843137254], 
+         LineBox[{{-1.8, 0.5}, {0, 0}, {1.8, 0.5}}]}, AspectRatio -> 1, 
+        PlotRange -> {{-3, 4}, {-1, 1}}, ImageSize -> 20], Magnification -> 
+       0.68 Inherited, StripOnInput -> False], 
+      StyleBox[
+       GraphicsBox[{
+         Thickness[0.18], 
+         RGBColor[0.9686274509803922, 0.4666666666666667, 0.], 
+         LineBox[{{-1.8, 0.5}, {0, 0}, {1.8, 0.5}}]}, AspectRatio -> 1, 
+        PlotRange -> {{-3, 4}, {-1, 1}}, ImageSize -> 20], Magnification -> 
+       0.68 Inherited, StripOnInput -> False]},
+     "GrayLinkWithIcon",
+     BaseStyle->{"TutorialJumpBoxLink"}], 
+    TemplateBox[{
+      Cell["06.03.2020"], "paclet:Fretica/tutorial/ChangeLog#522103964", 
+      StyleBox[
+       GraphicsBox[{
+         Thickness[0.18], 
+         RGBColor[0.3843137254901961, 0.4627450980392157, 0.7019607843137254], 
+         LineBox[{{-1.8, 0.5}, {0, 0}, {1.8, 0.5}}]}, AspectRatio -> 1, 
+        PlotRange -> {{-3, 4}, {-1, 1}}, ImageSize -> 20], Magnification -> 
+       0.68 Inherited, StripOnInput -> False], 
+      StyleBox[
+       GraphicsBox[{
+         Thickness[0.18], 
+         RGBColor[0.9686274509803922, 0.4666666666666667, 0.], 
+         LineBox[{{-1.8, 0.5}, {0, 0}, {1.8, 0.5}}]}, AspectRatio -> 1, 
+        PlotRange -> {{-3, 4}, {-1, 1}}, ImageSize -> 20], Magnification -> 
+       0.68 Inherited, StripOnInput -> False]},
+     "GrayLinkWithIcon",
+     BaseStyle->{"TutorialJumpBoxLink"}]},
+   {
+    TemplateBox[{
+      Cell["February 2023"], "paclet:Fretica/tutorial/ChangeLog#252922813", 
+      StyleBox[
+       GraphicsBox[{
+         Thickness[0.18], 
+         RGBColor[0.3843137254901961, 0.4627450980392157, 0.7019607843137254], 
+         LineBox[{{-1.8, 0.5}, {0, 0}, {1.8, 0.5}}]}, AspectRatio -> 1, 
+        PlotRange -> {{-3, 4}, {-1, 1}}, ImageSize -> 20], Magnification -> 
+       0.68 Inherited, StripOnInput -> False], 
+      StyleBox[
+       GraphicsBox[{
+         Thickness[0.18], 
+         RGBColor[0.9686274509803922, 0.4666666666666667, 0.], 
+         LineBox[{{-1.8, 0.5}, {0, 0}, {1.8, 0.5}}]}, AspectRatio -> 1, 
+        PlotRange -> {{-3, 4}, {-1, 1}}, ImageSize -> 20], Magnification -> 
+       0.68 Inherited, StripOnInput -> False]},
+     "GrayLinkWithIcon",
+     BaseStyle->{"TutorialJumpBoxLink"}], 
+    TemplateBox[{
+      Cell["07.01.2020"], "paclet:Fretica/tutorial/ChangeLog#14671882", 
+      StyleBox[
+       GraphicsBox[{
+         Thickness[0.18], 
+         RGBColor[0.3843137254901961, 0.4627450980392157, 0.7019607843137254], 
+         LineBox[{{-1.8, 0.5}, {0, 0}, {1.8, 0.5}}]}, AspectRatio -> 1, 
+        PlotRange -> {{-3, 4}, {-1, 1}}, ImageSize -> 20], Magnification -> 
+       0.68 Inherited, StripOnInput -> False], 
+      StyleBox[
+       GraphicsBox[{
+         Thickness[0.18], 
+         RGBColor[0.9686274509803922, 0.4666666666666667, 0.], 
+         LineBox[{{-1.8, 0.5}, {0, 0}, {1.8, 0.5}}]}, AspectRatio -> 1, 
+        PlotRange -> {{-3, 4}, {-1, 1}}, ImageSize -> 20], Magnification -> 
+       0.68 Inherited, StripOnInput -> False]},
+     "GrayLinkWithIcon",
+     BaseStyle->{"TutorialJumpBoxLink"}]},
+   {
+    TemplateBox[{
+      Cell["January 2023"], "paclet:Fretica/tutorial/ChangeLog#311319555", 
+      StyleBox[
+       GraphicsBox[{
+         Thickness[0.18], 
+         RGBColor[0.3843137254901961, 0.4627450980392157, 0.7019607843137254], 
+         LineBox[{{-1.8, 0.5}, {0, 0}, {1.8, 0.5}}]}, AspectRatio -> 1, 
+        PlotRange -> {{-3, 4}, {-1, 1}}, ImageSize -> 20], Magnification -> 
+       0.68 Inherited, StripOnInput -> False], 
+      StyleBox[
+       GraphicsBox[{
+         Thickness[0.18], 
+         RGBColor[0.9686274509803922, 0.4666666666666667, 0.], 
+         LineBox[{{-1.8, 0.5}, {0, 0}, {1.8, 0.5}}]}, AspectRatio -> 1, 
+        PlotRange -> {{-3, 4}, {-1, 1}}, ImageSize -> 20], Magnification -> 
+       0.68 Inherited, StripOnInput -> False]},
+     "GrayLinkWithIcon",
+     BaseStyle->{"TutorialJumpBoxLink"}], 
+    TemplateBox[{
+      Cell["30.09.2019"], "paclet:Fretica/tutorial/ChangeLog#176743376", 
+      StyleBox[
+       GraphicsBox[{
+         Thickness[0.18], 
+         RGBColor[0.3843137254901961, 0.4627450980392157, 0.7019607843137254], 
+         LineBox[{{-1.8, 0.5}, {0, 0}, {1.8, 0.5}}]}, AspectRatio -> 1, 
+        PlotRange -> {{-3, 4}, {-1, 1}}, ImageSize -> 20], Magnification -> 
+       0.68 Inherited, StripOnInput -> False], 
+      StyleBox[
+       GraphicsBox[{
+         Thickness[0.18], 
+         RGBColor[0.9686274509803922, 0.4666666666666667, 0.], 
+         LineBox[{{-1.8, 0.5}, {0, 0}, {1.8, 0.5}}]}, AspectRatio -> 1, 
+        PlotRange -> {{-3, 4}, {-1, 1}}, ImageSize -> 20], Magnification -> 
+       0.68 Inherited, StripOnInput -> False]},
+     "GrayLinkWithIcon",
+     BaseStyle->{"TutorialJumpBoxLink"}]},
+   {
+    TemplateBox[{
+      Cell["October 2022"], "paclet:Fretica/tutorial/ChangeLog#6123557", 
+      StyleBox[
+       GraphicsBox[{
+         Thickness[0.18], 
+         RGBColor[0.3843137254901961, 0.4627450980392157, 0.7019607843137254], 
+         LineBox[{{-1.8, 0.5}, {0, 0}, {1.8, 0.5}}]}, AspectRatio -> 1, 
+        PlotRange -> {{-3, 4}, {-1, 1}}, ImageSize -> 20], Magnification -> 
+       0.68 Inherited, StripOnInput -> False], 
+      StyleBox[
+       GraphicsBox[{
+         Thickness[0.18], 
+         RGBColor[0.9686274509803922, 0.4666666666666667, 0.], 
+         LineBox[{{-1.8, 0.5}, {0, 0}, {1.8, 0.5}}]}, AspectRatio -> 1, 
+        PlotRange -> {{-3, 4}, {-1, 1}}, ImageSize -> 20], Magnification -> 
+       0.68 Inherited, StripOnInput -> False]},
+     "GrayLinkWithIcon",
+     BaseStyle->{"TutorialJumpBoxLink"}], 
+    TemplateBox[{
+      Cell["27.09.2019"], "paclet:Fretica/tutorial/ChangeLog#661859002", 
+      StyleBox[
+       GraphicsBox[{
+         Thickness[0.18], 
+         RGBColor[0.3843137254901961, 0.4627450980392157, 0.7019607843137254], 
+         LineBox[{{-1.8, 0.5}, {0, 0}, {1.8, 0.5}}]}, AspectRatio -> 1, 
+        PlotRange -> {{-3, 4}, {-1, 1}}, ImageSize -> 20], Magnification -> 
+       0.68 Inherited, StripOnInput -> False], 
+      StyleBox[
+       GraphicsBox[{
+         Thickness[0.18], 
+         RGBColor[0.9686274509803922, 0.4666666666666667, 0.], 
+         LineBox[{{-1.8, 0.5}, {0, 0}, {1.8, 0.5}}]}, AspectRatio -> 1, 
+        PlotRange -> {{-3, 4}, {-1, 1}}, ImageSize -> 20], Magnification -> 
+       0.68 Inherited, StripOnInput -> False]},
+     "GrayLinkWithIcon",
+     BaseStyle->{"TutorialJumpBoxLink"}]},
+   {
+    TemplateBox[{
+      Cell["June 2022"], "paclet:Fretica/tutorial/ChangeLog#1320970", 
+      StyleBox[
+       GraphicsBox[{
+         Thickness[0.18], 
+         RGBColor[0.3843137254901961, 0.4627450980392157, 0.7019607843137254], 
+         LineBox[{{-1.8, 0.5}, {0, 0}, {1.8, 0.5}}]}, AspectRatio -> 1, 
+        PlotRange -> {{-3, 4}, {-1, 1}}, ImageSize -> 20], Magnification -> 
+       0.68 Inherited, StripOnInput -> False], 
+      StyleBox[
+       GraphicsBox[{
+         Thickness[0.18], 
+         RGBColor[0.9686274509803922, 0.4666666666666667, 0.], 
+         LineBox[{{-1.8, 0.5}, {0, 0}, {1.8, 0.5}}]}, AspectRatio -> 1, 
+        PlotRange -> {{-3, 4}, {-1, 1}}, ImageSize -> 20], Magnification -> 
+       0.68 Inherited, StripOnInput -> False]},
+     "GrayLinkWithIcon",
+     BaseStyle->{"TutorialJumpBoxLink"}], 
+    TemplateBox[{
+      Cell["4.06.2019"], "paclet:Fretica/tutorial/ChangeLog#517727759", 
+      StyleBox[
+       GraphicsBox[{
+         Thickness[0.18], 
+         RGBColor[0.3843137254901961, 0.4627450980392157, 0.7019607843137254], 
+         LineBox[{{-1.8, 0.5}, {0, 0}, {1.8, 0.5}}]}, AspectRatio -> 1, 
+        PlotRange -> {{-3, 4}, {-1, 1}}, ImageSize -> 20], Magnification -> 
+       0.68 Inherited, StripOnInput -> False], 
+      StyleBox[
+       GraphicsBox[{
+         Thickness[0.18], 
+         RGBColor[0.9686274509803922, 0.4666666666666667, 0.], 
+         LineBox[{{-1.8, 0.5}, {0, 0}, {1.8, 0.5}}]}, AspectRatio -> 1, 
+        PlotRange -> {{-3, 4}, {-1, 1}}, ImageSize -> 20], Magnification -> 
+       0.68 Inherited, StripOnInput -> False]},
+     "GrayLinkWithIcon",
+     BaseStyle->{"TutorialJumpBoxLink"}]},
+   {
+    TemplateBox[{
+      Cell["31.5.2022"], "paclet:Fretica/tutorial/ChangeLog#186654542", 
+      StyleBox[
+       GraphicsBox[{
+         Thickness[0.18], 
+         RGBColor[0.3843137254901961, 0.4627450980392157, 0.7019607843137254], 
+         LineBox[{{-1.8, 0.5}, {0, 0}, {1.8, 0.5}}]}, AspectRatio -> 1, 
+        PlotRange -> {{-3, 4}, {-1, 1}}, ImageSize -> 20], Magnification -> 
+       0.68 Inherited, StripOnInput -> False], 
+      StyleBox[
+       GraphicsBox[{
+         Thickness[0.18], 
+         RGBColor[0.9686274509803922, 0.4666666666666667, 0.], 
+         LineBox[{{-1.8, 0.5}, {0, 0}, {1.8, 0.5}}]}, AspectRatio -> 1, 
+        PlotRange -> {{-3, 4}, {-1, 1}}, ImageSize -> 20], Magnification -> 
+       0.68 Inherited, StripOnInput -> False]},
+     "GrayLinkWithIcon",
+     BaseStyle->{"TutorialJumpBoxLink"}], 
+    TemplateBox[{
+      Cell["28.05.2019"], "paclet:Fretica/tutorial/ChangeLog#667100186", 
+      StyleBox[
+       GraphicsBox[{
+         Thickness[0.18], 
+         RGBColor[0.3843137254901961, 0.4627450980392157, 0.7019607843137254], 
+         LineBox[{{-1.8, 0.5}, {0, 0}, {1.8, 0.5}}]}, AspectRatio -> 1, 
+        PlotRange -> {{-3, 4}, {-1, 1}}, ImageSize -> 20], Magnification -> 
+       0.68 Inherited, StripOnInput -> False], 
+      StyleBox[
+       GraphicsBox[{
+         Thickness[0.18], 
+         RGBColor[0.9686274509803922, 0.4666666666666667, 0.], 
+         LineBox[{{-1.8, 0.5}, {0, 0}, {1.8, 0.5}}]}, AspectRatio -> 1, 
+        PlotRange -> {{-3, 4}, {-1, 1}}, ImageSize -> 20], Magnification -> 
+       0.68 Inherited, StripOnInput -> False]},
+     "GrayLinkWithIcon",
+     BaseStyle->{"TutorialJumpBoxLink"}]},
+   {
+    TemplateBox[{
+      Cell["2.5.2022"], "paclet:Fretica/tutorial/ChangeLog#508626690", 
+      StyleBox[
+       GraphicsBox[{
+         Thickness[0.18], 
+         RGBColor[0.3843137254901961, 0.4627450980392157, 0.7019607843137254], 
+         LineBox[{{-1.8, 0.5}, {0, 0}, {1.8, 0.5}}]}, AspectRatio -> 1, 
+        PlotRange -> {{-3, 4}, {-1, 1}}, ImageSize -> 20], Magnification -> 
+       0.68 Inherited, StripOnInput -> False], 
+      StyleBox[
+       GraphicsBox[{
+         Thickness[0.18], 
+         RGBColor[0.9686274509803922, 0.4666666666666667, 0.], 
+         LineBox[{{-1.8, 0.5}, {0, 0}, {1.8, 0.5}}]}, AspectRatio -> 1, 
+        PlotRange -> {{-3, 4}, {-1, 1}}, ImageSize -> 20], Magnification -> 
+       0.68 Inherited, StripOnInput -> False]},
+     "GrayLinkWithIcon",
+     BaseStyle->{"TutorialJumpBoxLink"}], 
+    TemplateBox[{
+      Cell["16.04.2019"], "paclet:Fretica/tutorial/ChangeLog#122174354", 
+      StyleBox[
+       GraphicsBox[{
+         Thickness[0.18], 
+         RGBColor[0.3843137254901961, 0.4627450980392157, 0.7019607843137254], 
+         LineBox[{{-1.8, 0.5}, {0, 0}, {1.8, 0.5}}]}, AspectRatio -> 1, 
+        PlotRange -> {{-3, 4}, {-1, 1}}, ImageSize -> 20], Magnification -> 
+       0.68 Inherited, StripOnInput -> False], 
+      StyleBox[
+       GraphicsBox[{
+         Thickness[0.18], 
+         RGBColor[0.9686274509803922, 0.4666666666666667, 0.], 
+         LineBox[{{-1.8, 0.5}, {0, 0}, {1.8, 0.5}}]}, AspectRatio -> 1, 
+        PlotRange -> {{-3, 4}, {-1, 1}}, ImageSize -> 20], Magnification -> 
+       0.68 Inherited, StripOnInput -> False]},
+     "GrayLinkWithIcon",
+     BaseStyle->{"TutorialJumpBoxLink"}]},
+   {
+    TemplateBox[{
+      Cell["26.4.2022"], "paclet:Fretica/tutorial/ChangeLog#37007871", 
+      StyleBox[
+       GraphicsBox[{
+         Thickness[0.18], 
+         RGBColor[0.3843137254901961, 0.4627450980392157, 0.7019607843137254], 
+         LineBox[{{-1.8, 0.5}, {0, 0}, {1.8, 0.5}}]}, AspectRatio -> 1, 
+        PlotRange -> {{-3, 4}, {-1, 1}}, ImageSize -> 20], Magnification -> 
+       0.68 Inherited, StripOnInput -> False], 
+      StyleBox[
+       GraphicsBox[{
+         Thickness[0.18], 
+         RGBColor[0.9686274509803922, 0.4666666666666667, 0.], 
+         LineBox[{{-1.8, 0.5}, {0, 0}, {1.8, 0.5}}]}, AspectRatio -> 1, 
+        PlotRange -> {{-3, 4}, {-1, 1}}, ImageSize -> 20], Magnification -> 
+       0.68 Inherited, StripOnInput -> False]},
+     "GrayLinkWithIcon",
+     BaseStyle->{"TutorialJumpBoxLink"}], 
+    TemplateBox[{
+      Cell["1.04.2019"], "paclet:Fretica/tutorial/ChangeLog#331341430", 
+      StyleBox[
+       GraphicsBox[{
+         Thickness[0.18], 
+         RGBColor[0.3843137254901961, 0.4627450980392157, 0.7019607843137254], 
+         LineBox[{{-1.8, 0.5}, {0, 0}, {1.8, 0.5}}]}, AspectRatio -> 1, 
+        PlotRange -> {{-3, 4}, {-1, 1}}, ImageSize -> 20], Magnification -> 
+       0.68 Inherited, StripOnInput -> False], 
+      StyleBox[
+       GraphicsBox[{
+         Thickness[0.18], 
+         RGBColor[0.9686274509803922, 0.4666666666666667, 0.], 
+         LineBox[{{-1.8, 0.5}, {0, 0}, {1.8, 0.5}}]}, AspectRatio -> 1, 
+        PlotRange -> {{-3, 4}, {-1, 1}}, ImageSize -> 20], Magnification -> 
+       0.68 Inherited, StripOnInput -> False]},
+     "GrayLinkWithIcon",
+     BaseStyle->{"TutorialJumpBoxLink"}]},
+   {
+    TemplateBox[{
+      Cell["14.4.2022"], "paclet:Fretica/tutorial/ChangeLog#317195348", 
+      StyleBox[
+       GraphicsBox[{
+         Thickness[0.18], 
+         RGBColor[0.3843137254901961, 0.4627450980392157, 0.7019607843137254], 
+         LineBox[{{-1.8, 0.5}, {0, 0}, {1.8, 0.5}}]}, AspectRatio -> 1, 
+        PlotRange -> {{-3, 4}, {-1, 1}}, ImageSize -> 20], Magnification -> 
+       0.68 Inherited, StripOnInput -> False], 
+      StyleBox[
+       GraphicsBox[{
+         Thickness[0.18], 
+         RGBColor[0.9686274509803922, 0.4666666666666667, 0.], 
+         LineBox[{{-1.8, 0.5}, {0, 0}, {1.8, 0.5}}]}, AspectRatio -> 1, 
+        PlotRange -> {{-3, 4}, {-1, 1}}, ImageSize -> 20], Magnification -> 
+       0.68 Inherited, StripOnInput -> False]},
+     "GrayLinkWithIcon",
+     BaseStyle->{"TutorialJumpBoxLink"}], 
+    TemplateBox[{
+      Cell["28.03.2019"], "paclet:Fretica/tutorial/ChangeLog#115926292", 
+      StyleBox[
+       GraphicsBox[{
+         Thickness[0.18], 
+         RGBColor[0.3843137254901961, 0.4627450980392157, 0.7019607843137254], 
+         LineBox[{{-1.8, 0.5}, {0, 0}, {1.8, 0.5}}]}, AspectRatio -> 1, 
+        PlotRange -> {{-3, 4}, {-1, 1}}, ImageSize -> 20], Magnification -> 
+       0.68 Inherited, StripOnInput -> False], 
+      StyleBox[
+       GraphicsBox[{
+         Thickness[0.18], 
+         RGBColor[0.9686274509803922, 0.4666666666666667, 0.], 
+         LineBox[{{-1.8, 0.5}, {0, 0}, {1.8, 0.5}}]}, AspectRatio -> 1, 
+        PlotRange -> {{-3, 4}, {-1, 1}}, ImageSize -> 20], Magnification -> 
+       0.68 Inherited, StripOnInput -> False]},
+     "GrayLinkWithIcon",
+     BaseStyle->{"TutorialJumpBoxLink"}]},
+   {
+    TemplateBox[{
+      Cell["22.11.2021"], "paclet:Fretica/tutorial/ChangeLog#159312179", 
+      StyleBox[
+       GraphicsBox[{
+         Thickness[0.18], 
+         RGBColor[0.3843137254901961, 0.4627450980392157, 0.7019607843137254], 
+         LineBox[{{-1.8, 0.5}, {0, 0}, {1.8, 0.5}}]}, AspectRatio -> 1, 
+        PlotRange -> {{-3, 4}, {-1, 1}}, ImageSize -> 20], Magnification -> 
+       0.68 Inherited, StripOnInput -> False], 
+      StyleBox[
+       GraphicsBox[{
+         Thickness[0.18], 
+         RGBColor[0.9686274509803922, 0.4666666666666667, 0.], 
+         LineBox[{{-1.8, 0.5}, {0, 0}, {1.8, 0.5}}]}, AspectRatio -> 1, 
+        PlotRange -> {{-3, 4}, {-1, 1}}, ImageSize -> 20], Magnification -> 
+       0.68 Inherited, StripOnInput -> False]},
+     "GrayLinkWithIcon",
+     BaseStyle->{"TutorialJumpBoxLink"}], 
+    TemplateBox[{
+      Cell["26.03.2019"], "paclet:Fretica/tutorial/ChangeLog#49760268", 
+      StyleBox[
+       GraphicsBox[{
+         Thickness[0.18], 
+         RGBColor[0.3843137254901961, 0.4627450980392157, 0.7019607843137254], 
+         LineBox[{{-1.8, 0.5}, {0, 0}, {1.8, 0.5}}]}, AspectRatio -> 1, 
+        PlotRange -> {{-3, 4}, {-1, 1}}, ImageSize -> 20], Magnification -> 
+       0.68 Inherited, StripOnInput -> False], 
+      StyleBox[
+       GraphicsBox[{
+         Thickness[0.18], 
+         RGBColor[0.9686274509803922, 0.4666666666666667, 0.], 
+         LineBox[{{-1.8, 0.5}, {0, 0}, {1.8, 0.5}}]}, AspectRatio -> 1, 
+        PlotRange -> {{-3, 4}, {-1, 1}}, ImageSize -> 20], Magnification -> 
+       0.68 Inherited, StripOnInput -> False]},
+     "GrayLinkWithIcon",
+     BaseStyle->{"TutorialJumpBoxLink"}]},
+   {
+    TemplateBox[{
+      Cell["19.11.2021"], "paclet:Fretica/tutorial/ChangeLog#34629517", 
+      StyleBox[
+       GraphicsBox[{
+         Thickness[0.18], 
+         RGBColor[0.3843137254901961, 0.4627450980392157, 0.7019607843137254], 
+         LineBox[{{-1.8, 0.5}, {0, 0}, {1.8, 0.5}}]}, AspectRatio -> 1, 
+        PlotRange -> {{-3, 4}, {-1, 1}}, ImageSize -> 20], Magnification -> 
+       0.68 Inherited, StripOnInput -> False], 
+      StyleBox[
+       GraphicsBox[{
+         Thickness[0.18], 
+         RGBColor[0.9686274509803922, 0.4666666666666667, 0.], 
+         LineBox[{{-1.8, 0.5}, {0, 0}, {1.8, 0.5}}]}, AspectRatio -> 1, 
+        PlotRange -> {{-3, 4}, {-1, 1}}, ImageSize -> 20], Magnification -> 
+       0.68 Inherited, StripOnInput -> False]},
+     "GrayLinkWithIcon",
+     BaseStyle->{"TutorialJumpBoxLink"}], 
+    TemplateBox[{
+      Cell["6.03.2019"], "paclet:Fretica/tutorial/ChangeLog#762003235", 
+      StyleBox[
+       GraphicsBox[{
+         Thickness[0.18], 
+         RGBColor[0.3843137254901961, 0.4627450980392157, 0.7019607843137254], 
+         LineBox[{{-1.8, 0.5}, {0, 0}, {1.8, 0.5}}]}, AspectRatio -> 1, 
+        PlotRange -> {{-3, 4}, {-1, 1}}, ImageSize -> 20], Magnification -> 
+       0.68 Inherited, StripOnInput -> False], 
+      StyleBox[
+       GraphicsBox[{
+         Thickness[0.18], 
+         RGBColor[0.9686274509803922, 0.4666666666666667, 0.], 
+         LineBox[{{-1.8, 0.5}, {0, 0}, {1.8, 0.5}}]}, AspectRatio -> 1, 
+        PlotRange -> {{-3, 4}, {-1, 1}}, ImageSize -> 20], Magnification -> 
+       0.68 Inherited, StripOnInput -> False]},
+     "GrayLinkWithIcon",
+     BaseStyle->{"TutorialJumpBoxLink"}]},
+   {
+    TemplateBox[{
+      Cell["26.6.2021"], "paclet:Fretica/tutorial/ChangeLog#649761722", 
+      StyleBox[
+       GraphicsBox[{
+         Thickness[0.18], 
+         RGBColor[0.3843137254901961, 0.4627450980392157, 0.7019607843137254], 
+         LineBox[{{-1.8, 0.5}, {0, 0}, {1.8, 0.5}}]}, AspectRatio -> 1, 
+        PlotRange -> {{-3, 4}, {-1, 1}}, ImageSize -> 20], Magnification -> 
+       0.68 Inherited, StripOnInput -> False], 
+      StyleBox[
+       GraphicsBox[{
+         Thickness[0.18], 
+         RGBColor[0.9686274509803922, 0.4666666666666667, 0.], 
+         LineBox[{{-1.8, 0.5}, {0, 0}, {1.8, 0.5}}]}, AspectRatio -> 1, 
+        PlotRange -> {{-3, 4}, {-1, 1}}, ImageSize -> 20], Magnification -> 
+       0.68 Inherited, StripOnInput -> False]},
+     "GrayLinkWithIcon",
+     BaseStyle->{"TutorialJumpBoxLink"}], 
+    TemplateBox[{
+      Cell["18.12.2018"], "paclet:Fretica/tutorial/ChangeLog#171536424", 
+      StyleBox[
+       GraphicsBox[{
+         Thickness[0.18], 
+         RGBColor[0.3843137254901961, 0.4627450980392157, 0.7019607843137254], 
+         LineBox[{{-1.8, 0.5}, {0, 0}, {1.8, 0.5}}]}, AspectRatio -> 1, 
+        PlotRange -> {{-3, 4}, {-1, 1}}, ImageSize -> 20], Magnification -> 
+       0.68 Inherited, StripOnInput -> False], 
+      StyleBox[
+       GraphicsBox[{
+         Thickness[0.18], 
+         RGBColor[0.9686274509803922, 0.4666666666666667, 0.], 
+         LineBox[{{-1.8, 0.5}, {0, 0}, {1.8, 0.5}}]}, AspectRatio -> 1, 
+        PlotRange -> {{-3, 4}, {-1, 1}}, ImageSize -> 20], Magnification -> 
+       0.68 Inherited, StripOnInput -> False]},
+     "GrayLinkWithIcon",
+     BaseStyle->{"TutorialJumpBoxLink"}]},
+   {
+    TemplateBox[{
+      Cell["16.4.2021"], "paclet:Fretica/tutorial/ChangeLog#83782180", 
+      StyleBox[
+       GraphicsBox[{
+         Thickness[0.18], 
+         RGBColor[0.3843137254901961, 0.4627450980392157, 0.7019607843137254], 
+         LineBox[{{-1.8, 0.5}, {0, 0}, {1.8, 0.5}}]}, AspectRatio -> 1, 
+        PlotRange -> {{-3, 4}, {-1, 1}}, ImageSize -> 20], Magnification -> 
+       0.68 Inherited, StripOnInput -> False], 
+      StyleBox[
+       GraphicsBox[{
+         Thickness[0.18], 
+         RGBColor[0.9686274509803922, 0.4666666666666667, 0.], 
+         LineBox[{{-1.8, 0.5}, {0, 0}, {1.8, 0.5}}]}, AspectRatio -> 1, 
+        PlotRange -> {{-3, 4}, {-1, 1}}, ImageSize -> 20], Magnification -> 
+       0.68 Inherited, StripOnInput -> False]},
+     "GrayLinkWithIcon",
+     BaseStyle->{"TutorialJumpBoxLink"}], 
+    TemplateBox[{
+      Cell["30.11.2018"], "paclet:Fretica/tutorial/ChangeLog#14347106", 
+      StyleBox[
+       GraphicsBox[{
+         Thickness[0.18], 
+         RGBColor[0.3843137254901961, 0.4627450980392157, 0.7019607843137254], 
+         LineBox[{{-1.8, 0.5}, {0, 0}, {1.8, 0.5}}]}, AspectRatio -> 1, 
+        PlotRange -> {{-3, 4}, {-1, 1}}, ImageSize -> 20], Magnification -> 
+       0.68 Inherited, StripOnInput -> False], 
+      StyleBox[
+       GraphicsBox[{
+         Thickness[0.18], 
+         RGBColor[0.9686274509803922, 0.4666666666666667, 0.], 
+         LineBox[{{-1.8, 0.5}, {0, 0}, {1.8, 0.5}}]}, AspectRatio -> 1, 
+        PlotRange -> {{-3, 4}, {-1, 1}}, ImageSize -> 20], Magnification -> 
+       0.68 Inherited, StripOnInput -> False]},
+     "GrayLinkWithIcon",
+     BaseStyle->{"TutorialJumpBoxLink"}]},
+   {
+    TemplateBox[{
+      Cell["9.11.2020"], "paclet:Fretica/tutorial/ChangeLog#166876306", 
+      StyleBox[
+       GraphicsBox[{
+         Thickness[0.18], 
+         RGBColor[0.3843137254901961, 0.4627450980392157, 0.7019607843137254], 
+         LineBox[{{-1.8, 0.5}, {0, 0}, {1.8, 0.5}}]}, AspectRatio -> 1, 
+        PlotRange -> {{-3, 4}, {-1, 1}}, ImageSize -> 20], Magnification -> 
+       0.68 Inherited, StripOnInput -> False], 
+      StyleBox[
+       GraphicsBox[{
+         Thickness[0.18], 
+         RGBColor[0.9686274509803922, 0.4666666666666667, 0.], 
+         LineBox[{{-1.8, 0.5}, {0, 0}, {1.8, 0.5}}]}, AspectRatio -> 1, 
+        PlotRange -> {{-3, 4}, {-1, 1}}, ImageSize -> 20], Magnification -> 
+       0.68 Inherited, StripOnInput -> False]},
+     "GrayLinkWithIcon",
+     BaseStyle->{"TutorialJumpBoxLink"}], 
+    TemplateBox[{
+      Cell["9.11.2018"], "paclet:Fretica/tutorial/ChangeLog#38636436", 
+      StyleBox[
+       GraphicsBox[{
+         Thickness[0.18], 
+         RGBColor[0.3843137254901961, 0.4627450980392157, 0.7019607843137254], 
+         LineBox[{{-1.8, 0.5}, {0, 0}, {1.8, 0.5}}]}, AspectRatio -> 1, 
+        PlotRange -> {{-3, 4}, {-1, 1}}, ImageSize -> 20], Magnification -> 
+       0.68 Inherited, StripOnInput -> False], 
+      StyleBox[
+       GraphicsBox[{
+         Thickness[0.18], 
+         RGBColor[0.9686274509803922, 0.4666666666666667, 0.], 
+         LineBox[{{-1.8, 0.5}, {0, 0}, {1.8, 0.5}}]}, AspectRatio -> 1, 
+        PlotRange -> {{-3, 4}, {-1, 1}}, ImageSize -> 20], Magnification -> 
+       0.68 Inherited, StripOnInput -> False]},
+     "GrayLinkWithIcon",
+     BaseStyle->{"TutorialJumpBoxLink"}]},
+   {
+    TemplateBox[{
+      Cell["30.10.2020"], "paclet:Fretica/tutorial/ChangeLog#255536907", 
+      StyleBox[
+       GraphicsBox[{
+         Thickness[0.18], 
+         RGBColor[0.3843137254901961, 0.4627450980392157, 0.7019607843137254], 
+         LineBox[{{-1.8, 0.5}, {0, 0}, {1.8, 0.5}}]}, AspectRatio -> 1, 
+        PlotRange -> {{-3, 4}, {-1, 1}}, ImageSize -> 20], Magnification -> 
+       0.68 Inherited, StripOnInput -> False], 
+      StyleBox[
+       GraphicsBox[{
+         Thickness[0.18], 
+         RGBColor[0.9686274509803922, 0.4666666666666667, 0.], 
+         LineBox[{{-1.8, 0.5}, {0, 0}, {1.8, 0.5}}]}, AspectRatio -> 1, 
+        PlotRange -> {{-3, 4}, {-1, 1}}, ImageSize -> 20], Magnification -> 
+       0.68 Inherited, StripOnInput -> False]},
+     "GrayLinkWithIcon",
+     BaseStyle->{"TutorialJumpBoxLink"}], ""}
+  }]], "TechNoteJumpBox",ExpressionUUID->"5d712d46-4d7b-4e38-8575-\
+3a8802787ca4"],
+
+Cell[CellGroupData[{
+
+Cell["April 2023", "TechNoteSection",
+ CellID->232087442,ExpressionUUID->"f54b84c6-ff2b-4839-acdd-16d69c6d5cde"],
+
+Cell[TextData[{
+ "\"PhotonTimes\",  \"MainChannelPhotonTimes\",  \"PieChannelPhotonTimes, and \
+\"BVA_ProximityRatios",
+ StyleBox["n",
+  FontSlant->"Italic"],
+ "\" were added to FGetFromBurst and FGetFromBurstList."
+}], "TechNoteText",
+ CellID->92077042,ExpressionUUID->"f683b244-ccf1-4c46-9cf9-3db38b0107b5"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["March 2023", "TechNoteSection",
+ CellID->15577491,ExpressionUUID->"783d0856-b642-4606-9c2b-f87ac66bdb16"],
+
+Cell["\<\
+Fretica can now be installed by executing in a notebook: \[LineSeparator]\t\
+PacletInstall[\"https://schuler.bioc.uzh.ch/fretica/\"]\
+\>", "TechNoteText",
+ CellID->359828781,ExpressionUUID->"c42bca0d-ed8e-4ef4-87ff-6ebab061234f"],
+
+Cell["Executing \[LineSeparator]\tNeeds[\"Fretica`\"] ", "TechNoteText",
+ CellID->348491574,ExpressionUUID->"62df4518-f4b7-4521-acb0-61a65c5c82d9"],
+
+Cell["\<\
+will automatically add the kernel FreticaDocumentation to the user profile, \
+if the kernel does not exist yet.  \
+\>", "TechNoteText",
+ CellID->365610530,ExpressionUUID->"9554af68-c791-40ab-8afe-935306477ca6"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["February 2023", "TechNoteSection",
+ CellID->252922813,ExpressionUUID->"add0ef32-cbd1-4e63-a290-9251fed25657"],
+
+Cell["\<\
+Modification of FFCSW allows now to give weights to photons not only as a \
+function of its micro time, but also with respect of detection channel. This \
+is useful for doing filtered FCS (https://doi.org/10.1002/cphc.201100897)\
+\>", "TechNoteText",
+ CellID->9758184,ExpressionUUID->"f987a2d9-a912-4739-bfc1-5817d4f33028"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["January 2023", "TechNoteSection",
+ CellID->311319555,ExpressionUUID->"9d3f0645-ae99-4269-8828-e25db59b3a32"],
+
+Cell[TextData[{
+ "Tech note added:\[LineSeparator] ",
+ ButtonBox["Extracting fluorescence lifetime information from photon bursts",
+  BaseStyle->"Link",
+  ButtonData->
+   "paclet:Fretica/tutorial/\
+ExtractingFluorescenceLifetimeInformationFromPhotonBursts"]
+}], "TechNoteText",
+ CellID->122648573,ExpressionUUID->"102e6b3c-ce62-47b4-9080-a1477b61a778"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["October 2022", "TechNoteSection",
+ CellID->6123557,ExpressionUUID->"ea54f3c1-aaa4-42dd-8000-f80cacbd4cb6"],
+
+Cell["New functions:", "TechNoteText",
+ CellID->192627222,ExpressionUUID->"d0539a65-9c58-42b8-80d3-47c32f151523"],
+
+Cell["\<\
+FCalcAV and FCalcAVMinLinkerLength for calculating accessible volumes (AV) \
+for dyes linked bio molecules using \
+https://github.com/Fluorescence-Tools/LabelLib\
+\>", "TechNoteText",
+ CellID->169315017,ExpressionUUID->"27615ab5-f20b-4c0b-8b4c-d9f44417925f"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["June 2022", "TechNoteSection",
+ CellID->1320970,ExpressionUUID->"398a5507-84d5-494a-8088-22f4521891da"],
+
+Cell["New functions:", "TechNoteText",
+ CellID->175870606,ExpressionUUID->"cd319b73-e211-4d3d-bfd4-0d9ad3a45c6f"],
+
+Cell["\<\
+FGetRouteAssignment, FGetPIERouteAssignment\[LineSeparator]FGetRoutes, \
+FGetPIERoutes\
+\>", "TechNoteText",
+ CellID->78884436,ExpressionUUID->"8c368c1e-45b9-4231-96ce-6996cf1b59b6"],
+
+Cell["FPIECorrectionFactors\[LineSeparator]FSetFretCorrectionFactors", \
+"TechNoteText",
+ CellID->111643731,ExpressionUUID->"89417126-f648-4001-bdfc-9f847d6cf157"],
+
+Cell["FFCSModel", "TechNoteText",
+ CellID->172692598,ExpressionUUID->"5871326c-c4a9-40dd-b1b2-a4e51673e860"],
+
+Cell["FMakePeakModel2D\[LineSeparator]FFitPeaks2DMakeGuess\[LineSeparator]\
+FFitPeaks2D\[LineSeparator]", "TechNoteText",
+ CellID->60094225,ExpressionUUID->"9a42a526-8c65-4466-bddd-abea44b434e5"],
+
+Cell["Updated functions:", "TechNoteText",
+ CellID->452385741,ExpressionUUID->"851e8ad9-c77d-4130-af10-86dc1bb69f04"],
+
+Cell["\<\
+Histo accepts now WeightedData[data, weights] as \
+argument.\[LineSeparator]FFitFretHistogram can now be used to fit all kind of \
+data, i.e., not only \"E\" but also \"Epie\", \"Spie\", etc.\
+\>", "TechNoteText",
+ CellID->199182360,ExpressionUUID->"3e7a0441-9bf0-472f-b01e-e8afd87d31f4"],
+
+Cell["\<\
+New string expressions for FGetFromBurstList, FGetFromBurst, etc. : \"Epie\", \
+\"Spie\", \"Eapp\", \"Sapp\"\
+\>", "TechNoteText",
+ CellID->51831613,ExpressionUUID->"5d2db9e3-4a1e-4d2f-a362-ac54db9d30a5"],
+
+Cell["\<\
+Tech note on practical use of TTTR simulation added.\[LineSeparator]Tech \
+notes on correction factors and on calibration with FRET labeled samples were \
+updated. \
+\>", "TechNoteText",
+ CellID->310821151,ExpressionUUID->"c989f83c-263f-4684-92e6-e37e5fc64662"],
+
+Cell["\<\
+The option FPIEBurstIdentificationMethod \[Rule] FDualChannelBurstSearch was \
+added to FFindBurstsFromTimeBinnedData and FFindBurstsDeltaT.\
+\>", "TechNoteText",
+ CellID->667227928,ExpressionUUID->"f1167814-85c1-4bbc-a8d4-0f611b1e67a1"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["31.5.2022", "TechNoteSection",
+ CellID->186654542,ExpressionUUID->"667297be-544c-47da-8692-aa8843c64be0"],
+
+Cell["\<\
+FGetFromBurstList can from now on additionally be called with \
+\"InterPhotonTimes\", \"DetectionChannels\", and \"LifeTimeChannels\". \
+Previously, this was only for single bursts with FGetFromBurst possible.\
+\>", "TechNoteText",
+ CellID->79064987,ExpressionUUID->"509f5478-9650-49fa-974f-3b89a5e8b821"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["2.5.2022", "TechNoteSection",
+ CellID->508626690,ExpressionUUID->"a77c9b45-7e3b-4322-90e1-96fe9fadd1cc"],
+
+Cell["\<\
+The option FPIEBurstIdentificationMethod \[Rule] FPieChannelAboveThreshold \
+was added to FFindBurstsFromTimeBinnedData and FFindBurstsDeltaT.\
+\>", "TechNoteText",
+ CellID->442879143,ExpressionUUID->"1ced9963-6c26-48b1-b387-0d6ec25b9b0a"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["26.4.2022", "TechNoteSection",
+ CellID->37007871,ExpressionUUID->"69d73937-62e5-46ee-bae1-95b77980c6a0"],
+
+Cell["The function FMakeModel was replaced by FMakeFRETPeakModel.", \
+"TechNoteText",
+ CellID->12933200,ExpressionUUID->"413ab922-e761-4d46-a9e8-c37591791f0a"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["14.4.2022", "TechNoteSection",
+ CellID->317195348,ExpressionUUID->"e33cabb8-0f7f-4720-86ca-aff6569b62c4"],
+
+Cell["\<\
+The documentation of Fretica got a major update. It is now build using the \
+new tools provided by Mathematica 13 (Documentation Tools, Paclet Tools).\
+\>", "TechNoteText",
+ CellID->57816718,ExpressionUUID->"d45b24f1-e2d4-48a6-aa39-d15555f422dd"],
+
+Cell[TextData[{
+ ButtonBox["A technical note",
+  BaseStyle->"Link",
+  ButtonData->
+   "paclet:Fretica/tutorial/\
+DetermintaionOfTheRCMFromFRETLabledSamplesUsingPIEOrAlex"],
+ " on on how to determine the correction factors from FRET labeled samples \
+using PIE or Alex (Lee et al., aka \"Kapanidis method\") was added."
+}], "TechNoteText",
+ CellID->65502398,ExpressionUUID->"29cdeb7c-1419-4dcd-9f36-fc9b69116a6c"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["22.11.2021", "TechNoteSection",
+ CellID->159312179,ExpressionUUID->"433a2134-a95a-469b-8b2b-8c72a3f1935a"],
+
+Cell[TextData[{
+ StyleBox["FTimeCorrelateWeighted",
+  FontWeight->"Bold"],
+ " was introduced."
+}], "TechNoteText",
+ CellID->437859380,ExpressionUUID->"6f74a3aa-e8a9-47e2-b9ec-9c5ed39f2a94"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["19.11.2021", "TechNoteSection",
+ CellID->34629517,ExpressionUUID->"1b5e9309-4a76-42b7-9612-eaa51310eb0b"],
+
+Cell[TextData[{
+ "FHMMLogLikelihood returns the sum of all logarithmic likelihoods of the \
+photon trajectories. Sometimes one is interested in the individual values. \
+The can be obtained by calling ",
+ StyleBox["FHMMGetLogLikelihoodList",
+  FontWeight->"Bold"],
+ "[]."
+}], "TechNoteText",
+ CellID->34209400,ExpressionUUID->"362af17a-9dd0-4cbf-8494-a370a8d25d54"],
+
+Cell["\<\
+Analogously, for F1DHMMGetLogLikelihoodList[] was introduced.\
+\>", "TechNoteText",
+ CellID->715296177,ExpressionUUID->"73d7d74c-c705-4406-8022-ce49296fcce2"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["26.6.2021", "TechNoteSection",
+ CellID->649761722,ExpressionUUID->"1265da3d-818b-4b93-adf6-f85055ea1b6e"],
+
+Cell[TextData[{
+ "The option FOutput \[Rule] ",
+ StyleBox["FRawData",
+  FontWeight->"Bold"],
+ " was introduced for FFCS, FFCSW, etc."
+}], "TechNoteText",
+ CellID->416417481,ExpressionUUID->"5337df48-09ee-4644-9468-0f8e3d53f6fd"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["16.4.2021", "TechNoteSection",
+ CellID->83782180,ExpressionUUID->"b38a7c0c-4aa0-4efb-955a-2d2f78d104ef"],
+
+Cell[TextData[{
+ "In Mathematica 12.2 the behavior of Transpose was changed such that \
+commands like\[LineSeparator]\tFGetFromBusrstList[ Transpose[ {\"E\", \
+\"Stoichiometry\"} ] ]\[LineSeparator] do not work like before. From now on \
+one needs to write \[LineSeparator]\tFGetFromBusrstList[ ",
+ StyleBox["Hold@",
+  FontWeight->"Bold"],
+ "Transpose[ {\"E\", \"Stoichiometry\"} ] ] \[LineSeparator]instead."
+}], "TechNoteText",
+ CellID->294010723,ExpressionUUID->"3dc31df3-ea22-4dba-ad57-5fa707a17def"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["9.11.2020", "TechNoteSection",
+ CellID->166876306,ExpressionUUID->"87f497c5-be81-4052-8050-b9c5e5b477a3"],
+
+Cell[TextData[{
+ "Bursts can now be defined manually using ",
+ StyleBox["FSetBurstList",
+  FontWeight->"Bold"]
+}], "TechNoteText",
+ CellID->245970435,ExpressionUUID->"6c7d6a7b-f773-4a43-b5a8-a0e635e65ea3"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["30.10.2020", "TechNoteSection",
+ CellID->255536907,ExpressionUUID->"75a77c8f-39b6-421a-86cf-a4cb18bc2510"],
+
+Cell[TextData[{
+ StyleBox["FMCSTrace",
+  FontWeight->"Bold"],
+ "[....,t1,t2] is back to the old mode (before 28.8.), that the traces are \
+only calculated up to the end of the measurement (tstop), even if t2>tstop.\n\
+With ",
+ StyleBox["FGetStartTime",
+  FontWeight->"Bold"],
+ "[], ",
+ StyleBox["FGetStopTime",
+  FontWeight->"Bold"],
+ "[] you can get the start and stop time of the actual photon data.\
+\[LineSeparator]Other than the header information, these times are updated if \
+you for example use FDeleteTTTRTTimeIntervals.\nNew is the command ",
+ StyleBox["FExportTTTRToH5",
+  FontWeight->"Bold"],
+ "[\"filename.h5\",{t1_,t2_},routes:FRouteList], which is for exporting \
+photon data to the H5 format. This is useful for sharing  raw data with \
+researchers that cannot handle PTU files.\nIn PIE/Alex mode the alternating \
+lasers beams can be orthogonally polarized. The ",
+ StyleBox["FSetAnisotropyRoutes",
+  FontWeight->"Bold"],
+ " command has been updated for dealing with this situation. Use for example \
+FSetAnisotropyRoutes[{\"P\", \"P\", \"S\", \"S\"},  {\"S\", \"S\", \"P\", \"P\
+\"}] to set for the main channels (donor laser channels) {\"P\", \"P\", \
+\"S\", \"S\"} and for the PIE channels   (acceptor laser channels) {\"S\", \
+\"S\", \"P\", \"P\"}.  \[LineSeparator]",
+ StyleBox["FGetAnisotropyRoutes",
+  FontWeight->"Bold"],
+ "[]  and  ",
+ StyleBox["FGetPIEAnisotropyRoutes",
+  FontWeight->"Bold"],
+ "[] return the settings for the main channels and PIE channels, \
+respectively.\nAnalogously to  ",
+ StyleBox["FBurstAsymmetry",
+  FontWeight->"Bold"],
+ " and ",
+ StyleBox["FCutAsymmetricBursts",
+  FontWeight->"Bold"],
+ " the new commands ",
+ StyleBox["FPIEBurstAsymmetry",
+  FontWeight->"Bold"],
+ " and ",
+ StyleBox["FPIECutAsymmetricBursts",
+  FontWeight->"Bold"],
+ " were introduced. Please consult the documentation, which was improved also \
+for FBurstAsymmetry and FCutAsymmetricBursts. "
+}], "TechNoteText",
+ CellID->128321387,ExpressionUUID->"7c455555-d9d8-4686-aa99-36fcf63ee3e5"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["28.08.2020", "TechNoteSection",
+ CellID->431513219,ExpressionUUID->"0d869c76-388a-4af6-89c6-908cef38dbbc"],
+
+Cell["\<\
+FMCSTrace now uses internally the full time resolution (macro and micro time \
+combined).
+FTSSimulateFRETStateTrajectories was introduced.
+The documentation was substantially improved.
+Tutorials on RCM and calibration were added.\
+\>", "TechNoteText",
+ CellID->25541026,ExpressionUUID->"810178a3-60c9-4e22-adfc-ec58ecfa400e"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["06.03.2020", "TechNoteSection",
+ CellID->522103964,ExpressionUUID->"efe66bbf-981e-4957-8999-a80a2e65d5ec"],
+
+Cell["\<\
+Fretica is now loaded with Needs[\"Fretica`\"] instead of previously with \
+Needs[\"Fretica`Fretica`\"]\
+\>", "TechNoteText",
+ CellID->98685116,ExpressionUUID->"ce1d8b41-516e-415f-b8f7-792d2058af9a"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["07.01.2020", "TechNoteSection",
+ CellID->14671882,ExpressionUUID->"d88013de-86ce-480f-86ad-b1ffd0e83d97"],
+
+Cell["\<\
+FTSSimulateParticleDiffusion has now the option Method->\"1D\" (default) or \
+Method->\"2D\" to toggle between 1D and 2D simulations.  
+The TTTR simulation section of Fretica is now (almost fully) documented.
+A bug was fixed which preciously led to slightly false particle \
+concentrations in the confocal volume.  \
+\>", "TechNoteText",
+ CellID->22597336,ExpressionUUID->"47f8e06e-1a40-4a6e-b28e-1b4b78a7ea09"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["30.09.2019", "TechNoteSection",
+ CellID->176743376,ExpressionUUID->"1df8aab0-c665-4642-93d0-20c2bfae039f"],
+
+Cell["\<\
+FShiftPhotonTimesByPicoseconds can now be called like \
+FShiftPhotonTimesByPicoseconds[ { dt1, dt2 ..}]. This is shifting route 1 by \
+dt1 picoseconds, route 2 by dt2, etc.\
+\>", "TechNoteText",
+ CellID->226712312,ExpressionUUID->"d3537f5f-e5dd-4a41-b857-264d7602ccfa"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["27.09.2019", "TechNoteSection",
+ CellID->661859002,ExpressionUUID->"a8343b2c-d277-475e-aa22-b34166751487"],
+
+Cell["\<\
+FHMM... comands are now generalized from two detection channels to an \
+arbitrary numbers of detection channels.  This allows for example the \
+modeling of 3-color FRET data.
+FHMMInitWithPhotonByPhotonDataFromBurstList was introduced.\
+\>", "TechNoteText",
+ CellID->181756929,ExpressionUUID->"2a89c964-27d1-4487-a589-bf51ef8cced3"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["4.06.2019", "TechNoteSection",
+ CellID->517727759,ExpressionUUID->"c59d136a-f8f9-41a5-975a-26d83478afd7"],
+
+Cell["\<\
+FGetFromPiezoScan supports now reading frames from a \"movie\".\
+\>", "TechNoteText",
+ CellID->167692082,ExpressionUUID->"21b34700-7f62-4b1a-a8be-c06e1a2f5cc1"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["28.05.2019", "TechNoteSection",
+ CellID->667100186,ExpressionUUID->"9d979bd8-30aa-4b59-be8c-2c2c16001a60"],
+
+Cell["FOpenHistoData now also opens phu files.", "TechNoteText",
+ CellID->984218205,ExpressionUUID->"d6343c5f-eac5-42f9-b9b9-c66b62ca3827"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["16.04.2019", "TechNoteSection",
+ CellID->122174354,ExpressionUUID->"66e68d1e-b71e-40b9-bbd8-121ae235dd5f"],
+
+Cell["\<\
+Introduction of FRET HMM which allows to model intrinsic broadening using \
+\[Beta]-distribution in FRET space.\
+\>", "TechNoteText",
+ CellID->91883590,ExpressionUUID->"bbe4beee-3978-448f-b073-8a3ac0e32804"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["1.04.2019", "TechNoteSection",
+ CellID->331341430,ExpressionUUID->"20c72503-9a92-434c-8879-c55160156487"],
+
+Cell["\<\
+Weighted FCS has now its own command FFCSW. Before it was included in the \
+FFCS command.\
+\>", "TechNoteText",
+ CellID->8905324,ExpressionUUID->"f98c77bd-90e1-46ab-bae9-eab84a78993f"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["28.03.2019", "TechNoteSection",
+ CellID->115926292,ExpressionUUID->"913eea7b-ef66-46da-8287-22ad00575c85"],
+
+Cell["\<\
+FHMMSimulateBinnedTrace simulates a photon by photon trace, bins it, and \
+returns the binned trace.\
+\>", "TechNoteText",
+ CellID->167382967,ExpressionUUID->"e83805c8-e564-46eb-8dcf-2072d9519ba1"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["26.03.2019", "TechNoteSection",
+ CellID->49760268,ExpressionUUID->"f4a0aec3-62ee-4485-9280-3569842ba67b"],
+
+Cell["\<\
+Introduction of 1D HMM commands: F1DHMMInit, F1DHMMSetPobs, \
+F1DHMMLogLikelihood, F1DHMMViterbi, \
+F1DHMMForwardBackward.\[LineSeparator]Theses commands can be used to analyze \
+for example force-trap data.
+FHMMForwardBackward was introduced.\
+\>", "TechNoteText",
+ CellID->58143533,ExpressionUUID->"7d6a89f2-e4fe-4cb5-a39c-94cf29fce35b"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["6.03.2019", "TechNoteSection",
+ CellID->762003235,ExpressionUUID->"641a7b0a-cb71-4c75-9f0e-71a616e06243"],
+
+Cell["\<\
+The new function FShiftPhotonTimesByPicoseconds[dt , route] is introduced to \
+allow for corrections of non-ideal detection-channel offsets;\
+\>", "TechNoteText",
+ CellID->192456094,ExpressionUUID->"5344d8fe-0cd7-443a-82fe-06657e7df99a"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["18.12.2018", "TechNoteSection",
+ CellID->171536424,ExpressionUUID->"61ddc0d1-111d-44ac-9295-eed5d5a03831"],
+
+Cell["\<\
+FHMMSimulatePhotonByPhotonTrace[photonrates:{nA, nD, K, pini,t] is now \
+implemented in C++ and executes about twenty times faster.\
+\>", "TechNoteText",
+ CellID->123466801,ExpressionUUID->"eda2cdb8-3f4f-4325-aed9-584178890654"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["30.11.2018", "TechNoteSection",
+ CellID->14347106,ExpressionUUID->"677c3fbe-c107-4467-aafc-43f389a40c35"],
+
+Cell["\<\
+New options for FFitFretHistogram introduced: FFitCurveOptions and \
+FSubPopOptions.
+FFitFretHistogram uses now NonlinearModelFit. The FittedModel object is \
+returned as a third element.
+This Changelog was introduced.\
+\>", "TechNoteText",
+ CellID->947542911,ExpressionUUID->"ae3ff6be-69a6-4a7d-a254-ed069e77cd43"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["9.11.2018", "TechNoteSection",
+ CellID->38636436,ExpressionUUID->"c0e3cd41-04c1-4837-8339-f0bd24c4f6dc"],
+
+Cell["\<\
+Major changes:
+
+The documentation of Fretica is now integrated into the Mathematica help \
+system.
+
+        Now you can get help by pressing F1 like with any other Mathematica \
+command. This opens a reference page, which currently just contains the same \
+information as if you were execute ?command
+        However, on each reference page you will also find a link to the \
+Fretica main guide page, which lists all available commands organized listed \
+under thematic section titles.
+        If you click  on a section title, a page with more detailed \
+information and examples will be open.
+        The examples can be executed. They run on a separate kernel and hence \
+won't interfere with your other kernels. For this purpose you need to \
+configure a Kernel named \"FreticaDocumentation\" in the Evaluation|Kernel \
+Configure Options... menu.
+        It is my aim to improve the documentation in the coming weeks \
+extensively. Any help and comments from your side is very much welcome!
+        FreticaDocumentation.nb is obsolete from now on. All its content is \
+now included in the new help system.
+
+    Histograms have a new and (hopefully) better look. Additionally, you can \
+use all available options of the Mathematica command Histogram to modify the \
+graphical appearance.
+    Up to now GeneralizedBarChart was used for this purpose,  which is \
+however since version 7 deprecated by Wolfram Research, surprisingly without \
+providing an appropriate alternative. I found now a workaround using \
+Histogram which is out of the box meant for building and plotting histograms \
+from the raw data, and not only for plotting an already existing histogram.
+    All this is most likely not effecting your existing code. However if you \
+have  histogram data generated with the option FOutput->FData. Then you can \
+better use from now on the new command FPlotHisto to plot it, instead of \
+GeneralizedBarChart. Again, FPlotHisto, does support all options you find in \
+the documentation of Histogram for adjusting the graphical output according \
+to your taste.
+    The new Fretica version includes a complete new and unified set of \
+commands for the HMM analysis of photon traces.
+    Photon-by-photon and time-binned data are now analysed using the same \
+commands. Only  the initialization process is different for the two cases. \
+All new command start with the letters FHMM...
+    Important, your code using the old commands is still executable, however, \
+the some of the old commands also started with FHMM... I changed those all \
+now to FHmm... with  lower case \"m\"s. So you need to rename in your code \
+these old commands accordingly.
+    Some of you might have noticed that since some weeks FFCS was using for \
+T3 data not only the macro time as it was always the case in the past. \
+Instead in the last version the microtime was always added to the macrotime. \
+This allows to calculate FCS curves down to the sub-ns range.
+    In the new version I switched back to the old behaviour (which omits the \
+microtime) as the standard setting of Fretica.  However, if you want to \
+include the microtime for FCS calculations, than you can set the option \
+FUseMicrotime->True in FFCS.
+\
+\>", "TechNoteText",
+ CellID->362536657,ExpressionUUID->"353527ec-d1c1-44e9-81ee-ff43d0d1d1af"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[GridBox[{
+   {
+    DynamicBox[FEPrivate`ImportImage[
+      FrontEnd`FileName[{"Documentation", "FooterIcons"}, "RelatedGuide.png"]],
+     ImageSizeCache->{50., {27., 33.}}], GridBox[{
+      {
+       StyleBox[
+        RowBox[{"Related", " ", "Guides"}], "TutorialMoreAboutSection"]},
+      {
+       RowBox[{"\[FilledVerySmallSquare]", Cell[TextData[ButtonBox["Fretica",
+         BaseStyle->"Link",
+         ButtonData->"paclet:Fretica/guide/Fretica"]], "TutorialMoreAbout",
+         ExpressionUUID->"dd87dde8-58f0-4348-a8a9-32eb8d30417a"]}]}
+     }]}
+  }]], "TutorialMoreAboutSection",ExpressionUUID->"7e40b9d0-535a-49d4-9d21-\
+103e1a399aa4"],
+
+Cell[BoxData[""], "Input",ExpressionUUID->"8b850084-b9af-4d55-bb53-b768a080001d"]
+}, Open  ]]
+}, Open  ]],
+
+Cell[" ", "FooterCell",ExpressionUUID->"f345d54a-1ea6-4460-93e8-e8cf6bd07d31"]
+},
+Saveable->False,
+ScreenStyleEnvironment->"Working",
+Evaluator->"FreticaDocumentation",
+WindowSize->{900., 604.8},
+WindowMargins->{{0, Automatic}, {Automatic, 0}},
+WindowTitle->"Change Log",
+Visible->False,
+TaggingRules->{
+ "ModificationHighlight" -> False, "ColorType" -> "", "LinkTrails" -> "", 
+  "ExampleCounter" -> 1, 
+  "Openers" -> {
+   "PrimaryExamplesSection" -> Open, "ExampleSection" -> {"0" -> Open}}, 
+  "NewStyles" -> True, "CitationPopupData" -> {$Failed, ""}, "ShowCitation" -> 
+  False, "RootCaptions" -> "", 
+  "Metadata" -> {
+   "built" -> "{2023, 4, 11, 14, 23, 57.1826224}", 
+    "history" -> {"", "", "", ""}, "context" -> "Fretica`", "keywords" -> {}, 
+    "specialkeywords" -> {}, "tutorialcollectionlinks" -> {}, "index" -> True,
+     "label" -> "Fretica Tech Note", "language" -> "en", "paclet" -> 
+    "Fretica", "status" -> "None", "summary" -> 
+    "\"PhotonTimes\", \"MainChannelPhotonTimes\", \"PieChannelPhotonTimes, \
+and \"BVA_ProximityRatiosn \" were added to FGetFromBurst and \
+FGetFromBurstList. Fretica can now be installed by executing in a notebook: \
+PacletInstall[\"https://schuler.bioc.uzh.ch/fretica/\"] Executing \
+Needs[\"Fretica` \"] ", "synonyms" -> {}, "tabletags" -> 
+    DocumentationBuild`Make`Private`tabletaggingrules$42434, "title" -> 
+    "Change Log", "titlemodifier" -> "", "windowtitle" -> "Change Log", 
+    "type" -> "Tech Note", "uri" -> "Fretica/tutorial/ChangeLog"}},
+FrontEndVersion->"13.2 for Microsoft Windows (64-bit) (January 30, 2023)",
+StyleDefinitions->Notebook[{
+   Cell[
+    StyleData[
+    StyleDefinitions -> FrontEnd`FileName[{"Wolfram"}, "Reference.nb"]]], 
+   Cell[
+    StyleData["Input"], CellContext -> Notebook], 
+   Cell[
+    StyleData["Output"], CellContext -> Notebook], 
+   Cell[
+    StyleData["TutorialMoreAboutSection"], 
+    CellGroupingRules -> {"SectionGrouping", 30}], 
+   Cell[
+    StyleData["RelatedTutorialsSection"], 
+    CellGroupingRules -> {"SectionGrouping", 30}], 
+   Cell[
+    StyleData["TutorialRelatedLinksSection"], 
+    CellGroupingRules -> {"SectionGrouping", 30}]}, Visible -> False, 
+  FrontEndVersion -> "13.2 for Microsoft Windows (64-bit) (January 30, 2023)",
+   StyleDefinitions -> "Default.nb"],
+ExpressionUUID->"a007b884-cec5-4417-8f3f-eb71e9c73364"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[582, 21, 3350, 77, 70, "AnchorBarGrid",ExpressionUUID->"02748464-bb17-4bfc-b733-f1cd5e3ff192",
+ CellID->1],
+Cell[CellGroupData[{
+Cell[3957, 102, 109, 1, 70, "TechNoteTitle",ExpressionUUID->"d63887b5-bd9a-4324-8b85-46a699d37681",
+ CellID->49631738],
+Cell[4069, 105, 25838, 576, 70, "TechNoteJumpBox",ExpressionUUID->"5d712d46-4d7b-4e38-8575-3a8802787ca4"],
+Cell[CellGroupData[{
+Cell[29932, 685, 112, 1, 70, "TechNoteSection",ExpressionUUID->"f54b84c6-ff2b-4839-acdd-16d69c6d5cde",
+ CellID->232087442],
+Cell[30047, 688, 309, 7, 70, "TechNoteText",ExpressionUUID->"f683b244-ccf1-4c46-9cf9-3db38b0107b5",
+ CellID->92077042]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[30393, 700, 111, 1, 70, "TechNoteSection",ExpressionUUID->"783d0856-b642-4606-9c2b-f87ac66bdb16",
+ CellID->15577491],
+Cell[30507, 703, 239, 4, 70, "TechNoteText",ExpressionUUID->"c42bca0d-ed8e-4ef4-87ff-6ebab061234f",
+ CellID->359828781],
+Cell[30749, 709, 147, 1, 70, "TechNoteText",ExpressionUUID->"62df4518-f4b7-4521-acb0-61a65c5c82d9",
+ CellID->348491574],
+Cell[30899, 712, 220, 4, 70, "TechNoteText",ExpressionUUID->"9554af68-c791-40ab-8afe-935306477ca6",
+ CellID->365610530]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[31156, 721, 115, 1, 70, "TechNoteSection",ExpressionUUID->"add0ef32-cbd1-4e63-a290-9251fed25657",
+ CellID->252922813],
+Cell[31274, 724, 333, 5, 70, "TechNoteText",ExpressionUUID->"f987a2d9-a912-4739-bfc1-5817d4f33028",
+ CellID->9758184]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[31644, 734, 114, 1, 70, "TechNoteSection",ExpressionUUID->"9d3f0645-ae99-4269-8828-e25db59b3a32",
+ CellID->311319555],
+Cell[31761, 737, 352, 8, 70, "TechNoteText",ExpressionUUID->"102e6b3c-ce62-47b4-9080-a1477b61a778",
+ CellID->122648573]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[32150, 750, 112, 1, 70, "TechNoteSection",ExpressionUUID->"ea54f3c1-aaa4-42dd-8000-f80cacbd4cb6",
+ CellID->6123557],
+Cell[32265, 753, 113, 1, 70, "TechNoteText",ExpressionUUID->"d0539a65-9c58-42b8-80d3-47c32f151523",
+ CellID->192627222],
+Cell[32381, 756, 268, 5, 70, "TechNoteText",ExpressionUUID->"27615ab5-f20b-4c0b-8b4c-d9f44417925f",
+ CellID->169315017]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[32686, 766, 109, 1, 70, "TechNoteSection",ExpressionUUID->"398a5507-84d5-494a-8088-22f4521891da",
+ CellID->1320970],
+Cell[32798, 769, 113, 1, 70, "TechNoteText",ExpressionUUID->"cd319b73-e211-4d3d-bfd4-0d9ad3a45c6f",
+ CellID->175870606],
+Cell[32914, 772, 192, 4, 70, "TechNoteText",ExpressionUUID->"8c368c1e-45b9-4231-96ce-6996cf1b59b6",
+ CellID->78884436],
+Cell[33109, 778, 163, 2, 70, "TechNoteText",ExpressionUUID->"89417126-f648-4001-bdfc-9f847d6cf157",
+ CellID->111643731],
+Cell[33275, 782, 108, 1, 70, "TechNoteText",ExpressionUUID->"5871326c-c4a9-40dd-b1b2-a4e51673e860",
+ CellID->172692598],
+Cell[33386, 785, 195, 2, 70, "TechNoteText",ExpressionUUID->"9a42a526-8c65-4466-bddd-abea44b434e5",
+ CellID->60094225],
+Cell[33584, 789, 117, 1, 70, "TechNoteText",ExpressionUUID->"851e8ad9-c77d-4130-af10-86dc1bb69f04",
+ CellID->452385741],
+Cell[33704, 792, 298, 5, 70, "TechNoteText",ExpressionUUID->"3e7a0441-9bf0-472f-b01e-e8afd87d31f4",
+ CellID->199182360],
+Cell[34005, 799, 214, 4, 70, "TechNoteText",ExpressionUUID->"5d2db9e3-4a1e-4d2f-a362-ac54db9d30a5",
+ CellID->51831613],
+Cell[34222, 805, 271, 5, 70, "TechNoteText",ExpressionUUID->"c989f83c-263f-4684-92e6-e37e5fc64662",
+ CellID->310821151],
+Cell[34496, 812, 247, 4, 70, "TechNoteText",ExpressionUUID->"f1167814-85c1-4bbc-a8d4-0f611b1e67a1",
+ CellID->667227928]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[34780, 821, 111, 1, 70, "TechNoteSection",ExpressionUUID->"667297be-544c-47da-8692-aa8843c64be0",
+ CellID->186654542],
+Cell[34894, 824, 315, 5, 70, "TechNoteText",ExpressionUUID->"509f5478-9650-49fa-974f-3b89a5e8b821",
+ CellID->79064987]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[35246, 834, 110, 1, 70, "TechNoteSection",ExpressionUUID->"a77c9b45-7e3b-4322-90e1-96fe9fadd1cc",
+ CellID->508626690],
+Cell[35359, 837, 249, 4, 70, "TechNoteText",ExpressionUUID->"1ced9963-6c26-48b1-b387-0d6ec25b9b0a",
+ CellID->442879143]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[35645, 846, 110, 1, 70, "TechNoteSection",ExpressionUUID->"69d73937-62e5-46ee-bae1-95b77980c6a0",
+ CellID->37007871],
+Cell[35758, 849, 159, 2, 70, "TechNoteText",ExpressionUUID->"413ab922-e761-4d46-a9e8-c37591791f0a",
+ CellID->12933200]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[35954, 856, 111, 1, 70, "TechNoteSection",ExpressionUUID->"e33cabb8-0f7f-4720-86ca-aff6569b62c4",
+ CellID->317195348],
+Cell[36068, 859, 256, 4, 70, "TechNoteText",ExpressionUUID->"d45b24f1-e2d4-48a6-aa39-d15555f422dd",
+ CellID->57816718],
+Cell[36327, 865, 412, 9, 70, "TechNoteText",ExpressionUUID->"29cdeb7c-1419-4dcd-9f36-fc9b69116a6c",
+ CellID->65502398]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[36776, 879, 112, 1, 70, "TechNoteSection",ExpressionUUID->"433a2134-a95a-469b-8b2b-8c72a3f1935a",
+ CellID->159312179],
+Cell[36891, 882, 189, 5, 70, "TechNoteText",ExpressionUUID->"6f74a3aa-e8a9-47e2-b9ec-9c5ed39f2a94",
+ CellID->437859380]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[37117, 892, 111, 1, 70, "TechNoteSection",ExpressionUUID->"1b5e9309-4a76-42b7-9612-eaa51310eb0b",
+ CellID->34629517],
+Cell[37231, 895, 364, 8, 70, "TechNoteText",ExpressionUUID->"362af17a-9dd0-4cbf-8494-a370a8d25d54",
+ CellID->34209400],
+Cell[37598, 905, 168, 3, 70, "TechNoteText",ExpressionUUID->"73d7d74c-c705-4406-8022-ce49296fcce2",
+ CellID->715296177]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[37803, 913, 111, 1, 70, "TechNoteSection",ExpressionUUID->"1265da3d-818b-4b93-adf6-f85055ea1b6e",
+ CellID->649761722],
+Cell[37917, 916, 228, 6, 70, "TechNoteText",ExpressionUUID->"5337df48-09ee-4644-9468-0f8e3d53f6fd",
+ CellID->416417481]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[38182, 927, 110, 1, 70, "TechNoteSection",ExpressionUUID->"b38a7c0c-4aa0-4efb-955a-2d2f78d104ef",
+ CellID->83782180],
+Cell[38295, 930, 504, 9, 70, "TechNoteText",ExpressionUUID->"3dc31df3-ea22-4dba-ad57-5fa707a17def",
+ CellID->294010723]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[38836, 944, 111, 1, 70, "TechNoteSection",ExpressionUUID->"87f497c5-be81-4052-8050-b9c5e5b477a3",
+ CellID->166876306],
+Cell[38950, 947, 205, 5, 70, "TechNoteText",ExpressionUUID->"6c7d6a7b-f773-4a43-b5a8-a0e635e65ea3",
+ CellID->245970435]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[39192, 957, 112, 1, 70, "TechNoteSection",ExpressionUUID->"75a77c8f-39b6-421a-86cf-a4cb18bc2510",
+ CellID->255536907],
+Cell[39307, 960, 2011, 48, 70, "TechNoteText",ExpressionUUID->"7c455555-d9d8-4686-aa99-36fcf63ee3e5",
+ CellID->128321387]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[41355, 1013, 112, 1, 70, "TechNoteSection",ExpressionUUID->"0d869c76-388a-4af6-89c6-908cef38dbbc",
+ CellID->431513219],
+Cell[41470, 1016, 335, 7, 70, "TechNoteText",ExpressionUUID->"810178a3-60c9-4e22-adfc-ec58ecfa400e",
+ CellID->25541026]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[41842, 1028, 112, 1, 70, "TechNoteSection",ExpressionUUID->"efe66bbf-981e-4957-8999-a80a2e65d5ec",
+ CellID->522103964],
+Cell[41957, 1031, 209, 4, 70, "TechNoteText",ExpressionUUID->"ce1d8b41-516e-415f-b8f7-792d2058af9a",
+ CellID->98685116]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[42203, 1040, 111, 1, 70, "TechNoteSection",ExpressionUUID->"d88013de-86ce-480f-86ad-b1ffd0e83d97",
+ CellID->14671882],
+Cell[42317, 1043, 421, 7, 70, "TechNoteText",ExpressionUUID->"47f8e06e-1a40-4a6e-b28e-1b4b78a7ea09",
+ CellID->22597336]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[42775, 1055, 112, 1, 70, "TechNoteSection",ExpressionUUID->"1df8aab0-c665-4642-93d0-20c2bfae039f",
+ CellID->176743376],
+Cell[42890, 1058, 279, 5, 70, "TechNoteText",ExpressionUUID->"d3537f5f-e5dd-4a41-b857-264d7602ccfa",
+ CellID->226712312]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[43206, 1068, 112, 1, 70, "TechNoteSection",ExpressionUUID->"a8343b2c-d277-475e-aa22-b34166751487",
+ CellID->661859002],
+Cell[43321, 1071, 341, 6, 70, "TechNoteText",ExpressionUUID->"2a89c964-27d1-4487-a589-bf51ef8cced3",
+ CellID->181756929]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[43699, 1082, 111, 1, 70, "TechNoteSection",ExpressionUUID->"c59d136a-f8f9-41a5-975a-26d83478afd7",
+ CellID->517727759],
+Cell[43813, 1085, 170, 3, 70, "TechNoteText",ExpressionUUID->"21b34700-7f62-4b1a-a8be-c06e1a2f5cc1",
+ CellID->167692082]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[44020, 1093, 112, 1, 70, "TechNoteSection",ExpressionUUID->"9d979bd8-30aa-4b59-be8c-2c2c16001a60",
+ CellID->667100186],
+Cell[44135, 1096, 139, 1, 70, "TechNoteText",ExpressionUUID->"d6343c5f-eac5-42f9-b9b9-c66b62ca3827",
+ CellID->984218205]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[44311, 1102, 112, 1, 70, "TechNoteSection",ExpressionUUID->"66e68d1e-b71e-40b9-bbd8-121ae235dd5f",
+ CellID->122174354],
+Cell[44426, 1105, 217, 4, 70, "TechNoteText",ExpressionUUID->"bbe4beee-3978-448f-b073-8a3ac0e32804",
+ CellID->91883590]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[44680, 1114, 111, 1, 70, "TechNoteSection",ExpressionUUID->"20c72503-9a92-434c-8879-c55160156487",
+ CellID->331341430],
+Cell[44794, 1117, 194, 4, 70, "TechNoteText",ExpressionUUID->"f98c77bd-90e1-46ab-bae9-eab84a78993f",
+ CellID->8905324]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[45025, 1126, 112, 1, 70, "TechNoteSection",ExpressionUUID->"913eea7b-ef66-46da-8287-22ad00575c85",
+ CellID->115926292],
+Cell[45140, 1129, 207, 4, 70, "TechNoteText",ExpressionUUID->"e83805c8-e564-46eb-8dcf-2072d9519ba1",
+ CellID->167382967]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[45384, 1138, 111, 1, 70, "TechNoteSection",ExpressionUUID->"f4a0aec3-62ee-4485-9280-3569842ba67b",
+ CellID->49760268],
+Cell[45498, 1141, 349, 7, 70, "TechNoteText",ExpressionUUID->"7d6a89f2-e4fe-4cb5-a39c-94cf29fce35b",
+ CellID->58143533]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[45884, 1153, 111, 1, 70, "TechNoteSection",ExpressionUUID->"641a7b0a-cb71-4c75-9f0e-71a616e06243",
+ CellID->762003235],
+Cell[45998, 1156, 247, 4, 70, "TechNoteText",ExpressionUUID->"5344d8fe-0cd7-443a-82fe-06657e7df99a",
+ CellID->192456094]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[46282, 1165, 112, 1, 70, "TechNoteSection",ExpressionUUID->"61ddc0d1-111d-44ac-9295-eed5d5a03831",
+ CellID->171536424],
+Cell[46397, 1168, 238, 4, 70, "TechNoteText",ExpressionUUID->"eda2cdb8-3f4f-4325-aed9-584178890654",
+ CellID->123466801]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[46672, 1177, 111, 1, 70, "TechNoteSection",ExpressionUUID->"677c3fbe-c107-4467-aafc-43f389a40c35",
+ CellID->14347106],
+Cell[46786, 1180, 325, 7, 70, "TechNoteText",ExpressionUUID->"ae3ff6be-69a6-4a7d-a254-ed069e77cd43",
+ CellID->947542911]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[47148, 1192, 110, 1, 70, "TechNoteSection",ExpressionUUID->"c0e3cd41-04c1-4837-8339-f0bd24c4f6dc",
+ CellID->38636436],
+Cell[47261, 1195, 3315, 56, 70, "TechNoteText",ExpressionUUID->"353527ec-d1c1-44e9-81ee-ff43d0d1d1af",
+ CellID->362536657]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[50613, 1256, 654, 15, 70, "TutorialMoreAboutSection",ExpressionUUID->"7e40b9d0-535a-49d4-9d21-103e1a399aa4"],
+Cell[51270, 1273, 81, 0, 70, "Input",ExpressionUUID->"8b850084-b9af-4d55-bb53-b768a080001d"]
+}, Open  ]]
+}, Open  ]],
+Cell[51378, 1277, 78, 0, 70, "FooterCell",ExpressionUUID->"f345d54a-1ea6-4460-93e8-e8cf6bd07d31"]
+}
+]
+*)
+

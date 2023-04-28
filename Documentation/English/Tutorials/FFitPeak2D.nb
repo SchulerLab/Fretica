@@ -1,0 +1,209 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 13.1' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      7995,        201]
+NotebookOptionsPosition[      5562,        144]
+NotebookOutlinePosition[      7576,        195]
+CellTagsIndexPosition[      7533,        192]
+WindowTitle->FFitPeaks2D
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[GridBox[{
+   {GridBox[{
+      {
+       ItemBox[Cell[BoxData[
+         RowBox[{
+          TemplateBox[{12},
+           "Spacer1"], Cell["FRETICA SYMBOL", "PacletNameCell",
+           TextAlignment->Center,ExpressionUUID->
+           "cf7fb45a-e791-44a1-b30a-63e1d78922f3"], 
+          TemplateBox[{8},
+           "Spacer1"]}]],
+         TextAlignment->Center,ExpressionUUID->
+         "b3b6f9c8-dadb-4477-9e48-21043ca65ecf"],
+        Background->RGBColor[0.490196, 0.576471, 0.690196],
+        ItemSize->Full], ""}
+     },
+     GridBoxAlignment->{"Rows" -> {{Center}}},
+     GridBoxItemSize->{"Columns" -> {Full, 
+         Scaled[0.02]}, "Rows" -> {{2.5}}}], Cell[TextData[Cell[BoxData[
+     TagBox[
+      ActionMenuBox[
+       FrameBox[Cell[TextData[{
+         "URL",
+         " ",
+         Cell[BoxData[
+          GraphicsBox[
+           {GrayLevel[0.66667], Thickness[0.13], 
+            LineBox[{{-1.8, 0.5}, {0, 0}, {1.8, 0.5}}]},
+           AspectRatio->1,
+           ImageSize->20,
+           PlotRange->{{-3, 4}, {-1, 1}}]],ExpressionUUID->
+          "1340c460-d7bc-4bae-9545-6df55670cda9"]
+        }],ExpressionUUID->"fa4fae0c-a30b-4e5a-8e68-219bb9a5148d"],
+        StripOnInput->False], {"\<\"Fretica/ref/FFitPeaks2D\"\>":>
+       None, "\<\"Copy Wolfram Documentation Center URL\"\>":>
+       Module[{DocumentationSearch`Private`nb$}, 
+        DocumentationSearch`Private`nb$ = NotebookPut[
+           Notebook[{
+             Cell["Fretica/ref/FFitPeaks2D"]}, Visible -> False]]; 
+        SelectionMove[DocumentationSearch`Private`nb$, All, Notebook]; 
+        FrontEndTokenExecute[DocumentationSearch`Private`nb$, "Copy"]; 
+        NotebookClose[DocumentationSearch`Private`nb$]; Null], 
+       Delimiter, "\<\"Copy web URL\"\>":>
+       Module[{DocumentationSearch`Private`nb$}, 
+        DocumentationSearch`Private`nb$ = NotebookPut[
+           Notebook[{
+             Cell[
+              BoxData[
+               MakeBoxes[
+                Hyperlink[
+                "http://reference.wolfram.com/language/Fretica/ref/\
+FFitPeaks2D.html"], StandardForm]], "Input", TextClipboardType -> 
+              "PlainText"]}, Visible -> False]]; 
+        SelectionMove[DocumentationSearch`Private`nb$, All, Notebook]; 
+        FrontEndTokenExecute[DocumentationSearch`Private`nb$, "Copy"]; 
+        NotebookClose[DocumentationSearch`Private`nb$]; 
+        Null], "\<\"Go to web URL\"\>":>FrontEndExecute[{
+         NotebookLocate[{
+           URL[If[
+              TrueQ[DocumentationBuild`Make`Private`wsmlinkQ$281572], 
+              "http://reference.wolfram.com/system-modeler/", 
+              "http://reference.wolfram.com/language/"] <> 
+            "Fretica/ref/FFitPeaks2D" <> ".html"], None}]}]},
+       Appearance->None,
+       MenuAppearance->Automatic,
+       MenuStyle->"URLMenu"],
+      MouseAppearanceTag["LinkHand"]]],
+     LineSpacing->{1.4, 0},ExpressionUUID->
+     "529a6a49-af5b-405e-8117-903ab41f64e3"]], "AnchorBar",
+     CacheGraphics->False,ExpressionUUID->
+     "2a0cac01-463a-43dc-bbf8-304759918f76"]}
+  }]], "AnchorBarGrid",
+ GridBoxOptions->{GridBoxItemSize->{"Columns" -> {
+     Scaled[0.65], {
+      Scaled[0.34]}}, "ColumnsIndexed" -> {}, "Rows" -> {{1.}}, 
+   "RowsIndexed" -> {}}},
+ CellID->1,ExpressionUUID->"45a9447f-2acc-4b6e-908d-49a6be91f19a"],
+
+Cell["Fretica`", "ContextNameCell",ExpressionUUID->"f9880e0d-b5c1-4978-979c-454cf639d1bb"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[GridBox[{
+   {Cell[TextData[{
+     Cell[
+     "FFitPeaks2D", "ObjectName",ExpressionUUID->
+      "14e80168-6a36-4f69-8449-2eae794158b0"],
+     Cell[BoxData[
+      TemplateBox[{8},
+       "Spacer1"]],ExpressionUUID->"2c348acb-7120-4d26-b3b8-384544659b24"],
+     Cell[BoxData[
+     ""], "ObjectNameTranslation",ExpressionUUID->
+      "8af820b1-6dcd-467b-acc4-543dea8fe959"]
+    }],ExpressionUUID->"abb9dad9-cea0-4719-9f6f-bc7f4aa92aab"], 
+    "\[SpanFromLeft]"}
+  }]], "ObjectNameGrid",ExpressionUUID->"cd55f163-10bc-417f-8de8-\
+d2d2df54e151"],
+
+Cell[BoxData[GridBox[{
+   {"", Cell[
+    "FFitPeaks2D[xyfdata,peaknames,guess]\[LineSeparator]or ",ExpressionUUID->
+     "cef45a33-3700-4212-a278-bb4ee654bd36"]},
+   {"", Cell[TextData[{
+     "FFitPeaks2D\[LineSeparator][xyfdata, ",
+     Cell[BoxData[
+      StyleBox["peaknames", "TI"]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "dc864c5b-145e-492c-876a-9b76dcc9ed04"],
+     ", positionguess:{{_?NumericQ,_?NumericQ}..} fits peaks in a 2D \
+distribution yxfdata with 2D Gaussians. The peaks to be fit are assigned to \
+symbols listed in ",
+     Cell[BoxData[
+      StyleBox["peaknames", "TI"]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "121ca39f-eeb2-4309-8c63-2d0690a4b16c"],
+     "."
+    }],ExpressionUUID->"a09e0eef-22d1-4986-87a8-c6af04db4c79"]}
+  }]], "Usage",
+ CellID->89653879,ExpressionUUID->"2fdf68e9-3ddd-4b93-8e52-9f682b9725cf"]
+}, Open  ]],
+
+Cell[" ", "FooterCell",ExpressionUUID->"8c7e4774-0f10-470d-a55c-3207e74fccaa"]
+},
+Saveable->False,
+ScreenStyleEnvironment->"Working",
+Evaluator->"FreticaDocumentation",
+WindowSize->{900., 604.8},
+WindowMargins->{{0, Automatic}, {Automatic, 0}},
+WindowTitle->"FFitPeaks2D",
+Visible->False,
+TaggingRules->{
+ "ModificationHighlight" -> False, "ColorType" -> "", "LinkTrails" -> "", 
+  "ExampleCounter" -> 1, 
+  "Openers" -> {
+   "PrimaryExamplesSection" -> Open, "ExampleSection" -> {"0" -> Open}}, 
+  "NewStyles" -> True, "CitationPopupData" -> $Failed, "ShowCitation" -> 
+  False, "RootCaptions" -> "", 
+  "Metadata" -> {
+   "built" -> "{2022, 7, 26, 15, 37, 5.1566366}", 
+    "history" -> {"XX", "", "", ""}, "context" -> "Fretica`", 
+    "keywords" -> {}, "specialkeywords" -> {}, 
+    "tutorialcollectionlinks" -> {}, "index" -> True, "label" -> 
+    "Fretica Symbol", "language" -> "en", "paclet" -> "Fretica", "status" -> 
+    "None", "summary" -> 
+    "FFitPeaks2D[xyfdata,peaknames,guess] or FFitPeaks2D [xyfdata, peaknames, \
+positionguess:{{_?NumericQ,_?NumericQ}..} fits peaks in a 2D distribution \
+yxfdata with 2D Gaussians. The peaks to be fit are assigned to symbols listed \
+in peaknames.", "synonyms" -> {}, "tabletags" -> {}, "title" -> "FFitPeaks2D",
+     "titlemodifier" -> "", "windowtitle" -> "FFitPeaks2D", "type" -> 
+    "Symbol", "uri" -> "Fretica/ref/FFitPeaks2D"}},
+CellContext->"Global`",
+FrontEndVersion->"13.2 for Microsoft Windows (64-bit) (January 30, 2023)",
+StyleDefinitions->Notebook[{
+   Cell[
+    StyleData[
+    StyleDefinitions -> FrontEnd`FileName[{"Wolfram"}, "Reference.nb"]]], 
+   Cell[
+    StyleData["Input"], CellContext -> "Global`"], 
+   Cell[
+    StyleData["Output"], CellContext -> "Global`"]}, Visible -> False, 
+  FrontEndVersion -> "13.2 for Microsoft Windows (64-bit) (January 30, 2023)",
+   StyleDefinitions -> "Default.nb"],
+ExpressionUUID->"a68ca49b-022e-4535-a981-dc57e4d0c221"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[583, 21, 3298, 76, 70, "AnchorBarGrid",ExpressionUUID->"45a9447f-2acc-4b6e-908d-49a6be91f19a",
+ CellID->1],
+Cell[3884, 99, 90, 0, 70, "ContextNameCell",ExpressionUUID->"f9880e0d-b5c1-4978-979c-454cf639d1bb"],
+Cell[CellGroupData[{
+Cell[3999, 103, 554, 14, 70, "ObjectNameGrid",ExpressionUUID->"cd55f163-10bc-417f-8de8-d2d2df54e151"],
+Cell[4556, 119, 909, 20, 70, "Usage",ExpressionUUID->"2fdf68e9-3ddd-4b93-8e52-9f682b9725cf",
+ CellID->89653879]
+}, Open  ]],
+Cell[5480, 142, 78, 0, 70, "FooterCell",ExpressionUUID->"8c7e4774-0f10-470d-a55c-3207e74fccaa"]
+}
+]
+*)
+
