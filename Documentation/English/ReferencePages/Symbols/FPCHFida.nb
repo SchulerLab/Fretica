@@ -1,0 +1,489 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 13.2' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     18325,        479]
+NotebookOptionsPosition[     14853,        410]
+NotebookOutlinePosition[     17684,        471]
+CellTagsIndexPosition[     17641,        468]
+WindowTitle->FPCHFida
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[GridBox[{
+   {GridBox[{
+      {
+       ItemBox[Cell[BoxData[
+         RowBox[{
+          TemplateBox[{12},
+           "Spacer1"], Cell["FRETICA SYMBOL", "PacletNameCell",
+           TextAlignment->Center,ExpressionUUID->
+           "365fe01c-3997-4bba-ac94-9b24d0b4c2fa"], 
+          TemplateBox[{8},
+           "Spacer1"]}]],
+         TextAlignment->Center,ExpressionUUID->
+         "60186e0a-c639-4627-b5f6-37da333c9431"],
+        Background->RGBColor[0.490196, 0.576471, 0.690196],
+        ItemSize->Full], ""}
+     },
+     GridBoxAlignment->{"Rows" -> {{Center}}},
+     GridBoxItemSize->{"Columns" -> {Full, 
+         Scaled[0.02]}, "Rows" -> {{2.5}}}], Cell[TextData[{
+     Cell[BoxData[
+      TagBox[
+       ActionMenuBox[
+        FrameBox[Cell[TextData[{
+          "Related Guides",
+          " ",
+          Cell[BoxData[
+           GraphicsBox[
+            {GrayLevel[0.66667], Thickness[0.13], 
+             LineBox[{{-1.8, 0.5}, {0, 0}, {1.8, 0.5}}]},
+            AspectRatio->1,
+            ImageSize->20,
+            PlotRange->{{-3, 4}, {-1, 1}}]],ExpressionUUID->
+           "ba8b5dcd-1fd9-447f-ae7f-e318e01fd28e"]
+         }],ExpressionUUID->"6e77bff7-8f67-45e4-b4cc-4d335be56e1a"],
+         StripOnInput->False], {"\<\"Fretica\"\>":>Documentation`HelpLookup[
+        "paclet:Fretica/guide/Fretica"]},
+        Appearance->None,
+        MenuAppearance->Automatic,
+        MenuStyle->"MoreAbout"],
+       MouseAppearanceTag["LinkHand"]]],
+      LineSpacing->{1.4, 0},ExpressionUUID->
+      "450b3a91-6c3d-44db-9900-802b22a004e2"],
+     "\[ThickSpace]\[ThickSpace]\[ThickSpace]\[ThickSpace]\[ThickSpace]\
+\[ThickSpace]",
+     Cell[BoxData[
+      TagBox[
+       ActionMenuBox[
+        FrameBox[Cell[TextData[{
+          "URL",
+          " ",
+          Cell[BoxData[
+           GraphicsBox[
+            {GrayLevel[0.66667], Thickness[0.13], 
+             LineBox[{{-1.8, 0.5}, {0, 0}, {1.8, 0.5}}]},
+            AspectRatio->1,
+            ImageSize->20,
+            PlotRange->{{-3, 4}, {-1, 1}}]],ExpressionUUID->
+           "e62ff10e-4999-45ec-90f8-425cf42fdde7"]
+         }],ExpressionUUID->"271fa6dc-debc-4ed8-8e87-49cfeebe44b0"],
+         StripOnInput->False], {"\<\"Fretica/ref/FPCHFida\"\>":>
+        None, "\<\"Copy Wolfram Documentation Center URL\"\>":>
+        Module[{DocumentationSearch`Private`nb$}, 
+         DocumentationSearch`Private`nb$ = NotebookPut[
+            Notebook[{
+              Cell["Fretica/ref/FPCHFida"]}, Visible -> False]]; 
+         SelectionMove[DocumentationSearch`Private`nb$, All, Notebook]; 
+         FrontEndTokenExecute[DocumentationSearch`Private`nb$, "Copy"]; 
+         NotebookClose[DocumentationSearch`Private`nb$]; Null], 
+        Delimiter, "\<\"Copy web URL\"\>":>
+        Module[{DocumentationSearch`Private`nb$}, 
+         DocumentationSearch`Private`nb$ = NotebookPut[
+            Notebook[{
+              Cell[
+               BoxData[
+                MakeBoxes[
+                 Hyperlink[
+                 "http://reference.wolfram.com/language/Fretica/ref/FPCHFida.\
+html"], StandardForm]], "Input", TextClipboardType -> "PlainText"]}, Visible -> 
+             False]]; SelectionMove[
+          DocumentationSearch`Private`nb$, All, Notebook]; 
+         FrontEndTokenExecute[DocumentationSearch`Private`nb$, "Copy"]; 
+         NotebookClose[DocumentationSearch`Private`nb$]; 
+         Null], "\<\"Go to web URL\"\>":>FrontEndExecute[{
+          NotebookLocate[{
+            URL[If[
+               TrueQ[DocumentationBuild`Make`Private`wsmlinkQ$177745], 
+               "http://reference.wolfram.com/system-modeler/", 
+               "http://reference.wolfram.com/language/"] <> 
+             "Fretica/ref/FPCHFida" <> ".html"], None}]}]},
+        Appearance->None,
+        MenuAppearance->Automatic,
+        MenuStyle->"URLMenu"],
+       MouseAppearanceTag["LinkHand"]]],
+      LineSpacing->{1.4, 0},ExpressionUUID->
+      "c1093ae7-9247-473d-92aa-06ab9d458503"]
+    }], "AnchorBar",
+     CacheGraphics->False,ExpressionUUID->
+     "16207e75-7abc-4880-9b67-d1efcc7e1d4d"]}
+  }]], "AnchorBarGrid",
+ GridBoxOptions->{GridBoxItemSize->{"Columns" -> {
+     Scaled[0.65], {
+      Scaled[0.34]}}, "ColumnsIndexed" -> {}, "Rows" -> {{1.}}, 
+   "RowsIndexed" -> {}}},
+ CellID->1,ExpressionUUID->"ea878164-84fc-48ee-8b55-5ffabad26819"],
+
+Cell["Fretica`", "ContextNameCell",ExpressionUUID->"bda20e37-98bf-4265-89fa-b39e9f57734e"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[GridBox[{
+   {Cell[TextData[{
+     Cell[
+     "FPCHFida", "ObjectName",ExpressionUUID->
+      "ee100e1e-45ff-43f0-a19f-a44e98119d0d"],
+     Cell[BoxData[
+      TemplateBox[{8},
+       "Spacer1"]],ExpressionUUID->"18c58485-22aa-43e3-968b-3e0e95d09c64"],
+     Cell[BoxData[
+     ""], "ObjectNameTranslation",ExpressionUUID->
+      "a0ac4a07-bcf9-4488-a71e-ff6dd617fcfe"]
+    }],ExpressionUUID->"b7b79ed6-5214-4e49-8ecc-974536c73d9e"], 
+    "\[SpanFromLeft]"}
+  }]], "ObjectNameGrid",ExpressionUUID->"260468c3-0f1d-4425-ab1b-\
+4a89191f35ff"],
+
+Cell[BoxData[GridBox[{
+   {"", Cell[TextData[{
+     "FPCHFida[nmax, ",
+     Cell[BoxData[
+      FormBox[
+       RowBox[{"{", 
+        RowBox[{"{", 
+         SubscriptBox[
+          StyleBox["B", "TI"], "1"]}]}], TraditionalForm]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "2e9bcf2a-33a9-4194-9b66-d64639e4a196"],
+     ", ",
+     Cell[BoxData[
+      FormBox[
+       RowBox[{
+        SubscriptBox[
+         StyleBox["n", "TI"], "1"], " ", "}"}], TraditionalForm]], 
+      "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "1debe1fc-c857-4dab-bc64-6d210085a024"],
+     ", ",
+     Cell[BoxData[
+      FormBox[
+       RowBox[{"{", 
+        SubscriptBox[
+         StyleBox["B", "TI"], "2"]}], TraditionalForm]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "e16a5b05-de45-48a8-8214-8cd025d61cef"],
+     ", ",
+     Cell[BoxData[
+      FormBox[
+       RowBox[{
+        SubscriptBox[
+         StyleBox["n", "TI"], "2"], " ", "}"}], TraditionalForm]], 
+      "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "ea4ab4ae-1817-4243-bcea-5d466668902a"],
+     ",..",
+     Cell[BoxData[
+      FormBox["}", TraditionalForm]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "02594322-7fd5-4a09-80b8-5d289740b90a"],
+     ", ",
+     Cell[BoxData[
+      FormBox[
+       SubscriptBox[
+        StyleBox["n", "TI"], "bg"], TraditionalForm]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "a4b22ef7-9412-4aee-8623-13fc96189969"],
+     ", ",
+     Cell[BoxData[
+      FormBox[
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{"{", 
+          RowBox[{
+           SubscriptBox[
+            StyleBox["a", "TI"], 
+            StyleBox["i", "TI"]], ",", 
+           StyleBox["i", "TI"]}], "}"}], " ", "..."}], "}"}], 
+       TraditionalForm]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "005b858d-3547-4111-aceb-142351337bb3"],
+     "]"
+    }],ExpressionUUID->"444a3f86-5d28-436f-a5b5-a22384c6ee29"]},
+   {"", Cell[TextData[{
+     "calculates a model PCH as introduced in FIDA*, where the confocal \
+volume is described generically by the function ",
+     Cell[BoxData[
+      FormBox[
+       RowBox[{
+        RowBox[{
+         StyleBox["d", "TI"], 
+         RowBox[{
+          StyleBox["V", "TI"], "/", 
+          StyleBox["d", "TI"]}], 
+         StyleBox["x", "TI"]}], " ", "\[LongEqual]", 
+        RowBox[{
+         UnderscriptBox["\[Sum]", 
+          StyleBox["i", "TI"],
+          LimitsPositioning->True], 
+         SubscriptBox[
+          StyleBox["a", "TI"], 
+          StyleBox["i", "TI"]], 
+         SuperscriptBox[
+          StyleBox["x", "TI"], 
+          StyleBox["i", "TI"]]}]}], TraditionalForm]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "b11b65c8-f28b-4e2d-8d95-a0397ef87d09"],
+     "."
+    }],ExpressionUUID->"0e744eca-2be1-4c34-9073-90359041ad80"]},
+   {"", Cell["\<\
+nmax: maximum value of photon counts per bin to which the model PCH is \
+calculated\
+\>",ExpressionUUID->"46fcc42c-d84b-441d-aca9-9a3e6558f620"]},
+   {"", Cell[TextData[{
+     Cell[BoxData[
+      FormBox[
+       SubscriptBox[
+        StyleBox["B", "TI"], 
+        StyleBox["s", "TI"]], TraditionalForm]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "4bf36eb3-ae57-45ca-8d4a-ad9bfaedd951"],
+     " : mean number of photons per bin for species ",
+     Cell[BoxData[
+      FormBox[
+       StyleBox["s", "TI"], TraditionalForm]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "d38a343c-ab4c-4e4e-91bb-c7c55ce97702"],
+     " when the particle is located at the center of the confocal volume"
+    }],ExpressionUUID->"e249f32e-88ef-45aa-ab23-9d70c6956539"]},
+   {"", Cell[TextData[{
+     Cell[BoxData[
+      FormBox[
+       SubscriptBox[
+        StyleBox["n", "TI"], 
+        StyleBox["s", "TI"]], TraditionalForm]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "0ef1f481-3765-4ac2-b2cc-10e0c1abbc92"],
+     " : mean number of molecules of species ",
+     Cell[BoxData[
+      FormBox[
+       StyleBox["s", "TI"], TraditionalForm]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "39339cf2-6abf-49a5-9ba6-75539dab6a46"],
+     " in the confocal volume"
+    }],ExpressionUUID->"470be097-9fcb-4044-a9e5-24c6102e1600"]},
+   {"", Cell[TextData[{
+     Cell[BoxData[
+      FormBox[
+       SubscriptBox[
+        StyleBox["n", "TI"], "bg"], TraditionalForm]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "6756c93c-0562-4c97-b3fa-163ce787c287"],
+     " : mean number of background photons per bin"
+    }],ExpressionUUID->"982e29e6-a9a5-4f26-8112-5af9fa442ec7"]},
+   {"", Cell[TextData[{
+     Cell[BoxData[
+      FormBox[
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{"{", 
+          RowBox[{
+           SubscriptBox[
+            StyleBox["a", "TI"], 
+            StyleBox["i", "TI"]], ",", 
+           StyleBox["i", "TI"]}], "}"}], "..."}], "}"}], TraditionalForm]], 
+      "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "86401118-f43e-4542-be01-879b441a4f61"],
+     " is a list of coefficients and exponents defining ",
+     Cell[BoxData[
+      FormBox[
+       RowBox[{
+        RowBox[{
+         StyleBox["d", "TI"], 
+         RowBox[{
+          StyleBox["V", "TI"], "/", 
+          StyleBox["d", "TI"]}], 
+         StyleBox["x", "TI"]}], "\[LongEqual]", 
+        RowBox[{
+         UnderscriptBox["\[Sum]", 
+          StyleBox["i", "TI"],
+          LimitsPositioning->True], 
+         SubscriptBox[
+          StyleBox["a", "TI"], 
+          StyleBox["i", "TI"]], 
+         SuperscriptBox[
+          StyleBox["x", "TI"], 
+          StyleBox["i", "TI"]]}]}], TraditionalForm]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "639c2639-73e5-4898-a12a-038ccfa43aec"],
+     ". Note that ",
+     Cell[BoxData[
+      FormBox[
+       StyleBox["i", "TI"], TraditionalForm]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "9f4a7b21-7d9a-43f8-8935-36e492d0c8e7"],
+     " is not necessarily an integer. For example, ",
+     Cell[BoxData[
+      FormBox[
+       RowBox[{
+        RowBox[{
+         StyleBox["d", "TI"], 
+         RowBox[{
+          StyleBox["V", "TI"], "/", 
+          StyleBox["d", "TI"]}], 
+         StyleBox["x", "TI"]}], "\[LongEqual]", 
+        SuperscriptBox[
+         StyleBox["x", "TI"], 
+         RowBox[{"1", "/", "2"}]]}], TraditionalForm]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "8e95302e-1628-4521-a48f-8f86c5a1d0f4"],
+     " describes a 3D Gaussian confocal volume**."
+    }],ExpressionUUID->"6ae652bc-fb3c-4ed5-9d6b-18a015f8710c"]},
+   {"", Cell["\<\
+Kask, P., Palo, K., Ullman, D., and Gall, K. (1999) Proc. Natl. Acad. Sci. U. \
+S. A. 96, 13756\[Hyphen]13761\
+\>",ExpressionUUID->"4bd8ec91-7913-4f89-b7e3-b6edd77b3261"]},
+   {"", Cell[
+    "* Meng, F., Ma, H. (2006) J.Phys. Chem. B, 110,25716\[Hyphen]25720",
+     ExpressionUUID->"8f03fa5f-1b08-4c68-ac74-35db9f0f4fa4"]},
+   {"", Cell["\<\
+The PCH is calculated as described in Gopich, I., Szabo, A. (2005) J. Phys. \
+Chem. B, 109, 17683\[Hyphen]17688. \
+\>",ExpressionUUID->"a2096be6-bfed-48ad-a6a9-3fc74b362ae2"]}
+  }]], "Usage",
+ CellID->210124884,ExpressionUUID->"6c971ab1-6866-482d-8a2f-ea1d08f6b269"]
+}, Open  ]],
+
+Cell[BoxData[GridBox[{
+   {
+    DynamicBox[FEPrivate`ImportImage[
+      FrontEnd`FileName[{"Documentation", "FooterIcons"}, "RelatedGuide.png"]],
+     ImageSizeCache->{50., {27., 33.}}], GridBox[{
+      {
+       StyleBox[
+        RowBox[{"Related", " ", "Guides"}], "MoreAboutSection"]},
+      {
+       RowBox[{"\[FilledVerySmallSquare]", Cell[BoxData[
+         TemplateBox[{
+           Cell[
+            TextData["Fretica"]], "paclet:Fretica/guide/Fretica"},
+          "RefLinkPlain",
+          BaseStyle->{"MoreAbout"}]], "MoreAbout",ExpressionUUID->
+         "fd742f4e-62e1-4db3-bafc-75e3e3e88705"]}]}
+     }]}
+  }]], "MoreAboutSection",ExpressionUUID->"9695ffd9-a2ba-4f63-94c3-\
+0818ea20c90f"],
+
+Cell[BoxData[GridBox[{
+   {
+    TemplateBox[{29},
+     "Spacer1"], GridBox[{
+      {
+       RowBox[{
+        TemplateBox[{17},
+         "Spacer1"], 
+        StyleBox[
+         RowBox[{"Related", " ", "Links"}], "RelatedLinksSection"]}]},
+      {Cell[TextData[Cell[BoxData[
+        RowBox[{
+         TemplateBox[{16},
+          "Spacer1"], "\[FilledVerySmallSquare]", Cell[BoxData[
+          TemplateBox[{
+            Cell[
+             TextData[
+              Cell[
+               TextData[{
+                 Cell[
+                  BoxData[
+                   TemplateBox[{2}, "Spacer1"]]], "Schuler Lab"}]]]], 
+            "https://schuler.bioc.uzh.ch/programs/"},
+           "WebLink",
+           BaseStyle->{"RelatedLinks"}]],ExpressionUUID->
+          "22e3f8d5-db0e-438a-911d-73daf375860a"]}]],ExpressionUUID->
+        "b2dcc785-aed1-4de6-ba96-3716d2060768"]], "RelatedLinks",
+        ExpressionUUID->"6f02bca2-d065-4f46-94f2-a7d8782b28e1"]}
+     }]}
+  }]], "RelatedLinksSection",ExpressionUUID->"50bd2023-82ff-4e87-9850-\
+d90b471eef98"],
+
+Cell[" ", "FooterCell",ExpressionUUID->"c66591c7-aba8-4755-bc36-b2b10b5eae5d"]
+},
+Saveable->False,
+ScreenStyleEnvironment->"Working",
+WindowSize->{900., 604.8},
+WindowMargins->{{0, Automatic}, {Automatic, 0}},
+WindowTitle->"FPCHFida",
+TaggingRules->{
+ "ModificationHighlight" -> False, "ColorType" -> "", "LinkTrails" -> "", 
+  "HasOptions" -> True, "ExampleCounter" -> 1, 
+  "Openers" -> {
+   "PrimaryExamplesSection" -> Open, "ExampleSection" -> {"0" -> Open}}, 
+  "NewStyles" -> True, "CitationPopupData" -> $Failed, "ShowCitation" -> 
+  False, "RootCaptions" -> "", 
+  "Metadata" -> {
+   "built" -> "{2023, 3, 6, 14, 30, 43.7748881}", 
+    "history" -> {"XX", "", "", ""}, "context" -> "Fretica`", 
+    "keywords" -> {}, "specialkeywords" -> {}, 
+    "tutorialcollectionlinks" -> {}, "index" -> True, "label" -> 
+    "Fretica Symbol", "language" -> "en", "paclet" -> "Fretica", "status" -> 
+    "None", "summary" -> 
+    "FPCHFida[nmax, {{B1, n1 }, {B2, n2 },..}, nbg, {{ai, i} ...}] calculates \
+a model PCH as introduced in FIDA*, where the confocal volume is described \
+generically by the function d V/d x == UnderscriptBox[\\[Sum], i, \
+LimitsPositioning->True]ai x^i. nmax: maximum value of photon counts per bin \
+to which the model PCH is calculated Bs : mean number of photons per bin for \
+species s when the particle is located at the center of the confocal volume \
+ns : mean number of molecules of species s in the confocal volume nbg : mean \
+number of background photons per bin {{ai, i} ...} is a list of coefficients \
+and exponents defining d V/d x == UnderscriptBox[\\[Sum], i, \
+LimitsPositioning->True]ai x^i. Note that i is not necessarily an integer. \
+For example, d V/d x == x 1/2 describes a 3D Gaussian confocal volume**. \
+Kask, P., Palo, K., Ullman, D., and Gall, K. (1999) Proc. Natl. Acad. Sci. U. \
+S. A. 96, 13756-13761 * Meng, F., Ma, H. (2006) J.Phys. Chem. B, \
+110,25716-25720 The PCH is calculated as described in Gopich, I., Szabo, A. \
+(2005) J. Phys. Chem. B, 109, 17683-17688. ", "synonyms" -> {}, 
+    "tabletags" -> {}, "title" -> "FPCHFida", "titlemodifier" -> "", 
+    "windowtitle" -> "FPCHFida", "type" -> "Symbol", "uri" -> 
+    "Fretica/ref/FPCHFida"}},
+CellContext->"Global`",
+FrontEndVersion->"13.2 for Microsoft Windows (64-bit) (January 30, 2023)",
+StyleDefinitions->Notebook[{
+   Cell[
+    StyleData[
+    StyleDefinitions -> FrontEnd`FileName[{"Wolfram"}, "Reference.nb"]]], 
+   Cell[
+    StyleData["Input"], CellContext -> "Global`"], 
+   Cell[
+    StyleData["Output"], CellContext -> "Global`"]}, Visible -> False, 
+  FrontEndVersion -> "13.2 for Microsoft Windows (64-bit) (January 30, 2023)",
+   StyleDefinitions -> "Default.nb"],
+ExpressionUUID->"5426535f-c470-40e4-b25d-a8e445cc5ccf"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[580, 21, 4306, 103, 70, "AnchorBarGrid",ExpressionUUID->"ea878164-84fc-48ee-8b55-5ffabad26819",
+ CellID->1],
+Cell[4889, 126, 90, 0, 70, "ContextNameCell",ExpressionUUID->"bda20e37-98bf-4265-89fa-b39e9f57734e"],
+Cell[CellGroupData[{
+Cell[5004, 130, 551, 14, 70, "ObjectNameGrid",ExpressionUUID->"260468c3-0f1d-4425-ab1b-4a89191f35ff"],
+Cell[5558, 146, 7452, 207, 70, "Usage",ExpressionUUID->"6c971ab1-6866-482d-8a2f-ea1d08f6b269",
+ CellID->210124884]
+}, Open  ]],
+Cell[13025, 356, 697, 18, 70, "MoreAboutSection",ExpressionUUID->"9695ffd9-a2ba-4f63-94c3-0818ea20c90f"],
+Cell[13725, 376, 1043, 30, 70, "RelatedLinksSection",ExpressionUUID->"50bd2023-82ff-4e87-9850-d90b471eef98"],
+Cell[14771, 408, 78, 0, 70, "FooterCell",ExpressionUUID->"c66591c7-aba8-4755-bc36-b2b10b5eae5d"]
+}
+]
+*)
+
+(* End of internal cache information *)
+

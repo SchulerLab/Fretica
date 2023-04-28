@@ -1,0 +1,441 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 13.2' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     17217,        431]
+NotebookOptionsPosition[     13603,        360]
+NotebookOutlinePosition[     16577,        423]
+CellTagsIndexPosition[     16534,        420]
+WindowTitle->FPIEBurstAsymmetry
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[GridBox[{
+   {GridBox[{
+      {
+       ItemBox[Cell[BoxData[
+         RowBox[{
+          TemplateBox[{12},
+           "Spacer1"], Cell["FRETICA SYMBOL", "PacletNameCell",
+           TextAlignment->Center,ExpressionUUID->
+           "352107c6-d33c-42eb-9e67-073590ded513"], 
+          TemplateBox[{8},
+           "Spacer1"]}]],
+         TextAlignment->Center,ExpressionUUID->
+         "fd3bf169-489c-4452-91f9-fab401c45196"],
+        Background->RGBColor[0.490196, 0.576471, 0.690196],
+        ItemSize->Full], ""}
+     },
+     GridBoxAlignment->{"Rows" -> {{Center}}},
+     GridBoxItemSize->{"Columns" -> {Full, 
+         Scaled[0.02]}, "Rows" -> {{2.5}}}], Cell[TextData[{
+     Cell[BoxData[
+      TagBox[
+       ActionMenuBox[
+        FrameBox[Cell[TextData[{
+          "Related Guides",
+          " ",
+          Cell[BoxData[
+           GraphicsBox[
+            {GrayLevel[0.66667], Thickness[0.13], 
+             LineBox[{{-1.8, 0.5}, {0, 0}, {1.8, 0.5}}]},
+            AspectRatio->1,
+            ImageSize->20,
+            PlotRange->{{-3, 4}, {-1, 1}}]],ExpressionUUID->
+           "e063ba5a-9ed5-47a2-9475-c32a3a5332e0"]
+         }],ExpressionUUID->"24e23156-2980-4065-a5c0-ae879045074c"],
+         StripOnInput->False], {"\<\"Fretica\"\>":>Documentation`HelpLookup[
+        "paclet:Fretica/guide/Fretica"]},
+        Appearance->None,
+        MenuAppearance->Automatic,
+        MenuStyle->"MoreAbout"],
+       MouseAppearanceTag["LinkHand"]]],
+      LineSpacing->{1.4, 0},ExpressionUUID->
+      "cb25456e-0847-41f5-8c4f-8d51323528fa"],
+     "\[ThickSpace]\[ThickSpace]\[ThickSpace]\[ThickSpace]\[ThickSpace]\
+\[ThickSpace]",
+     Cell[BoxData[
+      TagBox[
+       ActionMenuBox[
+        FrameBox[Cell[TextData[{
+          "URL",
+          " ",
+          Cell[BoxData[
+           GraphicsBox[
+            {GrayLevel[0.66667], Thickness[0.13], 
+             LineBox[{{-1.8, 0.5}, {0, 0}, {1.8, 0.5}}]},
+            AspectRatio->1,
+            ImageSize->20,
+            PlotRange->{{-3, 4}, {-1, 1}}]],ExpressionUUID->
+           "306a5b9c-2780-45da-8a8d-bd7c2026274e"]
+         }],ExpressionUUID->"0ac59447-30d3-484c-8b2c-da0573e47e50"],
+         StripOnInput->False], {"\<\"Fretica/ref/FPIEBurstAsymmetry\"\>":>
+        None, "\<\"Copy Wolfram Documentation Center URL\"\>":>
+        Module[{DocumentationSearch`Private`nb$}, 
+         DocumentationSearch`Private`nb$ = NotebookPut[
+            Notebook[{
+              Cell["Fretica/ref/FPIEBurstAsymmetry"]}, Visible -> False]]; 
+         SelectionMove[DocumentationSearch`Private`nb$, All, Notebook]; 
+         FrontEndTokenExecute[DocumentationSearch`Private`nb$, "Copy"]; 
+         NotebookClose[DocumentationSearch`Private`nb$]; Null], 
+        Delimiter, "\<\"Copy web URL\"\>":>
+        Module[{DocumentationSearch`Private`nb$}, 
+         DocumentationSearch`Private`nb$ = NotebookPut[
+            Notebook[{
+              Cell[
+               BoxData[
+                MakeBoxes[
+                 Hyperlink[
+                 "http://reference.wolfram.com/language/Fretica/ref/\
+FPIEBurstAsymmetry.html"], StandardForm]], "Input", TextClipboardType -> 
+               "PlainText"]}, Visible -> False]]; 
+         SelectionMove[DocumentationSearch`Private`nb$, All, Notebook]; 
+         FrontEndTokenExecute[DocumentationSearch`Private`nb$, "Copy"]; 
+         NotebookClose[DocumentationSearch`Private`nb$]; 
+         Null], "\<\"Go to web URL\"\>":>FrontEndExecute[{
+          NotebookLocate[{
+            URL[If[
+               TrueQ[DocumentationBuild`Make`Private`wsmlinkQ$195866], 
+               "http://reference.wolfram.com/system-modeler/", 
+               "http://reference.wolfram.com/language/"] <> 
+             "Fretica/ref/FPIEBurstAsymmetry" <> ".html"], None}]}]},
+        Appearance->None,
+        MenuAppearance->Automatic,
+        MenuStyle->"URLMenu"],
+       MouseAppearanceTag["LinkHand"]]],
+      LineSpacing->{1.4, 0},ExpressionUUID->
+      "088389fa-8273-478a-8c91-aae827f8b1bf"]
+    }], "AnchorBar",
+     CacheGraphics->False,ExpressionUUID->
+     "209e90cb-8e41-45d0-8d48-0b111064c56e"]}
+  }]], "AnchorBarGrid",
+ GridBoxOptions->{GridBoxItemSize->{"Columns" -> {
+     Scaled[0.65], {
+      Scaled[0.34]}}, "ColumnsIndexed" -> {}, "Rows" -> {{1.}}, 
+   "RowsIndexed" -> {}}},
+ CellID->1,ExpressionUUID->"4ae4fec8-6d79-4d0b-a1a0-9b7d5d85d8b8"],
+
+Cell["Fretica`", "ContextNameCell",ExpressionUUID->"bd27a050-92c1-4ee9-954c-943bc731bbab"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[GridBox[{
+   {Cell[TextData[{
+     Cell[
+     "FPIEBurstAsymmetry", "ObjectName",ExpressionUUID->
+      "9745c808-7c25-4bdf-a9be-0d2d3fb1b01e"],
+     Cell[BoxData[
+      TemplateBox[{8},
+       "Spacer1"]],ExpressionUUID->"4d0508ee-5797-48c6-8862-683657b4c837"],
+     Cell[BoxData[
+     ""], "ObjectNameTranslation",ExpressionUUID->
+      "b1c57ba9-7459-45ac-923c-036dd23803e9"]
+    }],ExpressionUUID->"80f5d6f8-69c4-4438-bdeb-80c3f5c6329d"], 
+    "\[SpanFromLeft]"}
+  }]], "ObjectNameGrid",ExpressionUUID->"d6644003-fa43-4e82-8c39-\
+8db9628246b9"],
+
+Cell[BoxData[GridBox[{
+   {"", Cell[TextData[{
+     "FPIEBurstAsymmetry[",
+     Cell[BoxData[
+      FormBox[
+       RowBox[{"{", " ", "\[Null]"}], TraditionalForm]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "4e983b90-6a54-4eb1-9369-753bdca8b8ea"],
+     "Emin, Emax, dE",
+     Cell[BoxData[
+      FormBox["}", TraditionalForm]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "af3cb205-e4ad-45f2-89e5-d46cd1a9e795"],
+     ",",
+     Cell[BoxData[
+      FormBox[
+       RowBox[{"{", " ", "\[Null]"}], TraditionalForm]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "c0f77cc8-a18e-43d7-8342-6d0a6b02e5cd"],
+     "Amin, Amax, dA ",
+     Cell[BoxData[
+      FormBox["}", TraditionalForm]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "82c7e13f-8011-4bf3-bfde-674cad53a581"],
+     ", ",
+     Cell[BoxData[
+      FormBox[
+       StyleBox["n", "TI"], TraditionalForm]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "6bca85be-6c80-4d8c-af60-eb8704c03927"],
+     "] creates three plots showing photon burst asymmetry ( ",
+     Cell[BoxData[
+      FormBox[
+       SubscriptBox["\[Alpha]", "PIE"], TraditionalForm]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "12223a6d-4de7-4b18-822b-3c328e34c5e0"],
+     ") versus transfer efficiency (",
+     Cell[BoxData[
+      FormBox[
+       StyleBox["E", "TI"], TraditionalForm]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "f35b1d5c-0939-4034-a731-30eb0134820b"],
+     "). The first plot shows for each burst a point, where the color depends \
+on ",
+     Cell[BoxData[
+      FormBox[
+       SubscriptBox["\[Alpha]", "PIE"], TraditionalForm]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "69507d56-959e-4d63-9ee8-41fec32612d6"],
+     " being inside (blue) or outside (red) the confidence level ",
+     Cell[BoxData[
+      FormBox[
+       RowBox[{
+        StyleBox["n", "TI"], " ", "\[Cross]", "\[Sigma]"}], TraditionalForm]],
+       "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "e136a0d8-5f1a-4d7a-9b27-f028fd6c7ba7"],
+     " ",
+     Cell[BoxData[
+      FormBox["\[Sigma]", TraditionalForm]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "f40d5d87-4639-40ce-8a5c-17d9a568448a"],
+     " is calculated for each burst from ",
+     Cell[BoxData[
+      FormBox[
+       RowBox[{"\[Sigma]", " ", "\[LongEqual]", 
+        RowBox[{
+         FractionBox[
+          StyleBox["T", "TI"], 
+          RowBox[{"2", 
+           SqrtBox["3"]}]], 
+         SqrtBox[
+          RowBox[{"1", "/", 
+           RowBox[{"(", 
+            RowBox[{
+             SubscriptBox[
+              StyleBox["N", "TI"], "DD"], "+", 
+             SubscriptBox[
+              StyleBox["N", "TI"], "DA"]}], ")"}], "+", "1", "/", 
+           SubscriptBox[
+            StyleBox["N", "TI"], "AA"]}]]}]}], TraditionalForm]], 
+      "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "eb6918ef-2efa-40be-ab9a-1b3d409f8923"],
+     ". ",
+     Cell[BoxData[
+      FormBox[
+       StyleBox["T", "TI"], TraditionalForm]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "ab926ce2-fff1-4989-802f-e6c582f71f0b"],
+     " is the burst duration. ",
+     Cell[BoxData[
+      FormBox[
+       SubscriptBox[
+        StyleBox["N", "TI"], "DD"], TraditionalForm]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "283a684a-3356-42d8-98e9-151f7e6abb3f"],
+     " and ",
+     Cell[BoxData[
+      FormBox[
+       SubscriptBox[
+        StyleBox["N", "TI"], "DA"], TraditionalForm]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "d30c7f58-4d40-433c-9c5c-94e2c1857f6a"],
+     " are the uncorrected photon numbers in the donor and acceptor detection \
+routes emitted upon donor excitation. ",
+     Cell[BoxData[
+      FormBox[
+       SubscriptBox[
+        StyleBox["N", "TI"], "AA"], TraditionalForm]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "87d2c7fc-8770-4aff-abff-9d0b1b7327b9"],
+     " is the uncorrected photon numbers in acceptor detection routes emitted \
+upon acceptor excitation. The PIE photon burst asymmetry is defined as ",
+     Cell[BoxData[
+      FormBox[
+       RowBox[{
+        SubscriptBox["\[Alpha]", "PIE"], " ", "\[LongEqual]", 
+        RowBox[{
+         RowBox[{"\[LeftAngleBracket]", 
+          SubscriptBox[
+           StyleBox["t", "TI"], "Dex"], "\[RightAngleBracket]"}], "-", 
+         RowBox[{"\[LeftAngleBracket]", 
+          SubscriptBox[
+           StyleBox["t", "TI"], "Aex"], "\[RightAngleBracket]"}]}]}], 
+       TraditionalForm]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "ab7d2f20-6750-41bb-8c55-20fdc84c0b9b"],
+     ", i.e. the difference between the mean detection times of the photons \
+emitted upon donor excitation and acceptor excitation, respectively. The \
+other two plots are contour plots showing only the bursts with ",
+     Cell[BoxData[
+      FormBox[
+       RowBox[{"|", 
+        SubscriptBox["\[Alpha]", "PIE"], "|", 
+        RowBox[{"\[LessEqual]", 
+         RowBox[{
+          RowBox[{"StyleBox", " ", "[", 
+           RowBox[{"\"\<n\>\"", ",", "\"\<TI\>\""}], "]"}], "\[Sigma]"}]}]}], 
+       TraditionalForm]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "064c089e-210f-4b04-964c-4c00833c6df3"],
+     " and ",
+     Cell[BoxData[
+      FormBox[
+       RowBox[{"|", 
+        SubscriptBox["\[Alpha]", "PIE"], "|", 
+        RowBox[{">", 
+         RowBox[{
+          RowBox[{"StyleBox", " ", "[", 
+           RowBox[{"\"\<n\>\"", ",", "\"\<TI\>\""}], "]"}], "\[Sigma]"}]}]}], 
+       TraditionalForm]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "efb8df03-fc22-4c5f-b139-a2f26659ec57"],
+     ", respectively. "
+    }],ExpressionUUID->"0c9fa9f0-b403-4a04-aa37-11793dd04cb1"]}
+  }]], "Usage",
+ CellID->92597746,ExpressionUUID->"5cb10e67-7bec-4d5b-8f53-4fffd3e5778d"]
+}, Open  ]],
+
+Cell[BoxData[GridBox[{
+   {
+    DynamicBox[FEPrivate`ImportImage[
+      FrontEnd`FileName[{"Documentation", "FooterIcons"}, "RelatedGuide.png"]],
+     ImageSizeCache->{50., {27., 33.}}], GridBox[{
+      {
+       StyleBox[
+        RowBox[{"Related", " ", "Guides"}], "MoreAboutSection"]},
+      {
+       RowBox[{"\[FilledVerySmallSquare]", Cell[BoxData[
+         TemplateBox[{
+           Cell[
+            TextData["Fretica"]], "paclet:Fretica/guide/Fretica"},
+          "RefLinkPlain",
+          BaseStyle->{"MoreAbout"}]], "MoreAbout",ExpressionUUID->
+         "08a86cb9-baf5-40e4-82ca-a410021f2805"]}]}
+     }]}
+  }]], "MoreAboutSection",ExpressionUUID->"b4111371-b813-4017-8659-\
+0965e53fc8ac"],
+
+Cell[BoxData[GridBox[{
+   {
+    TemplateBox[{29},
+     "Spacer1"], GridBox[{
+      {
+       RowBox[{
+        TemplateBox[{17},
+         "Spacer1"], 
+        StyleBox[
+         RowBox[{"Related", " ", "Links"}], "RelatedLinksSection"]}]},
+      {Cell[TextData[Cell[BoxData[
+        RowBox[{
+         TemplateBox[{16},
+          "Spacer1"], "\[FilledVerySmallSquare]", Cell[BoxData[
+          TemplateBox[{
+            Cell[
+             TextData[
+              Cell[
+               TextData[{
+                 Cell[
+                  BoxData[
+                   TemplateBox[{2}, "Spacer1"]]], "Schuler Lab"}]]]], 
+            "https://schuler.bioc.uzh.ch/programs/"},
+           "WebLink",
+           BaseStyle->{"RelatedLinks"}]],ExpressionUUID->
+          "798fd62d-7398-4452-9baf-92c93d896fd8"]}]],ExpressionUUID->
+        "4af67ec5-dd8d-4edc-8221-f9e165f8ba3a"]], "RelatedLinks",
+        ExpressionUUID->"56c65df0-37b9-4f0f-9022-d0617e5ec551"]}
+     }]}
+  }]], "RelatedLinksSection",ExpressionUUID->"1905db04-9185-40b8-9a17-\
+56d696729409"],
+
+Cell[" ", "FooterCell",ExpressionUUID->"77143d47-540d-48ac-9f1b-0715d1869764"]
+},
+Saveable->False,
+ScreenStyleEnvironment->"Working",
+WindowSize->{900., 604.8},
+WindowMargins->{{0, Automatic}, {Automatic, 0}},
+WindowTitle->"FPIEBurstAsymmetry",
+TaggingRules->{
+ "ModificationHighlight" -> False, "ColorType" -> "", "LinkTrails" -> "", 
+  "HasOptions" -> True, "ExampleCounter" -> 1, 
+  "Openers" -> {
+   "PrimaryExamplesSection" -> Open, "ExampleSection" -> {"0" -> Open}}, 
+  "NewStyles" -> True, "CitationPopupData" -> $Failed, "ShowCitation" -> 
+  False, "RootCaptions" -> "", 
+  "Metadata" -> {
+   "built" -> "{2023, 3, 6, 14, 31, 8.0799621}", 
+    "history" -> {"XX", "", "", ""}, "context" -> "Fretica`", 
+    "keywords" -> {}, "specialkeywords" -> {}, 
+    "tutorialcollectionlinks" -> {}, "index" -> True, "label" -> 
+    "Fretica Symbol", "language" -> "en", "paclet" -> "Fretica", "status" -> 
+    "None", "summary" -> 
+    "FPIEBurstAsymmetry[{ \\[Null]Emin, Emax, dE},{ \\[Null]Amin, Amax, dA }, \
+n] creates three plots showing photon burst asymmetry ( \\[Alpha]PIE) versus \
+transfer efficiency (E). The first plot shows for each burst a point, where \
+the color depends on \\[Alpha]PIE being inside (blue) or outside (red) the \
+confidence level n *\\[Sigma] \\[Sigma] is calculated for each burst from \
+\\[Sigma] == T/(2 Sqrt[3]) Sqrt[1/(NDD + NDA) + 1/NAA]. T is the burst \
+duration. NDD and NDA are the uncorrected photon numbers in the donor and \
+acceptor detection routes emitted upon donor excitation. NAA is the \
+uncorrected photon numbers in acceptor detection routes emitted upon acceptor \
+excitation. The PIE photon burst asymmetry is defined as \\[Alpha]PIE == \
+\\[LeftAngleBracket]tDex\\[RightAngleBracket] - \\ \
+\\[LeftAngleBracket]tAex\\[RightAngleBracket], i.e. the difference between \
+the mean detection times of the photons emitted upon donor excitation and \
+acceptor excitation, respectively. The other two plots are contour plots \
+showing only the bursts with | \\[Alpha]PIE | <= StyleBox [\"n\", \"TI\"] \
+\\[Sigma] and | \\[Alpha]PIE | > StyleBox [\"n\", \"TI\"] \\[Sigma], \
+respectively. ", "synonyms" -> {}, "tabletags" -> {}, "title" -> 
+    "FPIEBurstAsymmetry", "titlemodifier" -> "", "windowtitle" -> 
+    "FPIEBurstAsymmetry", "type" -> "Symbol", "uri" -> 
+    "Fretica/ref/FPIEBurstAsymmetry"}},
+CellContext->"Global`",
+FrontEndVersion->"13.2 for Microsoft Windows (64-bit) (January 30, 2023)",
+StyleDefinitions->Notebook[{
+   Cell[
+    StyleData[
+    StyleDefinitions -> FrontEnd`FileName[{"Wolfram"}, "Reference.nb"]]], 
+   Cell[
+    StyleData["Input"], CellContext -> "Global`"], 
+   Cell[
+    StyleData["Output"], CellContext -> "Global`"]}, Visible -> False, 
+  FrontEndVersion -> "13.2 for Microsoft Windows (64-bit) (January 30, 2023)",
+   StyleDefinitions -> "Default.nb"],
+ExpressionUUID->"4bbd26e2-6746-4c2d-9545-da68cc119ada"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[590, 21, 4347, 103, 70, "AnchorBarGrid",ExpressionUUID->"4ae4fec8-6d79-4d0b-a1a0-9b7d5d85d8b8",
+ CellID->1],
+Cell[4940, 126, 90, 0, 70, "ContextNameCell",ExpressionUUID->"bd27a050-92c1-4ee9-954c-943bc731bbab"],
+Cell[CellGroupData[{
+Cell[5055, 130, 561, 14, 70, "ObjectNameGrid",ExpressionUUID->"d6644003-fa43-4e82-8c39-8db9628246b9"],
+Cell[5619, 146, 6141, 157, 70, "Usage",ExpressionUUID->"5cb10e67-7bec-4d5b-8f53-4fffd3e5778d",
+ CellID->92597746]
+}, Open  ]],
+Cell[11775, 306, 697, 18, 70, "MoreAboutSection",ExpressionUUID->"b4111371-b813-4017-8659-0965e53fc8ac"],
+Cell[12475, 326, 1043, 30, 70, "RelatedLinksSection",ExpressionUUID->"1905db04-9185-40b8-9a17-56d696729409"],
+Cell[13521, 358, 78, 0, 70, "FooterCell",ExpressionUUID->"77143d47-540d-48ac-9f1b-0715d1869764"]
+}
+]
+*)
+
+(* End of internal cache information *)
+

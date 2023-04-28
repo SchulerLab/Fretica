@@ -1,0 +1,384 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 13.2' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     15056,        374]
+NotebookOptionsPosition[     11617,        304]
+NotebookOutlinePosition[     14016,        359]
+CellTagsIndexPosition[     13973,        356]
+WindowTitle->FOpenTTTR
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[GridBox[{
+   {GridBox[{
+      {
+       ItemBox[Cell[BoxData[
+         RowBox[{
+          TemplateBox[{12},
+           "Spacer1"], Cell["FRETICA SYMBOL", "PacletNameCell",
+           TextAlignment->Center,ExpressionUUID->
+           "dc7e3577-a9a7-459b-b679-432bea514c67"], 
+          TemplateBox[{8},
+           "Spacer1"]}]],
+         TextAlignment->Center,ExpressionUUID->
+         "8522c3e9-73a8-41a2-9f1e-fa0630c255c6"],
+        Background->RGBColor[0.490196, 0.576471, 0.690196],
+        ItemSize->Full], ""}
+     },
+     GridBoxAlignment->{"Rows" -> {{Center}}},
+     GridBoxItemSize->{"Columns" -> {Full, 
+         Scaled[0.02]}, "Rows" -> {{2.5}}}], Cell[TextData[{
+     Cell[BoxData[
+      TagBox[
+       ActionMenuBox[
+        FrameBox[Cell[TextData[{
+          "Related Guides",
+          " ",
+          Cell[BoxData[
+           GraphicsBox[
+            {GrayLevel[0.66667], Thickness[0.13], 
+             LineBox[{{-1.8, 0.5}, {0, 0}, {1.8, 0.5}}]},
+            AspectRatio->1,
+            ImageSize->20,
+            PlotRange->{{-3, 4}, {-1, 1}}]],ExpressionUUID->
+           "152f1232-fd9e-46db-9a3c-fc190844ddac"]
+         }],ExpressionUUID->"ed5934f5-291c-4ba8-9ea4-78fa2a936466"],
+         StripOnInput->False], {"\<\"Fretica\"\>":>Documentation`HelpLookup[
+        "paclet:Fretica/guide/Fretica"]},
+        Appearance->None,
+        MenuAppearance->Automatic,
+        MenuStyle->"MoreAbout"],
+       MouseAppearanceTag["LinkHand"]]],
+      LineSpacing->{1.4, 0},ExpressionUUID->
+      "bf114166-9a36-4a01-830d-b7edabe0a02a"],
+     "\[ThickSpace]\[ThickSpace]\[ThickSpace]\[ThickSpace]\[ThickSpace]\
+\[ThickSpace]",
+     Cell[BoxData[
+      TagBox[
+       ActionMenuBox[
+        FrameBox[Cell[TextData[{
+          "URL",
+          " ",
+          Cell[BoxData[
+           GraphicsBox[
+            {GrayLevel[0.66667], Thickness[0.13], 
+             LineBox[{{-1.8, 0.5}, {0, 0}, {1.8, 0.5}}]},
+            AspectRatio->1,
+            ImageSize->20,
+            PlotRange->{{-3, 4}, {-1, 1}}]],ExpressionUUID->
+           "6ec52b36-db9f-4769-9c8b-a1884d9f349b"]
+         }],ExpressionUUID->"b883d4a1-1aa4-4c8b-b9e1-12aeee9558f9"],
+         StripOnInput->False], {"\<\"Fretica/ref/FOpenTTTR\"\>":>
+        None, "\<\"Copy Wolfram Documentation Center URL\"\>":>
+        Module[{DocumentationSearch`Private`nb$}, 
+         DocumentationSearch`Private`nb$ = NotebookPut[
+            Notebook[{
+              Cell["Fretica/ref/FOpenTTTR"]}, Visible -> False]]; 
+         SelectionMove[DocumentationSearch`Private`nb$, All, Notebook]; 
+         FrontEndTokenExecute[DocumentationSearch`Private`nb$, "Copy"]; 
+         NotebookClose[DocumentationSearch`Private`nb$]; Null], 
+        Delimiter, "\<\"Copy web URL\"\>":>
+        Module[{DocumentationSearch`Private`nb$}, 
+         DocumentationSearch`Private`nb$ = NotebookPut[
+            Notebook[{
+              Cell[
+               BoxData[
+                MakeBoxes[
+                 Hyperlink[
+                 "http://reference.wolfram.com/language/Fretica/ref/FOpenTTTR.\
+html"], StandardForm]], "Input", TextClipboardType -> "PlainText"]}, Visible -> 
+             False]]; SelectionMove[
+          DocumentationSearch`Private`nb$, All, Notebook]; 
+         FrontEndTokenExecute[DocumentationSearch`Private`nb$, "Copy"]; 
+         NotebookClose[DocumentationSearch`Private`nb$]; 
+         Null], "\<\"Go to web URL\"\>":>FrontEndExecute[{
+          NotebookLocate[{
+            URL[If[
+               TrueQ[DocumentationBuild`Make`Private`wsmlinkQ$166698], 
+               "http://reference.wolfram.com/system-modeler/", 
+               "http://reference.wolfram.com/language/"] <> 
+             "Fretica/ref/FOpenTTTR" <> ".html"], None}]}]},
+        Appearance->None,
+        MenuAppearance->Automatic,
+        MenuStyle->"URLMenu"],
+       MouseAppearanceTag["LinkHand"]]],
+      LineSpacing->{1.4, 0},ExpressionUUID->
+      "2d4523d6-2fde-4183-acd7-8350462ab4a2"]
+    }], "AnchorBar",
+     CacheGraphics->False,ExpressionUUID->
+     "0a430577-f17a-44b4-8af9-7eedd23bc657"]}
+  }]], "AnchorBarGrid",
+ GridBoxOptions->{GridBoxItemSize->{"Columns" -> {
+     Scaled[0.65], {
+      Scaled[0.34]}}, "ColumnsIndexed" -> {}, "Rows" -> {{1.}}, 
+   "RowsIndexed" -> {}}},
+ CellID->1,ExpressionUUID->"4352ac75-9b31-47cd-8409-991746e68e66"],
+
+Cell["Fretica`", "ContextNameCell",ExpressionUUID->"96cdd28b-5daa-4567-b6e1-3b058052210d"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[GridBox[{
+   {Cell[TextData[{
+     Cell[
+     "FOpenTTTR", "ObjectName",ExpressionUUID->
+      "7a4ade37-cc47-4640-b1b4-85b7b5ffa4e7"],
+     Cell[BoxData[
+      TemplateBox[{8},
+       "Spacer1"]],ExpressionUUID->"710bc4f0-1f72-4fa8-af0d-db4ab1e2cf60"],
+     Cell[BoxData[
+     ""], "ObjectNameTranslation",ExpressionUUID->
+      "185f70b0-bc2c-49bf-a192-f49ba0eb18a7"]
+    }],ExpressionUUID->"fd82e7dc-32a8-4e76-b96d-1c7aefd74aed"], 
+    "\[SpanFromLeft]"}
+  }]], "ObjectNameGrid",ExpressionUUID->"ce167148-cbbf-42a3-833b-\
+c168ea8d7648"],
+
+Cell[BoxData[GridBox[{
+   {"", Cell["\<\
+FOpenTTTR[filename] opens a .tr3, .pt2, .pt3, .ht2, .ht3, or .ptu file given \
+by filename. All TTTR\[Hyphen]Records are read into memory.\
+\>",ExpressionUUID->"8b9491da-0b6d-46aa-bd39-957788fd3915"]},
+   {"", Cell["\<\
+FOpenTTTR[] opens an dialog window for choosing the TTTR file to be read in.\
+\>",ExpressionUUID->"094cc525-e9a9-46c5-bc80-dfd506baba95"]},
+   {"", Cell[TextData[{
+     "FOpenTTTR[filename,",
+     Cell[BoxData[
+      FormBox[
+       RowBox[{"{", " ", "\[Null]"}], TraditionalForm]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "4514eae2-9efa-477d-81b2-d2e1dad84ec6"],
+     "t1,t2",
+     Cell[BoxData[
+      FormBox["}", TraditionalForm]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "c38f3bc0-c95d-482d-82c4-3f6f4c3da9e3"],
+     "] opens the file filename and reads only the TTTR records measured \
+between times t1 and t2 into memory. t1 and t2 are given in seconds."
+    }],ExpressionUUID->"fd075c3e-d16a-4f08-933d-3c5f35f985e2"]},
+   {"", Cell[
+    "Options:",ExpressionUUID->"6aaea81e-bf6d-4120-ab30-b13614dbe6be"]},
+   {"", Cell[TextData[{
+     " FCopyToLocalDisk",
+     Cell[BoxData[
+      FormBox["\[Rule]", TraditionalForm]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "ecc8151c-d0ed-49b1-b035-6f920853dacc"],
+     "False (default)"
+    }],ExpressionUUID->"3d057e66-9686-4f5a-8c1e-8b3bea98f9ad"]},
+   {"", Cell[TextData[{
+     "If the option value is set to True, the file is copied into a temporary \
+directory (",
+     Cell[BoxData[
+      FormBox["$", TraditionalForm]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "626fb30c-54ae-4b05-803e-725361b1b51b"],
+     "TemporaryDirectory) before being opened. This might be faster if the \
+original file is located on a network drive."
+    }],ExpressionUUID->"6512ba7a-055d-4bf4-9c24-4c4bd59d226c"]}
+  }]], "Usage",
+ CellID->395464107,ExpressionUUID->"073840e4-b303-42d4-a28e-6a0bc503f10b"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[Cell[BoxData[
+ ButtonBox[Cell[TextData[{
+   Cell[BoxData[
+    DynamicBox[ToBoxes[
+      If[
+       MatchQ[
+        CurrentValue[
+         EvaluationNotebook[], {TaggingRules, "Openers", "NotesSection"}, 
+         Closed], 
+        Alternatives[Open, True]], 
+       Style[
+        Graphics[{
+          Thickness[0.18], 
+          RGBColor[0.8509803921568627, 0.396078431372549, 0], 
+          Line[{{-1.8, 0.5}, {0, 0}, {1.8, 0.5}}]}, AspectRatio -> 1, 
+         PlotRange -> {{-3, 4}, {-1, 1}}, ImageSize -> 20], Magnification -> 
+        0.68 Inherited], 
+       Rotate[
+        Style[
+         Graphics[{
+           Thickness[0.18], 
+           RGBColor[0.8509803921568627, 0.396078431372549, 0], 
+           Line[{{-1.8, 0.5}, {0, 0}, {1.8, 0.5}}]}, AspectRatio -> 1, 
+          PlotRange -> {{-3, 4}, {-1, 1}}, ImageSize -> 20], Magnification -> 
+         0.68 Inherited], Rational[1, 2] Pi, {-1.65, -1}]]],
+     ImageSizeCache->{
+      13.600000000000001`, {0.5800000000000001, 13.020000000000001`}}]],
+    ExpressionUUID->"ec506791-c229-4123-bd2f-d7d2dff92d0a"],
+   Cell[BoxData[
+    TemplateBox[{1},
+     "Spacer1"]],ExpressionUUID->"799ff534-d55e-462c-bb88-2952a962042c"],
+   "Details and Options"
+  }], "NotesFrameText",ExpressionUUID->"919a1ff8-0d5f-40ad-899b-0889003a8bc8"],
+  Appearance->{Automatic, None, "Normal", Automatic},
+  BaseStyle->None,
+  ButtonFunction:>(FrontEndExecute[{
+     FrontEnd`SelectionMove[
+      FrontEnd`SelectedNotebook[], All, ButtonCell], 
+     FrontEndToken["OpenCloseGroup"], 
+     FrontEnd`SelectionMove[
+      FrontEnd`SelectedNotebook[], After, CellContents]}]& ),
+  Evaluator->None,
+  Method->
+   "Preemptive"]],ExpressionUUID->"d65c9b51-2d2a-49e8-9a61-fe873ef924c6"]], \
+"NotesSection",
+ WholeCellGroupOpener->True,
+ CellGroupingRules->{"SectionGrouping", 50},
+ CacheGraphics->False,
+ CellID->288450045,ExpressionUUID->"2ddb65cc-e55c-48df-9d98-ee6e691c4be8"],
+
+Cell["The following options can be given: ", "Notes",
+ CellID->137083310,ExpressionUUID->"c4b2da90-892a-4d59-8cb1-1991fdc065b6"]
+}, Dynamic[CurrentValue[
+ EvaluationNotebook[], {TaggingRules, "Openers", "NotesSection"}, Closed]]]],
+
+Cell[BoxData[GridBox[{
+   {
+    DynamicBox[FEPrivate`ImportImage[
+      FrontEnd`FileName[{"Documentation", "FooterIcons"}, "RelatedGuide.png"]],
+     ImageSizeCache->{50., {27., 33.}}], GridBox[{
+      {
+       StyleBox[
+        RowBox[{"Related", " ", "Guides"}], "MoreAboutSection"]},
+      {
+       RowBox[{"\[FilledVerySmallSquare]", Cell[BoxData[
+         TemplateBox[{
+           Cell[
+            TextData["Fretica"]], "paclet:Fretica/guide/Fretica"},
+          "RefLinkPlain",
+          BaseStyle->{"MoreAbout"}]], "MoreAbout",ExpressionUUID->
+         "f6866582-448b-4d53-9d60-5710a490659a"]}]}
+     }]}
+  }]], "MoreAboutSection",ExpressionUUID->"3030f77f-7082-4818-bcaf-\
+97603855a786"],
+
+Cell[BoxData[GridBox[{
+   {
+    TemplateBox[{29},
+     "Spacer1"], GridBox[{
+      {
+       RowBox[{
+        TemplateBox[{17},
+         "Spacer1"], 
+        StyleBox[
+         RowBox[{"Related", " ", "Links"}], "RelatedLinksSection"]}]},
+      {Cell[TextData[Cell[BoxData[
+        RowBox[{
+         TemplateBox[{16},
+          "Spacer1"], "\[FilledVerySmallSquare]", Cell[BoxData[
+          TemplateBox[{
+            Cell[
+             TextData[
+              Cell[
+               TextData[{
+                 Cell[
+                  BoxData[
+                   TemplateBox[{2}, "Spacer1"]]], "Schuler Lab"}]]]], 
+            "https://schuler.bioc.uzh.ch/programs/"},
+           "WebLink",
+           BaseStyle->{"RelatedLinks"}]],ExpressionUUID->
+          "036e7c86-cafd-4fcd-bf87-fb471efce34e"]}]],ExpressionUUID->
+        "d6d3e07d-8cc2-49fc-8467-df60a176c8f1"]], "RelatedLinks",
+        ExpressionUUID->"bbc6ff82-3bf8-4438-a944-761b6f5d7fdf"]}
+     }]}
+  }]], "RelatedLinksSection",ExpressionUUID->"e85b7730-f556-46d2-af28-\
+1d23e7e633ff"],
+
+Cell[" ", "FooterCell",ExpressionUUID->"6babd97f-9492-46b9-9eb9-f94b8147e384"]
+},
+Saveable->False,
+ScreenStyleEnvironment->"Working",
+WindowSize->{900., 604.8},
+WindowMargins->{{0, Automatic}, {Automatic, 0}},
+WindowTitle->"FOpenTTTR",
+TaggingRules->{
+ "ModificationHighlight" -> False, "ColorType" -> "", "LinkTrails" -> "", 
+  "HasOptions" -> True, "ExampleCounter" -> 1, 
+  "Openers" -> {
+   "PrimaryExamplesSection" -> Open, "ExampleSection" -> {"0" -> Open}, 
+    "NotesSection" -> Closed}, "NewStyles" -> True, 
+  "CitationPopupData" -> $Failed, "ShowCitation" -> False, "RootCaptions" -> 
+  "", "Metadata" -> {
+   "built" -> "{2023, 3, 6, 14, 30, 31.5326125}", 
+    "history" -> {"XX", "", "", ""}, "context" -> "Fretica`", 
+    "keywords" -> {}, "specialkeywords" -> {}, 
+    "tutorialcollectionlinks" -> {}, "index" -> True, "label" -> 
+    "Fretica Symbol", "language" -> "en", "paclet" -> "Fretica", "status" -> 
+    "None", "summary" -> 
+    "FOpenTTTR[filename] opens a .tr3, .pt2, .pt3, .ht2, .ht3, or .ptu file \
+given by filename. All TTTR-Records are read into memory. FOpenTTTR[] opens \
+an dialog window for choosing the TTTR file to be read in. \
+FOpenTTTR[filename,{ \\[Null]t1,t2}] opens the file filename and reads only \
+the TTTR records measured between times t1 and t2 into memory. t1 and t2 are \
+given in seconds. Options: FCopyToLocalDisk->False (default) If the option \
+value is set to True, the file is copied into a temporary directory \
+($TemporaryDirectory) before being opened. This might be faster if the \
+original file is located on a network drive.", "synonyms" -> {}, 
+    "tabletags" -> {}, "title" -> "FOpenTTTR", "titlemodifier" -> "", 
+    "windowtitle" -> "FOpenTTTR", "type" -> "Symbol", "uri" -> 
+    "Fretica/ref/FOpenTTTR"}},
+CellContext->"Global`",
+FrontEndVersion->"13.2 for Microsoft Windows (64-bit) (January 30, 2023)",
+StyleDefinitions->Notebook[{
+   Cell[
+    StyleData[
+    StyleDefinitions -> FrontEnd`FileName[{"Wolfram"}, "Reference.nb"]]], 
+   Cell[
+    StyleData["Input"], CellContext -> "Global`"], 
+   Cell[
+    StyleData["Output"], CellContext -> "Global`"]}, Visible -> False, 
+  FrontEndVersion -> "13.2 for Microsoft Windows (64-bit) (January 30, 2023)",
+   StyleDefinitions -> "Default.nb"],
+ExpressionUUID->"9d3dab87-51b0-49e4-8b63-94bd9047089b"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[581, 21, 4310, 103, 70, "AnchorBarGrid",ExpressionUUID->"4352ac75-9b31-47cd-8409-991746e68e66",
+ CellID->1],
+Cell[4894, 126, 90, 0, 70, "ContextNameCell",ExpressionUUID->"96cdd28b-5daa-4567-b6e1-3b058052210d"],
+Cell[CellGroupData[{
+Cell[5009, 130, 552, 14, 70, "ObjectNameGrid",ExpressionUUID->"ce167148-cbbf-42a3-833b-c168ea8d7648"],
+Cell[5564, 146, 2033, 44, 70, "Usage",ExpressionUUID->"073840e4-b303-42d4-a28e-6a0bc503f10b",
+ CellID->395464107]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[7634, 195, 1919, 48, 70, "NotesSection",ExpressionUUID->"2ddb65cc-e55c-48df-9d98-ee6e691c4be8",
+ CellGroupingRules->{"SectionGrouping", 50},
+ CellID->288450045],
+Cell[9556, 245, 128, 1, 70, "Notes",ExpressionUUID->"c4b2da90-892a-4d59-8cb1-1991fdc065b6",
+ CellID->137083310]
+}, Dynamic[CurrentValue[EvaluationNotebook[], {TaggingRules, "Openers", "NotesSection"}, Closed]]]],
+Cell[9789, 250, 697, 18, 70, "MoreAboutSection",ExpressionUUID->"3030f77f-7082-4818-bcaf-97603855a786"],
+Cell[10489, 270, 1043, 30, 70, "RelatedLinksSection",ExpressionUUID->"e85b7730-f556-46d2-af28-1d23e7e633ff"],
+Cell[11535, 302, 78, 0, 70, "FooterCell",ExpressionUUID->"6babd97f-9492-46b9-9eb9-f94b8147e384"]
+}
+]
+*)
+
+(* End of internal cache information *)
+
