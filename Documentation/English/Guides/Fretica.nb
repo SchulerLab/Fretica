@@ -1,0 +1,3689 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 13.2' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[    139399,       3681]
+NotebookOptionsPosition[    125871,       3435]
+NotebookOutlinePosition[    128082,       3484]
+CellTagsIndexPosition[    128039,       3481]
+WindowTitle->Fretica
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[GridBox[{
+   {GridBox[{
+      {
+       ItemBox[Cell[BoxData[
+         RowBox[{
+          TemplateBox[{12},
+           "Spacer1"], Cell["FRETICA GUIDE", "PacletNameCell",
+           TextAlignment->Center,ExpressionUUID->
+           "61281a4c-0ce5-4ba2-aeef-1cda20152030"], 
+          TemplateBox[{8},
+           "Spacer1"]}]],
+         TextAlignment->Center,ExpressionUUID->
+         "859da448-2dca-4310-99f8-b90cbc4e4297"],
+        Background->RGBColor[0.85098, 0.396078, 0],
+        ItemSize->Full], ""}
+     },
+     GridBoxAlignment->{"Rows" -> {{Center}}},
+     GridBoxItemSize->{"Columns" -> {Full, 
+         Scaled[0.02]}, "Rows" -> {{2.5}}}], Cell[TextData[{
+     Cell[BoxData[
+      TagBox[
+       ActionMenuBox[
+        FrameBox[Cell[TextData[{
+          "Functions",
+          " ",
+          Cell[BoxData[
+           GraphicsBox[
+            {GrayLevel[0.66667], Thickness[0.13], 
+             LineBox[{{-1.8, 0.5}, {0, 0}, {1.8, 0.5}}]},
+            AspectRatio->1,
+            ImageSize->20,
+            PlotRange->{{-3, 4}, {-1, 1}}]],ExpressionUUID->
+           "8783f30b-16ed-4c71-81ef-69276a19f3b2"]
+         }],ExpressionUUID->"ac691348-d4b4-4aa9-ba10-f8145a42bc70"],
+         StripOnInput->False], {"\<\"F1DHMMForwardBackward\"\>":>
+        Documentation`HelpLookup[
+        "paclet:Fretica/ref/F1DHMMForwardBackward"], \
+"\<\"F1DHMMGetLogLikelihoodList\"\>":>Documentation`HelpLookup[
+        "paclet:Fretica/ref/F1DHMMGetLogLikelihoodList"], \
+"\<\"F1DHMMInit\"\>":>Documentation`HelpLookup[
+        "paclet:Fretica/ref/F1DHMMInit"], "\<\"F1DHMMLogLikelihood\"\>":>
+        Documentation`HelpLookup[
+        "paclet:Fretica/ref/F1DHMMLogLikelihood"], "\<\"F1DHMMSetPobs\"\>":>
+        Documentation`HelpLookup[
+        "paclet:Fretica/ref/F1DHMMSetPobs"], "\<\"F1DHMMViterbi\"\>":>
+        Documentation`HelpLookup[
+        "paclet:Fretica/ref/F1DHMMViterbi"], "\<\"F2fFCSFit\"\>":>
+        Documentation`HelpLookup[
+        "paclet:Fretica/ref/F2fFCSFit"], "\<\"F2fFCSFromTTTR\"\>":>
+        Documentation`HelpLookup[
+        "paclet:Fretica/ref/F2fFCSFromTTTR"], \
+"\<\"F2fFCSGetLinearCoefficients\"\>":>Documentation`HelpLookup[
+        "paclet:Fretica/ref/F2fFCSGetLinearCoefficients"], \
+"\<\"F2fFCSGetModel\"\>":>Documentation`HelpLookup[
+        "paclet:Fretica/ref/F2fFCSGetModel"], "\<\"F2fFCSGlobalFit\"\>":>
+        Documentation`HelpLookup[
+        "paclet:Fretica/ref/F2fFCSGlobalFit"], "\<\"F2fFCSSettings\"\>":>
+        Documentation`HelpLookup[
+        "paclet:Fretica/ref/F2fFCSSettings"], "\<\"FAboutFretica\"\>":>
+        Documentation`HelpLookup[
+        "paclet:Fretica/ref/FAboutFretica"], "\<\"FBetaPeak\"\>":>
+        Documentation`HelpLookup[
+        "paclet:Fretica/ref/FBetaPeak"], "\<\"FBurstAsymmetry\"\>":>
+        Documentation`HelpLookup[
+        "paclet:Fretica/ref/FBurstAsymmetry"], "\<\"FCalcBurstLifeTimes\"\>":>
+        Documentation`HelpLookup[
+        "paclet:Fretica/ref/FCalcBurstLifeTimes"], "\<\"FCloseGap\"\>":>
+        Documentation`HelpLookup[
+        "paclet:Fretica/ref/FCloseGap"], "\<\"FCombineContiguousBins\"\>":>
+        Documentation`HelpLookup[
+        "paclet:Fretica/ref/FCombineContiguousBins"], "\<\"FConstraints\"\>":>
+        Documentation`HelpLookup[
+        "paclet:Fretica/ref/FConstraints"], "\<\"FConvolve\"\>":>
+        Documentation`HelpLookup[
+        "paclet:Fretica/ref/FConvolve"], "\<\"FCorrelateBinnedData\"\>":>
+        Documentation`HelpLookup[
+        "paclet:Fretica/ref/FCorrelateBinnedData"], "\<\"FCutAsymmetricBursts\
+\"\>":>Documentation`HelpLookup[
+        "paclet:Fretica/ref/FCutAsymmetricBursts"], \
+"\<\"FDeleteNoneSelectedBursts\"\>":>Documentation`HelpLookup[
+        "paclet:Fretica/ref/FDeleteNoneSelectedBursts"], \
+"\<\"FDeleteNonSelectedBursts\"\>":>Documentation`HelpLookup[
+        "paclet:Fretica/ref/FDeleteNonSelectedBursts"], \
+"\<\"FDeleteSelectedBursts\"\>":>Documentation`HelpLookup[
+        "paclet:Fretica/ref/FDeleteSelectedBursts"], \
+"\<\"FDeleteTTTRTimeInterval\"\>":>Documentation`HelpLookup[
+        "paclet:Fretica/ref/FDeleteTTTRTimeInterval"], \
+"\<\"FDetermineBackground\"\>":>Documentation`HelpLookup[
+        "paclet:Fretica/ref/FDetermineBackground"], \
+"\<\"FDetermineShotNoiseWidths\"\>":>Documentation`HelpLookup[
+        "paclet:Fretica/ref/FDetermineShotNoiseWidths"], "\<\"FDwell\"\>":>
+        Documentation`HelpLookup[
+        "paclet:Fretica/ref/FDwell"], "\<\"FDwellList\"\>":>
+        Documentation`HelpLookup[
+        "paclet:Fretica/ref/FDwellList"], "\<\"FEnableChannelConstraints\"\>":>
+        Documentation`HelpLookup[
+        "paclet:Fretica/ref/FEnableChannelConstraints"], "\<\"FEnablePie\"\>":>
+        Documentation`HelpLookup[
+        "paclet:Fretica/ref/FEnablePie"], \
+"\<\"FExpandBurstsSymmetrically\"\>":>Documentation`HelpLookup[
+        "paclet:Fretica/ref/FExpandBurstsSymmetrically"], \
+"\<\"FExportTTTRToH5\"\>":>Documentation`HelpLookup[
+        "paclet:Fretica/ref/FExportTTTRToH5"], "\<\"FFastFLIM\"\>":>
+        Documentation`HelpLookup[
+        "paclet:Fretica/ref/FFastFLIM"], "\<\"FFCS\"\>":>
+        Documentation`HelpLookup["paclet:Fretica/ref/FFCS"], "\<\"FFCSW\"\>":>
+        Documentation`HelpLookup[
+        "paclet:Fretica/ref/FFCSW"], "\<\"FFindBurstsDeltaT\"\>":>
+        Documentation`HelpLookup[
+        "paclet:Fretica/ref/FFindBurstsDeltaT"], \
+"\<\"FFindBurstsFromTimeBinnedData\"\>":>Documentation`HelpLookup[
+        "paclet:Fretica/ref/FFindBurstsFromTimeBinnedData"], \
+"\<\"FFindGlobalFit\"\>":>Documentation`HelpLookup[
+        "paclet:Fretica/ref/FFindGlobalFit"], "\<\"FFitCurveOptions\"\>":>
+        Documentation`HelpLookup[
+        "paclet:Fretica/ref/FFitCurveOptions"], "\<\"FFitCurveStyle\"\>":>
+        Documentation`HelpLookup[
+        "paclet:Fretica/ref/FFitCurveStyle"], "\<\"FFitFretHistogram\"\>":>
+        Documentation`HelpLookup[
+        "paclet:Fretica/ref/FFitFretHistogram"], "\<\"FFixParams\"\>":>
+        Documentation`HelpLookup[
+        "paclet:Fretica/ref/FFixParams"], "\<\"FFretHMMForwardBackward\"\>":>
+        Documentation`HelpLookup[
+        "paclet:Fretica/ref/FFretHMMForwardBackward"], \
+"\<\"FFretHMMInitWithBinnedData\"\>":>Documentation`HelpLookup[
+        "paclet:Fretica/ref/FFretHMMInitWithBinnedData"], \
+"\<\"FFretHMMInitWithPhotonByPhotonData\"\>":>Documentation`HelpLookup[
+        "paclet:Fretica/ref/FFretHMMInitWithPhotonByPhotonData"], \
+"\<\"FFretHMMLogLikelihood\"\>":>Documentation`HelpLookup[
+        "paclet:Fretica/ref/FFretHMMLogLikelihood"], \
+"\<\"FFretHMMSetPhotonRates\"\>":>Documentation`HelpLookup[
+        "paclet:Fretica/ref/FFretHMMSetPhotonRates"], "\<\"FFretHMMSetPinPfin\
+\"\>":>Documentation`HelpLookup[
+        "paclet:Fretica/ref/FFretHMMSetPinPfin"], \
+"\<\"FFretHMMSimulateBinnedTrace\"\>":>Documentation`HelpLookup[
+        "paclet:Fretica/ref/FFretHMMSimulateBinnedTrace"], \
+"\<\"FFretHMMViterbi\"\>":>Documentation`HelpLookup[
+        "paclet:Fretica/ref/FHMMViterbi"], "\<\"FFRETPeakIntegrate\"\>":>
+        Documentation`HelpLookup[
+        "paclet:Fretica/ref/FFRETPeakIntegrate"], "\<\"FGaussian\"\>":>
+        Documentation`HelpLookup[
+        "paclet:Fretica/ref/FGaussian"], "\<\"FGCAcceptorLifeTimeDecay\"\>":>
+        Documentation`HelpLookup[
+        "paclet:Fretica/ref/FGCAcceptorLifeTimeDecay"], \
+"\<\"FGCDonorLifeTimeDecay\"\>":>Documentation`HelpLookup[
+        "paclet:Fretica/ref/FGCDonorLifeTimeDecay"], \
+"\<\"FGetAcceptorRoutes\"\>":>Documentation`HelpLookup[
+        "paclet:Fretica/ref/FGetAcceptorRoutes"], "\<\"FGetAnisotropyL1\"\>":>
+        Documentation`HelpLookup[
+        "paclet:Fretica/ref/FGetAnisotropyL1"], "\<\"FGetAnisotropyL2\"\>":>
+        Documentation`HelpLookup[
+        "paclet:Fretica/ref/FGetAnisotropyL2"], \
+"\<\"FGetAnisotropyRoutes\"\>":>Documentation`HelpLookup[
+        "paclet:Fretica/ref/FGetAnisotropyRoutes"], "\<\"FGetBackground\"\>":>
+        Documentation`HelpLookup[
+        "paclet:Fretica/ref/FGetBackground"], "\<\"FGetBurstListSize\"\>":>
+        Documentation`HelpLookup[
+        "paclet:Fretica/ref/FGetBurstListSize"], \
+"\<\"FGetChannelConstraints\"\>":>Documentation`HelpLookup[
+        "paclet:Fretica/ref/FGetChannelConstraints"], \
+"\<\"FGetDirectAcceptorExcitation\"\>":>Documentation`HelpLookup[
+        "paclet:Fretica/ref/FGetDirectAcceptorExcitation"], \
+"\<\"FGetDonorRoutes\"\>":>Documentation`HelpLookup[
+        "paclet:Fretica/ref/FGetDonorRoutes"], "\<\"FGetFRETRoutes\"\>":>
+        Documentation`HelpLookup[
+        "paclet:Fretica/ref/FGetFRETRoutes"], "\<\"FGetFromBurst\"\>":>
+        Documentation`HelpLookup[
+        "paclet:Fretica/ref/FGetFromBurst"], "\<\"FGetFromBurstList\"\>":>
+        Documentation`HelpLookup[
+        "paclet:Fretica/ref/FGetFromBurstList"], "\<\"FGetFromHeader\"\>":>
+        Documentation`HelpLookup[
+        "paclet:Fretica/ref/FGetFromHeader"], "\<\"FGetFromPiezoScan\"\>":>
+        Documentation`HelpLookup[
+        "paclet:Fretica/ref/FGetFromPiezoScan"], "\<\"FGetMarkerList\"\>":>
+        Documentation`HelpLookup[
+        "paclet:Fretica/ref/FGetMarkerList"], "\<\"FGetPhotonData\"\>":>
+        Documentation`HelpLookup[
+        "paclet:Fretica/ref/FGetPhotonData"], "\<\"FGetPhotonDataRaw\"\>":>
+        Documentation`HelpLookup[
+        "paclet:Fretica/ref/FGetPhotonDataRaw"], "\<\"FGetPIEAnisotropyRoutes\
+\"\>":>Documentation`HelpLookup[
+        "paclet:Fretica/ref/FGetPIEAnisotropyRoutes"], "\<\"FGetPIEBackground\
+\"\>":>Documentation`HelpLookup[
+        "paclet:Fretica/ref/FGetPIEBackground"], \
+"\<\"FGetPIEChannelConstraints\"\>":>Documentation`HelpLookup[
+        "paclet:Fretica/ref/FGetPIEChannelConstraints"], "\<\"FGetRCM\"\>":>
+        Documentation`HelpLookup[
+        "paclet:Fretica/ref/FGetRCM"], \
+"\<\"FGetScanImageCoordinatesFromTime\"\>":>Documentation`HelpLookup[
+        "paclet:Fretica/ref/FGetScanImageCoordinatesFromTime"], \
+"\<\"FGetStartTime\"\>":>Documentation`HelpLookup[
+        "paclet:Fretica/ref/FGetStartTime"], "\<\"FGetStopTime\"\>":>
+        Documentation`HelpLookup[
+        "paclet:Fretica/ref/FGetStopTime"], "\<\"FGetT3rFilename\"\>":>
+        Documentation`HelpLookup[
+        "paclet:Fretica/ref/FGetT3rFilename"], \
+"\<\"FHMMBinPhotonByPhotonTrace\"\>":>Documentation`HelpLookup[
+        "paclet:Fretica/ref/FHMMSimulateBinnedTrace"], \
+"\<\"FHMMForwardBackward\"\>":>Documentation`HelpLookup[
+        "paclet:Fretica/ref/FHMMForwardBackward"], \
+"\<\"FHMMGetBinnedTraceFromTTTR\"\>":>Documentation`HelpLookup[
+        "paclet:Fretica/ref/FHMMGetBinnedTraceFromTTTR"], \
+"\<\"FHMMGetLogLikelihoodList\"\>":>Documentation`HelpLookup[
+        "paclet:Fretica/ref/FHMMGetLogLikelihoodList"], \
+"\<\"FHMMGetPhotonByPhotonTraceFromTTTR\"\>":>Documentation`HelpLookup[
+        "paclet:Fretica/ref/FHMMGetPhotonByPhotonTraceFromTTTR"], \
+"\<\"FHMMInitWithBinnedData\"\>":>Documentation`HelpLookup[
+        "paclet:Fretica/ref/FHMMInitWithBinnedData"], \
+"\<\"FHMMInitWithPhotonByPhotonData\"\>":>Documentation`HelpLookup[
+        "paclet:Fretica/ref/FHMMInitWithPhotonByPhotonData"], \
+"\<\"FHMMLogLikelihood\"\>":>Documentation`HelpLookup[
+        "paclet:Fretica/ref/FHMMLogLikelihood"], "\<\"FHMMSetPhotonRates\"\>":>
+        Documentation`HelpLookup[
+        "paclet:Fretica/ref/FHMMSetPhotonRates"], "\<\"FHMMSetPinPfin\"\>":>
+        Documentation`HelpLookup[
+        "paclet:Fretica/ref/FHMMSetPinPfin"], \
+"\<\"FHMMSimulateBinnedTrace\"\>":>Documentation`HelpLookup[
+        "paclet:Fretica/ref/FHMMSimulateBinnedTrace"], \
+"\<\"FHMMSimulatePhotonByPhotonTrace\"\>":>Documentation`HelpLookup[
+        "paclet:Fretica/ref/FHMMSimulatePhotonByPhotonTrace"], \
+"\<\"FHMMViterbi\"\>":>Documentation`HelpLookup[
+        "paclet:Fretica/ref/FHMMViterbi"], "\<\"FJoinSelftransitions\"\>":>
+        Documentation`HelpLookup[
+        "paclet:Fretica/ref/FJoinSelftransitions"], "\<\"FLifeTimeFit\"\>":>
+        Documentation`HelpLookup[
+        "paclet:Fretica/ref/FLifeTimeFit"], "\<\"FLifeTimeHisto\"\>":>
+        Documentation`HelpLookup[
+        "paclet:Fretica/ref/FLifeTimeHisto"], "\<\"FLMFit\"\>":>
+        Documentation`HelpLookup[
+        "paclet:Fretica/ref/FLMFit"], "\<\"FLogNormal\"\>":>
+        Documentation`HelpLookup[
+        "paclet:Fretica/ref/FLogNormal"], \
+"\<\"FMainChannelAboveThreshold\"\>":>Documentation`HelpLookup[
+        "paclet:Fretica/ref/FMainChannelAboveThreshold"], \
+"\<\"FMainChannelOrPieChannelAboveThreshold\"\>":>Documentation`HelpLookup[
+        "paclet:Fretica/ref/FMainChannelOrPieChannelAboveThreshold"], \
+"\<\"FMainChannelPlusPieChannelAboveThreshold\"\>":>Documentation`HelpLookup[
+        "paclet:Fretica/ref/FMainChannelPlusPieChannelAboveThreshold"], \
+"\<\"FMCStrace\"\>":>Documentation`HelpLookup[
+        "paclet:Fretica/ref/FMCStrace"], "\<\"FNDAcceptorLifeTimeDecay\"\>":>
+        Documentation`HelpLookup[
+        "paclet:Fretica/ref/FNDAcceptorLifeTimeDecay"], \
+"\<\"FNDDonorLifeTimeDecay\"\>":>Documentation`HelpLookup[
+        "paclet:Fretica/ref/FNDDonorLifeTimeDecay"], \
+"\<\"FNonlinearModelGlobalFit\"\>":>Documentation`HelpLookup[
+        "paclet:Fretica/ref/FNonlinearModelGlobalFit"], "\<\"FnsFCS\"\>":>
+        Documentation`HelpLookup[
+        "paclet:Fretica/ref/FnsFCS"], "\<\"FNumberOfStepsInCascade\"\>":>
+        Documentation`HelpLookup[
+        "paclet:Fretica/ref/FNumberOfStepsInCascade"], "\<\"FNumericMatrixQ\"\
+\>":>Documentation`HelpLookup[
+        "paclet:Fretica/ref/FNumericMatrixQ"], \
+"\<\"FNumericSquareMatrixQ\"\>":>Documentation`HelpLookup[
+        "paclet:Fretica/ref/FNumericSquareMatrixQ"], "\<\"FOpenTTTR\"\>":>
+        Documentation`HelpLookup[
+        "paclet:Fretica/ref/FOpenTTTR"], "\<\"FParamHisto\"\>":>
+        Documentation`HelpLookup[
+        "paclet:Fretica/ref/FParamHisto"], "\<\"FParamHisto2D\"\>":>
+        Documentation`HelpLookup[
+        "paclet:Fretica/ref/FParamHisto2D"], "\<\"FPCH\"\>":>
+        Documentation`HelpLookup[
+        "paclet:Fretica/ref/FPCH"], "\<\"FPCH3DG\"\>":>
+        Documentation`HelpLookup[
+        "paclet:Fretica/ref/FPCH3DG"], "\<\"FPCHFida\"\>":>
+        Documentation`HelpLookup[
+        "paclet:Fretica/ref/FPCHFida"], "\<\"FPCHFidaFit\"\>":>
+        Documentation`HelpLookup[
+        "paclet:Fretica/ref/FPCHFidaFit"], "\<\"FPCHFidaGlobalFit\"\>":>
+        Documentation`HelpLookup[
+        "paclet:Fretica/ref/FPCHFidaGlobalFit"], "\<\"FpdaEHisto\"\>":>
+        Documentation`HelpLookup[
+        "paclet:Fretica/ref/FpdaEHisto"], "\<\"FpdaFitEHisto\"\>":>
+        Documentation`HelpLookup[
+        "paclet:Fretica/ref/FpdaFitEHisto"], "\<\"FpdaGetDABackground\"\>":>
+        Documentation`HelpLookup[
+        "paclet:Fretica/ref/FpdaGetDABackground"], \
+"\<\"FpdaGetSubPopBurstSizeDistributions\"\>":>Documentation`HelpLookup[
+        "paclet:Fretica/ref/FpdaGetSubPopBurstSizeDistributions"], \
+"\<\"FPDAMethod\"\>":>Documentation`HelpLookup[
+        "paclet:Fretica/ref/FPDAMethod"], \
+"\<\"FPhotonTimeRelativeToMarkerHistogram\"\>":>Documentation`HelpLookup[
+        "paclet:Fretica/ref/FPhotonTimeRelativeToMarkerHistogram"], \
+"\<\"FPIEBurstAsymmetry\"\>":>Documentation`HelpLookup[
+        "paclet:Fretica/ref/FPIEBurstAsymmetry"], \
+"\<\"FPIEBurstIdentificationMethod\"\>":>Documentation`HelpLookup[
+        "paclet:Fretica/ref/FPIEBurstIdentificationMethod"], \
+"\<\"FPIEChannelSelector\"\>":>Documentation`HelpLookup[
+        "paclet:Fretica/ref/FPIEChannelSelector"], \
+"\<\"FPIECutAsymmetricBursts\"\>":>Documentation`HelpLookup[
+        "paclet:Fretica/ref/FPIECutAsymmetricBursts"], "\<\"FPlotContourHisto\
+\"\>":>Documentation`HelpLookup[
+        "paclet:Fretica/ref/FPlotContourHisto"], "\<\"FPlotFRETFit\"\>":>
+        Documentation`HelpLookup[
+        "paclet:Fretica/ref/FPlotFRETFit"], "\<\"FPowerSpectrum\"\>":>
+        Documentation`HelpLookup[
+        "paclet:Fretica/ref/FPowerSpectrum"], "\<\"FProximityRatio\"\>":>
+        Documentation`HelpLookup[
+        "paclet:Fretica/ref/FProximityRatio"], "\<\"FReadCoordinatesFromImage\
+\"\>":>Documentation`HelpLookup[
+        "paclet:Fretica/ref/FReadCoordinatesFromImage"], \
+"\<\"FRealNumberQ\"\>":>Documentation`HelpLookup[
+        "paclet:Fretica/ref/FRealNumberQ"], "\<\"FRecurrenceHisto\"\>":>
+        Documentation`HelpLookup[
+        "paclet:Fretica/ref/FRecurrenceHisto"], "\<\"FRecurrenceHisto2D\"\>":>
+        Documentation`HelpLookup[
+        "paclet:Fretica/ref/FRecurrenceHisto2D"], "\<\"FRecurrenceHistoN\"\>":>
+        Documentation`HelpLookup[
+        "paclet:Fretica/ref/FRecurrenceHistoN"], "\<\"FReduceToBurstPhotons\"\
+\>":>Documentation`HelpLookup[
+        "paclet:Fretica/ref/FReduceToBurstPhotons"], "\<\"FRenameStates\"\>":>
+        Documentation`HelpLookup[
+        "paclet:Fretica/ref/FRenameStates"], \
+"\<\"FSameMoleculeProbability\"\>":>Documentation`HelpLookup[
+        "paclet:Fretica/ref/FSameMoleculeProbability"], "\<\"FSaveAsHT3\"\>":>
+        Documentation`HelpLookup[
+        "paclet:Fretica/ref/FSaveAsHT3"], "\<\"FScanImage\"\>":>
+        Documentation`HelpLookup[
+        "paclet:Fretica/ref/FScanImage"], "\<\"FScanImageColorLegend\"\>":>
+        Documentation`HelpLookup[
+        "paclet:Fretica/ref/FScanImageColorLegend"], "\<\"FScanImageParamName\
+\"\>":>Documentation`HelpLookup[
+        "paclet:Fretica/ref/FScanImageParamName"], "\<\"FSelectBurst\"\>":>
+        Documentation`HelpLookup[
+        "paclet:Fretica/ref/FSelectBurst"], "\<\"FSelectBursts\"\>":>
+        Documentation`HelpLookup[
+        "paclet:Fretica/ref/FSelectBursts"], "\<\"FSetAnisotropyL1\"\>":>
+        Documentation`HelpLookup[
+        "paclet:Fretica/ref/FSetAnisotropyL1"], "\<\"FSetAnisotropyL2\"\>":>
+        Documentation`HelpLookup[
+        "paclet:Fretica/ref/FSetAnisotropyL2"], \
+"\<\"FSetAnisotropyRoutes\"\>":>Documentation`HelpLookup[
+        "paclet:Fretica/ref/FSetAnisotropyRoutes"], "\<\"FSetBackground\"\>":>
+        Documentation`HelpLookup[
+        "paclet:Fretica/ref/FSetBackground"], "\<\"FSetBurstList\"\>":>
+        Documentation`HelpLookup[
+        "paclet:Fretica/ref/FSetBurstList"], "\<\"FSetChannelConstraints\"\>":>
+        Documentation`HelpLookup[
+        "paclet:Fretica/ref/FSetChannelConstraints"], \
+"\<\"FSetDirectAcceptorExcitation\"\>":>Documentation`HelpLookup[
+        "paclet:Fretica/ref/FSetDirectAcceptorExcitation"], \
+"\<\"FSetFRETRoutes\"\>":>Documentation`HelpLookup[
+        "paclet:Fretica/ref/FSetFRETRoutes"], "\<\"FSetPIEBackground\"\>":>
+        Documentation`HelpLookup[
+        "paclet:Fretica/ref/FSetPIEBackground"], \
+"\<\"FSetPIEChannelConstraints\"\>":>Documentation`HelpLookup[
+        "paclet:Fretica/ref/FSetPIEChannelConstraints"], \
+"\<\"FSetPIEGamma\"\>":>Documentation`HelpLookup[
+        "paclet:Fretica/ref/FSetPIEGamma"], "\<\"FSetPIERoutes\"\>":>
+        Documentation`HelpLookup[
+        "paclet:Fretica/ref/FSetPIERoutes"], "\<\"FSetRCM\"\>":>
+        Documentation`HelpLookup[
+        "paclet:Fretica/ref/FSetRCM"], \
+"\<\"FShiftPhotonTimesByPicoseconds\"\>":>Documentation`HelpLookup[
+        "paclet:Fretica/ref/FShiftPhotonTimesByPicoseconds"], \
+"\<\"FShowBursts\"\>":>Documentation`HelpLookup[
+        "paclet:Fretica/ref/FShowBursts"], "\<\"FShowBurstsLevel\"\>":>
+        Documentation`HelpLookup[
+        "paclet:Fretica/ref/FShowBurstsLevel"], "\<\"FShowHeader\"\>":>
+        Documentation`HelpLookup[
+        "paclet:Fretica/ref/FShowHeader"], "\<\"FSplitBursts\"\>":>
+        Documentation`HelpLookup[
+        "paclet:Fretica/ref/FSplitBursts"], "\<\"FSplitTrajectory\"\>":>
+        Documentation`HelpLookup[
+        "paclet:Fretica/ref/FSplitTrajectory"], "\<\"FSubPopCurveOptions\"\>":>
+        Documentation`HelpLookup[
+        "paclet:Fretica/ref/FSubPopCurveOptions"], "\<\"FSubPopOptions\"\>":>
+        Documentation`HelpLookup[
+        "paclet:Fretica/ref/FSubPopOptions"], "\<\"FSubPopStyle\"\>":>
+        Documentation`HelpLookup[
+        "paclet:Fretica/ref/FSubPopStyle"], "\<\"FTimeCorrelate\"\>":>
+        Documentation`HelpLookup[
+        "paclet:Fretica/ref/FTimeCorrelate"], \
+"\<\"FTimeCorrelateWeighted\"\>":>Documentation`HelpLookup[
+        "paclet:Fretica/ref/FTimeCorrelateWeighted"], \
+"\<\"FTSClearStateTrajectories\"\>":>Documentation`HelpLookup[
+        "paclet:Fretica/ref/FTSClearStateTrajectories"], \
+"\<\"FTSDistanceTrajectory\"\>":>Documentation`HelpLookup[
+        "paclet:Fretica/ref/FTSDistanceTrajectory"], \
+"\<\"FTSGetIntensityTrajectory\"\>":>Documentation`HelpLookup[
+        "paclet:Fretica/ref/FMLHSetPhotonRates"], \
+"\<\"FTSGetNumberOfParticleTrajectory\"\>":>Documentation`HelpLookup[
+        "paclet:Fretica/ref/FTSGetNumberOfParticleTrajectory"], \
+"\<\"FTSGetNumberOfSpecies\"\>":>Documentation`HelpLookup[
+        "paclet:Fretica/ref/FTSGetNumberOfSpecies"], "\<\"FTSGetRDistribution\
+\"\>":>Documentation`HelpLookup[
+        "paclet:Fretica/ref/FTSGetRDistribution"], \
+"\<\"FTSGetTrajectories\"\>":>Documentation`HelpLookup[
+        "paclet:Fretica/ref/FTSGetTrajectories"], "\<\"FTSIntensityTrajectory\
+\"\>":>Documentation`HelpLookup[
+        "paclet:Fretica/ref/FTSIntensityTrajectory"], \
+"\<\"FTSLoadTrajectories\"\>":>Documentation`HelpLookup[
+        "paclet:Fretica/ref/FTSLoadTrajectories"], \
+"\<\"FTSMeanNewParticelNumberInSphere\"\>":>Documentation`HelpLookup[
+        "paclet:Fretica/ref/FMLHTraFTSMeanNewParticelNumberInSpherejectory"], \
+"\<\"FTSNewParticleConcentration\"\>":>Documentation`HelpLookup[
+        "paclet:Fretica/ref/FTSNewParticleConcentration"], \
+"\<\"FTSPIEify\"\>":>Documentation`HelpLookup[
+        "paclet:Fretica/ref/FTSPIEify"], "\<\"FTSRandomPositionInSphere\"\>":>
+        Documentation`HelpLookup[
+        "paclet:Fretica/ref/FTSRandomPositionInSphere"], \
+"\<\"FTSRateList\"\>":>Documentation`HelpLookup[
+        "paclet:Fretica/ref/FTSRateList"], "\<\"FTSSaveTrajectories\"\>":>
+        Documentation`HelpLookup[
+        "paclet:Fretica/ref/FTSSaveTrajectories"], "\<\"FTSSetNumberOfSpecies\
+\"\>":>Documentation`HelpLookup[
+        "paclet:Fretica/ref/FTSSetNumberOfSpecies"], \
+"\<\"FTSSimulateFRETStateTrajectories\"\>":>Documentation`HelpLookup[
+        "paclet:Fretica/ref/FTSSimulateFRETStateTrajectories"], \
+"\<\"FTSSimulateImobilizedParticle\"\>":>Documentation`HelpLookup[
+        "paclet:Fretica/ref/FTSSimulateImobilizedParticle"], \
+"\<\"FTSSimulateParticleDiffusion\"\>":>Documentation`HelpLookup[
+        "paclet:Fretica/ref/FTSSimulateParticleDiffusion"], \
+"\<\"FTSSimulateParticleDiffusionInClosedCylinder\"\>":>
+        Documentation`HelpLookup[
+        "paclet:Fretica/ref/FTSSimulateParticleDiffusionInClosedCylinder"], "\
+\<\"FTSSimulateParticleDiffusionInClosedSphere\"\>":>Documentation`HelpLookup[
+        "paclet:Fretica/ref/FTSSimulateParticleDiffusionInClosedSphere"], "\<\
+\"FTSSimulateStateTrajectories\"\>":>Documentation`HelpLookup[
+        "paclet:Fretica/ref/FTSSimulateStateTrajectories"], \
+"\<\"FTSSimulateTTTR\"\>":>Documentation`HelpLookup[
+        "paclet:Fretica/ref/FTSSimulateTTTR"], \
+"\<\"FTSSimulateTTTRLifeTimes\"\>":>Documentation`HelpLookup[
+        "paclet:Fretica/ref/FTSSimulateTTTRLifeTimes"], \
+"\<\"FTTTRCreationTime\"\>":>Documentation`HelpLookup[
+        "paclet:Fretica/ref/FTTTRCreationTime"], "\<\"FUnlinkFretica\"\>":>
+        Documentation`HelpLookup[
+        "paclet:Fretica/ref/FUnlinkFretica"], "\<\"FUpdateBurstCounts\"\>":>
+        Documentation`HelpLookup["paclet:Fretica/ref/FUpdateBurstCounts"]},
+        Appearance->None,
+        MenuAppearance->Automatic,
+        MenuStyle->"GuideFunction"],
+       MouseAppearanceTag["LinkHand"]]],
+      LineSpacing->{1.4, 0},ExpressionUUID->
+      "c55d6cee-0d40-4a8a-8196-59d056a5c578"],
+     "\[ThickSpace]\[ThickSpace]\[ThickSpace]\[ThickSpace]\[ThickSpace]\
+\[ThickSpace]",
+     Cell[BoxData[
+      TagBox[
+       ActionMenuBox[
+        FrameBox[Cell[TextData[{
+          "Tech Notes",
+          " ",
+          Cell[BoxData[
+           GraphicsBox[
+            {GrayLevel[0.66667], Thickness[0.13], 
+             LineBox[{{-1.8, 0.5}, {0, 0}, {1.8, 0.5}}]},
+            AspectRatio->1,
+            ImageSize->20,
+            PlotRange->{{-3, 4}, {-1, 1}}]],ExpressionUUID->
+           "8aa7b930-9fa7-4e01-9ddc-e6fd64e21a60"]
+         }],ExpressionUUID->"f1994531-da32-4f6b-9768-324a6ee10f6b"],
+         StripOnInput->False], {"\<\"Fretica's change log\"\>":>
+        Documentation`HelpLookup[
+        "paclet:Fretica/tutorial/ChangeLog"], "\<\"Correction factors, route \
+correction matrix (RCM), transfer efficiencies\"\>":>Documentation`HelpLookup[
+        "paclet:Fretica/tutorial/CorrectionFactors"], "\<\"Determination of \
+the RCM from dye solutions\"\>":>Documentation`HelpLookup[
+        "paclet:Fretica/tutorial/DeterminationOfTheRCMFromDyeSolutions"], "\<\
+\"Determination of the  RCM from FRET labeled samples using PIE/Alex (Lee \
+et.al.)\"\>":>Documentation`HelpLookup[
+        "paclet:Fretica/tutorial/\
+DetermintaionOfTheRCMFromFRETLabledSamplesUsingPIEOrAlex"], "\<\"Extracting \
+fluorescence lifetime information from photon bursts\"\>":>
+        Documentation`HelpLookup[
+        "paclet:Fretica/tutorial/\
+ExtractingFluorescenceLifetimeInformationFromPhotonBursts"], "\<\"Inter-dye \
+distance distributions (SAWnu)\"\>":>Documentation`HelpLookup[
+        "paclet:Fretica/tutorial/Inter-DyeDistanceDistributionsSAWnu"], \
+"\<\"TTTR fluorescence data simulations for diffusing particles\"\>":>
+        Documentation`HelpLookup[
+        "paclet:Fretica/tutorial/\
+TTTRFluorescenceDataSimulationsForDiffusingParticles"]},
+        Appearance->None,
+        MenuAppearance->Automatic,
+        MenuStyle->"GuideTutorial"],
+       MouseAppearanceTag["LinkHand"]]],
+      LineSpacing->{1.4, 0},ExpressionUUID->
+      "62f148fc-7e51-45aa-807d-4ab53c5db9da"],
+     "\[ThickSpace]\[ThickSpace]\[ThickSpace]\[ThickSpace]\[ThickSpace]\
+\[ThickSpace]",
+     Cell[BoxData[
+      TagBox[
+       ActionMenuBox[
+        FrameBox[Cell[TextData[{
+          "URL",
+          " ",
+          Cell[BoxData[
+           GraphicsBox[
+            {GrayLevel[0.66667], Thickness[0.13], 
+             LineBox[{{-1.8, 0.5}, {0, 0}, {1.8, 0.5}}]},
+            AspectRatio->1,
+            ImageSize->20,
+            PlotRange->{{-3, 4}, {-1, 1}}]],ExpressionUUID->
+           "9be27f4d-3a62-4197-bb66-46b38dc5efb6"]
+         }],ExpressionUUID->"3bd53cae-97d3-4809-88a3-ba6d2951f598"],
+         StripOnInput->False], {"\<\"Fretica/guide/Fretica\"\>":>
+        None, "\<\"Copy Wolfram Documentation Center URL\"\>":>
+        Module[{DocumentationSearch`Private`nb$}, 
+         DocumentationSearch`Private`nb$ = NotebookPut[
+            Notebook[{
+              Cell["Fretica/guide/Fretica"]}, Visible -> False]]; 
+         SelectionMove[DocumentationSearch`Private`nb$, All, Notebook]; 
+         FrontEndTokenExecute[DocumentationSearch`Private`nb$, "Copy"]; 
+         NotebookClose[DocumentationSearch`Private`nb$]; Null], 
+        Delimiter, "\<\"Copy web URL\"\>":>
+        Module[{DocumentationSearch`Private`nb$}, 
+         DocumentationSearch`Private`nb$ = NotebookPut[
+            Notebook[{
+              Cell[
+               BoxData[
+                MakeBoxes[
+                 Hyperlink[
+                 "http://reference.wolfram.com/language/Fretica/guide/Fretica.\
+html"], StandardForm]], "Input", TextClipboardType -> "PlainText"]}, Visible -> 
+             False]]; SelectionMove[
+          DocumentationSearch`Private`nb$, All, Notebook]; 
+         FrontEndTokenExecute[DocumentationSearch`Private`nb$, "Copy"]; 
+         NotebookClose[DocumentationSearch`Private`nb$]; 
+         Null], "\<\"Go to web URL\"\>":>FrontEndExecute[{
+          NotebookLocate[{
+            URL[If[
+               TrueQ[DocumentationBuild`Make`Private`wsmlinkQ$30326], 
+               "http://reference.wolfram.com/system-modeler/", 
+               "http://reference.wolfram.com/language/"] <> 
+             "Fretica/guide/Fretica" <> ".html"], None}]}]},
+        Appearance->None,
+        MenuAppearance->Automatic,
+        MenuStyle->"URLMenu"],
+       MouseAppearanceTag["LinkHand"]]],
+      LineSpacing->{1.4, 0},ExpressionUUID->
+      "62b8ca29-a036-486c-9fb6-587b7beaf782"]
+    }], "AnchorBar",
+     CacheGraphics->False,ExpressionUUID->
+     "4f1afd28-a444-426c-acba-7e9a9051f0f2"]}
+  }]], "AnchorBarGrid",
+ CellID->1,ExpressionUUID->"47125fd9-23db-4fc5-9c92-f0fc3ca9b89e"],
+
+Cell[CellGroupData[{
+
+Cell["Fretica", "GuideTitle",
+ CellID->510072863,ExpressionUUID->"98e57d75-0de0-4065-9700-ad0e5014d862"],
+
+Cell[TextData[{
+ "Fretica is a Mathematica application with a backend written in C++ for \
+analysing single molecule spectroscopy data. It is developed and maintained \
+by the Schuler lab at the Biochemistry Department of the University of  \
+Zurich. \n",
+ Cell[BoxData[
+  TemplateBox[{
+    Cell[
+     TextData["https://schuler.bioc.uzh.ch/programs/"]], 
+    "https://schuler.bioc.uzh.ch/programs/"},
+   "WebLink",
+   BaseStyle->{"GuideAbstract"}]],ExpressionUUID->
+  "90cf9d54-76aa-43b9-a279-121d4c14aa4c"],
+ "\nFretica is licensed under a Creative Commons \
+Attribution-NonCommercial-NoDerivatives 4.0 International License. \nBelow \
+the available Fretica commands are subdivided in thematic groups. \
+\[LineSeparator]",
+ StyleBox["Click the ",
+  FontSize->18],
+ StyleBox["orange section titles",
+  FontSize->18,
+  FontColor->RGBColor[1, 0.5, 0]],
+ StyleBox[" for getting detailed information. \n",
+  FontSize->18],
+ StyleBox["I",
+  FontSize->14],
+ StyleBox["t is recommended to add a kernel named \"",
+  FontSize->12],
+ StyleBox["FreticaDocumentation",
+  FontSize->12,
+  FontSlant->"Italic"],
+ StyleBox["\" to your system. This can be done in the ",
+  FontSize->12],
+ StyleBox["Evaluation\[Rule] Kernel Configuration Options...",
+  FontSize->12,
+  FontSlant->"Italic"],
+ StyleBox[" menu.",
+  FontSize->12]
+}], "GuideAbstract",
+ CellID->678861249,ExpressionUUID->"a7ccad9f-dbd5-44d6-a5b9-a00540dc3c59"],
+
+Cell["\t", "GuideDelimiterSubsection",ExpressionUUID->"8692bbc1-f058-4351-a87f-9010f9453d58"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ TemplateBox[{
+   Cell[
+    TextData["Quick Tour \[RightGuillemet]"]], 
+   "paclet:Fretica/tutorial/QuickTour"},
+  "OrangeLink",
+  BaseStyle->"GuideFunctionsSubsection"]], "GuideFunctionsSubsection",
+ CellID->52294601,ExpressionUUID->"be8d14b2-c417-4dc7-a40a-861d554901f2"],
+
+Cell["Get a quick overview...", "GuideText",
+ CellID->29968083,ExpressionUUID->"903cdd89-70d8-4138-95f6-2ea666f7a072"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ TemplateBox[{
+   Cell[
+    TextData["Fretica Settings \[RightGuillemet]"]], 
+   "paclet:Fretica/tutorial/FreticaSettings"},
+  "OrangeLink",
+  BaseStyle->"GuideFunctionsSubsection"]], "GuideFunctionsSubsection",
+ CellID->6801125,ExpressionUUID->"bb464ef7-d049-4282-80f0-eaa907abefef"],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{
+    Cell[
+     TextData["FEnableChannelConstraints"]], 
+    "paclet:Fretica/ref/FEnableChannelConstraints", "Fretica Package Symbol"},
+   "PackageLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans",ExpressionUUID->
+  "4a8da337-dc8a-4863-b2c3-75f49e633252"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{
+    Cell[
+     TextData["FSetChannelConstraints"]], 
+    "paclet:Fretica/ref/FSetChannelConstraints", "Fretica Package Symbol"},
+   "PackageLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans",ExpressionUUID->
+  "9270554f-ac64-4780-b406-666a5ff34d51"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{
+    Cell[
+     TextData["FGetChannelConstraints"]], 
+    "paclet:Fretica/ref/FGetChannelConstraints", "Fretica Package Symbol"},
+   "PackageLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans",ExpressionUUID->
+  "dbbe54bb-a11c-4899-a1f6-1ecd51d548ac"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]", "InlineSeparator"]
+}], "InlineGuideFunctionListing",
+ CellID->411533501,ExpressionUUID->"1a5efae0-0c75-43dc-8894-b71dc07b4e1c"],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{
+    Cell[
+     TextData["FSetRCM"]], "paclet:Fretica/ref/FSetRCM", 
+    "Fretica Package Symbol"},
+   "PackageLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans",ExpressionUUID->
+  "add09319-494c-41b7-bfb3-88d8e6227901"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{
+    Cell[
+     TextData["FGetRCM"]], "paclet:Fretica/ref/FGetRCM", 
+    "Fretica Package Symbol"},
+   "PackageLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans",ExpressionUUID->
+  "aa65fc9c-1307-4d38-b570-d4c5f852734f"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{
+    Cell[
+     TextData["FSetDirectAcceptorExcitation"]], 
+    "paclet:Fretica/ref/FSetDirectAcceptorExcitation", 
+    "Fretica Package Symbol"},
+   "PackageLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans",ExpressionUUID->
+  "e518431f-7a9d-4f5c-812f-2e9ffe0c0ec6"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{
+    Cell[
+     TextData["FGetDirectAcceptorExcitation"]], 
+    "paclet:Fretica/ref/FGetDirectAcceptorExcitation", 
+    "Fretica Package Symbol"},
+   "PackageLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans",ExpressionUUID->
+  "5bb04909-6cb3-4b42-8398-5dc278919c28"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]", "InlineSeparator"]
+}], "InlineGuideFunctionListing",
+ CellID->185482254,ExpressionUUID->"f2169627-0f72-4d5c-be0c-1830bb4b79b8"],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{
+    Cell[
+     TextData["FSetFRETRoutes"]], "paclet:Fretica/ref/FSetFRETRoutes", 
+    "Fretica Package Symbol"},
+   "PackageLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans",ExpressionUUID->
+  "dae3d521-90b1-46a9-b985-32eb78f2e30d"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{
+    Cell[
+     TextData["FGetFRETRoutes"]], "paclet:Fretica/ref/FGetFRETRoutes", 
+    "Fretica Package Symbol"},
+   "PackageLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans",ExpressionUUID->
+  "93cc19a1-2d04-4694-8999-d2b92d75d6f8"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{
+    Cell[
+     TextData["FGetDonorRoutes"]], "paclet:Fretica/ref/FGetDonorRoutes", 
+    "Fretica Package Symbol"},
+   "PackageLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans",ExpressionUUID->
+  "077fcf35-760e-4194-bbb9-1b890e1bb3de"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{
+    Cell[
+     TextData["FGetAcceptorRoutes"]], "paclet:Fretica/ref/FGetAcceptorRoutes",
+     "Fretica Package Symbol"},
+   "PackageLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans",ExpressionUUID->
+  "e1b9acfc-a91b-49a0-88d6-b394004a4d79"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]", "InlineSeparator"]
+}], "InlineGuideFunctionListing",
+ CellID->6338575,ExpressionUUID->"beea8dfa-3a11-45ad-b1be-48dae0e271e0"],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{
+    Cell[
+     TextData["FSetAnisotropyRoutes"]], 
+    "paclet:Fretica/ref/FSetAnisotropyRoutes", "Fretica Package Symbol"},
+   "PackageLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans",ExpressionUUID->
+  "3911bc4b-fd10-422e-a9e7-80fddd19a0c3"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{
+    Cell[
+     TextData["FGetAnisotropyRoutes"]], 
+    "paclet:Fretica/ref/FGetAnisotropyRoutes", "Fretica Package Symbol"},
+   "PackageLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans",ExpressionUUID->
+  "3ecf8429-105e-4d43-9f5a-83641e4acaf1"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{
+    Cell[
+     TextData["FGetPIEAnisotropyRoutes"]], 
+    "paclet:Fretica/ref/FGetPIEAnisotropyRoutes", "Fretica Package Symbol"},
+   "PackageLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans",ExpressionUUID->
+  "be69841f-c331-4e78-9ff6-e14bf9f985f2"],
+ StyleBox["\[FilledVerySmallSquare]\[MediumSpace]", "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{
+    Cell[
+     TextData["FSetAnisotropyL1"]], "paclet:Fretica/ref/FSetAnisotropyL1", 
+    "Fretica Package Symbol"},
+   "PackageLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans",ExpressionUUID->
+  "58822ea1-169f-4a96-b388-1895c14752ae"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{
+    Cell[
+     TextData["FGetAnisotropyL1"]], "paclet:Fretica/ref/FGetAnisotropyL1", 
+    "Fretica Package Symbol"},
+   "PackageLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans",ExpressionUUID->
+  "93c1cfdc-9dd7-44c5-882e-1a230661cd2f"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[FilledVerySmallSquare]\[MediumSpace]", "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{
+    Cell[
+     TextData["FSetAnisotropyL2"]], "paclet:Fretica/ref/FSetAnisotropyL2", 
+    "Fretica Package Symbol"},
+   "PackageLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans",ExpressionUUID->
+  "3335b0ed-7078-4615-9c7c-03b5643e8098"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{
+    Cell[
+     TextData["FGetAnisotropyL2"]], "paclet:Fretica/ref/FGetAnisotropyL2", 
+    "Fretica Package Symbol"},
+   "PackageLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans",ExpressionUUID->
+  "c71a0fc5-6594-40ee-90e2-e9ec5fbdc95f"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]", "InlineSeparator"]
+}], "InlineGuideFunctionListing",
+ CellID->68316499,ExpressionUUID->"195dbcfb-296f-41ca-a589-29a7d4563c01"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ TemplateBox[{
+   Cell[
+    TextData["Handling TTTR Files \[RightGuillemet]"]], 
+   "paclet:Fretica/tutorial/HandlingTTTRFiles"},
+  "OrangeLink",
+  BaseStyle->"GuideFunctionsSubsection"]], "GuideFunctionsSubsection",
+ CellID->306571986,ExpressionUUID->"ac04a816-d67f-43f6-9dd6-411c0c82c4f5"],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{
+    Cell[
+     TextData["FOpenTTTR"]], "paclet:Fretica/ref/FOpenTTTR", 
+    "Fretica Package Symbol"},
+   "PackageLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans",ExpressionUUID->
+  "0f8b518f-d812-4b71-944a-0e773964f7cb"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{
+    Cell[
+     TextData["FGetT3rFilename"]], "paclet:Fretica/ref/FGetT3rFilename", 
+    "Fretica Package Symbol"},
+   "PackageLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans",ExpressionUUID->
+  "44dab3ce-03fd-4d51-9f26-4f6becf7e632"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{
+    Cell[
+     TextData["FShowHeader"]], "paclet:Fretica/ref/FShowHeader", 
+    "Fretica Package Symbol"},
+   "PackageLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans",ExpressionUUID->
+  "89ffa5a7-f93c-485a-b2b0-5f94897aaa0c"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{
+    Cell[
+     TextData["FGetFromHeader"]], "paclet:Fretica/ref/FGetFromHeader", 
+    "Fretica Package Symbol"},
+   "PackageLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans",ExpressionUUID->
+  "f3958188-b15f-4f44-a4b3-f6d6a8427a47"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[FilledVerySmallSquare]\[MediumSpace]", "InlineSeparator"],
+ "  ",
+ Cell[BoxData[
+  TemplateBox[{
+    Cell[
+     TextData["FGetMarkerList"]], "paclet:Fretica/ref/FGetMarkerList", 
+    "Fretica Package Symbol"},
+   "PackageLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans",ExpressionUUID->
+  "27661488-e9c5-4ca5-b378-9b15d4782a6d"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[FilledVerySmallSquare] ", "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{
+    Cell[
+     TextData["FTTTRCreationTime"]], "paclet:Fretica/ref/FTTTRCreationTime", 
+    "Fretica Package Symbol"},
+   "PackageLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans",ExpressionUUID->
+  "aa273af7-4039-4881-b22d-4a35c2794ac0"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[FilledVerySmallSquare]", "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{
+    Cell[
+     TextData["FGetStartTime"]], "paclet:Fretica/ref/FGetStartTime", 
+    "Fretica Package Symbol"},
+   "PackageLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans",ExpressionUUID->
+  "fbe98ee6-189a-4003-aa5f-4f23bf6a815a"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[FilledVerySmallSquare] ", "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{
+    Cell[
+     TextData["FGetStopTime"]], "paclet:Fretica/ref/FGetStopTime", 
+    "Fretica Package Symbol"},
+   "PackageLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans",ExpressionUUID->
+  "cd177d19-a2a0-4851-8d91-893a0a7b2062"]
+}], "InlineGuideFunctionListing",
+ CellID->517166695,ExpressionUUID->"1df6e922-1db8-4567-8a86-087440cf3318"],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{
+    Cell[
+     TextData["FDeleteTTTRTimeInterval"]], 
+    "paclet:Fretica/ref/FDeleteTTTRTimeInterval", "Fretica Package Symbol"},
+   "PackageLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans",ExpressionUUID->
+  "0a7e74ef-60cd-4843-81bc-44e009f35f89"],
+ " ",
+ StyleBox["\[FilledVerySmallSquare] ", "InlineSeparator"],
+ Cell[BoxData[
+  TemplateBox[{
+    Cell[
+     TextData["FShiftPhotonTimesByPicoseconds"]], 
+    "paclet:Fretica/ref/FShiftPhotonTimesByPicoseconds", 
+    "Fretica Package Symbol"},
+   "PackageLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans",ExpressionUUID->
+  "a922ed22-220e-4a97-8631-e8d3d74388e6"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]", "InlineSeparator"]
+}], "InlineGuideFunctionListing",
+ CellID->773409,ExpressionUUID->"b4eef0d4-24e5-4f18-bdd0-777b86ce9ecf"],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{
+    Cell[
+     TextData["FGetPhotonData"]], "paclet:Fretica/ref/FGetPhotonData", 
+    "Fretica Package Symbol"},
+   "PackageLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans",ExpressionUUID->
+  "c1e2246a-70db-49a8-b929-d9e43f8cedb7"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[FilledVerySmallSquare]", "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{
+    Cell[
+     TextData["FGetPhotonDataRaw"]], "paclet:Fretica/ref/FGetPhotonDataRaw", 
+    "Fretica Package Symbol"},
+   "PackageLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans",ExpressionUUID->
+  "e29430df-e372-48e3-8cc4-62e07faf5d6b"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[FilledVerySmallSquare]", "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{
+    Cell[
+     TextData["FPhotonTimeRelativeToMarkerHistogram"]], 
+    "paclet:Fretica/ref/FPhotonTimeRelativeToMarkerHistogram", 
+    "Fretica Package Symbol"},
+   "PackageLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans",ExpressionUUID->
+  "8f10e1e1-a501-4c2b-9588-da44848e0d35"]
+}], "InlineGuideFunctionListing",
+ CellID->622668770,ExpressionUUID->"8013170f-7911-4a79-ac8b-4ec372fe1165"],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{
+    Cell[
+     TextData["FCloseGap"]], "paclet:Fretica/ref/FCloseGap", 
+    "Fretica Package Symbol"},
+   "PackageLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans",ExpressionUUID->
+  "5162e5d7-3b61-472e-8bd2-05fae443de72"],
+ "\[LineSeparator]",
+ Cell[BoxData[
+  TemplateBox[{
+    Cell[
+     TextData["FSaveAsHT3"]], "paclet:Fretica/ref/FSaveAsHT3", 
+    "Fretica Package Symbol"},
+   "PackageLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans",ExpressionUUID->
+  "090053a0-f8f9-4908-9235-9982afd16ed9"],
+ " ",
+ StyleBox["\[FilledVerySmallSquare] ", "InlineSeparator"],
+ Cell[BoxData[
+  TemplateBox[{
+    Cell[
+     TextData["FExportTTTRToH5"]], "paclet:Fretica/ref/FExportTTTRToH5", 
+    "Fretica Package Symbol"},
+   "PackageLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans",ExpressionUUID->
+  "8404c2bf-1c0e-4281-84de-3ab7c890de8c"]
+}], "InlineGuideFunctionListing",
+ CellID->539194,ExpressionUUID->"9fc7e775-3aad-48e2-b778-ae295bf1bb62"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ TemplateBox[{
+   Cell[
+    TextData["Binned Photon Traces (MCS) \[RightGuillemet]"]], 
+   "paclet:Fretica/tutorial/BinnedPhotonTracesMCS"},
+  "OrangeLink",
+  BaseStyle->"GuideFunctionsSubsection"]], "GuideFunctionsSubsection",
+ CellID->88003744,ExpressionUUID->"50e8e2a2-08e5-4a23-bea6-d25a2da1e397"],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{
+    Cell[
+     TextData["FMCStrace"]], "paclet:Fretica/ref/FMCStrace", 
+    "Fretica Package Symbol"},
+   "PackageLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans",ExpressionUUID->
+  "d879b901-0943-4dc7-955e-fda8b610170d"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]", "InlineSeparator"]
+}], "InlineGuideFunctionListing",
+ CellID->892742194,ExpressionUUID->"72ac3012-fa57-4555-8160-f6efdcd2913f"],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{
+    Cell[
+     TextData["FShowBursts"]], "paclet:Fretica/ref/FShowBursts", 
+    "Fretica Package Symbol"},
+   "PackageLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans",ExpressionUUID->
+  "c4dbd67a-075c-41d5-ac5a-d53f15e2fdeb"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{
+    Cell[
+     TextData["FShowBurstsLevel"]], "paclet:Fretica/ref/FShowBurstsLevel", 
+    "Fretica Package Symbol"},
+   "PackageLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans",ExpressionUUID->
+  "c5301d64-d28e-488a-8dd7-20be84d039da"],
+ "\[NonBreakingSpace]"
+}], "InlineGuideFunctionListing",
+ CellID->338911655,ExpressionUUID->"9e855c55-9e67-4c63-8174-96f1f7a3f605"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ TemplateBox[{
+   Cell[
+    TextData["Photon Counting Histograms (PCH) \[RightGuillemet]"]], 
+   "paclet:Fretica/tutorial/PhotonCountingHistogramsPCH"},
+  "OrangeLink",
+  BaseStyle->"GuideFunctionsSubsection"]], "GuideFunctionsSubsection",
+ CellID->208841989,ExpressionUUID->"0bc3d389-cb18-46a7-ae39-608be53f2329"],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{
+    Cell[
+     TextData["FPCH"]], "paclet:Fretica/ref/FPCH", "Fretica Package Symbol"},
+   "PackageLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans",ExpressionUUID->
+  "022193e4-56b2-4dc4-9b60-05cf8cb85d66"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{
+    Cell[
+     TextData["FPCH3DG"]], "paclet:Fretica/ref/FPCH3DG", 
+    "Fretica Package Symbol"},
+   "PackageLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans",ExpressionUUID->
+  "13a0f627-cb56-40ee-82ed-7741673dab5f"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{
+    Cell[
+     TextData["FPCHFida"]], "paclet:Fretica/ref/FPCHFida", 
+    "Fretica Package Symbol"},
+   "PackageLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans",ExpressionUUID->
+  "fdbd5c96-1cd4-477e-a259-3c7bdd3bf134"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{
+    Cell[
+     TextData["FPCHFidaFit"]], "paclet:Fretica/ref/FPCHFidaFit", 
+    "Fretica Package Symbol"},
+   "PackageLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans",ExpressionUUID->
+  "56e559eb-962c-4a34-9455-4ea8411ce179"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{
+    Cell[
+     TextData["FPCHFidaGlobalFit"]], "paclet:Fretica/ref/FPCHFidaGlobalFit", 
+    "Fretica Package Symbol"},
+   "PackageLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans",ExpressionUUID->
+  "c2a9ccda-52ab-44c0-b19c-2dd23aee86c5"],
+ "\[NonBreakingSpace]"
+}], "InlineGuideFunctionListing",
+ CellID->43653211,ExpressionUUID->"8752f2f0-b2fe-4876-b750-de6cc56f75aa"],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{
+    Cell[
+     TextData["FPDAMethod"]], "paclet:Fretica/ref/FPDAMethod", 
+    "Fretica Package Symbol"},
+   "PackageLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans",ExpressionUUID->
+  "500f3717-9ea1-4a9f-b7dc-ff91c54a2ef3"],
+ "\[NonBreakingSpace]"
+}], "InlineGuideFunctionListing",
+ CellID->67503930,ExpressionUUID->"7c554bf4-cd15-4178-97c9-da7e0a5d2687"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ TemplateBox[{
+   Cell[
+    TextData[
+    "Photon burst identification and manipulation of the burst list \
+\[RightGuillemet]"]], 
+   "paclet:Fretica/tutorial/\
+PhotonBurstIdentificationAndManipulationOfTheBurstList"},
+  "OrangeLink",
+  BaseStyle->"GuideFunctionsSubsection"]], "GuideFunctionsSubsection",
+ CellID->4050641,ExpressionUUID->"8bc28a2f-a000-47b2-92af-75bedc309b5a"],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{
+    Cell[
+     TextData["FFindBurstsDeltaT"]], "paclet:Fretica/ref/FFindBurstsDeltaT", 
+    "Fretica Package Symbol"},
+   "PackageLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans",ExpressionUUID->
+  "3b3c92a6-bb45-43c7-be4c-282952124361"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{
+    Cell[
+     TextData["FFindBurstsFromTimeBinnedData"]], 
+    "paclet:Fretica/ref/FFindBurstsFromTimeBinnedData", 
+    "Fretica Package Symbol"},
+   "PackageLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans",ExpressionUUID->
+  "7eb8e98c-5d55-4409-9a3d-0b4f1815add5"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[FilledVerySmallSquare]\[MediumSpace]", "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{
+    Cell[
+     TextData["FSetBurstList"]], "paclet:Fretica/ref/FSetBurstList", 
+    "Fretica Package Symbol"},
+   "PackageLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans",ExpressionUUID->
+  "3d537b07-8d5a-4dea-9f55-cdbc77b6ca29"],
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{
+    Cell[
+     TextData["FGetBurstListSize"]], "paclet:Fretica/ref/FGetBurstListSize", 
+    "Fretica Package Symbol"},
+   "PackageLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans",ExpressionUUID->
+  "1aa9b713-ab86-4b75-b256-7a9f01730f2a"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{
+    Cell[
+     TextData["FBurstAsymmetry"]], "paclet:Fretica/ref/FBurstAsymmetry", 
+    "Fretica Package Symbol"},
+   "PackageLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans",ExpressionUUID->
+  "dbe0a19a-4bdd-41c7-b872-b3c430eff2b4"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{
+    Cell[
+     TextData["FCutAsymmetricBursts"]], 
+    "paclet:Fretica/ref/FCutAsymmetricBursts", "Fretica Package Symbol"},
+   "PackageLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans",ExpressionUUID->
+  "17a2f9a3-e6e0-48b4-8b76-ff56e4ce79a0"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{
+    Cell[
+     TextData["FPIEBurstAsymmetry"]], "paclet:Fretica/ref/FPIEBurstAsymmetry",
+     "Fretica Package Symbol"},
+   "PackageLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans",ExpressionUUID->
+  "a740ab0f-6fe0-471e-b6b3-e85d95484c3f"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{
+    Cell[
+     TextData["FPIECutAsymmetricBursts"]], 
+    "paclet:Fretica/ref/FPIECutAsymmetricBursts", "Fretica Package Symbol"},
+   "PackageLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans",ExpressionUUID->
+  "9916ff0b-1402-4d32-9565-8dfca25033f2"]
+}], "InlineGuideFunctionListing",
+ CellID->654561883,ExpressionUUID->"3c9d14d0-853b-422f-bc1e-8a722296cc70"],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{
+    Cell[
+     TextData["FSplitBursts"]], "paclet:Fretica/ref/FSplitBursts", 
+    "Fretica Package Symbol"},
+   "PackageLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans",ExpressionUUID->
+  "5a278b5f-64f0-448a-bc8a-f30ac5c6ca54"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{
+    Cell[
+     TextData["FExpandBurstsSymmetrically"]], 
+    "paclet:Fretica/ref/FExpandBurstsSymmetrically", "Fretica Package Symbol"},
+   "PackageLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans",ExpressionUUID->
+  "ed38c50b-1ecc-4bc1-8434-1eca2cc2fb85"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{
+    Cell[
+     TextData["FUpdateBurstCounts"]], "paclet:Fretica/ref/FUpdateBurstCounts",
+     "Fretica Package Symbol"},
+   "PackageLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans",ExpressionUUID->
+  "46e52f7e-cf82-485e-820a-a06ad9914331"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{
+    Cell[
+     TextData["FDeleteSelectedBursts"]], 
+    "paclet:Fretica/ref/FDeleteSelectedBursts", "Fretica Package Symbol"},
+   "PackageLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans",ExpressionUUID->
+  "34e66634-71c9-4def-a2ec-dcfe1b738846"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{
+    Cell[
+     TextData["FDeleteNoneSelectedBursts"]], 
+    "paclet:Fretica/ref/FDeleteNoneSelectedBursts", "Fretica Package Symbol"},
+   "PackageLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans",ExpressionUUID->
+  "ef1a87d9-0b87-4921-8189-94cf65eb4e48"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[FilledVerySmallSquare]\[MediumSpace]", "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{
+    Cell[
+     TextData["FReduceToBurstPhotons"]], 
+    "paclet:Fretica/ref/FReduceToBurstPhotons", "Fretica Package Symbol"},
+   "PackageLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans",ExpressionUUID->
+  "1002ad10-48c9-441f-9ca3-4039114690e6"]
+}], "InlineGuideFunctionListing",
+ CellID->5909694,ExpressionUUID->"4d055cc7-04b3-4fe4-9e04-42c9ba6ce282"],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{
+    Cell[
+     TextData["FCombineContiguousBins"]], 
+    "paclet:Fretica/ref/FCombineContiguousBins", "Fretica Package Symbol"},
+   "PackageLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans",ExpressionUUID->
+  "d64934e5-a8e0-4216-9951-1a7db186f1c9"],
+ "\[NonBreakingSpace]"
+}], "InlineGuideFunctionListing",
+ CellID->179255020,ExpressionUUID->"44390504-2dfb-40e1-8b71-3b6edc36716c"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ TemplateBox[{
+   Cell[
+    TextData["Background rates \[RightGuillemet]"]], 
+   "paclet:Fretica/tutorial/BackgroundRates"},
+  "OrangeLink",
+  BaseStyle->"GuideFunctionsSubsection"]], "GuideFunctionsSubsection",
+ CellID->310290498,ExpressionUUID->"beadba54-f3a8-47ee-bd48-a9785062a367"],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{
+    Cell[
+     TextData["FDetermineBackground"]], 
+    "paclet:Fretica/ref/FDetermineBackground", "Fretica Package Symbol"},
+   "PackageLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans",ExpressionUUID->
+  "56c002da-0b70-43c1-8f4a-d999f54af9a0"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{
+    Cell[
+     TextData["FSetBackground"]], "paclet:Fretica/ref/FSetBackground", 
+    "Fretica Package Symbol"},
+   "PackageLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans",ExpressionUUID->
+  "277b9278-e91c-4d0c-8580-c70e7089eb96"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{
+    Cell[
+     TextData["FGetBackground"]], "paclet:Fretica/ref/FGetBackground", 
+    "Fretica Package Symbol"},
+   "PackageLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans",ExpressionUUID->
+  "5407d013-147b-4b83-ba78-29ccae577105"]
+}], "InlineGuideFunctionListing",
+ CellID->20136355,ExpressionUUID->"dc06f922-89a2-4ffe-bb95-5fe6bd7eb7c8"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ TemplateBox[{
+   Cell[
+    TextData["Multi-parameter analysis of photon bursts \[RightGuillemet]"]], 
+   "paclet:Fretica/tutorial/Multi-parameterAnalysisOfPhotonBursts"},
+  "OrangeLink",
+  BaseStyle->"GuideFunctionsSubsection"]], "GuideFunctionsSubsection",
+ CellID->222560512,ExpressionUUID->"8c866ac6-6b91-4ddc-8ce6-38798605baa1"],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{
+    Cell[
+     TextData["FGetFromBurstList"]], "paclet:Fretica/ref/FGetFromBurstList", 
+    "Fretica Package Symbol"},
+   "PackageLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans",ExpressionUUID->
+  "0f8a51cf-6d28-4c42-b90c-12a4d0622aa0"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{
+    Cell[
+     TextData["FGetFromBurst"]], "paclet:Fretica/ref/FGetFromBurst", 
+    "Fretica Package Symbol"},
+   "PackageLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans",ExpressionUUID->
+  "f4aa11d0-2891-45ea-b1e1-01ec84e43db5"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{
+    Cell[
+     TextData["FParamHisto"]], "paclet:Fretica/ref/FParamHisto", 
+    "Fretica Package Symbol"},
+   "PackageLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans",ExpressionUUID->
+  "c56b18cf-3e2e-4b6f-a56f-6daedf59f156"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{
+    Cell[
+     TextData["FParamHisto2D"]], "paclet:Fretica/ref/FParamHisto2D", 
+    "Fretica Package Symbol"},
+   "PackageLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans",ExpressionUUID->
+  "af91411b-12ad-4e11-b577-cb4a861ecf48"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[FilledVerySmallSquare]\[MediumSpace]", "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{
+    Cell[
+     TextData["FPlotContourHisto"]], "paclet:Fretica/ref/FPlotContourHisto", 
+    "Fretica Package Symbol"},
+   "PackageLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans",ExpressionUUID->
+  "1619efdc-ee2e-4600-bc56-5d55fa037a4f"],
+ "\[NonBreakingSpace]"
+}], "InlineGuideFunctionListing",
+ CellID->64290467,ExpressionUUID->"6148c07a-58a4-446a-9794-95f60f71d1ab"],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{
+    Cell[
+     TextData["FCalcBurstLifeTimes"]], 
+    "paclet:Fretica/ref/FCalcBurstLifeTimes", "Fretica Package Symbol"},
+   "PackageLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans",ExpressionUUID->
+  "01ae2a01-99f8-41b7-a030-006b3eed3cdf"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{
+    Cell[
+     TextData["FSelectBursts"]], "paclet:Fretica/ref/FSelectBursts", 
+    "Fretica Package Symbol"},
+   "PackageLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans",ExpressionUUID->
+  "ab194d42-3615-43c2-81b1-a95bbcfd8d40"],
+ " ",
+ StyleBox["\[FilledVerySmallSquare]\[MediumSpace]", "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{
+    Cell[
+     TextData["FSelectBurst"]], "paclet:Fretica/ref/FSelectBurst", 
+    "Fretica Package Symbol"},
+   "PackageLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans",ExpressionUUID->
+  "f6de2874-f02f-4218-8128-13f2c5c307a3"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{
+    Cell[
+     TextData["FDeleteSelectedBursts"]], 
+    "paclet:Fretica/ref/FDeleteSelectedBursts", "Fretica Package Symbol"},
+   "PackageLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans",ExpressionUUID->
+  "6d72ab80-87e7-44fa-8efc-77e6910b70dd"],
+ " ",
+ StyleBox["\[FilledVerySmallSquare]\[MediumSpace]", "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{
+    Cell[
+     TextData["FDeleteNonSelectedBursts"]], 
+    "paclet:Fretica/ref/FDeleteNonSelectedBursts", "Fretica Package Symbol"},
+   "PackageLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans",ExpressionUUID->
+  "13b2f83c-9c9b-4753-90f6-b50560cce7a2"]
+}], "InlineGuideFunctionListing",
+ CellID->314834173,ExpressionUUID->"c4cfeebc-8479-443d-ae31-bfafaf5c9720"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ TemplateBox[{
+   Cell[
+    TextData["FRET histogram fitting \[RightGuillemet]"]], 
+   "paclet:Fretica/tutorial/FRETHistogramFitting"},
+  "OrangeLink",
+  BaseStyle->"GuideFunctionsSubsection"]], "GuideFunctionsSubsection",
+ CellID->360292272,ExpressionUUID->"0a43be41-efc2-4b8b-af6d-74b1816ef962"],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{
+    Cell[
+     TextData["FFitFretHistogram"]], "paclet:Fretica/ref/FFitFretHistogram", 
+    "Fretica Package Symbol"},
+   "PackageLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans",ExpressionUUID->
+  "00f00cba-60de-4193-bab9-eaaa281bb790"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{
+    Cell[
+     TextData["FMakeFRETPeakModel "]], 
+    "paclet:Fretica/ref/FMakeFRETPeakModel", "Fretica Package Symbol"},
+   "PackageLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans",ExpressionUUID->
+  "44fea8f6-2724-494e-80cd-71ad3fc26a74"],
+ StyleBox["\[FilledVerySmallSquare]\[MediumSpace]", "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{
+    Cell[
+     TextData["FFindGuess "]], "paclet:Fretica/ref/FFindGuess", 
+    "Fretica Package Symbol"},
+   "PackageLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans",ExpressionUUID->
+  "56fb98dc-b5d1-457e-828e-899ccfcf3526"],
+ StyleBox["\[FilledVerySmallSquare]\[MediumSpace]", "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{
+    Cell[
+     TextData["FPlotFRETFit"]], "paclet:Fretica/ref/FPlotFRETFit", 
+    "Fretica Package Symbol"},
+   "PackageLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans",ExpressionUUID->
+  "8a581220-4677-4167-a85e-e5b3e516d063"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{
+    Cell[
+     TextData["FFRETPeakIntegrate"]], "paclet:Fretica/ref/FFRETPeakIntegrate",
+     "Fretica Package Symbol"},
+   "PackageLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans",ExpressionUUID->
+  "d0228819-3786-47bb-9c30-51135c5a25b1"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{
+    Cell[
+     TextData["FDetermineShotNoiseWidths"]], 
+    "paclet:Fretica/ref/FDetermineShotNoiseWidths", "Fretica Package Symbol"},
+   "PackageLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans",ExpressionUUID->
+  "e64b6339-726e-4350-976b-6128ff5d6776"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]", "InlineSeparator"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{
+    Cell[
+     TextData["FGaussian"]], "paclet:Fretica/ref/FGaussian", 
+    "Fretica Package Symbol"},
+   "PackageLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans",ExpressionUUID->
+  "8bf719ff-090b-4dc2-b554-32e5fb7d5490"],
+ StyleBox[" ", "InlineSeparator"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{
+    Cell[
+     TextData["FLogNormal"]], "paclet:Fretica/ref/FLogNormal", 
+    "Fretica Package Symbol"},
+   "PackageLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans",ExpressionUUID->
+  "20e3d4ff-281d-4703-bb9a-985b4c493888"]
+}], "InlineGuideFunctionListing",
+ CellID->305081518,ExpressionUUID->"74ec0389-db8c-4d3f-b9c9-647f52027b1a"],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{
+    Cell[
+     TextData["FFitCurveOptions"]], "paclet:Fretica/ref/FFitCurveOptions", 
+    "Fretica Package Symbol"},
+   "PackageLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans",ExpressionUUID->
+  "1894d10f-f7d5-4ac8-a9b8-dea1a6074b6a"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[FilledVerySmallSquare]\[MediumSpace]", "InlineSeparator"],
+ Cell[BoxData[
+  TemplateBox[{
+    Cell[
+     TextData["FFitCurveOptions"]], "paclet:Fretica/ref/FFitCurveOptions", 
+    "Fretica Package Symbol"},
+   "PackageLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans",ExpressionUUID->
+  "93dfa3fd-febe-45fb-8307-0f767af13241"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[FilledVerySmallSquare]\[MediumSpace]", "InlineSeparator"],
+ Cell[BoxData[
+  TemplateBox[{
+    Cell[
+     TextData["FSubPopOptions"]], "paclet:Fretica/ref/FSubPopOptions", 
+    "Fretica Package Symbol"},
+   "PackageLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans",ExpressionUUID->
+  "eb139b24-9b11-4539-bf34-48a7f2040387"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[FilledVerySmallSquare]\[MediumSpace]", "InlineSeparator"],
+ Cell[BoxData[
+  TemplateBox[{
+    Cell[
+     TextData["FFitCurveStyle"]], "paclet:Fretica/ref/FFitCurveStyle", 
+    "Fretica Package Symbol"},
+   "PackageLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans",ExpressionUUID->
+  "02ce44e1-ab7b-4f14-b0ea-f0f842f0d449"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[FilledVerySmallSquare]\[MediumSpace]", "InlineSeparator"],
+ Cell[BoxData[
+  TemplateBox[{
+    Cell[
+     TextData["FSubPopStyle"]], "paclet:Fretica/ref/FSubPopStyle", 
+    "Fretica Package Symbol"},
+   "PackageLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans",ExpressionUUID->
+  "7607781d-41ee-4cf9-b898-aeb56ce3c010"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{
+    Cell[
+     TextData["FConstraints"]], "paclet:Fretica/ref/FConstraints", 
+    "Fretica Package Symbol"},
+   "PackageLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans",ExpressionUUID->
+  "15fc1449-f054-4e3e-ba68-4e9a7858a918"],
+ " ",
+ StyleBox["\[FilledVerySmallSquare]\[MediumSpace]", "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{
+    Cell[
+     TextData["FFixParams"]], "paclet:Fretica/ref/FFixParams", 
+    "Fretica Package Symbol"},
+   "PackageLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans",ExpressionUUID->
+  "4172ae7c-546c-4ad8-8f73-052ea3b045ef"]
+}], "InlineGuideFunctionListing",
+ CellID->601135113,ExpressionUUID->"0cdc6b48-f988-4709-813c-1e61fd848b81"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ TemplateBox[{
+   Cell[
+    TextData[
+    "Fluorescence lifetime and anisotropy decay fitting \[RightGuillemet]"]], 
+   "paclet:Fretica/tutorial/FluorescenceLifetimeAndAnisotropyDecayFitting"},
+  "OrangeLink",
+  BaseStyle->"GuideFunctionsSubsection"]], "GuideFunctionsSubsection",
+ CellID->18487738,ExpressionUUID->"245b45a5-1108-4586-a7a0-905baa5a0c55"],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{
+    Cell[
+     TextData["FLifeTimeHisto"]], "paclet:Fretica/ref/FLifeTimeHisto", 
+    "Fretica Package Symbol"},
+   "PackageLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans",ExpressionUUID->
+  "4b88d041-e332-4003-8d80-2972045180a3"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{
+    Cell[
+     TextData["FLifeTimeFit"]], "paclet:Fretica/ref/FLifeTimeFit", 
+    "Fretica Package Symbol"},
+   "PackageLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans",ExpressionUUID->
+  "d40a8db4-9cf5-4301-8266-ab92dc032ba8"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{
+    Cell[
+     TextData["FConvolve"]], "paclet:Fretica/ref/FConvolve", 
+    "Fretica Package Symbol"},
+   "PackageLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans",ExpressionUUID->
+  "9d8d26fe-e8e6-4c44-aabd-246ea46ff5a6"],
+ StyleBox["\[MediumSpace]", "InlineSeparator"]
+}], "InlineGuideFunctionListing",
+ CellID->309231546,ExpressionUUID->"e8940c2c-c9ef-49df-a413-e32032107ce2"],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{
+    Cell[
+     TextData["FGCDonorLifeTimeDecay"]], 
+    "paclet:Fretica/ref/FGCDonorLifeTimeDecay", "Fretica Package Symbol"},
+   "PackageLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans",ExpressionUUID->
+  "a8d6f136-58a9-430c-aff0-144475df8fe4"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{
+    Cell[
+     TextData["FGCAcceptorLifeTimeDecay"]], 
+    "paclet:Fretica/ref/FGCAcceptorLifeTimeDecay", "Fretica Package Symbol"},
+   "PackageLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans",ExpressionUUID->
+  "7945506d-dbde-40b3-a807-d801fe0ff162"],
+ "\[NonBreakingSpace]"
+}], "InlineGuideFunctionListing",
+ CellID->208608386,ExpressionUUID->"ec86c709-cc7e-4ac8-96ec-77ddcd26ac40"],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{
+    Cell[
+     TextData["FNDDonorLifeTimeDecay"]], 
+    "paclet:Fretica/ref/FNDDonorLifeTimeDecay", "Fretica Package Symbol"},
+   "PackageLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans",ExpressionUUID->
+  "4aec37eb-e8a7-48e4-afe4-6a93aedc0bcd"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{
+    Cell[
+     TextData["FNDAcceptorLifeTimeDecay"]], 
+    "paclet:Fretica/ref/FNDAcceptorLifeTimeDecay", "Fretica Package Symbol"},
+   "PackageLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans",ExpressionUUID->
+  "936b7189-c06a-4f87-9abc-37eb18fc21e6"],
+ "\[NonBreakingSpace]"
+}], "InlineGuideFunctionListing",
+ CellID->180361751,ExpressionUUID->"8291ea55-fc42-4082-8574-093c17610f0e"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ TemplateBox[{
+   Cell[
+    TextData[
+    "Pulsed interleaved excitation (PIE)  and  Alternating-laser excitation \
+(ALEX) \[RightGuillemet]"]], 
+   "paclet:Fretica/tutorial/PulseInterleavedExcitationPIEAndAlternating-\
+LaserExcitationALEX"},
+  "OrangeLink",
+  BaseStyle->"GuideFunctionsSubsection"]], "GuideFunctionsSubsection",
+ CellID->612082324,ExpressionUUID->"5f2b506d-280b-4c5d-bf07-4320d873b2c9"],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{
+    Cell[
+     TextData["FEnablePie"]], "paclet:Fretica/ref/FEnablePie", 
+    "Fretica Package Symbol"},
+   "PackageLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans",ExpressionUUID->
+  "c03e6d22-f9c0-4c65-9afa-3a8b93dc5489"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{
+    Cell[
+     TextData["FSetPIERoutes"]], "paclet:Fretica/ref/FSetPIERoutes", 
+    "Fretica Package Symbol"},
+   "PackageLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans",ExpressionUUID->
+  "a08840ce-6ef5-4023-83d6-bc4477560e34"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{
+    Cell[
+     TextData["FPIEChannelSelector"]], 
+    "paclet:Fretica/ref/FPIEChannelSelector", "Fretica Package Symbol"},
+   "PackageLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans",ExpressionUUID->
+  "a61a41c0-b23c-47a9-b5c4-e267a7bef9f1"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{
+    Cell[
+     TextData["FSetPIEChannelConstraints"]], 
+    "paclet:Fretica/ref/FSetPIEChannelConstraints", "Fretica Package Symbol"},
+   "PackageLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans",ExpressionUUID->
+  "da964706-ba31-4914-b349-8ce82996316b"],
+ " ",
+ StyleBox["\[FilledVerySmallSquare]\[MediumSpace]", "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{
+    Cell[
+     TextData["FGetPIEChannelConstraints"]], 
+    "paclet:Fretica/ref/FGetPIEChannelConstraints", "Fretica Package Symbol"},
+   "PackageLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans",ExpressionUUID->
+  "320cff7c-e22d-49fe-af2d-39dcf19a3c03"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{
+    Cell[
+     TextData["FSetPIEGamma"]], "paclet:Fretica/ref/FSetPIEGamma", 
+    "Fretica Package Symbol"},
+   "PackageLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans",ExpressionUUID->
+  "7f9e5335-b49d-4d7a-aee3-892de17297e6"],
+ " ",
+ StyleBox["\[FilledVerySmallSquare]\[MediumSpace]", "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{
+    Cell[
+     TextData["FSetPIEBackground"]], "paclet:Fretica/ref/FSetPIEBackground", 
+    "Fretica Package Symbol"},
+   "PackageLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans",ExpressionUUID->
+  "17568447-105e-4837-b030-c5eecdc0191b"],
+ StyleBox["\[FilledVerySmallSquare]\[MediumSpace]", "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{
+    Cell[
+     TextData["FGetPIEBackground"]], "paclet:Fretica/ref/FGetPIEBackground", 
+    "Fretica Package Symbol"},
+   "PackageLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans",ExpressionUUID->
+  "2175e6e2-bdc2-4bcf-97d4-b7eb15bed03f"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]\
+", "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{
+    Cell[
+     TextData["FGetPIEAnisotropyRoutes"]], 
+    "paclet:Fretica/ref/FGetPIEAnisotropyRoutes", "Fretica Package Symbol"},
+   "PackageLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans",ExpressionUUID->
+  "cc6ff58c-f185-4b94-b429-4edeb19eac97"]
+}], "InlineGuideFunctionListing",
+ CellID->423702677,ExpressionUUID->"56508f2e-fefc-4ece-a38a-41072f7f3c57"],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{
+    Cell[
+     TextData["FPIEBurstIdentificationMethod"]], 
+    "paclet:Fretica/ref/FPIEBurstIdentificationMethod", 
+    "Fretica Package Symbol"},
+   "PackageLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans",ExpressionUUID->
+  "0532828a-03d4-4790-af90-6494f37f31cd"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ Cell[BoxData[
+  TemplateBox[{
+    Cell[
+     TextData["FMainChannelAboveThreshold"]], 
+    "paclet:Fretica/ref/FMainChannelAboveThreshold", "Fretica Package Symbol"},
+   "PackageLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans",ExpressionUUID->
+  "d6c805bd-3e3a-4191-a338-c83c9932b6e2"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{
+    Cell[
+     TextData["FMainChannelOrPieChannelAboveThreshold"]], 
+    "paclet:Fretica/ref/FMainChannelOrPieChannelAboveThreshold", 
+    "Fretica Package Symbol"},
+   "PackageLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans",ExpressionUUID->
+  "72ac93f4-f2b2-4f85-a7fd-2ec3eb36b98c"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{
+    Cell[
+     TextData["FMainChannelPlusPieChannelAboveThreshold"]], 
+    "paclet:Fretica/ref/FMainChannelPlusPieChannelAboveThreshold", 
+    "Fretica Package Symbol"},
+   "PackageLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans",ExpressionUUID->
+  "1563b6d0-136e-441e-8f0d-fd2c431029d7"],
+ "\[NonBreakingSpace]\[LineSeparator]",
+ Cell[BoxData[
+  TemplateBox[{
+    Cell[
+     TextData["FPIEBurstAsymmetry"]], "paclet:Fretica/ref/FPIEBurstAsymmetry",
+     "Fretica Package Symbol"},
+   "PackageLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans",ExpressionUUID->
+  "ff50a208-6a49-4fe5-857f-46eed2d06f98"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{
+    Cell[
+     TextData["FPIECutAsymmetricBursts"]], 
+    "paclet:Fretica/ref/FPIECutAsymmetricBursts", "Fretica Package Symbol"},
+   "PackageLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans",ExpressionUUID->
+  "498ff889-7728-4833-9a6e-1236c3c45efc"]
+}], "InlineGuideFunctionListing",
+ CellID->850420368,ExpressionUUID->"8888fc77-b6de-472d-a4e5-b549334dbef4"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ TemplateBox[{
+   Cell[
+    TextData["Correlation \[RightGuillemet]"]], 
+   "paclet:Fretica/tutorial/Correlation"},
+  "OrangeLink",
+  BaseStyle->"GuideFunctionsSubsection"]], "GuideFunctionsSubsection",
+ CellID->139644895,ExpressionUUID->"963e4711-fc22-4818-a60b-d5cd1c1010ad"],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{
+    Cell[
+     TextData["FFCS"]], "paclet:Fretica/ref/FFCS", "Fretica Package Symbol"},
+   "PackageLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans",ExpressionUUID->
+  "8006ffa1-db85-4649-a43a-5f4515adfd21"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[FilledVerySmallSquare]\[MediumSpace]", "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{
+    Cell[
+     TextData["FFCSW"]], "paclet:Fretica/ref/FFCSW", "Fretica Package Symbol"},
+   "PackageLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans",ExpressionUUID->
+  "64afe36b-22ae-4a55-bab1-40f9a6706d88"],
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{
+    Cell[
+     TextData["FnsFCS"]], "paclet:Fretica/ref/FnsFCS", 
+    "Fretica Package Symbol"},
+   "PackageLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans",ExpressionUUID->
+  "1b4ecf36-bf73-40e4-a40c-007df60a563b"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{
+    Cell[
+     TextData["FTimeCorrelate"]], "paclet:Fretica/ref/FTimeCorrelate", 
+    "Fretica Package Symbol"},
+   "PackageLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans",ExpressionUUID->
+  "682d8e23-c495-4e49-96a1-df8dd7a3e3ab"],
+ " ",
+ StyleBox["\[FilledVerySmallSquare]\[MediumSpace]", "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{
+    Cell[
+     TextData["FTimeCorrelateWeighted"]], 
+    "paclet:Fretica/ref/FTimeCorrelateWeighted", "Fretica Package Symbol"},
+   "PackageLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans",ExpressionUUID->
+  "d0ded42f-6fc5-4c1e-a6d2-fbff9593405b"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{
+    Cell[
+     TextData["FCorrelateBinnedData"]], 
+    "paclet:Fretica/ref/FCorrelateBinnedData", "Fretica Package Symbol"},
+   "PackageLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans",ExpressionUUID->
+  "81cabd88-776e-48bd-a777-780ad4004bd0"]
+}], "InlineGuideFunctionListing",
+ CellID->262942708,ExpressionUUID->"3dcd7c44-503e-4d56-8b1c-5293d52fbadf"],
+
+Cell[TextData[Cell[BoxData[
+ TemplateBox[{
+   Cell[
+    TextData["FNumberOfStepsInCascade"]], 
+   "paclet:Fretica/ref/FNumberOfStepsInCascade", "Fretica Package Symbol"},
+  "PackageLink",
+  BaseStyle->
+   "InlineFunctionSans"]], \
+"InlineFunctionSans",ExpressionUUID->"3c78d678-46be-4dc3-bc00-cc8d03f498be"]],\
+ "InlineGuideFunctionListing",
+ CellID->229814772,ExpressionUUID->"5a6d4ae2-5f7b-4316-bc01-03a8396ed039"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ TemplateBox[{
+   Cell[
+    TextData["Two-Focus FCS \[RightGuillemet]"]], 
+   "paclet:Fretica/tutorial/Two-FocusFCS"},
+  "OrangeLink",
+  BaseStyle->"GuideFunctionsSubsection"]], "GuideFunctionsSubsection",
+ CellID->214137530,ExpressionUUID->"9d5b6652-40a1-46f5-ba4d-74016c552cbb"],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{
+    Cell[
+     TextData["F2fFCSFit"]], "paclet:Fretica/ref/F2fFCSFit", 
+    "Fretica Package Symbol"},
+   "PackageLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans",ExpressionUUID->
+  "65d02e7a-846c-40cf-9097-44ed34d34615"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{
+    Cell[
+     TextData["F2fFCSGlobalFit"]], "paclet:Fretica/ref/F2fFCSGlobalFit", 
+    "Fretica Package Symbol"},
+   "PackageLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans",ExpressionUUID->
+  "c91f4431-71ec-4dff-8ab8-13b83b30044d"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{
+    Cell[
+     TextData["F2fFCSFromTTTR"]], "paclet:Fretica/ref/F2fFCSFromTTTR", 
+    "Fretica Package Symbol"},
+   "PackageLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans",ExpressionUUID->
+  "887a09de-8d9b-4f3c-b60d-e4f7f07b6694"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{
+    Cell[
+     TextData["F2fFCSGetModel"]], "paclet:Fretica/ref/F2fFCSGetModel", 
+    "Fretica Package Symbol"},
+   "PackageLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans",ExpressionUUID->
+  "90f4cf05-3bd1-470b-a392-4069fca86613"],
+ " ",
+ StyleBox["\[FilledVerySmallSquare]\[MediumSpace]", "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{
+    Cell[
+     TextData["F2fFCSGetLinearCoefficients"]], 
+    "paclet:Fretica/ref/F2fFCSGetLinearCoefficients", 
+    "Fretica Package Symbol"},
+   "PackageLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans",ExpressionUUID->
+  "44dc3de6-f41b-4e24-a527-a5292dcb3fe2"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{
+    Cell[
+     TextData["F2fFCSSettings"]], "paclet:Fretica/ref/F2fFCSSettings", 
+    "Fretica Package Symbol"},
+   "PackageLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans",ExpressionUUID->
+  "5c98102f-4025-41c2-8a63-66bf3ce37620"],
+ " "
+}], "InlineGuideFunctionListing",
+ CellID->150412178,ExpressionUUID->"a09dc874-125b-4ec3-9574-d9e7b072478c"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ TemplateBox[{
+   Cell[
+    TextData["Scan Images \[RightGuillemet]"]], 
+   "paclet:Fretica/tutorial/ScanImages"},
+  "OrangeLink",
+  BaseStyle->"GuideFunctionsSubsection"]], "GuideFunctionsSubsection",
+ CellID->320806554,ExpressionUUID->"26211079-10ff-4090-9500-a827f3e2fc9f"],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{
+    Cell[
+     TextData["FGetFromPiezoScan"]], "paclet:Fretica/ref/FGetFromPiezoScan", 
+    "Fretica Package Symbol"},
+   "PackageLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans",ExpressionUUID->
+  "ca2bea6e-48e9-4816-a7c1-b9646c05cb8b"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{
+    Cell[
+     TextData["FScanImage"]], "paclet:Fretica/ref/FScanImage", 
+    "Fretica Package Symbol"},
+   "PackageLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans",ExpressionUUID->
+  "0ee5d9f8-39cd-4f00-9a7b-5b93f0a681d2"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{
+    Cell[
+     TextData["FFastFLIM"]], "paclet:Fretica/ref/FFastFLIM", 
+    "Fretica Package Symbol"},
+   "PackageLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans",ExpressionUUID->
+  "0eaf0073-62a1-4426-baab-c5f226671e44"],
+ StyleBox["\[FilledVerySmallSquare]\[MediumSpace]", "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{
+    Cell[
+     TextData["FGetScanImageCoordinatesFromTime"]], 
+    "paclet:Fretica/ref/FGetScanImageCoordinatesFromTime", 
+    "Fretica Package Symbol"},
+   "PackageLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans",ExpressionUUID->
+  "2edf99a7-d36c-444f-a881-5767a5366afa"]
+}], "InlineGuideFunctionListing",
+ CellID->45937666,ExpressionUUID->"bed34931-f81d-4749-a0dc-d6c14c519336"],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{
+    Cell[
+     TextData["FScanImageColorLegend"]], 
+    "paclet:Fretica/ref/FScanImageColorLegend", "Fretica Package Symbol"},
+   "PackageLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans",ExpressionUUID->
+  "51438d07-6a8a-4455-93f8-99f1ff9c7ef4"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{
+    Cell[
+     TextData["FScanImageParamName"]], 
+    "paclet:Fretica/ref/FScanImageParamName", "Fretica Package Symbol"},
+   "PackageLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans",ExpressionUUID->
+  "797b0784-1ac3-4604-8d8a-1db97b70ecb3"]
+}], "InlineGuideFunctionListing",
+ CellID->2470255,ExpressionUUID->"13ac3627-2d5a-41f8-a424-c5868257e0e2"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ TemplateBox[{
+   Cell[
+    TextData[
+    "Recurrence analysis of single particles (RASP) \[RightGuillemet]"]], 
+   "paclet:Fretica/tutorial/RecurrenceAnalysisOfSingleParticlesRASP"},
+  "OrangeLink",
+  BaseStyle->"GuideFunctionsSubsection"]], "GuideFunctionsSubsection",
+ CellID->486643969,ExpressionUUID->"9b205778-9a54-440b-af55-03419070176f"],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{
+    Cell[
+     TextData["FSameMoleculeProbability"]], 
+    "paclet:Fretica/ref/FSameMoleculeProbability", "Fretica Package Symbol"},
+   "PackageLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans",ExpressionUUID->
+  "3913e362-ab1f-4bc0-942c-77f80a02a86b"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{
+    Cell[
+     TextData["FRecurrenceHisto"]], "paclet:Fretica/ref/FRecurrenceHisto", 
+    "Fretica Package Symbol"},
+   "PackageLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans",ExpressionUUID->
+  "16f3b8a1-b9ac-4306-a8df-1ca261c9cce3"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{
+    Cell[
+     TextData["FRecurrenceHistoN"]], "paclet:Fretica/ref/FRecurrenceHistoN", 
+    "Fretica Package Symbol"},
+   "PackageLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans",ExpressionUUID->
+  "7c785a2d-da0b-43b1-8365-eb06168a4783"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{
+    Cell[
+     TextData["FRecurrenceHisto2D"]], "paclet:Fretica/ref/FRecurrenceHisto2D",
+     "Fretica Package Symbol"},
+   "PackageLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans",ExpressionUUID->
+  "7d5a2477-6daf-45ea-9ea5-afb95e1458c6"],
+ " "
+}], "InlineGuideFunctionListing",
+ CellID->625681693,ExpressionUUID->"4dbac5de-784d-46e0-becc-c9bec6b4074d"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ TemplateBox[{
+   Cell[
+    TextData["Beta PDA \[RightGuillemet]"]], 
+   "paclet:Fretica/tutorial/BetaPDA"},
+  "OrangeLink",
+  BaseStyle->"GuideFunctionsSubsection"]], "GuideFunctionsSubsection",
+ CellID->620908616,ExpressionUUID->"e3c435fd-2ece-412a-b7e3-b37ac58d1a4a"],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{
+    Cell[
+     TextData["FpdaEHisto"]], "paclet:Fretica/ref/FpdaEHisto", 
+    "Fretica Package Symbol"},
+   "PackageLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans",ExpressionUUID->
+  "8323335b-1018-4325-bdc1-c027cd310387"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{
+    Cell[
+     TextData["FpdaFitEHisto"]], "paclet:Fretica/ref/FpdaFitEHisto", 
+    "Fretica Package Symbol"},
+   "PackageLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans",ExpressionUUID->
+  "b1af5190-c255-48e6-bd72-b2e3262170b9"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{
+    Cell[
+     TextData["FpdaGetSubPopBurstSizeDistributions"]], 
+    "paclet:Fretica/ref/FpdaGetSubPopBurstSizeDistributions", 
+    "Fretica Package Symbol"},
+   "PackageLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans",ExpressionUUID->
+  "feae3946-0940-4d08-be5b-29edd4daf3b0"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{
+    Cell[
+     TextData["FpdaGetDABackground"]], 
+    "paclet:Fretica/ref/FpdaGetDABackground", "Fretica Package Symbol"},
+   "PackageLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans",ExpressionUUID->
+  "9f7d0da8-59fd-42aa-93b5-7b47019889b1"],
+ " ",
+ StyleBox["\[FilledVerySmallSquare]\[MediumSpace]", "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{
+    Cell[
+     TextData["FBetaPeak"]], "paclet:Fretica/ref/FBetaPeak", 
+    "Fretica Package Symbol"},
+   "PackageLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans",ExpressionUUID->
+  "c6c3b1f9-e977-4d10-8151-002abaa011e6"],
+ " ",
+ StyleBox["\[FilledVerySmallSquare]\[MediumSpace]", "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{
+    Cell[
+     TextData["FProximityRatio"]], "paclet:Fretica/ref/FProximityRatio", 
+    "Fretica Package Symbol"},
+   "PackageLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans",ExpressionUUID->
+  "d8edf121-2c90-4090-8339-ba76f5e01c70"],
+ " "
+}], "InlineGuideFunctionListing",
+ CellID->56883146,ExpressionUUID->"2a2a2abd-12e5-49c6-89ed-790bd3d44b68"],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{
+    Cell[
+     TextData["FSubPopCurveOptions"]], 
+    "paclet:Fretica/ref/FSubPopCurveOptions", "Fretica Package Symbol"},
+   "PackageLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans",ExpressionUUID->
+  "80f7da79-97cc-477b-a343-0a0d3c45625c"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " "
+}], "InlineGuideFunctionListing",
+ CellID->270231873,ExpressionUUID->"e1b42102-0fd1-43dd-b4af-9cbcc6e2c1ea"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ TemplateBox[{
+   Cell[
+    TextData[
+    "Hidden Markov Model analysis of photon traces \[RightGuillemet]"]], 
+   "paclet:Fretica/tutorial/HiddenMarkovModelAnalysisOfPhotonTraces"},
+  "OrangeLink",
+  BaseStyle->"GuideFunctionsSubsection"]], "GuideFunctionsSubsection",
+ CellID->532348358,ExpressionUUID->"f015accd-9605-461b-bbd4-21b9951784a4"],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{
+    Cell[
+     TextData["FHMMInitWithBinnedData"]], 
+    "paclet:Fretica/ref/FHMMInitWithBinnedData", "Fretica Package Symbol"},
+   "PackageLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans",ExpressionUUID->
+  "bba53ac1-dcbc-4cd7-92d2-c75ba6adb995"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{
+    Cell[
+     TextData["FHMMInitWithPhotonByPhotonData"]], 
+    "paclet:Fretica/ref/FHMMInitWithPhotonByPhotonData", 
+    "Fretica Package Symbol"},
+   "PackageLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans",ExpressionUUID->
+  "0b5564a8-222b-4b0c-99a9-3789feabc38a"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{
+    Cell[
+     TextData["FHMMSetPhotonRates"]], "paclet:Fretica/ref/FHMMSetPhotonRates",
+     "Fretica Package Symbol"},
+   "PackageLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans",ExpressionUUID->
+  "19b8e5e0-27fa-402a-902e-53cc29929426"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{
+    Cell[
+     TextData["FHMMSetPinPfin"]], "paclet:Fretica/ref/FHMMSetPinPfin", 
+    "Fretica Package Symbol"},
+   "PackageLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans",ExpressionUUID->
+  "4a984114-2828-4c99-9b8f-f55bac9923f2"],
+ " ",
+ StyleBox["\[FilledVerySmallSquare]\[MediumSpace]", "InlineSeparator"],
+ " "
+}], "InlineGuideFunctionListing",
+ CellID->362972201,ExpressionUUID->"cb4031d5-290f-4924-aaaf-d7b42cae0d10"],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{
+    Cell[
+     TextData["FHMMLogLikelihood"]], "paclet:Fretica/ref/FHMMLogLikelihood", 
+    "Fretica Package Symbol"},
+   "PackageLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans",ExpressionUUID->
+  "0404adce-c063-4342-ac73-ce13c2d1e844"],
+ " ",
+ StyleBox["\[FilledVerySmallSquare]\[MediumSpace]", "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{
+    Cell[
+     TextData["FHMMGetLogLikelihoodList"]], 
+    "paclet:Fretica/ref/FHMMGetLogLikelihoodList", "Fretica Package Symbol"},
+   "PackageLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans",ExpressionUUID->
+  "7af95460-4d1c-4793-8360-bfffeeed93bb"],
+ StyleBox["\[FilledVerySmallSquare]\[MediumSpace]", "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{
+    Cell[
+     TextData["FHMMViterbi"]], "paclet:Fretica/ref/FHMMViterbi", 
+    "Fretica Package Symbol"},
+   "PackageLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans",ExpressionUUID->
+  "28c869f4-d4b9-4a3f-84ec-66d4ce74da0e"],
+ " ",
+ StyleBox["\[FilledVerySmallSquare]\[MediumSpace]", "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{
+    Cell[
+     TextData["FHMMForwardBackward"]], 
+    "paclet:Fretica/ref/FHMMForwardBackward", "Fretica Package Symbol"},
+   "PackageLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans",ExpressionUUID->
+  "89b189db-84ae-4a90-b495-d7c420b186ca"],
+ " "
+}], "InlineGuideFunctionListing",
+ CellID->327432498,ExpressionUUID->"b1e44b54-8ca7-410c-b3a2-6c25bcb94dee"],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{
+    Cell[
+     TextData["FHMMGetPhotonByPhotonTraceFromTTTR"]], 
+    "paclet:Fretica/ref/FHMMGetPhotonByPhotonTraceFromTTTR", 
+    "Fretica Package Symbol"},
+   "PackageLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans",ExpressionUUID->
+  "1698eee3-1d5c-4c6b-8375-e26129a5987b"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{
+    Cell[
+     TextData["FHMMGetBinnedTraceFromTTTR"]], 
+    "paclet:Fretica/ref/FHMMGetBinnedTraceFromTTTR", "Fretica Package Symbol"},
+   "PackageLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans",ExpressionUUID->
+  "3bead510-3eeb-403a-bf81-d59013ce664b"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]\n", 
+  "InlineSeparator"],
+ Cell[BoxData[
+  TemplateBox[{
+    Cell[
+     TextData["FHMMSimulatePhotonByPhotonTrace"]], 
+    "paclet:Fretica/ref/FHMMSimulatePhotonByPhotonTrace", 
+    "Fretica Package Symbol"},
+   "PackageLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans",ExpressionUUID->
+  "5c134895-eedd-4206-934e-768cf37b1faa"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{
+    Cell[
+     TextData["FHMMBinPhotonByPhotonTrace"]], 
+    "paclet:Fretica/ref/FHMMSimulateBinnedTrace", "Fretica Package Symbol"},
+   "PackageLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans",ExpressionUUID->
+  "d527889c-46bb-400f-bf76-d20099737bf9"],
+ " ",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{
+    Cell[
+     TextData["FHMMSimulateBinnedTrace"]], 
+    "paclet:Fretica/ref/FHMMSimulateBinnedTrace", "Fretica Package Symbol"},
+   "PackageLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans",ExpressionUUID->
+  "c4ae0532-6592-439f-b5ab-3b65bcbe552f"],
+ " "
+}], "InlineGuideFunctionListing",
+ CellID->177297707,ExpressionUUID->"c1a0d4da-8f28-451a-9b13-63dd97a33490"],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{
+    Cell[
+     TextData["FDwellList"]], "paclet:Fretica/ref/FDwellList", 
+    "Fretica Package Symbol"},
+   "PackageLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans",ExpressionUUID->
+  "df7a82c3-cf22-45ec-ba7c-47934de65b36"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]", "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{
+    Cell[
+     TextData["FDwell"]], "paclet:Fretica/ref/FDwell", 
+    "Fretica Package Symbol"},
+   "PackageLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans",ExpressionUUID->
+  "e5f3b1f1-0679-4e83-b29c-fdbcfc93f563"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]\[MediumSpace]\
+", "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{
+    Cell[
+     TextData["FRenameStates"]], "paclet:Fretica/ref/FRenameStates", 
+    "Fretica Package Symbol"},
+   "PackageLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans",ExpressionUUID->
+  "8f3ed01f-68d7-410a-bf04-5bdc91ec2671"],
+ "\[NonBreakingSpace]\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{
+    Cell[
+     TextData["FSplitTrajectory"]], "paclet:Fretica/ref/FSplitTrajectory", 
+    "Fretica Package Symbol"},
+   "PackageLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans",ExpressionUUID->
+  "c4678da5-fdeb-4e10-94d9-ab421381ce35"],
+ "\[NonBreakingSpace]\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{
+    Cell[
+     TextData["FJoinSelftransitions"]], 
+    "paclet:Fretica/ref/FJoinSelftransitions", "Fretica Package Symbol"},
+   "PackageLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans",ExpressionUUID->
+  "ec4bb251-e603-46aa-a45d-a42440615de7"],
+ "\[NonBreakingSpace]"
+}], "InlineGuideFunctionListing",
+ CellID->471035463,ExpressionUUID->"30fa240a-ed9b-4446-8418-28280a0a3c1c"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ TemplateBox[{
+   Cell[
+    TextData[
+    "Hidden Markov Model analysis of FRET photon traces \[RightGuillemet]"]], 
+   "paclet:Fretica/tutorial/HiddenMarkovModelAnalysisOfFRETPhotonTraces"},
+  "OrangeLink",
+  BaseStyle->"GuideFunctionsSubsection"]], "GuideFunctionsSubsection",
+ CellID->322783913,ExpressionUUID->"558d86a0-cb1c-484a-a8e5-b5a877e8ebdd"],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{
+    Cell[
+     TextData["FFretHMMInitWithBinnedData"]], 
+    "paclet:Fretica/ref/FFretHMMInitWithBinnedData", "Fretica Package Symbol"},
+   "PackageLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans",ExpressionUUID->
+  "fddb201f-17f0-4f7c-913a-a83318f7ef46"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{
+    Cell[
+     TextData["FFretHMMInitWithPhotonByPhotonData"]], 
+    "paclet:Fretica/ref/FFretHMMInitWithPhotonByPhotonData", 
+    "Fretica Package Symbol"},
+   "PackageLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans",ExpressionUUID->
+  "320e8820-fd78-4004-8dc9-0bce5edb9bc9"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{
+    Cell[
+     TextData["FFretHMMSetPhotonRates"]], 
+    "paclet:Fretica/ref/FFretHMMSetPhotonRates", "Fretica Package Symbol"},
+   "PackageLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans",ExpressionUUID->
+  "79899cb2-663e-45bc-86fd-21fa2f9b9f8a"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{
+    Cell[
+     TextData["FFretHMMSetPinPfin"]], "paclet:Fretica/ref/FFretHMMSetPinPfin",
+     "Fretica Package Symbol"},
+   "PackageLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans",ExpressionUUID->
+  "ed69bba4-9994-42e5-bc76-e01643fc78c5"],
+ " ",
+ StyleBox["\[FilledVerySmallSquare]\[MediumSpace]", "InlineSeparator"],
+ " "
+}], "InlineGuideFunctionListing",
+ CellID->286958894,ExpressionUUID->"1c9dc27f-b3ee-4e07-afef-8dc6413306dd"],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{
+    Cell[
+     TextData["FFretHMMLogLikelihood"]], 
+    "paclet:Fretica/ref/FFretHMMLogLikelihood", "Fretica Package Symbol"},
+   "PackageLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans",ExpressionUUID->
+  "5230b57d-8e9a-4e75-9a9a-7b516456e082"],
+ " ",
+ StyleBox["\[FilledVerySmallSquare]\[MediumSpace]", "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{
+    Cell[
+     TextData["FFretHMMViterbi"]], "paclet:Fretica/ref/FHMMViterbi", 
+    "Fretica Package Symbol"},
+   "PackageLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans",ExpressionUUID->
+  "fe453708-6c9d-4663-981e-47abcb52d687"],
+ " ",
+ StyleBox["\[FilledVerySmallSquare]\[MediumSpace]", "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{
+    Cell[
+     TextData["FFretHMMForwardBackward"]], 
+    "paclet:Fretica/ref/FFretHMMForwardBackward", "Fretica Package Symbol"},
+   "PackageLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans",ExpressionUUID->
+  "fad7bb31-7d97-4378-ae0d-6a3f941ed0a7"],
+ " "
+}], "InlineGuideFunctionListing",
+ CellID->1671068,ExpressionUUID->"844e9807-9201-4585-a231-20f9f6387deb"],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{
+    Cell[
+     TextData["FFretHMMSimulateBinnedTrace"]], 
+    "paclet:Fretica/ref/FFretHMMSimulateBinnedTrace", 
+    "Fretica Package Symbol"},
+   "PackageLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans",ExpressionUUID->
+  "1b0b8f82-a59d-478f-a1a8-f00e7978d6e7"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]", "InlineSeparator"]
+}], "InlineGuideFunctionListing",
+ CellID->364312369,ExpressionUUID->"c3ebba89-a7be-4103-bd8b-afeeaa8337db"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ TemplateBox[{
+   Cell[
+    TextData[
+    "Hidden Markov Model analysis of 1D time traces \[RightGuillemet]"]], 
+   "paclet:Fretica/tutorial/HiddenMarkovModelAnalysisOf1DTimeTraces"},
+  "OrangeLink",
+  BaseStyle->"GuideFunctionsSubsection"]], "GuideFunctionsSubsection",
+ CellID->69617088,ExpressionUUID->"345227f9-6abd-4b32-b00d-40ef133a330a"],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{
+    Cell[
+     TextData["F1DHMMInit"]], "paclet:Fretica/ref/F1DHMMInit", 
+    "Fretica Package Symbol"},
+   "PackageLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans",ExpressionUUID->
+  "f6e4cf2a-c03a-4b60-aceb-98e5d2102f82"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{
+    Cell[
+     TextData["F1DHMMSetPobs"]], "paclet:Fretica/ref/F1DHMMSetPobs", 
+    "Fretica Package Symbol"},
+   "PackageLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans",ExpressionUUID->
+  "7d92ef1f-9b5d-4628-aadb-6c8e84886a6d"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]", "InlineSeparator"]
+}], "InlineGuideFunctionListing",
+ CellID->225317823,ExpressionUUID->"eb307695-8432-4d93-b39d-bb8687950cc5"],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{
+    Cell[
+     TextData["F1DHMMLogLikelihood"]], 
+    "paclet:Fretica/ref/F1DHMMLogLikelihood", "Fretica Package Symbol"},
+   "PackageLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans",ExpressionUUID->
+  "a369ab75-b991-43e2-99bd-1afe223d2853"],
+ " ",
+ StyleBox["\[FilledVerySmallSquare]\[MediumSpace]", "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{
+    Cell[
+     TextData["F1DHMMGetLogLikelihoodList"]], 
+    "paclet:Fretica/ref/F1DHMMGetLogLikelihoodList", "Fretica Package Symbol"},
+   "PackageLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans",ExpressionUUID->
+  "c7522dc2-a1cc-4cbb-a7f4-234716baa23e"],
+ StyleBox["\[FilledVerySmallSquare]\[MediumSpace]", "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{
+    Cell[
+     TextData["F1DHMMViterbi"]], "paclet:Fretica/ref/F1DHMMViterbi", 
+    "Fretica Package Symbol"},
+   "PackageLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans",ExpressionUUID->
+  "4602cad9-9e50-4346-8de2-221d668f81b5"],
+ " ",
+ StyleBox["\[FilledVerySmallSquare]\[MediumSpace]", "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{
+    Cell[
+     TextData["F1DHMMForwardBackward"]], 
+    "paclet:Fretica/ref/F1DHMMForwardBackward", "Fretica Package Symbol"},
+   "PackageLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans",ExpressionUUID->
+  "37dcd9ad-c017-4ea1-acfc-ec20a6127c30"],
+ " "
+}], "InlineGuideFunctionListing",
+ CellID->6854105,ExpressionUUID->"5aef454e-9d9e-45ca-8590-0f8a65296317"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ TemplateBox[{
+   Cell[
+    TextData["TTTR simulation \[RightGuillemet]"]], 
+   "paclet:Fretica/tutorial/TTTRSimulation"},
+  "OrangeLink",
+  BaseStyle->"GuideFunctionsSubsection"]], "GuideFunctionsSubsection",
+ CellID->340032688,ExpressionUUID->"29422818-3adb-44aa-8f3d-53d14bdb24b6"],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{
+    Cell[
+     TextData["FTSSetNumberOfSpecies"]], 
+    "paclet:Fretica/ref/FTSSetNumberOfSpecies", "Fretica Package Symbol"},
+   "PackageLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans",ExpressionUUID->
+  "b9f4854e-c3a7-4290-a3d9-45bbfadfd1d8"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{
+    Cell[
+     TextData["FTSGetNumberOfSpecies"]], 
+    "paclet:Fretica/ref/FTSGetNumberOfSpecies", "Fretica Package Symbol"},
+   "PackageLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans",ExpressionUUID->
+  "70a09ac9-b73f-47a0-a9ee-ea7b954a64e0"],
+ "\[NonBreakingSpace]"
+}], "InlineGuideFunctionListing",
+ CellID->246412958,ExpressionUUID->"c0c5e253-627c-4e68-bf86-7d92038f17ff"],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{
+    Cell[
+     TextData["FTSSimulateParticleDiffusion"]], 
+    "paclet:Fretica/ref/FTSSimulateParticleDiffusion", 
+    "Fretica Package Symbol"},
+   "PackageLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans",ExpressionUUID->
+  "d0d8712c-7460-46bf-b3fd-6254f44d7230"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{
+    Cell[
+     TextData["FTSSimulateParticleDiffusionInClosedCylinder"]], 
+    "paclet:Fretica/ref/FTSSimulateParticleDiffusionInClosedCylinder", 
+    "Fretica Package Symbol"},
+   "PackageLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans",ExpressionUUID->
+  "906bf34e-e10a-4b85-bdd6-509b8233e205"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{
+    Cell[
+     TextData["FTSSimulateParticleDiffusionInClosedSphere"]], 
+    "paclet:Fretica/ref/FTSSimulateParticleDiffusionInClosedSphere", 
+    "Fretica Package Symbol"},
+   "PackageLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans",ExpressionUUID->
+  "2bcd3ff9-0acc-4cbb-b2ec-1d8d03941c0c"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{
+    Cell[
+     TextData["FTSSimulateImobilizedParticle"]], 
+    "paclet:Fretica/ref/FTSSimulateImobilizedParticle", 
+    "Fretica Package Symbol"},
+   "PackageLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans",ExpressionUUID->
+  "3883d401-256c-4db9-a595-deaff74b3226"]
+}], "InlineGuideFunctionListing",
+ CellID->34952705,ExpressionUUID->"d7099dcf-f48a-43ae-8a8f-75f477fbd3c3"],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{
+    Cell[
+     TextData["FTSSimulateStateTrajectories"]], 
+    "paclet:Fretica/ref/FTSSimulateStateTrajectories", 
+    "Fretica Package Symbol"},
+   "PackageLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans",ExpressionUUID->
+  "32cb6738-d988-4c0c-9d79-f6a1f7e9ff6d"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{
+    Cell[
+     TextData["FTSSimulateFRETStateTrajectories"]], 
+    "paclet:Fretica/ref/FTSSimulateFRETStateTrajectories", 
+    "Fretica Package Symbol"},
+   "PackageLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans",ExpressionUUID->
+  "a8f5b51a-2378-425c-89d5-0f15447a3b96"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{
+    Cell[
+     TextData["FTSClearStateTrajectories"]], 
+    "paclet:Fretica/ref/FTSClearStateTrajectories", "Fretica Package Symbol"},
+   "PackageLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans",ExpressionUUID->
+  "605aacc2-1838-4b07-8166-2ed0e221e668"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{
+    Cell[
+     TextData["FTSRateList"]], "paclet:Fretica/ref/FTSRateList", 
+    "Fretica Package Symbol"},
+   "PackageLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans",ExpressionUUID->
+  "5414e8c2-d1b4-40a3-b3c3-ef75d75d2cde"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{
+    Cell[
+     TextData["FTSIntensityTrajectory"]], 
+    "paclet:Fretica/ref/FTSIntensityTrajectory", "Fretica Package Symbol"},
+   "PackageLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans",ExpressionUUID->
+  "bd5d2055-8f4e-4c50-a9ef-b4873cef652d"],
+ " ",
+ StyleBox["\[FilledVerySmallSquare]\[MediumSpace]", "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{
+    Cell[
+     TextData["FTSGetIntensityTrajectory"]], 
+    "paclet:Fretica/ref/FMLHSetPhotonRates", "Fretica Package Symbol"},
+   "PackageLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans",ExpressionUUID->
+  "0a7f4373-f2dc-4ad6-b686-202d90e6a85b"],
+ " "
+}], "InlineGuideFunctionListing",
+ CellID->134365117,ExpressionUUID->"5536bd8a-515b-4a1c-8508-ab196d0664ae"],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{
+    Cell[
+     TextData["FTSGetTrajectories"]], "paclet:Fretica/ref/FTSGetTrajectories",
+     "Fretica Package Symbol"},
+   "PackageLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans",ExpressionUUID->
+  "6ea0b237-15d5-42af-abcd-618e5daad6ce"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{
+    Cell[
+     TextData["FTSSaveTrajectories"]], 
+    "paclet:Fretica/ref/FTSSaveTrajectories", "Fretica Package Symbol"},
+   "PackageLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans",ExpressionUUID->
+  "93c39f20-c7c3-45ef-bda8-0cfe8392f38c"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{
+    Cell[
+     TextData["FTSLoadTrajectories"]], 
+    "paclet:Fretica/ref/FTSLoadTrajectories", "Fretica Package Symbol"},
+   "PackageLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans",ExpressionUUID->
+  "a674253a-f520-4b2f-8228-1cf80fd5c412"]
+}], "InlineGuideFunctionListing",
+ CellID->497330879,ExpressionUUID->"fa5c659c-c906-4808-ba6d-b32d0fbed1b2"],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{
+    Cell[
+     TextData["FTSSimulateTTTR"]], "paclet:Fretica/ref/FTSSimulateTTTR", 
+    "Fretica Package Symbol"},
+   "PackageLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans",ExpressionUUID->
+  "4af8e650-e8ed-4886-b5bc-f3543c256cf1"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{
+    Cell[
+     TextData["FTSSimulateTTTRLifeTimes"]], 
+    "paclet:Fretica/ref/FTSSimulateTTTRLifeTimes", "Fretica Package Symbol"},
+   "PackageLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans",ExpressionUUID->
+  "68c77801-5ab3-4756-ad25-b4f429036d4d"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{
+    Cell[
+     TextData["FTSPIEify"]], "paclet:Fretica/ref/FTSPIEify", 
+    "Fretica Package Symbol"},
+   "PackageLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans",ExpressionUUID->
+  "50f1056b-845a-4ae9-aa8b-748b296f64cd"],
+ "\n"
+}], "InlineGuideFunctionListing",
+ CellID->20429719,ExpressionUUID->"28370f17-4f16-4de4-a042-629a1ccc4783"],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{
+    Cell[
+     TextData["FTSMeanNewParticelNumberInSphere"]], 
+    "paclet:Fretica/ref/FMLHTraFTSMeanNewParticelNumberInSpherejectory", 
+    "Fretica Package Symbol"},
+   "PackageLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans",ExpressionUUID->
+  "673d66e2-fb4b-4f0d-91c9-7aa60f15202e"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{
+    Cell[
+     TextData["FTSNewParticleConcentration"]], 
+    "paclet:Fretica/ref/FTSNewParticleConcentration", 
+    "Fretica Package Symbol"},
+   "PackageLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans",ExpressionUUID->
+  "984e8955-fcb0-4356-ad67-0d3322dd41a0"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{
+    Cell[
+     TextData["FTSRandomPositionInSphere"]], 
+    "paclet:Fretica/ref/FTSRandomPositionInSphere", "Fretica Package Symbol"},
+   "PackageLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans",ExpressionUUID->
+  "7fb1eaba-155e-435a-a5f8-82e7cfa6d892"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{
+    Cell[
+     TextData["FTSDistanceTrajectory"]], 
+    "paclet:Fretica/ref/FTSDistanceTrajectory", "Fretica Package Symbol"},
+   "PackageLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans",ExpressionUUID->
+  "186572d7-c659-48d7-8c31-98a25a3b2867"],
+ " ",
+ StyleBox["\[FilledVerySmallSquare]\[MediumSpace]", "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{
+    Cell[
+     TextData["FTSGetRDistribution"]], 
+    "paclet:Fretica/ref/FTSGetRDistribution", "Fretica Package Symbol"},
+   "PackageLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans",ExpressionUUID->
+  "536661b9-1613-4c0b-8f14-7c5d52bd0de3"],
+ " ",
+ StyleBox["\[FilledVerySmallSquare]\[MediumSpace]", "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{
+    Cell[
+     TextData["FTSGetNumberOfParticleTrajectory"]], 
+    "paclet:Fretica/ref/FTSGetNumberOfParticleTrajectory", 
+    "Fretica Package Symbol"},
+   "PackageLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans",ExpressionUUID->
+  "c8071eee-ed37-40bd-b141-95f645f920d7"]
+}], "InlineGuideFunctionListing",
+ CellID->428210659,ExpressionUUID->"4d5bf043-9fc6-476e-b93e-2d1f2c187280"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ TemplateBox[{
+   Cell[
+    TextData["General Tools \[RightGuillemet]"]], 
+   "paclet:Fretica/tutorial/GeneralTools"},
+  "OrangeLink",
+  BaseStyle->"GuideFunctionsSubsection"]], "GuideFunctionsSubsection",
+ CellID->363931448,ExpressionUUID->"351f1c22-68fb-4009-9e1d-144fecde172b"],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{
+    Cell[
+     TextData["FFindGlobalFit"]], "paclet:Fretica/ref/FFindGlobalFit", 
+    "Fretica Package Symbol"},
+   "PackageLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans",ExpressionUUID->
+  "ec0dfaaf-fc6f-4b01-b19c-2b8b9347d882"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{
+    Cell[
+     TextData["FNonlinearModelGlobalFit"]], 
+    "paclet:Fretica/ref/FNonlinearModelGlobalFit", "Fretica Package Symbol"},
+   "PackageLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans",ExpressionUUID->
+  "244aa655-2212-4146-9471-2cd3f3ac7e10"],
+ " ",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{
+    Cell[
+     TextData["FLMFit"]], "paclet:Fretica/ref/FLMFit", 
+    "Fretica Package Symbol"},
+   "PackageLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans",ExpressionUUID->
+  "8036d766-fc0e-4fcc-86f0-675417ba71dd"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{
+    Cell[
+     TextData["FReadCoordinatesFromImage"]], 
+    "paclet:Fretica/ref/FReadCoordinatesFromImage", "Fretica Package Symbol"},
+   "PackageLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans",ExpressionUUID->
+  "5dbe240e-b9bd-41f3-be64-d811ac651b3f"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{
+    Cell[
+     TextData["FPowerSpectrum"]], "paclet:Fretica/ref/FPowerSpectrum", 
+    "Fretica Package Symbol"},
+   "PackageLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans",ExpressionUUID->
+  "e835302e-4786-4453-958a-9819e6935f74"],
+ " "
+}], "InlineGuideFunctionListing",
+ CellID->53247425,ExpressionUUID->"8261ffbd-328c-4b39-9aa3-bd9c27ad14f4"],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{
+    Cell[
+     TextData["FNumericMatrixQ"]], "paclet:Fretica/ref/FNumericMatrixQ", 
+    "Fretica Package Symbol"},
+   "PackageLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans",ExpressionUUID->
+  "bb7297fe-8456-479d-a584-a94e6d2a91c0"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{
+    Cell[
+     TextData["FNumericSquareMatrixQ"]], 
+    "paclet:Fretica/ref/FNumericSquareMatrixQ", "Fretica Package Symbol"},
+   "PackageLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans",ExpressionUUID->
+  "8dd78b95-9096-448f-a16b-f6bcb7cbd3d4"],
+ " ",
+ StyleBox["\[FilledVerySmallSquare]\[MediumSpace]", "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{
+    Cell[
+     TextData["FRealNumberQ"]], "paclet:Fretica/ref/FRealNumberQ", 
+    "Fretica Package Symbol"},
+   "PackageLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans",ExpressionUUID->
+  "956776aa-2e24-485b-9f68-1a306ef195af"]
+}], "InlineGuideFunctionListing",
+ CellID->776260886,ExpressionUUID->"0ed6b2ae-5119-47c5-814e-a1811239746f"],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{
+    Cell[
+     TextData["FAboutFretica"]], "paclet:Fretica/ref/FAboutFretica", 
+    "Fretica Package Symbol"},
+   "PackageLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans",ExpressionUUID->
+  "9aeae71a-8426-4081-ba64-fdea50b4aa53"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{
+    Cell[
+     TextData["FUnlinkFretica"]], "paclet:Fretica/ref/FUnlinkFretica", 
+    "Fretica Package Symbol"},
+   "PackageLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans",ExpressionUUID->
+  "491754d7-6596-4cf7-8f31-3449ea7a2913"],
+ " "
+}], "InlineGuideFunctionListing",
+ CellID->496204556,ExpressionUUID->"50257504-176c-46e8-a1f8-2ce717fd6770"]
+}, Open  ]]
+}, Open  ]],
+
+Cell[BoxData[GridBox[{
+   {
+    DynamicBox[FEPrivate`ImportImage[
+      FrontEnd`FileName[{"Documentation", "FooterIcons"}, 
+       "RelatedTutorial.png"]],
+     ImageSizeCache->{50., {27., 33.}}], GridBox[{
+      {
+       StyleBox[
+        RowBox[{"Tech", " ", "Notes"}], "GuideTutorialsSection"]},
+      {
+       RowBox[{"\[FilledVerySmallSquare]", Cell[BoxData[
+         TemplateBox[{
+           Cell[
+            TextData["Fretica's change log"]], 
+           "paclet:Fretica/tutorial/ChangeLog"},
+          "RefLinkPlain",
+          BaseStyle->{"GuideTutorial"}]], "GuideTutorial",ExpressionUUID->
+         "0a59998e-c14e-4bd1-b4bc-05b804078926"]}]},
+      {
+       RowBox[{"\[FilledVerySmallSquare]", Cell[BoxData[
+         TemplateBox[{
+           Cell[
+            TextData[
+            "Correction factors, route correction matrix (RCM), transfer \
+efficiencies"]], "paclet:Fretica/tutorial/CorrectionFactors"},
+          "RefLinkPlain",
+          BaseStyle->{"GuideTutorial"}]], "GuideTutorial",ExpressionUUID->
+         "5bbc25b5-1988-4e11-a833-f2d38489589f"]}]},
+      {
+       RowBox[{"\[FilledVerySmallSquare]", Cell[BoxData[
+         TemplateBox[{
+           Cell[
+            TextData["Determination of the RCM from dye solutions"]], 
+           "paclet:Fretica/tutorial/DeterminationOfTheRCMFromDyeSolutions"},
+          "RefLinkPlain",
+          BaseStyle->{"GuideTutorial"}]], "GuideTutorial",ExpressionUUID->
+         "110ffc4b-69da-42d5-9748-fe90d8e7c99a"]}]},
+      {
+       RowBox[{"\[FilledVerySmallSquare]", Cell[BoxData[
+         TemplateBox[{
+           Cell[
+            TextData[
+            "Determination of the  RCM from FRET labeled samples using \
+PIE/Alex (Lee et.al.)"]], 
+           "paclet:Fretica/tutorial/\
+DetermintaionOfTheRCMFromFRETLabledSamplesUsingPIEOrAlex"},
+          "RefLinkPlain",
+          BaseStyle->{"GuideTutorial"}]], "GuideTutorial",ExpressionUUID->
+         "7a88d876-d816-4bd7-b3e6-a4700ab93c35"]}]},
+      {
+       RowBox[{"\[FilledVerySmallSquare]", Cell[BoxData[
+         TemplateBox[{
+           Cell[
+            TextData[
+            "Extracting fluorescence lifetime information from photon \
+bursts"]], 
+           "paclet:Fretica/tutorial/\
+ExtractingFluorescenceLifetimeInformationFromPhotonBursts"},
+          "RefLinkPlain",
+          BaseStyle->{"GuideTutorial"}]], "GuideTutorial",ExpressionUUID->
+         "4c362403-012c-4dda-a451-f13855fc1b7e"]}]},
+      {
+       RowBox[{"\[FilledVerySmallSquare]", Cell[BoxData[
+         TemplateBox[{
+           Cell[
+            TextData["Inter-dye distance distributions (SAWnu)"]], 
+           "paclet:Fretica/tutorial/Inter-DyeDistanceDistributionsSAWnu"},
+          "RefLinkPlain",
+          BaseStyle->{"GuideTutorial"}]], "GuideTutorial",ExpressionUUID->
+         "dc089530-57b3-4ca3-9428-fd76667a2898"]}]},
+      {
+       RowBox[{"\[FilledVerySmallSquare]", Cell[BoxData[
+         TemplateBox[{
+           Cell[
+            TextData[
+            "TTTR fluorescence data simulations for diffusing particles"]], 
+           "paclet:Fretica/tutorial/\
+TTTRFluorescenceDataSimulationsForDiffusingParticles"},
+          "RefLinkPlain",
+          BaseStyle->{"GuideTutorial"}]], "GuideTutorial",ExpressionUUID->
+         "452daf78-e82b-464b-ad13-f2edb30ea36d"]}]}
+     }]}
+  }]], "GuideTutorialsSection",ExpressionUUID->"dad9a956-3b60-490d-a717-\
+317a6e2127b2"],
+
+Cell[BoxData[GridBox[{
+   {
+    TemplateBox[{29},
+     "Spacer1"], GridBox[{
+      {
+       RowBox[{
+        TemplateBox[{17},
+         "Spacer1"], 
+        StyleBox[
+         RowBox[{"Related", " ", "Links"}], "GuideRelatedLinksSection"]}]},
+      {Cell[TextData[Cell[BoxData[
+        TemplateBox[{
+          Cell[
+           TextData["Schuler Lab"]], "https://schuler.bioc.uzh.ch/programs/"},
+         "WebLink",
+         BaseStyle->{"GuideRelatedLinks"}]],ExpressionUUID->
+        "5c6e5b6e-ea8e-4785-b7c2-eeb47f9c8ad0"]], "GuideText",ExpressionUUID->
+        "88f05180-8fea-49d0-923a-7d5769f0d3cd"]}
+     }]}
+  }]], "GuideRelatedLinksSection",ExpressionUUID->"3660e6f8-87af-44ec-9bdc-\
+ecc8aaefd3c9"],
+
+Cell[" ", "FooterCell",ExpressionUUID->"d4b6bcce-1649-49f9-8c06-1794b00e5684"]
+},
+Saveable->False,
+ScreenStyleEnvironment->"Working",
+Evaluator->"FreticaDocumentation",
+WindowSize->{900., 604.8},
+WindowMargins->{{0, Automatic}, {Automatic, 0}},
+WindowTitle->"Fretica",
+Visible->False,
+TaggingRules->{
+ "ModificationHighlight" -> False, "ColorType" -> "", "LinkTrails" -> "", 
+  "ExampleCounter" -> 1, 
+  "Openers" -> {
+   "PrimaryExamplesSection" -> Open, "ExampleSection" -> {"0" -> Open}}, 
+  "NewStyles" -> True, "CitationPopupData" -> {$Failed, ""}, "ShowCitation" -> 
+  False, "RootCaptions" -> "", 
+  "Metadata" -> {
+   "built" -> "{2023, 3, 6, 14, 27, 23.8404163}", 
+    "history" -> {"", "", "", ""}, "context" -> "Fretica`", "keywords" -> {}, 
+    "specialkeywords" -> {}, "tutorialcollectionlinks" -> {}, "index" -> True,
+     "label" -> "Fretica Guide", "language" -> "en", "paclet" -> "Fretica", 
+    "status" -> "None", "summary" -> 
+    "Fretica is a Mathematica application with a backend written in C++ for \
+analysing single molecule spectroscopy data. It is developed and maintained \
+by the Schuler lab at the Biochemistry Department of the University of \
+Zurich. https://schuler.bioc.uzh.ch/programs/ Fretica is licensed under a \
+Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International \
+License. Below the available Fretica commands are subdivided in thematic \
+groups. Click the orange section titles for getting detailed information. It \
+is recommended to add a kernel named \"FreticaDocumentation\" to your system. \
+This can be done in the Evaluation-> Kernel Configuration Options... menu.", 
+    "synonyms" -> {}, "tabletags" -> 
+    DocumentationBuild`Make`Private`tabletaggingrules$30063, "title" -> 
+    "Fretica", "titlemodifier" -> "", "windowtitle" -> "Fretica", "type" -> 
+    "Guide", "uri" -> "Fretica/guide/Fretica"}},
+CacheGraphics->False,
+FrontEndVersion->"13.2 for Microsoft Windows (64-bit) (January 30, 2023)",
+StyleDefinitions->FrontEnd`FileName[{"Wolfram"}, "Reference.nb", 
+  CharacterEncoding -> "UTF-8"],
+ExpressionUUID->"aac64caf-a868-4abe-8f97-315aec3efc9f"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[579, 21, 28239, 535, 70, "AnchorBarGrid",ExpressionUUID->"47125fd9-23db-4fc5-9c92-f0fc3ca9b89e",
+ CellID->1],
+Cell[CellGroupData[{
+Cell[28843, 560, 104, 1, 70, "GuideTitle",ExpressionUUID->"98e57d75-0de0-4065-9700-ad0e5014d862",
+ CellID->510072863],
+Cell[28950, 563, 1405, 39, 70, "GuideAbstract",ExpressionUUID->"a7ccad9f-dbd5-44d6-a5b9-a00540dc3c59",
+ CellID->678861249],
+Cell[30358, 604, 93, 0, 70, "GuideDelimiterSubsection",ExpressionUUID->"8692bbc1-f058-4351-a87f-9010f9453d58"],
+Cell[CellGroupData[{
+Cell[30476, 608, 287, 7, 70, "GuideFunctionsSubsection",ExpressionUUID->"be8d14b2-c417-4dc7-a40a-861d554901f2",
+ CellID->52294601],
+Cell[30766, 617, 118, 1, 70, "GuideText",ExpressionUUID->"903cdd89-70d8-4138-95f6-2ea666f7a072",
+ CellID->29968083]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[30921, 623, 298, 7, 70, "GuideFunctionsSubsection",ExpressionUUID->"bb464ef7-d049-4282-80f0-eaa907abefef",
+ CellID->6801125],
+Cell[31222, 632, 1330, 36, 70, "InlineGuideFunctionListing",ExpressionUUID->"1a5efae0-0c75-43dc-8894-b71dc07b4e1c",
+ CellID->411533501],
+Cell[32555, 670, 1714, 50, 70, "InlineGuideFunctionListing",ExpressionUUID->"f2169627-0f72-4d5c-be0c-1830bb4b79b8",
+ CellID->185482254],
+Cell[34272, 722, 1684, 48, 70, "InlineGuideFunctionListing",ExpressionUUID->"beea8dfa-3a11-45ad-b1be-48dae0e271e0",
+ CellID->6338575],
+Cell[35959, 772, 2875, 81, 70, "InlineGuideFunctionListing",ExpressionUUID->"195dbcfb-296f-41ca-a589-29a7d4563c01",
+ CellID->68316499]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[38871, 858, 305, 7, 70, "GuideFunctionsSubsection",ExpressionUUID->"ac04a816-d67f-43f6-9dd6-411c0c82c4f5",
+ CellID->306571986],
+Cell[39179, 867, 3083, 90, 70, "InlineGuideFunctionListing",ExpressionUUID->"1df6e922-1db8-4567-8a86-087440cf3318",
+ CellID->517166695],
+Cell[42265, 959, 874, 23, 70, "InlineGuideFunctionListing",ExpressionUUID->"b4eef0d4-24e5-4f18-bdd0-777b86ce9ecf",
+ CellID->773409],
+Cell[43142, 984, 1197, 33, 70, "InlineGuideFunctionListing",ExpressionUUID->"8013170f-7911-4a79-ac8b-4ec372fe1165",
+ CellID->622668770],
+Cell[44342, 1019, 1033, 29, 70, "InlineGuideFunctionListing",ExpressionUUID->"9fc7e775-3aad-48e2-b778-ae295bf1bb62",
+ CellID->539194]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[45412, 1053, 315, 7, 70, "GuideFunctionsSubsection",ExpressionUUID->"50e8e2a2-08e5-4a23-bea6-d25a2da1e397",
+ CellID->88003744],
+Cell[45730, 1062, 466, 12, 70, "InlineGuideFunctionListing",ExpressionUUID->"72ac3012-fa57-4555-8160-f6efdcd2913f",
+ CellID->892742194],
+Cell[46199, 1076, 826, 23, 70, "InlineGuideFunctionListing",ExpressionUUID->"9e855c55-9e67-4c63-8174-96f1f7a3f605",
+ CellID->338911655]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[47062, 1104, 328, 7, 70, "GuideFunctionsSubsection",ExpressionUUID->"0bc3d389-cb18-46a7-ae39-608be53f2329",
+ CellID->208841989],
+Cell[47393, 1113, 1976, 58, 70, "InlineGuideFunctionListing",ExpressionUUID->"8752f2f0-b2fe-4876-b750-de6cc56f75aa",
+ CellID->43653211],
+Cell[49372, 1173, 419, 11, 70, "InlineGuideFunctionListing",ExpressionUUID->"7c554bf4-cd15-4178-97c9-da7e0a5d2687",
+ CellID->67503930]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[49828, 1189, 392, 10, 70, "GuideFunctionsSubsection",ExpressionUUID->"8bc28a2f-a000-47b2-92af-75bedc309b5a",
+ CellID->4050641],
+Cell[50223, 1201, 3248, 93, 70, "InlineGuideFunctionListing",ExpressionUUID->"3c9d14d0-853b-422f-bc1e-8a722296cc70",
+ CellID->654561883],
+Cell[53474, 1296, 2463, 69, 70, "InlineGuideFunctionListing",ExpressionUUID->"4d055cc7-04b3-4fe4-9e04-42c9ba6ce282",
+ CellID->5909694],
+Cell[55940, 1367, 444, 11, 70, "InlineGuideFunctionListing",ExpressionUUID->"44390504-2dfb-40e1-8b71-3b6edc36716c",
+ CellID->179255020]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[56421, 1383, 300, 7, 70, "GuideFunctionsSubsection",ExpressionUUID->"beadba54-f3a8-47ee-bd48-a9785062a367",
+ CellID->310290498],
+Cell[56724, 1392, 1215, 34, 70, "InlineGuideFunctionListing",ExpressionUUID->"dc06f922-89a2-4ffe-bb95-5fe6bd7eb7c8",
+ CellID->20136355]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[57976, 1431, 347, 7, 70, "GuideFunctionsSubsection",ExpressionUUID->"8c866ac6-6b91-4ddc-8ce6-38798605baa1",
+ CellID->222560512],
+Cell[58326, 1440, 2012, 58, 70, "InlineGuideFunctionListing",ExpressionUUID->"6148c07a-58a4-446a-9794-95f60f71d1ab",
+ CellID->64290467],
+Cell[60341, 1500, 1972, 56, 70, "InlineGuideFunctionListing",ExpressionUUID->"c4cfeebc-8479-443d-ae31-bfafaf5c9720",
+ CellID->314834173]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[62350, 1561, 311, 7, 70, "GuideFunctionsSubsection",ExpressionUUID->"0a43be41-efc2-4b8b-af6d-74b1816ef962",
+ CellID->360292272],
+Cell[62664, 1570, 3245, 93, 70, "InlineGuideFunctionListing",ExpressionUUID->"74ec0389-db8c-4d3f-b9c9-647f52027b1a",
+ CellID->305081518],
+Cell[65912, 1665, 2669, 73, 70, "InlineGuideFunctionListing",ExpressionUUID->"0cdc6b48-f988-4709-813c-1e61fd848b81",
+ CellID->601135113]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[68618, 1743, 368, 8, 70, "GuideFunctionsSubsection",ExpressionUUID->"245b45a5-1108-4586-a7a0-905baa5a0c55",
+ CellID->18487738],
+Cell[68989, 1753, 1238, 35, 70, "InlineGuideFunctionListing",ExpressionUUID->"e8940c2c-c9ef-49df-a413-e32032107ce2",
+ CellID->309231546],
+Cell[70230, 1790, 862, 23, 70, "InlineGuideFunctionListing",ExpressionUUID->"ec86c709-cc7e-4ac8-96ec-77ddcd26ac40",
+ CellID->208608386],
+Cell[71095, 1815, 862, 23, 70, "InlineGuideFunctionListing",ExpressionUUID->"8291ea55-fc42-4082-8574-093c17610f0e",
+ CellID->180361751]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[71994, 1843, 418, 10, 70, "GuideFunctionsSubsection",ExpressionUUID->"5f2b506d-280b-4c5d-bf07-4320d873b2c9",
+ CellID->612082324],
+Cell[72415, 1855, 3576, 102, 70, "InlineGuideFunctionListing",ExpressionUUID->"56508f2e-fefc-4ece-a38a-41072f7f3c57",
+ CellID->423702677],
+Cell[75994, 1959, 2514, 69, 70, "InlineGuideFunctionListing",ExpressionUUID->"8888fc77-b6de-472d-a4e5-b549334dbef4",
+ CellID->850420368]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[78545, 2033, 291, 7, 70, "GuideFunctionsSubsection",ExpressionUUID->"963e4711-fc22-4818-a60b-d5cd1c1010ad",
+ CellID->139644895],
+Cell[78839, 2042, 2292, 65, 70, "InlineGuideFunctionListing",ExpressionUUID->"3dcd7c44-503e-4d56-8b1c-5293d52fbadf",
+ CellID->262942708],
+Cell[81134, 2109, 416, 10, 70, "InlineGuideFunctionListing",ExpressionUUID->"5a6d4ae2-5f7b-4316-bc01-03a8396ed039",
+ CellID->229814772]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[81587, 2124, 294, 7, 70, "GuideFunctionsSubsection",ExpressionUUID->"9d5b6652-40a1-46f5-ba4d-74016c552cbb",
+ CellID->214137530],
+Cell[81884, 2133, 2398, 71, 70, "InlineGuideFunctionListing",ExpressionUUID->"a09dc874-125b-4ec3-9574-d9e7b072478c",
+ CellID->150412178]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[84319, 2209, 290, 7, 70, "GuideFunctionsSubsection",ExpressionUUID->"26211079-10ff-4090-9500-a827f3e2fc9f",
+ CellID->320806554],
+Cell[84612, 2218, 1591, 45, 70, "InlineGuideFunctionListing",ExpressionUUID->"bed34931-f81d-4749-a0dc-d6c14c519336",
+ CellID->45937666],
+Cell[86206, 2265, 826, 22, 70, "InlineGuideFunctionListing",ExpressionUUID->"13ac3627-2d5a-41f8-a424-c5868257e0e2",
+ CellID->2470255]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[87069, 2292, 359, 8, 70, "GuideFunctionsSubsection",ExpressionUUID->"9b205778-9a54-440b-af55-03419070176f",
+ CellID->486643969],
+Cell[87431, 2302, 1648, 47, 70, "InlineGuideFunctionListing",ExpressionUUID->"4dbac5de-784d-46e0-becc-c9bec6b4074d",
+ CellID->625681693]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[89116, 2354, 284, 7, 70, "GuideFunctionsSubsection",ExpressionUUID->"e3c435fd-2ece-412a-b7e3-b37ac58d1a4a",
+ CellID->620908616],
+Cell[89403, 2363, 2378, 70, 70, "InlineGuideFunctionListing",ExpressionUUID->"2a2a2abd-12e5-49c6-89ed-790bd3d44b68",
+ CellID->56883146],
+Cell[91784, 2435, 533, 14, 70, "InlineGuideFunctionListing",ExpressionUUID->"e1b42102-0fd1-43dd-b4af-9cbcc6e2c1ea",
+ CellID->270231873]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[92354, 2454, 358, 8, 70, "GuideFunctionsSubsection",ExpressionUUID->"f015accd-9605-461b-bbd4-21b9951784a4",
+ CellID->532348358],
+Cell[92715, 2464, 1749, 50, 70, "InlineGuideFunctionListing",ExpressionUUID->"cb4031d5-290f-4924-aaaf-d7b42cae0d10",
+ CellID->362972201],
+Cell[94467, 2516, 1529, 43, 70, "InlineGuideFunctionListing",ExpressionUUID->"b1e44b54-8ca7-410c-b3a2-6c25bcb94dee",
+ CellID->327432498],
+Cell[95999, 2561, 2135, 60, 70, "InlineGuideFunctionListing",ExpressionUUID->"c1a0d4da-8f28-451a-9b13-63dd97a33490",
+ CellID->177297707],
+Cell[98137, 2623, 2052, 58, 70, "InlineGuideFunctionListing",ExpressionUUID->"30fa240a-ed9b-4446-8418-28280a0a3c1c",
+ CellID->471035463]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[100226, 2686, 367, 8, 70, "GuideFunctionsSubsection",ExpressionUUID->"558d86a0-cb1c-484a-a8e5-b5a877e8ebdd",
+ CellID->322783913],
+Cell[100596, 2696, 1781, 50, 70, "InlineGuideFunctionListing",ExpressionUUID->"1c9dc27f-b3ee-4e07-afef-8dc6413306dd",
+ CellID->286958894],
+Cell[102380, 2748, 1168, 33, 70, "InlineGuideFunctionListing",ExpressionUUID->"844e9807-9201-4585-a231-20f9f6387deb",
+ CellID->1671068],
+Cell[103551, 2783, 507, 13, 70, "InlineGuideFunctionListing",ExpressionUUID->"c3ebba89-a7be-4103-bd8b-afeeaa8337db",
+ CellID->364312369]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[104095, 2801, 358, 8, 70, "GuideFunctionsSubsection",ExpressionUUID->"345227f9-6abd-4b32-b00d-40ef133a330a",
+ CellID->69617088],
+Cell[104456, 2811, 866, 24, 70, "InlineGuideFunctionListing",ExpressionUUID->"eb307695-8432-4d93-b39d-bb8687950cc5",
+ CellID->225317823],
+Cell[105325, 2837, 1543, 43, 70, "InlineGuideFunctionListing",ExpressionUUID->"5aef454e-9d9e-45ca-8590-0f8a65296317",
+ CellID->6854105]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[106905, 2885, 298, 7, 70, "GuideFunctionsSubsection",ExpressionUUID->"29422818-3adb-44aa-8f3d-53d14bdb24b6",
+ CellID->340032688],
+Cell[107206, 2894, 856, 23, 70, "InlineGuideFunctionListing",ExpressionUUID->"c0c5e253-627c-4e68-bf86-7d92038f17ff",
+ CellID->246412958],
+Cell[108065, 2919, 1797, 50, 70, "InlineGuideFunctionListing",ExpressionUUID->"d7099dcf-f48a-43ae-8a8f-75f477fbd3c3",
+ CellID->34952705],
+Cell[109865, 2971, 2496, 72, 70, "InlineGuideFunctionListing",ExpressionUUID->"5536bd8a-515b-4a1c-8508-ab196d0664ae",
+ CellID->134365117],
+Cell[112364, 3045, 1232, 34, 70, "InlineGuideFunctionListing",ExpressionUUID->"fa5c659c-c906-4808-ba6d-b32d0fbed1b2",
+ CellID->497330879],
+Cell[113599, 3081, 1222, 35, 70, "InlineGuideFunctionListing",ExpressionUUID->"28370f17-4f16-4de4-a042-629a1ccc4783",
+ CellID->20429719],
+Cell[114824, 3118, 2507, 71, 70, "InlineGuideFunctionListing",ExpressionUUID->"4d5bf043-9fc6-476e-b93e-2d1f2c187280",
+ CellID->428210659]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[117368, 3194, 294, 7, 70, "GuideFunctionsSubsection",ExpressionUUID->"351f1c22-68fb-4009-9e1d-144fecde172b",
+ CellID->363931448],
+Cell[117665, 3203, 2017, 59, 70, "InlineGuideFunctionListing",ExpressionUUID->"8261ffbd-328c-4b39-9aa3-bd9c27ad14f4",
+ CellID->53247425],
+Cell[119685, 3264, 1181, 33, 70, "InlineGuideFunctionListing",ExpressionUUID->"0ed6b2ae-5119-47c5-814e-a1811239746f",
+ CellID->776260886],
+Cell[120869, 3299, 808, 23, 70, "InlineGuideFunctionListing",ExpressionUUID->"50257504-176c-46e8-a1f8-2ce717fd6770",
+ CellID->496204556]
+}, Open  ]]
+}, Open  ]],
+Cell[121704, 3326, 3375, 83, 70, "GuideTutorialsSection",ExpressionUUID->"dad9a956-3b60-490d-a717-317a6e2127b2"],
+Cell[125082, 3411, 704, 20, 70, "GuideRelatedLinksSection",ExpressionUUID->"3660e6f8-87af-44ec-9bdc-ecc8aaefd3c9"],
+Cell[125789, 3433, 78, 0, 70, "FooterCell",ExpressionUUID->"d4b6bcce-1649-49f9-8c06-1794b00e5684"]
+}
+]
+*)
+
