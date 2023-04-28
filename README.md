@@ -16,3 +16,4 @@ Alternatively, Fretica can be downloaded and installed manually following the in
 Fretica is only available for Windows.
 
 Fretica by Daniel Nettels and Ben Schuler is licensed under a Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License
+https://creativecommons.org/licenses/by-nc-nd/4.0/
