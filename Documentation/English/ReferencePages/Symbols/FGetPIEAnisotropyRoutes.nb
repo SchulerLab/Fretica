@@ -1,0 +1,309 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 13.2' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     11932,        299]
+NotebookOptionsPosition[      9051,        239]
+NotebookOutlinePosition[     11295,        291]
+CellTagsIndexPosition[     11252,        288]
+WindowTitle->FGetPIEAnisotropyRoutes
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[GridBox[{
+   {GridBox[{
+      {
+       ItemBox[Cell[BoxData[
+         RowBox[{
+          TemplateBox[{12},
+           "Spacer1"], Cell["FRETICA SYMBOL", "PacletNameCell",
+           TextAlignment->Center,ExpressionUUID->
+           "8a8f7642-0cce-44b5-8358-8645178b2de1"], 
+          TemplateBox[{8},
+           "Spacer1"]}]],
+         TextAlignment->Center,ExpressionUUID->
+         "3aa1ba56-5251-4362-86f8-ef31bf27646e"],
+        Background->RGBColor[0.490196, 0.576471, 0.690196],
+        ItemSize->Full], ""}
+     },
+     GridBoxAlignment->{"Rows" -> {{Center}}},
+     GridBoxItemSize->{"Columns" -> {Full, 
+         Scaled[0.02]}, "Rows" -> {{2.5}}}], Cell[TextData[{
+     Cell[BoxData[
+      TagBox[
+       ActionMenuBox[
+        FrameBox[Cell[TextData[{
+          "Related Guides",
+          " ",
+          Cell[BoxData[
+           GraphicsBox[
+            {GrayLevel[0.66667], Thickness[0.13], 
+             LineBox[{{-1.8, 0.5}, {0, 0}, {1.8, 0.5}}]},
+            AspectRatio->1,
+            ImageSize->20,
+            PlotRange->{{-3, 4}, {-1, 1}}]],ExpressionUUID->
+           "99098e0a-5543-4629-b325-d2a2341f8609"]
+         }],ExpressionUUID->"ec6f74b7-792e-42c8-9c1f-4e059d990675"],
+         StripOnInput->False], {"\<\"Fretica\"\>":>Documentation`HelpLookup[
+        "paclet:Fretica/guide/Fretica"]},
+        Appearance->None,
+        MenuAppearance->Automatic,
+        MenuStyle->"MoreAbout"],
+       MouseAppearanceTag["LinkHand"]]],
+      LineSpacing->{1.4, 0},ExpressionUUID->
+      "dc620932-c129-45bb-9def-5878847cea9b"],
+     "\[ThickSpace]\[ThickSpace]\[ThickSpace]\[ThickSpace]\[ThickSpace]\
+\[ThickSpace]",
+     Cell[BoxData[
+      TagBox[
+       ActionMenuBox[
+        FrameBox[Cell[TextData[{
+          "URL",
+          " ",
+          Cell[BoxData[
+           GraphicsBox[
+            {GrayLevel[0.66667], Thickness[0.13], 
+             LineBox[{{-1.8, 0.5}, {0, 0}, {1.8, 0.5}}]},
+            AspectRatio->1,
+            ImageSize->20,
+            PlotRange->{{-3, 4}, {-1, 1}}]],ExpressionUUID->
+           "75be345d-ec3a-4a24-bbc1-527ace3bc674"]
+         }],ExpressionUUID->"bf118c43-aae0-4894-b7bb-d1ef7191d787"],
+         StripOnInput->False], {"\<\"Fretica/ref/FGetPIEAnisotropyRoutes\"\>":>
+        None, "\<\"Copy Wolfram Documentation Center URL\"\>":>
+        Module[{DocumentationSearch`Private`nb$}, 
+         DocumentationSearch`Private`nb$ = NotebookPut[
+            Notebook[{
+              Cell["Fretica/ref/FGetPIEAnisotropyRoutes"]}, Visible -> 
+             False]]; SelectionMove[
+          DocumentationSearch`Private`nb$, All, Notebook]; 
+         FrontEndTokenExecute[DocumentationSearch`Private`nb$, "Copy"]; 
+         NotebookClose[DocumentationSearch`Private`nb$]; Null], 
+        Delimiter, "\<\"Copy web URL\"\>":>
+        Module[{DocumentationSearch`Private`nb$}, 
+         DocumentationSearch`Private`nb$ = NotebookPut[
+            Notebook[{
+              Cell[
+               BoxData[
+                MakeBoxes[
+                 Hyperlink[
+                 "http://reference.wolfram.com/language/Fretica/ref/\
+FGetPIEAnisotropyRoutes.html"], StandardForm]], "Input", TextClipboardType -> 
+               "PlainText"]}, Visible -> False]]; 
+         SelectionMove[DocumentationSearch`Private`nb$, All, Notebook]; 
+         FrontEndTokenExecute[DocumentationSearch`Private`nb$, "Copy"]; 
+         NotebookClose[DocumentationSearch`Private`nb$]; 
+         Null], "\<\"Go to web URL\"\>":>FrontEndExecute[{
+          NotebookLocate[{
+            URL[If[
+               TrueQ[DocumentationBuild`Make`Private`wsmlinkQ$119891], 
+               "http://reference.wolfram.com/system-modeler/", 
+               "http://reference.wolfram.com/language/"] <> 
+             "Fretica/ref/FGetPIEAnisotropyRoutes" <> ".html"], None}]}]},
+        Appearance->None,
+        MenuAppearance->Automatic,
+        MenuStyle->"URLMenu"],
+       MouseAppearanceTag["LinkHand"]]],
+      LineSpacing->{1.4, 0},ExpressionUUID->
+      "59945acb-bab4-4a7a-8abc-15a409f549b2"]
+    }], "AnchorBar",
+     CacheGraphics->False,ExpressionUUID->
+     "07821568-e47c-4b6c-a015-4e20e0b5113e"]}
+  }]], "AnchorBarGrid",
+ GridBoxOptions->{GridBoxItemSize->{"Columns" -> {
+     Scaled[0.65], {
+      Scaled[0.34]}}, "ColumnsIndexed" -> {}, "Rows" -> {{1.}}, 
+   "RowsIndexed" -> {}}},
+ CellID->1,ExpressionUUID->"61601ccc-9e96-4815-9cec-8ff53fddf07f"],
+
+Cell["Fretica`", "ContextNameCell",ExpressionUUID->"595257d5-cab7-47ae-a623-f1a7292f223e"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[GridBox[{
+   {Cell[TextData[{
+     Cell[
+     "FGetPIEAnisotropyRoutes", "ObjectName",ExpressionUUID->
+      "b1aa721c-b799-4b6e-9644-efe8d1616798"],
+     Cell[BoxData[
+      TemplateBox[{8},
+       "Spacer1"]],ExpressionUUID->"c5331466-ac89-4b54-a40d-25dd7c5c62fd"],
+     Cell[BoxData[
+     ""], "ObjectNameTranslation",ExpressionUUID->
+      "f897a927-471a-4de1-9bf0-3e4065fa4cac"]
+    }],ExpressionUUID->"a5632443-03b5-4808-9d7e-a37c771ea3e7"], 
+    "\[SpanFromLeft]"}
+  }]], "ObjectNameGrid",ExpressionUUID->"f5f68da2-7198-4222-8d2b-\
+d1057724dbdd"],
+
+Cell[BoxData[GridBox[{
+   {"", Cell[TextData[{
+     "FGetPIEAnisotropyRoutes[] returns ",
+     Cell[BoxData[
+      FormBox[
+       RowBox[{"{", " ", "\[Null]"}], TraditionalForm]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "5e295cda-d2ea-45dd-8ea5-9d903fb7995c"],
+     "r1, r2, r3, ",
+     Cell[BoxData[
+      FormBox[
+       RowBox[{"\[Ellipsis]", " ", "}"}], TraditionalForm]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "2c3f20a0-5e31-42a5-b8ae-0e75f2b81a56"],
+     ", where for each detection channel ",
+     Cell[BoxData[
+      FormBox[
+       StyleBox["i", "TI"], TraditionalForm]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "0402ea5a-a111-4a53-ab93-6e16af9436f8"],
+     ", the possible values for ",
+     Cell[BoxData[
+      FormBox[
+       SubscriptBox[
+        StyleBox["r", "TI"], 
+        StyleBox["i", "TI"]], TraditionalForm]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "9c8b074b-1db1-43ef-aaec-992abb562c1e"],
+     " are: \"P\", \"S\", or 0. These settings apply in PIE/Alex mode and \
+define which detection routes are considered to be parallel (\"P\") or \
+orthogonal (\"S\") with respect to the polarization of the acceptor \
+excitation light. Call FGetAnisotropyRoutes[] to get the settings for the \
+detection after donor excitation. "
+    }],ExpressionUUID->"54d22b4a-d58d-4001-8351-dfe4a2fd917e"]}
+  }]], "Usage",
+ CellID->671643710,ExpressionUUID->"5211259f-c2aa-4b38-8298-80e17cbd7ce8"]
+}, Open  ]],
+
+Cell[BoxData[GridBox[{
+   {
+    DynamicBox[FEPrivate`ImportImage[
+      FrontEnd`FileName[{"Documentation", "FooterIcons"}, "RelatedGuide.png"]],
+     ImageSizeCache->{50., {27., 33.}}], GridBox[{
+      {
+       StyleBox[
+        RowBox[{"Related", " ", "Guides"}], "MoreAboutSection"]},
+      {
+       RowBox[{"\[FilledVerySmallSquare]", Cell[BoxData[
+         TemplateBox[{
+           Cell[
+            TextData["Fretica"]], "paclet:Fretica/guide/Fretica"},
+          "RefLinkPlain",
+          BaseStyle->{"MoreAbout"}]], "MoreAbout",ExpressionUUID->
+         "79a0b0fe-db8f-4883-ae9a-7632b351973a"]}]}
+     }]}
+  }]], "MoreAboutSection",ExpressionUUID->"a0a4be86-9abc-4131-87cb-\
+534e39f009e6"],
+
+Cell[BoxData[GridBox[{
+   {
+    TemplateBox[{29},
+     "Spacer1"], GridBox[{
+      {
+       RowBox[{
+        TemplateBox[{17},
+         "Spacer1"], 
+        StyleBox[
+         RowBox[{"Related", " ", "Links"}], "RelatedLinksSection"]}]},
+      {Cell[TextData[Cell[BoxData[
+        RowBox[{
+         TemplateBox[{16},
+          "Spacer1"], "\[FilledVerySmallSquare]", Cell[BoxData[
+          TemplateBox[{
+            Cell[
+             TextData[
+              Cell[
+               TextData[{
+                 Cell[
+                  BoxData[
+                   TemplateBox[{2}, "Spacer1"]]], "Schuler Lab"}]]]], 
+            "https://schuler.bioc.uzh.ch/programs/"},
+           "WebLink",
+           BaseStyle->{"RelatedLinks"}]],ExpressionUUID->
+          "099f4029-e125-4edb-8cc3-db58a963fcb7"]}]],ExpressionUUID->
+        "31a9b0ec-fa4c-4a34-a610-83aef067f5ef"]], "RelatedLinks",
+        ExpressionUUID->"ae0eb6fd-41cf-487b-8540-62b570105966"]}
+     }]}
+  }]], "RelatedLinksSection",ExpressionUUID->"6254687b-3041-4863-968a-\
+fe2b6ecaeab0"],
+
+Cell[" ", "FooterCell",ExpressionUUID->"a699f4fc-871a-4769-acce-10a147020b93"]
+},
+Saveable->False,
+ScreenStyleEnvironment->"Working",
+WindowSize->{900., 604.8},
+WindowMargins->{{0, Automatic}, {Automatic, 0}},
+WindowTitle->"FGetPIEAnisotropyRoutes",
+TaggingRules->{
+ "ModificationHighlight" -> False, "ColorType" -> "", "LinkTrails" -> "", 
+  "HasOptions" -> True, "ExampleCounter" -> 1, 
+  "Openers" -> {
+   "PrimaryExamplesSection" -> Open, "ExampleSection" -> {"0" -> Open}}, 
+  "NewStyles" -> True, "CitationPopupData" -> $Failed, "ShowCitation" -> 
+  False, "RootCaptions" -> "", 
+  "Metadata" -> {
+   "built" -> "{2023, 3, 6, 14, 29, 11.0650824}", 
+    "history" -> {"XX", "", "", ""}, "context" -> "Fretica`", 
+    "keywords" -> {}, "specialkeywords" -> {}, 
+    "tutorialcollectionlinks" -> {}, "index" -> True, "label" -> 
+    "Fretica Symbol", "language" -> "en", "paclet" -> "Fretica", "status" -> 
+    "None", "summary" -> 
+    "FGetPIEAnisotropyRoutes[] returns { \\[Null]r1, r2, r3, ... }, where for \
+each detection channel i, the possible values for ri are: \"P\", \"S\", or 0. \
+These settings apply in PIE/Alex mode and define which detection routes are \
+considered to be parallel (\"P\") or orthogonal (\"S\") with respect to the \
+polarization of the acceptor excitation light. Call FGetAnisotropyRoutes[] to \
+get the settings for the detection after donor excitation. ", 
+    "synonyms" -> {}, "tabletags" -> {}, "title" -> "FGetPIEAnisotropyRoutes",
+     "titlemodifier" -> "", "windowtitle" -> "FGetPIEAnisotropyRoutes", 
+    "type" -> "Symbol", "uri" -> "Fretica/ref/FGetPIEAnisotropyRoutes"}},
+CellContext->"Global`",
+FrontEndVersion->"13.2 for Microsoft Windows (64-bit) (January 30, 2023)",
+StyleDefinitions->Notebook[{
+   Cell[
+    StyleData[
+    StyleDefinitions -> FrontEnd`FileName[{"Wolfram"}, "Reference.nb"]]], 
+   Cell[
+    StyleData["Input"], CellContext -> "Global`"], 
+   Cell[
+    StyleData["Output"], CellContext -> "Global`"]}, Visible -> False, 
+  FrontEndVersion -> "13.2 for Microsoft Windows (64-bit) (January 30, 2023)",
+   StyleDefinitions -> "Default.nb"],
+ExpressionUUID->"0e578c49-4570-46f9-8d3a-7a88edc539de"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[595, 21, 4382, 104, 70, "AnchorBarGrid",ExpressionUUID->"61601ccc-9e96-4815-9cec-8ff53fddf07f",
+ CellID->1],
+Cell[4980, 127, 90, 0, 70, "ContextNameCell",ExpressionUUID->"595257d5-cab7-47ae-a623-f1a7292f223e"],
+Cell[CellGroupData[{
+Cell[5095, 131, 566, 14, 70, "ObjectNameGrid",ExpressionUUID->"f5f68da2-7198-4222-8d2b-d1057724dbdd"],
+Cell[5664, 147, 1544, 35, 70, "Usage",ExpressionUUID->"5211259f-c2aa-4b38-8298-80e17cbd7ce8",
+ CellID->671643710]
+}, Open  ]],
+Cell[7223, 185, 697, 18, 70, "MoreAboutSection",ExpressionUUID->"a0a4be86-9abc-4131-87cb-534e39f009e6"],
+Cell[7923, 205, 1043, 30, 70, "RelatedLinksSection",ExpressionUUID->"6254687b-3041-4863-968a-fe2b6ecaeab0"],
+Cell[8969, 237, 78, 0, 70, "FooterCell",ExpressionUUID->"a699f4fc-871a-4769-acce-10a147020b93"]
+}
+]
+*)
+
+(* End of internal cache information *)
+

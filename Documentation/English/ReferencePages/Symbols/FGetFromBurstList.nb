@@ -1,0 +1,1085 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 13.2' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     43993,       1075]
+NotebookOptionsPosition[     36062,        946]
+NotebookOutlinePosition[     42822,       1058]
+CellTagsIndexPosition[     42779,       1055]
+WindowTitle->FGetFromBurstList
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[GridBox[{
+   {GridBox[{
+      {
+       ItemBox[Cell[BoxData[
+         RowBox[{
+          TemplateBox[{12},
+           "Spacer1"], Cell["FRETICA SYMBOL", "PacletNameCell",
+           TextAlignment->Center,ExpressionUUID->
+           "e6301ba0-8e70-40ce-a2ca-919f603b6c39"], 
+          TemplateBox[{8},
+           "Spacer1"]}]],
+         TextAlignment->Center,ExpressionUUID->
+         "fbfad27e-8483-4dd2-827a-0989218a9993"],
+        Background->RGBColor[0.490196, 0.576471, 0.690196],
+        ItemSize->Full], ""}
+     },
+     GridBoxAlignment->{"Rows" -> {{Center}}},
+     GridBoxItemSize->{"Columns" -> {Full, 
+         Scaled[0.02]}, "Rows" -> {{2.5}}}], Cell[TextData[{
+     Cell[BoxData[
+      TagBox[
+       ActionMenuBox[
+        FrameBox[Cell[TextData[{
+          "Related Guides",
+          " ",
+          Cell[BoxData[
+           GraphicsBox[
+            {GrayLevel[0.66667], Thickness[0.13], 
+             LineBox[{{-1.8, 0.5}, {0, 0}, {1.8, 0.5}}]},
+            AspectRatio->1,
+            ImageSize->20,
+            PlotRange->{{-3, 4}, {-1, 1}}]],ExpressionUUID->
+           "d773ae77-9177-4896-84de-fb360600a97b"]
+         }],ExpressionUUID->"8c8f10d8-1f70-4333-8f08-3d29cda837eb"],
+         StripOnInput->False], {"\<\"Fretica\"\>":>Documentation`HelpLookup[
+        "paclet:Fretica/guide/Fretica"]},
+        Appearance->None,
+        MenuAppearance->Automatic,
+        MenuStyle->"MoreAbout"],
+       MouseAppearanceTag["LinkHand"]]],
+      LineSpacing->{1.4, 0},ExpressionUUID->
+      "5f2867e1-1f5c-4358-b4d9-bfe37f89100b"],
+     "\[ThickSpace]\[ThickSpace]\[ThickSpace]\[ThickSpace]\[ThickSpace]\
+\[ThickSpace]",
+     Cell[BoxData[
+      TagBox[
+       ActionMenuBox[
+        FrameBox[Cell[TextData[{
+          "URL",
+          " ",
+          Cell[BoxData[
+           GraphicsBox[
+            {GrayLevel[0.66667], Thickness[0.13], 
+             LineBox[{{-1.8, 0.5}, {0, 0}, {1.8, 0.5}}]},
+            AspectRatio->1,
+            ImageSize->20,
+            PlotRange->{{-3, 4}, {-1, 1}}]],ExpressionUUID->
+           "3c7bb8cf-d398-4733-bd70-0497d7d8522c"]
+         }],ExpressionUUID->"fd9f33cb-a94e-41eb-b17b-f28ce59f1d0a"],
+         StripOnInput->False], {"\<\"Fretica/ref/FGetFromBurstList\"\>":>
+        None, "\<\"Copy Wolfram Documentation Center URL\"\>":>
+        Module[{DocumentationSearch`Private`nb$}, 
+         DocumentationSearch`Private`nb$ = NotebookPut[
+            Notebook[{
+              Cell["Fretica/ref/FGetFromBurstList"]}, Visible -> False]]; 
+         SelectionMove[DocumentationSearch`Private`nb$, All, Notebook]; 
+         FrontEndTokenExecute[DocumentationSearch`Private`nb$, "Copy"]; 
+         NotebookClose[DocumentationSearch`Private`nb$]; Null], 
+        Delimiter, "\<\"Copy web URL\"\>":>
+        Module[{DocumentationSearch`Private`nb$}, 
+         DocumentationSearch`Private`nb$ = NotebookPut[
+            Notebook[{
+              Cell[
+               BoxData[
+                MakeBoxes[
+                 Hyperlink[
+                 "http://reference.wolfram.com/language/Fretica/ref/\
+FGetFromBurstList.html"], StandardForm]], "Input", TextClipboardType -> 
+               "PlainText"]}, Visible -> False]]; 
+         SelectionMove[DocumentationSearch`Private`nb$, All, Notebook]; 
+         FrontEndTokenExecute[DocumentationSearch`Private`nb$, "Copy"]; 
+         NotebookClose[DocumentationSearch`Private`nb$]; 
+         Null], "\<\"Go to web URL\"\>":>FrontEndExecute[{
+          NotebookLocate[{
+            URL[If[
+               TrueQ[DocumentationBuild`Make`Private`wsmlinkQ$41336], 
+               "http://reference.wolfram.com/system-modeler/", 
+               "http://reference.wolfram.com/language/"] <> 
+             "Fretica/ref/FGetFromBurstList" <> ".html"], None}]}]},
+        Appearance->None,
+        MenuAppearance->Automatic,
+        MenuStyle->"URLMenu"],
+       MouseAppearanceTag["LinkHand"]]],
+      LineSpacing->{1.4, 0},ExpressionUUID->
+      "53e85644-2c10-4e20-90ea-5d3be2fbbe6a"]
+    }], "AnchorBar",
+     CacheGraphics->False,ExpressionUUID->
+     "915bfe50-c569-478f-87b0-28fb1c132793"]}
+  }]], "AnchorBarGrid",
+ GridBoxOptions->{GridBoxItemSize->{"Columns" -> {
+     Scaled[0.65], {
+      Scaled[0.34]}}, "ColumnsIndexed" -> {}, "Rows" -> {{1.}}, 
+   "RowsIndexed" -> {}}},
+ CellID->1,ExpressionUUID->"f48fdf66-a19b-4bd1-9d3b-d9e7fd10a200"],
+
+Cell["Fretica`", "ContextNameCell",ExpressionUUID->"4300a223-44a2-4852-8117-aa5c177804a1"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[GridBox[{
+   {Cell[TextData[{
+     Cell[
+     "FGetFromBurstList", "ObjectName",ExpressionUUID->
+      "defcd1fa-70da-4f3d-ba39-94c2aad051ef"],
+     Cell[BoxData[
+      TemplateBox[{8},
+       "Spacer1"]],ExpressionUUID->"253c1090-aac2-49d4-8a70-db56c5f3813f"],
+     Cell[BoxData[
+     ""], "ObjectNameTranslation",ExpressionUUID->
+      "c5f2cb67-be58-4f67-9e7f-644c527f5e77"]
+    }],ExpressionUUID->"f36fc052-41d2-4acc-97da-94e0a61ebab2"], 
+    "\[SpanFromLeft]"}
+  }]], "ObjectNameGrid",ExpressionUUID->"38f7580d-8a84-4569-8b26-\
+4719ce408a2c"],
+
+Cell[BoxData[GridBox[{
+   {"", Cell[TextData[{
+     "FGetFromBurstList[",
+     Cell[BoxData[
+      StyleBox["expr", "TI"]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "5d2555c5-05d7-4278-bec7-d12d36e7c0a3"],
+     "] evaluates ",
+     Cell[BoxData[
+      StyleBox["expr", "TI"]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "b2051fb2-748f-44d0-914f-18e960212d90"],
+     " for each photon burst and returns the results in a list."
+    }],ExpressionUUID->"09a2e225-d879-4a1f-b8a7-30ca4849ea32"]},
+   {"", Cell[TextData[{
+     Cell[BoxData[
+      StyleBox["expr", "TI"]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "fb58e8fe-1c84-40eb-b304-fca03462205b"],
+     " can contain the following strings:"
+    }],ExpressionUUID->"6cb011ca-8a7e-41a3-95b3-7d9be6bc8830"]},
+   {"", Cell[
+    "\"n1\", \"n2\", etc.:   Uncorrected detector counts.",ExpressionUUID->
+     "4e8d1397-aa2b-418c-b781-417a7aada76c"]},
+   {"", Cell[TextData[{
+     "\"n1",
+     Cell[BoxData[
+      FormBox["_", TraditionalForm]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "be356362-8233-448b-a0fd-d22f1c9fab53"],
+     "corr\", \"n2",
+     Cell[BoxData[
+      FormBox["_", TraditionalForm]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "45f96519-5405-4b70-b3c1-ff1a8628996c"],
+     "corr\", etc.:   Detector counts corrected for background and RCM, but \
+not for acceptor direct excitation, i.e. \"n",
+     Cell[BoxData[
+      FormBox[
+       RowBox[{
+        StyleBox["i", "TI"], " ", "_"}], TraditionalForm]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "9ab6d5de-7356-473d-9a0e-b2d0f9d12712"],
+     "corr\" represents the ",
+     Cell[BoxData[
+      FormBox[
+       StyleBox["i", "TI"], TraditionalForm]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "66fe4d59-e835-42d1-bcea-7bf8befb684c"],
+     "th element of the vector ",
+     Cell[BoxData[
+      FormBox[
+       RowBox[{
+        SubscriptBox[
+         StyleBox["n", "TI"], 
+         StyleBox[
+          RowBox[{"c", "o", "r", "r"}], "TI"]], " ", "\[LongEqual]"}], 
+       TraditionalForm]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "9a25b05f-498c-4034-bd2b-2823f40bd686"],
+     "RCM.",
+     Cell[BoxData[
+      FormBox[
+       RowBox[{"(", 
+        RowBox[{
+         StyleBox["n", "TI"], " ", "-", 
+         StyleBox[
+          RowBox[{"b", "g"}], "TI"]}], ")"}], TraditionalForm]], 
+      "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "f8638b56-fcb8-4615-9d10-1a352413156f"],
+     "."
+    }],ExpressionUUID->"9e6b0369-c804-4c3b-aced-fa49f7d0fa55"]},
+   {"", Cell[TextData[{
+     "\"n",
+     Cell[BoxData[
+      FormBox["_", TraditionalForm]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "1ffd6334-13c1-49e0-a20d-ad48124cff8a"],
+     "corr\":   Total photon number in photon burst, corrected for background \
+and RCM."
+    }],ExpressionUUID->"7a116c5c-d828-464c-89bd-2a304d025bf2"]},
+   {"", Cell[TextData[{
+     "\"nA",
+     Cell[BoxData[
+      FormBox["_", TraditionalForm]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "8f6f3082-952b-42d1-9671-54963df78c4c"],
+     "raw\", \"nD",
+     Cell[BoxData[
+      FormBox["_", TraditionalForm]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "54cda94e-1fc0-4371-9dd2-27efa8447f40"],
+     "raw\":   Uncorrected total acceptor and donor counts."
+    }],ExpressionUUID->"9886ff0c-4a36-4745-beb4-576642084164"]},
+   {"", Cell["\<\
+\"nA\", \"nD\":   Background\[Hyphen] and RCM\[Hyphen]corrected total \
+acceptor and total donor counts, not corrected for acceptor direct excitation.\
+\>",ExpressionUUID->"a9c79f11-f560-491e-8be0-7f1ae3c2f680"]},
+   {"", Cell[
+    "\"n1pie\", \"n2pie\", etc.:   Counts in the PIE channels.",
+     ExpressionUUID->"d5208d6b-5d4c-4e3e-bdaa-ca5d121d7b2c"]},
+   {"", Cell[TextData[{
+     "\"n1pie",
+     Cell[BoxData[
+      FormBox["_", TraditionalForm]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "d0008733-b601-43fe-ae62-93a93ad9881a"],
+     "corr\", \"n2pie",
+     Cell[BoxData[
+      FormBox["_", TraditionalForm]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "2281e4d5-3fee-43de-9f08-6b1de0b6bb8d"],
+     "corr\", etc.:   Background\[Hyphen]corrected counts in the PIE channels."
+    }],ExpressionUUID->"c35f89dd-a056-4628-a151-679833ff3cb4"]},
+   {"", Cell["\<\
+\"nApie_raw\", \"nDpie_raw\":   Uncorrected total acceptor and donor counts \
+in the PIE channels.\
+\>",ExpressionUUID->"3105ee09-e571-40bb-9a1e-257b9233f0f2"]},
+   {"", Cell["\<\
+\"nApie\", \"nDpie\":   Background corrected total acceptor and total donor \
+counts in the PIE channels.\
+\>",ExpressionUUID->"e075a48a-d5b3-4c04-9a25-f7b76382a51c"]},
+   {"", Cell["\<\
+\"E\" , \"LogNdOverNa\", \"Root6NdOverNa\":   Transfer efficiency and related \
+quantities corrected for background, RCM, and acceptor direct excitation \
+\[Alpha]. E is calculated from (nA-\[Alpha](nA+nD))/(nA+nD-\[Alpha](nA+nD))\
+\>",ExpressionUUID->"c85ade17-3b7f-4ede-a600-63086764dda5"]},
+   {"", Cell[TextData[{
+     "\"Epie\":   Transfer efficiency corrected for background, RCM, and \
+acceptor direct excitation ",
+     Cell[BoxData[
+      StyleBox["d",
+       FontSlant->"Italic"]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "38f2d0c3-20ba-465c-9a96-4b5cb046f3cc"],
+     ". ",
+     Cell[BoxData[
+      StyleBox["E",
+       FontSlant->"Italic"]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "c27197f5-d54f-4d80-b434-b8b78cdfbc00"],
+     " is calculated from (nA- ",
+     Cell[BoxData[
+      StyleBox["d",
+       FontSlant->"Italic"]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "5f9f6a24-f434-4340-9a70-2622a11c2b1e"],
+     " nA",
+     Cell[BoxData[
+      FormBox["_", TraditionalForm]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "d6a83aeb-5fb0-474d-864f-e39246e864ef"],
+     "pie)/(nA+nD- ",
+     Cell[BoxData[
+      StyleBox["d",
+       FontSlant->"Italic"]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "f2b761a1-8953-41d6-ab58-29fa3caaa1f2"],
+     " nA",
+     Cell[BoxData[
+      FormBox["_", TraditionalForm]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "8b28d0a5-421e-4224-a1b2-484a07d6f92f"],
+     "pie) with ",
+     Cell[BoxData[
+      StyleBox["d",
+       FontSlant->"Italic"]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "f3b69059-6e9e-487a-a0a1-e079cb87619f"],
+     "=",
+     Cell[BoxData[
+      SubscriptBox["\[Gamma]", 
+       StyleBox[
+        RowBox[{"p", " ", "i", "e"}], "TI"]]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "52ae1177-ea6f-496a-b2d5-cf8122c2367d"],
+     "(\[Alpha]/(1-\[Alpha])."
+    }],ExpressionUUID->"4ad4fa79-be23-4f52-897a-98d40a7d1629"]},
+   {"", Cell[TextData[{
+     "\"Spie\" or \"StoichiometryRatio\":   Calculated from (nA+nD)/(nA+nD+",
+     Cell[BoxData[
+      FormBox[
+       SubscriptBox["\[Gamma]", 
+        StyleBox[
+         RowBox[{"p", " ", "i", "e"}], "TI"]], TraditionalForm]], 
+      "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "237eae11-9a6d-4187-979c-884b72c64cbf"],
+     "(nA",
+     Cell[BoxData[
+      FormBox["_", TraditionalForm]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "c4876e4f-004d-4310-9926-58a2c63d840b"],
+     "pie))."
+    }],ExpressionUUID->"bdedd529-9dd3-4a79-b15b-e4074fe66a08"]},
+   {"", Cell["\<\
+\"Eapp\" and \"Sapp\":   cacluate apparent values from the burst counts that \
+are only corrected for background, but not for RCM, \[Alpha] or \[Gamma]pie.\
+\>",ExpressionUUID->"56f3ad30-9607-4526-a50f-f1fb54602890"]},
+   {"", Cell[TextData[{
+     "\"ProximityRatio\":   \"nA",
+     Cell[BoxData[
+      FormBox["_", TraditionalForm]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "908d15b1-2603-4afd-8b77-f6697c000723"],
+     "raw\"/(\"nA",
+     Cell[BoxData[
+      FormBox["_", TraditionalForm]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "65ee2c6b-3445-4b26-93fc-599cce87b9c9"],
+     "raw\"+\"nD",
+     Cell[BoxData[
+      FormBox["_", TraditionalForm]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "54c8beab-6347-4d03-bd1b-709363f927e6"],
+     "raw\")."
+    }],ExpressionUUID->"b560b415-04a4-47d2-b382-78c6de49f7f4"]},
+   {"", Cell[TextData[{
+     "\"BVA_ProximityRatios",
+     Cell[BoxData[
+      StyleBox["n",
+       FontSlant->"Italic"]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "91444a76-bafd-472f-a979-6c47cd51ab02"],
+     "\":   Proximity ratios for burst variance analysis (BVA). ",
+     Cell[BoxData[
+      StyleBox["n",
+       FontSlant->"Italic"]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "0748618a-f8b5-4452-a666-638b28d0bb3d"],
+     " is any integer larger 2, idnicating the partition of each bursts in \
+segements of ",
+     Cell[BoxData[
+      StyleBox["n",
+       FontSlant->"Italic"]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "c8cc866c-0220-4d40-bda9-1ec957f8a38d"],
+     " photons."
+    }],ExpressionUUID->"7d205f5b-b179-4847-8659-1de26c97823a"]},
+   {"", Cell["\<\
+\"StartTime\", \"EndTime\":   Detection times of the first and last photons \
+in a burst, respectively (in seconds).\
+\>",ExpressionUUID->"47251627-72d8-4277-bd0b-2813445126a6"]},
+   {"", Cell["\<\
+\"BurstDuration\":   Durations (\"EndTime\"\[Hyphen]\"StartTime\") of the \
+photon bursts (in seconds).\
+\>",ExpressionUUID->"fca1e5dc-62c6-4bd9-a111-ff78b0308724"]},
+   {"", Cell["\<\
+\"tau1\", \"tau2\", etc.:   Mean fluorescence lifetimes. Needs to be \
+calculated by calling FCalcBurstLifeTimes beforehand.\
+\>",ExpressionUUID->"392df7bf-b227-4b8e-b50e-15e397cdee37"]},
+   {"", Cell["\<\
+\"tavgD\", \"tavgA\":   Mean arrival (detection) times of donor and acceptor \
+photons, respectively.\
+\>",ExpressionUUID->"d977c008-25ac-4700-a075-d3bee68e1627"]},
+   {"", Cell[
+    "\"BurstAsymmetry\":   Equivalent to \"tavgA\"\[Hyphen]\"tavgD\".",
+     ExpressionUUID->"76c533c6-92c1-4097-b620-22dee86bd72c"]},
+   {"", Cell["\<\
+\"tavg\":   Mean arrival (detection) times. If PIE is enabled, only the \
+photons in the main lifetime channels are used.\
+\>",ExpressionUUID->"bc9cff34-2d56-4eaa-829a-419aacaddc3e"]},
+   {"", Cell[TextData[{
+     "\"tavg",
+     Cell[BoxData[
+      FormBox["_", TraditionalForm]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "c1043040-ed7a-40f5-85e4-a8cfa3d9fa69"],
+     "pie\":   Mean arrival (detection) times of photons in PIE lifetime \
+channels."
+    }],ExpressionUUID->"a52fe628-f084-413b-902c-e4cde86044d0"]},
+   {"", Cell[TextData[{
+     "\"BurstPIEAsymmetry\":   Equivalent to \"tavg\"\[Hyphen]\"tavg",
+     Cell[BoxData[
+      FormBox["_", TraditionalForm]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "bd0bced6-58b8-47da-84ad-db8c69f74d86"],
+     "pie\"."
+    }],ExpressionUUID->"5281d0c8-8714-4fff-b69e-c93c7c1de01d"]},
+   {"", Cell[TextData[{
+     "\"DonorAnisotropy\":   calculates ",
+     Cell[BoxData[
+      FormBox[
+       RowBox[{
+        RowBox[{
+         RowBox[{"(", 
+          RowBox[{
+           SubscriptBox[
+            StyleBox["n", "TI"], 
+            StyleBox["p", "TI"]], "-", 
+           SubscriptBox[
+            StyleBox["n", "TI"], 
+            StyleBox["s", "TI"]]}], ")"}], "/", 
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{
+            RowBox[{"(", 
+             RowBox[{"1", "-", 
+              RowBox[{"3", 
+               SubscriptBox[
+                StyleBox["L", "TI"], "2"]}]}], ")"}], 
+            SubscriptBox[
+             StyleBox["n", "TI"], 
+             StyleBox["p", "TI"]]}], "+", 
+           RowBox[{
+            RowBox[{"(", 
+             RowBox[{"2", "-", 
+              RowBox[{"3", 
+               SubscriptBox[
+                StyleBox["L", "TI"], "1"]}]}], ")"}], 
+            SubscriptBox[
+             StyleBox["n", "TI"], 
+             StyleBox["s", "TI"]]}]}], ")"}]}], " ", ")"}], TraditionalForm]],
+       "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "63417348-2998-4d17-b209-d56cdcf0a0c8"],
+     ", where ",
+     Cell[BoxData[
+      FormBox[
+       SubscriptBox[
+        StyleBox["n", "TI"], 
+        StyleBox["p", "TI"]], TraditionalForm]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "f9be7dd5-76e2-4247-8ec4-799cddc15804"],
+     " and ",
+     Cell[BoxData[
+      FormBox[
+       SubscriptBox[
+        StyleBox["n", "TI"], 
+        StyleBox["s", "TI"]], TraditionalForm]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "96a65f59-0cd5-49f0-aeb9-7d69aec2029d"],
+     " are background and RCM\[Hyphen]corrected photon counts of the parallel \
+and orthogonal donor detection routes, respectively. ",
+     Cell[BoxData[
+      FormBox[
+       SubscriptBox[
+        StyleBox["L", "TI"], "1"], TraditionalForm]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "5de2f41e-ee57-40a7-8501-7ab4682ff40e"],
+     " and ",
+     Cell[BoxData[
+      FormBox[
+       SubscriptBox[
+        StyleBox["L", "TI"], "2"], TraditionalForm]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "d2f0699b-fa45-4973-ab44-ea0899766241"],
+     " are correction factors set using FSetAnisotropyL1 and FSetAnisotropyL2."
+    }],ExpressionUUID->"c14ce0f4-3ad5-4518-a7ab-b70655b52de0"]},
+   {"", Cell[TextData[{
+     "\"AcceptorAnisotropy\":   calculates ",
+     Cell[BoxData[
+      FormBox[
+       RowBox[{
+        RowBox[{
+         RowBox[{"(", 
+          RowBox[{
+           SubscriptBox[
+            StyleBox["n", "TI"], 
+            StyleBox["p", "TI"]], "-", 
+           SubscriptBox[
+            StyleBox["n", "TI"], 
+            StyleBox["s", "TI"]]}], ")"}], "/", 
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{
+            RowBox[{"(", 
+             RowBox[{"1", "-", 
+              RowBox[{"3", 
+               SubscriptBox[
+                StyleBox["L", "TI"], "2"]}]}], ")"}], 
+            SubscriptBox[
+             StyleBox["n", "TI"], 
+             StyleBox["p", "TI"]]}], "+", 
+           RowBox[{
+            RowBox[{"(", 
+             RowBox[{"2", "-", 
+              RowBox[{"3", 
+               SubscriptBox[
+                StyleBox["L", "TI"], "1"]}]}], ")"}], 
+            SubscriptBox[
+             StyleBox["n", "TI"], 
+             StyleBox["s", "TI"]]}]}], ")"}]}], " ", ")"}], TraditionalForm]],
+       "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "387fb73d-f1bf-4111-920b-2b9509653b42"],
+     ", where ",
+     Cell[BoxData[
+      FormBox[
+       SubscriptBox[
+        StyleBox["n", "TI"], 
+        StyleBox["p", "TI"]], TraditionalForm]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "ca22fa81-4f75-4fde-9d2e-eec3da0d5a02"],
+     " and ",
+     Cell[BoxData[
+      FormBox[
+       SubscriptBox[
+        StyleBox["n", "TI"], 
+        StyleBox["s", "TI"]], TraditionalForm]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "ec72e518-0b0d-45b4-bd22-3ff17a6395ed"],
+     " are background and RCM\[Hyphen]corrected photon counts of the parallel \
+and orthogonal acceptor detection routes, respectively. ",
+     Cell[BoxData[
+      FormBox[
+       SubscriptBox[
+        StyleBox["L", "TI"], "1"], TraditionalForm]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "e36430e9-426a-4841-8325-8e00c05eabb3"],
+     " and ",
+     Cell[BoxData[
+      FormBox[
+       SubscriptBox[
+        StyleBox["L", "TI"], "2"], TraditionalForm]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "70e1185f-a7ab-4a59-9759-506f1e2917f6"],
+     " are correction factors set using FSetAnisotropyL1 and FSetAnisotropyL2."
+    }],ExpressionUUID->"66d99a2e-867f-44a3-9d8e-5a12aacc9539"]},
+   {"", Cell[TextData[{
+     "\"PIEAcceptorAnisotropy\":   calculates ",
+     Cell[BoxData[
+      FormBox[
+       RowBox[{
+        RowBox[{
+         RowBox[{"(", 
+          RowBox[{
+           SubscriptBox[
+            StyleBox["n", "TI"], 
+            StyleBox["p", "TI"]], "-", 
+           SubscriptBox[
+            StyleBox["n", "TI"], 
+            StyleBox["s", "TI"]]}], ")"}], "/", 
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{
+            RowBox[{"(", 
+             RowBox[{"1", "-", 
+              RowBox[{"3", 
+               SubscriptBox[
+                StyleBox["L", "TI"], "2"]}]}], ")"}], 
+            SubscriptBox[
+             StyleBox["n", "TI"], 
+             StyleBox["p", "TI"]]}], "+", 
+           RowBox[{
+            RowBox[{"(", 
+             RowBox[{"2", "-", 
+              RowBox[{"3", 
+               SubscriptBox[
+                StyleBox["L", "TI"], "1"]}]}], ")"}], 
+            SubscriptBox[
+             StyleBox["n", "TI"], 
+             StyleBox["s", "TI"]]}]}], ")"}]}], " ", ")"}], TraditionalForm]],
+       "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "f10d9261-a706-495a-b8e4-a03db0330a09"],
+     ", where ",
+     Cell[BoxData[
+      FormBox[
+       SubscriptBox[
+        StyleBox["n", "TI"], 
+        StyleBox["p", "TI"]], TraditionalForm]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "87d05f59-5ac6-4ee8-bbf7-76b30e8ec1d4"],
+     " and ",
+     Cell[BoxData[
+      FormBox[
+       SubscriptBox[
+        StyleBox["n", "TI"], 
+        StyleBox["s", "TI"]], TraditionalForm]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "111aefdb-e995-42b3-b2ad-ae5211ed03ac"],
+     " are background and RCM\[Hyphen]corrected photon counts of the parallel \
+and orthogonal acceptor detection routes, respectively. Only photons with \
+lifetime channels within the set PIE channel ranges are used. ",
+     Cell[BoxData[
+      FormBox[
+       SubscriptBox[
+        StyleBox["L", "TI"], "1"], TraditionalForm]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "9d2cfb5d-8eee-4339-ac44-52a8cc63a10d"],
+     " and ",
+     Cell[BoxData[
+      FormBox[
+       SubscriptBox[
+        StyleBox["L", "TI"], "2"], TraditionalForm]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "0a77de41-a7c5-4519-9ace-8918c7196215"],
+     " are correction factors set using FSetAnisotropyL1 and FSetAnisotropyL2."
+    }],ExpressionUUID->"87aba69a-25cc-406b-bb04-385f8fb5cea0"]},
+   {"", Cell[TextData[{
+     "\"n",
+     Cell[BoxData[
+      FormBox["_", TraditionalForm]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "63882e1c-2477-42f9-976e-833d8825d6a2"],
+     "tot",
+     Cell[BoxData[
+      FormBox["_", TraditionalForm]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "053780ca-fd81-4dc3-befc-70764ffc3b17"],
+     "asym\":   Calculated from ",
+     Cell[BoxData[
+      FormBox[
+       RowBox[{
+        RowBox[{"(", 
+         RowBox[{
+          SubscriptBox[
+           StyleBox["n", "TI"], "2"], "-", 
+          SubscriptBox[
+           StyleBox["n", "TI"], "1"]}], ")"}], " ", "/", 
+        RowBox[{"(", 
+         RowBox[{
+          SubscriptBox[
+           StyleBox["n", "TI"], "1"], "+", 
+          SubscriptBox[
+           StyleBox["n", "TI"], "2"]}], ")"}]}], TraditionalForm]], 
+      "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "527cc983-4711-4f4c-8b25-b0e1047d64da"],
+     ", where ",
+     Cell[BoxData[
+      FormBox[
+       SubscriptBox[
+        StyleBox["n", "TI"], 
+        RowBox[{"1", " ", ",", "2"}]], TraditionalForm]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "dda5dd54-4d3a-4dba-ad77-d0d23fd81996"],
+     " are the total corrected number of photons in the first and second half \
+of the photon burst, respectively."
+    }],ExpressionUUID->"d97ba199-8688-4f89-be4c-dd5292bd943d"]},
+   {"", Cell["\<\
+\"Selected\":   Value is 1 for selected photon bursts and 0 for \
+non\[Hyphen]selected photon bursts.\
+\>",ExpressionUUID->"2149f92c-55be-4884-ab6f-8d99676bb32c"]},
+   {"", Cell[TextData[{
+     "\"InterPhotonTimes\":   List of interphoton times, ",
+     Cell[BoxData[
+      FormBox[
+       RowBox[{
+        RowBox[{
+         StyleBox["d", "TI"], 
+         SubscriptBox[
+          StyleBox["t", "TI"], 
+          StyleBox["i", "TI"]]}], " ", "\[LongEqual]", 
+        RowBox[{
+         SubscriptBox[
+          StyleBox["t", "TI"], 
+          StyleBox["i", "TI"]], "-", 
+         SubscriptBox[
+          StyleBox["t", "TI"], 
+          RowBox[{
+           StyleBox["i", "TI"], "-", "1"}]]}]}], TraditionalForm]], 
+      "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "eff75559-8640-4e9f-91a1-bf452cb9f077"],
+     " in ",
+     Cell[BoxData[
+      FormBox["\[Mu]", TraditionalForm]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "0c2229e5-c54e-4c7e-b95b-ae63a3aad83f"],
+     "s."
+    }],ExpressionUUID->"af34c56d-af2c-4009-b9c4-3e8c139fd7c5"]},
+   {"", Cell[TextData[{
+     "\"PhotonTimes\":   List of photon times in ",
+     Cell[BoxData[
+      FormBox["\[Mu]", TraditionalForm]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "2d037c84-c92c-4bb7-946f-8e933a7500c9"],
+     "s with respect to first photon in burst."
+    }],ExpressionUUID->"d0b63239-70b9-4664-a1f3-25d7e9aed9af"]},
+   {"", Cell[TextData[{
+     "\"MainChannelPhotonTimes\":   List of photon times in ",
+     Cell[BoxData[
+      FormBox["\[Mu]", TraditionalForm]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "6462db33-fc01-46da-a1d7-37e2b91e9dc7"],
+     "s with respect to first photon in burst. Only photons in main channel \
+range."
+    }],ExpressionUUID->"b6330953-c482-4512-990e-c452272e2be9"]},
+   {"", Cell[TextData[{
+     "\"PieChannelPhotonTimes\":   List of photon times in ",
+     Cell[BoxData[
+      FormBox["\[Mu]", TraditionalForm]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "d0d38cec-784c-4efb-93dd-12ee6f4adb04"],
+     "s with respect to first photon in burst. Only photons in PIE channel \
+range."
+    }],ExpressionUUID->"c3c4c32a-c804-4c77-a596-f25338fb99a0"]},
+   {"", Cell["\<\
+\"DetectionChannels\":   List of the photons' detection routes.\
+\>",ExpressionUUID->"8faa45b1-8b7a-49d4-a5fd-4c75cbaddf64"]},
+   {"", Cell["\<\
+\"LifeTimeChannels\":   List of the photons' lifetime channels.\
+\>",ExpressionUUID->"1a6fcf0c-7d68-4383-978e-5b3031753736"]},
+   {"", Cell[TextData[{
+     "Each string in an expression will be replaced by the corresponding list \
+of values for all photon bursts. ",
+     Cell[BoxData[
+      StyleBox["Hold",
+       FontSlant->"Italic"]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "3a0980d1-880b-42fb-b4b7-f0c45527e135"],
+     " can be used to prevent the expression to be evalutated by Mathematica \
+before the strings are replaced. For example: \
+FGetFromBustList[Hold@Transpose[{\"Epie\",\"Spie\"}] ]."
+    }],ExpressionUUID->"1b785942-a944-4f53-a252-160ea086d025"]},
+   {"", Cell[
+    "FGetFromBurstList has the following options:",ExpressionUUID->
+     "40cca4a9-39ed-4e30-b035-104253957f36"]},
+   {"", Cell[TextData[{
+     "FBurstData",
+     Cell[BoxData[
+      FormBox["\[Rule]", TraditionalForm]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "5bedefcd-e8f6-44f9-a623-9d55826c90d5"],
+     "All (default)"
+    }],ExpressionUUID->"364e520b-f72b-4794-929c-4e49ef06b4f6"]},
+   {"", Cell[TextData[{
+     "FBurstData",
+     Cell[BoxData[
+      FormBox["\[Rule]", TraditionalForm]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "18126853-c2f9-4b1b-a5f1-722413699689"],
+     "FSelectedBursts"
+    }],ExpressionUUID->"cfcba39f-a002-4fe4-a6d0-b23b8e9572e2"]}
+  }]], "Usage",
+ CellID->255289545,ExpressionUUID->"6b62fb82-68f8-4365-8c01-c7ab0370d77f"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[Cell[BoxData[
+ ButtonBox[Cell[TextData[{
+   Cell[BoxData[
+    DynamicBox[ToBoxes[
+      If[
+       MatchQ[
+        CurrentValue[
+         EvaluationNotebook[], {TaggingRules, "Openers", "NotesSection"}, 
+         Closed], 
+        Alternatives[Open, True]], 
+       Style[
+        Graphics[{
+          Thickness[0.18], 
+          RGBColor[0.8509803921568627, 0.396078431372549, 0], 
+          Line[{{-1.8, 0.5}, {0, 0}, {1.8, 0.5}}]}, AspectRatio -> 1, 
+         PlotRange -> {{-3, 4}, {-1, 1}}, ImageSize -> 20], Magnification -> 
+        0.68 Inherited], 
+       Rotate[
+        Style[
+         Graphics[{
+           Thickness[0.18], 
+           RGBColor[0.8509803921568627, 0.396078431372549, 0], 
+           Line[{{-1.8, 0.5}, {0, 0}, {1.8, 0.5}}]}, AspectRatio -> 1, 
+          PlotRange -> {{-3, 4}, {-1, 1}}, ImageSize -> 20], Magnification -> 
+         0.68 Inherited], Rational[1, 2] Pi, {-1.65, -1}]]],
+     ImageSizeCache->{
+      13.600000000000001`, {0.5800000000000001, 13.020000000000001`}}]],
+    ExpressionUUID->"c25cf83e-0b3f-4e32-8cb7-f8d1e5829be4"],
+   Cell[BoxData[
+    TemplateBox[{1},
+     "Spacer1"]],ExpressionUUID->"e0f51979-25ed-45dc-8dd9-84875d4bf878"],
+   "Details and Options"
+  }], "NotesFrameText",ExpressionUUID->"5d4f49df-f06b-437c-baf3-3ae99c40cc1a"],
+  Appearance->{Automatic, None, "Normal", Automatic},
+  BaseStyle->None,
+  ButtonFunction:>(FrontEndExecute[{
+     FrontEnd`SelectionMove[
+      FrontEnd`SelectedNotebook[], All, ButtonCell], 
+     FrontEndToken["OpenCloseGroup"], 
+     FrontEnd`SelectionMove[
+      FrontEnd`SelectedNotebook[], After, CellContents]}]& ),
+  Evaluator->None,
+  Method->
+   "Preemptive"]],ExpressionUUID->"8a238f42-2736-4e2f-80cc-b35b9d92264f"]], \
+"NotesSection",
+ WholeCellGroupOpener->True,
+ CellGroupingRules->{"SectionGrouping", 50},
+ CacheGraphics->False,
+ CellID->280331227,ExpressionUUID->"0f9c1754-b0e6-467d-b648-32e96e722e0c"],
+
+Cell["The following options can be given: ", "Notes",
+ CellID->276679363,ExpressionUUID->"3e56fe36-ba1a-49c5-9684-62b6cf0306ed"],
+
+Cell[BoxData[GridBox[{
+   {Cell["      ", "TableRowIcon",ExpressionUUID->
+     "85dcfe90-0b74-401b-acb7-e495c7a5af45"], 
+    TemplateBox[{
+      Cell[
+       TextData["FBurstData"]], "paclet:Fretica/ref/FBurstData", 
+      "Fretica Package Symbol"},
+     "PackageLink",
+     BaseStyle->"3ColumnTableMod"], 
+    TemplateBox[{
+      Cell[
+       TextData["All"]], "paclet:ref/All"},
+     "RefLink",
+     BaseStyle->{"3ColumnTableMod"}], Cell[TextData[{
+     "Option for sp",
+     Cell[BoxData[
+      TemplateBox[{
+        Cell[
+         TextData["e"]], "paclet:Fretica/ref/e", "Fretica Package Symbol"},
+       "PackageLink",
+       BaseStyle->"3ColumnTableMod"]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "315dc6fe-fdf9-4b46-bff2-68980aedd134"],
+     "cifying that som",
+     Cell[BoxData[
+      TemplateBox[{
+        Cell[
+         TextData["e"]], "paclet:Fretica/ref/e", "Fretica Package Symbol"},
+       "PackageLink",
+       BaseStyle->"3ColumnTableMod"]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "670bd022-5c21-4e1d-b3d3-e1498f505d92"],
+     "thing is calculat",
+     Cell[BoxData[
+      TemplateBox[{
+        Cell[
+         TextData["e"]], "paclet:Fretica/ref/e", "Fretica Package Symbol"},
+       "PackageLink",
+       BaseStyle->"3ColumnTableMod"]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "238d0bd5-bb08-4961-9c1a-97ca45238f08"],
+     "d only for th",
+     Cell[BoxData[
+      TemplateBox[{
+        Cell[
+         TextData["e"]], "paclet:Fretica/ref/e", "Fretica Package Symbol"},
+       "PackageLink",
+       BaseStyle->"3ColumnTableMod"]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "c7a8e127-229b-4150-96bc-d68e8c6eb991"],
+     " burst photons. "
+    }], "TableText",ExpressionUUID->"40fb3a3e-7094-4715-b936-c9751d0e7a73"]}
+  }]], "3ColumnTableMod",
+ GridBoxOptions->{
+ GridBoxBackground->{"Columns" -> {{None}}, "Rows" -> {{None}}},
+ GridBoxDividers->{"Rows" -> {{True, True}}}},
+ CellID->106050370,ExpressionUUID->"17cf67fa-d243-4ca0-9c72-10d6dfa0800f"]
+}, Dynamic[CurrentValue[
+ EvaluationNotebook[], {TaggingRules, "Openers", "NotesSection"}, Closed]]]],
+
+Cell[BoxData[GridBox[{
+   {
+    DynamicBox[FEPrivate`ImportImage[
+      FrontEnd`FileName[{"Documentation", "FooterIcons"}, "RelatedGuide.png"]],
+     ImageSizeCache->{50., {27., 33.}}], GridBox[{
+      {
+       StyleBox[
+        RowBox[{"Related", " ", "Guides"}], "MoreAboutSection"]},
+      {
+       RowBox[{"\[FilledVerySmallSquare]", Cell[BoxData[
+         TemplateBox[{
+           Cell[
+            TextData["Fretica"]], "paclet:Fretica/guide/Fretica"},
+          "RefLinkPlain",
+          BaseStyle->{"MoreAbout"}]], "MoreAbout",ExpressionUUID->
+         "227e0a0f-50fd-48e3-894c-cb08e0fee531"]}]}
+     }]}
+  }]], "MoreAboutSection",ExpressionUUID->"5f49ad73-204c-4a21-8f25-\
+8c60d3d8ef37"],
+
+Cell[BoxData[GridBox[{
+   {
+    TemplateBox[{29},
+     "Spacer1"], GridBox[{
+      {
+       RowBox[{
+        TemplateBox[{17},
+         "Spacer1"], 
+        StyleBox[
+         RowBox[{"Related", " ", "Links"}], "RelatedLinksSection"]}]},
+      {Cell[TextData[Cell[BoxData[
+        RowBox[{
+         TemplateBox[{16},
+          "Spacer1"], "\[FilledVerySmallSquare]", Cell[BoxData[
+          TemplateBox[{
+            Cell[
+             TextData[
+              Cell[
+               TextData[{
+                 Cell[
+                  BoxData[
+                   TemplateBox[{2}, "Spacer1"]]], "Schuler Lab"}]]]], 
+            "https://schuler.bioc.uzh.ch/programs/"},
+           "WebLink",
+           BaseStyle->{"RelatedLinks"}]],ExpressionUUID->
+          "f229b1fe-0b5c-46d3-8272-a5c013981719"]}]],ExpressionUUID->
+        "b095ba50-75a3-4eb3-b4b6-b4266d7d7c22"]], "RelatedLinks",
+        ExpressionUUID->"f9f82198-b1a0-4848-921f-2cdb3f0f6165"]}
+     }]}
+  }]], "RelatedLinksSection",ExpressionUUID->"125b9e36-920b-4c7f-8ef2-\
+afcfd1493774"],
+
+Cell[" ", "FooterCell",ExpressionUUID->"38ecbe75-a76d-4b07-b227-38d704250893"]
+},
+Saveable->False,
+ScreenStyleEnvironment->"Working",
+WindowSize->{900., 604.8},
+WindowMargins->{{0, Automatic}, {Automatic, 0}},
+WindowTitle->"FGetFromBurstList",
+TaggingRules->{
+ "ModificationHighlight" -> False, "ColorType" -> "", "LinkTrails" -> "", 
+  "HasOptions" -> True, "ExampleCounter" -> 1, 
+  "Openers" -> {
+   "PrimaryExamplesSection" -> Open, "ExampleSection" -> {"0" -> Open}, 
+    "NotesSection" -> Closed}, "NewStyles" -> True, 
+  "CitationPopupData" -> $Failed, "ShowCitation" -> False, "RootCaptions" -> 
+  "", "Metadata" -> {
+   "built" -> "{2023, 4, 11, 14, 23, 55.4654676}", 
+    "history" -> {"XX", "", "", ""}, "context" -> "Fretica`", 
+    "keywords" -> {}, "specialkeywords" -> {}, 
+    "tutorialcollectionlinks" -> {}, "index" -> True, "label" -> 
+    "Fretica Symbol", "language" -> "en", "paclet" -> "Fretica", "status" -> 
+    "None", "summary" -> 
+    "FGetFromBurstList[expr] evaluates expr for each photon burst and returns \
+the results in a list. expr can contain the following strings: \"n1\", \
+\"n2\", etc.: Uncorrected detector counts. \"n1_corr\", \"n2_corr\", etc.: \
+Detector counts corrected for background and RCM, but not for acceptor direct \
+excitation, i.e. \"ni _corr\" represents the ith element of the vector n c o \
+r r ==RCM.(n - b g). \"n_corr\": Total photon number in photon burst, \
+corrected for background and RCM. \"nA_raw\", \"nD_raw\": Uncorrected total \
+acceptor and donor counts. \"nA\", \"nD\": Background- and RCM-corrected \
+total acceptor and total donor counts, not corrected for acceptor direct \
+excitation. \"n1pie\", \"n2pie\", etc.: Counts in the PIE channels. \
+\"n1pie_corr\", \"n2pie_corr\", etc.: Background-corrected counts in the PIE \
+channels. \"nApie_raw\", \"nDpie_raw\": Uncorrected total acceptor and donor \
+counts in the PIE channels. \"nApie\", \"nDpie\": Background corrected total \
+acceptor and total donor counts in the PIE channels. \"E\" , \"LogNdOverNa\", \
+\"Root6NdOverNa\": Transfer efficiency and related quantities corrected for \
+background, RCM, and acceptor direct excitation \\[Alpha]. E is calculated \
+from (nA-\\[Alpha](nA+nD))/(nA+nD-\\[Alpha](nA+nD)) \"Epie\": Transfer \
+efficiency corrected for background, RCM, and acceptor direct excitation d. E \
+is calculated from (nA- d nA_pie)/(nA+nD- d nA_pie) with d=\\[Gamma] p i \
+e(\\[Alpha]/(1-\\[Alpha]). \"Spie\" or \"StoichiometryRatio\": Calculated \
+from (nA+nD)/(nA+nD+\\[Gamma] p i e(nA_pie)). \"Eapp\" and \"Sapp\": cacluate \
+apparent values from the burst counts that are only corrected for background, \
+but not for RCM, \\[Alpha] or \\[Gamma]pie. \"ProximityRatio\": \
+\"nA_raw\"/(\"nA_raw\"+\"nD_raw\"). \"BVA_ProximityRatiosn\": Proximity \
+ratios for burst variance analysis (BVA). n is any integer larger 2, \
+idnicating the partition of each bursts in segements of n photons. \
+\"StartTime\", \"EndTime\": Detection times of the first and last photons in \
+a burst, respectively (in seconds). \"BurstDuration\": Durations \
+(\"EndTime\"-\"StartTime\") of the photon bursts (in seconds). \"tau1\", \
+\"tau2\", etc.: Mean fluorescence lifetimes. Needs to be calculated by \
+calling FCalcBurstLifeTimes beforehand. \"tavgD\", \"tavgA\": Mean arrival \
+(detection) times of donor and acceptor photons, respectively. \
+\"BurstAsymmetry\": Equivalent to \"tavgA\"-\"tavgD\". \"tavg\": Mean arrival \
+(detection) times. If PIE is enabled, only the photons in the main lifetime \
+channels are used. \"tavg_pie\": Mean arrival (detection) times of photons in \
+PIE lifetime channels. \"BurstPIEAsymmetry\": Equivalent to \
+\"tavg\"-\"tavg_pie\". \"DonorAnisotropy\": calculates (np - ns)/((1 - 3 L2) \
+np + (2 - 3 L1) ns) ), where np and ns are background and RCM-corrected \
+photon counts of the parallel and orthogonal donor detection routes, \
+respectively. L1 and L2 are correction factors set using FSetAnisotropyL1 and \
+FSetAnisotropyL2. \"AcceptorAnisotropy\": calculates (np - ns)/((1 - 3 L2) np \
++ (2 - 3 L1) ns) ), where np and ns are background and RCM-corrected photon \
+counts of the parallel and orthogonal acceptor detection routes, \
+respectively. L1 and L2 are correction factors set using FSetAnisotropyL1 and \
+FSetAnisotropyL2. \"PIEAcceptorAnisotropy\": calculates (np - ns)/((1 - 3 L2) \
+np + (2 - 3 L1) ns) ), where np and ns are background and RCM-corrected \
+photon counts of the parallel and orthogonal acceptor detection routes, \
+respectively. Only photons with lifetime channels within the set PIE channel \
+ranges are used. L1 and L2 are correction factors set using FSetAnisotropyL1 \
+and FSetAnisotropyL2. \"n_tot_asym\": Calculated from (n2 - n1) /(n1 + n2), \
+where n 1 , 2 are the total corrected number of photons in the first and \
+second half of the photon burst, respectively. \"Selected\": Value is 1 for \
+selected photon bursts and 0 for non-selected photon bursts. \
+\"InterPhotonTimes\": List of interphoton times, d ti == ti - t i - 1 in \
+\\[Mu]s. \"PhotonTimes\": List of photon times in \\[Mu]s with respect to \
+first photon in burst. \"MainChannelPhotonTimes\": List of photon times in \
+\\[Mu]s with respect to first photon in burst. Only photons in main channel \
+range. \"PieChannelPhotonTimes\": List of photon times in \\[Mu]s with \
+respect to first photon in burst. Only photons in PIE channel range. \
+\"DetectionChannels\": List of the photons' detection routes. \
+\"LifeTimeChannels\": List of the photons' lifetime channels. Each string in \
+an expression will be replaced by the corresponding list of values for all \
+photon bursts. Hold can be used to prevent the expression to be evalutated by \
+Mathematica before the strings are replaced. For example: \
+FGetFromBustList[Hold@Transpose[{\"Epie\",\"Spie\"}] ]. FGetFromBurstList has \
+the following options: FBurstData->All (default) FBurstData->FSelectedBursts",
+     "synonyms" -> {}, "tabletags" -> {}, "title" -> "FGetFromBurstList", 
+    "titlemodifier" -> "", "windowtitle" -> "FGetFromBurstList", "type" -> 
+    "Symbol", "uri" -> "Fretica/ref/FGetFromBurstList"}},
+CellContext->"Global`",
+FrontEndVersion->"13.2 for Microsoft Windows (64-bit) (January 30, 2023)",
+StyleDefinitions->Notebook[{
+   Cell[
+    StyleData[
+    StyleDefinitions -> FrontEnd`FileName[{"Wolfram"}, "Reference.nb"]]], 
+   Cell[
+    StyleData["Input"], CellContext -> "Global`"], 
+   Cell[
+    StyleData["Output"], CellContext -> "Global`"]}, Visible -> False, 
+  FrontEndVersion -> "13.2 for Microsoft Windows (64-bit) (January 30, 2023)",
+   StyleDefinitions -> "Default.nb"],
+ExpressionUUID->"b1885d06-efa2-4630-bd7c-7175562957cb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[589, 21, 4342, 103, 70, "AnchorBarGrid",ExpressionUUID->"f48fdf66-a19b-4bd1-9d3b-d9e7fd10a200",
+ CellID->1],
+Cell[4934, 126, 90, 0, 70, "ContextNameCell",ExpressionUUID->"4300a223-44a2-4852-8117-aa5c177804a1"],
+Cell[CellGroupData[{
+Cell[5049, 130, 560, 14, 70, "ObjectNameGrid",ExpressionUUID->"38f7580d-8a84-4569-8b26-4719ce408a2c"],
+Cell[5612, 146, 24321, 628, 70, "Usage",ExpressionUUID->"6b62fb82-68f8-4365-8c01-c7ab0370d77f",
+ CellID->255289545]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[29970, 779, 1919, 48, 70, "NotesSection",ExpressionUUID->"0f9c1754-b0e6-467d-b648-32e96e722e0c",
+ CellGroupingRules->{"SectionGrouping", 50},
+ CellID->280331227],
+Cell[31892, 829, 128, 1, 70, "Notes",ExpressionUUID->"3e56fe36-ba1a-49c5-9684-62b6cf0306ed",
+ CellID->276679363],
+Cell[32023, 832, 2106, 56, 70, "3ColumnTableMod",ExpressionUUID->"17cf67fa-d243-4ca0-9c72-10d6dfa0800f",
+ CellID->106050370]
+}, Dynamic[CurrentValue[EvaluationNotebook[], {TaggingRules, "Openers", "NotesSection"}, Closed]]]],
+Cell[34234, 892, 697, 18, 70, "MoreAboutSection",ExpressionUUID->"5f49ad73-204c-4a21-8f25-8c60d3d8ef37"],
+Cell[34934, 912, 1043, 30, 70, "RelatedLinksSection",ExpressionUUID->"125b9e36-920b-4c7f-8ef2-afcfd1493774"],
+Cell[35980, 944, 78, 0, 70, "FooterCell",ExpressionUUID->"38ecbe75-a76d-4b07-b227-38d704250893"]
+}
+]
+*)
+
+(* End of internal cache information *)
+

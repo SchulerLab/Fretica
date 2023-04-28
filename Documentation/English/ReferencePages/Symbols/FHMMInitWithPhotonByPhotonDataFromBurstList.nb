@@ -1,0 +1,613 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 13.2' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     24148,        603]
+NotebookOptionsPosition[     19716,        520]
+NotebookOutlinePosition[     22978,        586]
+CellTagsIndexPosition[     22935,        583]
+WindowTitle->FHMMInitWithPhotonByPhotonDataFromBurstList
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[GridBox[{
+   {GridBox[{
+      {
+       ItemBox[Cell[BoxData[
+         RowBox[{
+          TemplateBox[{12},
+           "Spacer1"], Cell["FRETICA SYMBOL", "PacletNameCell",
+           TextAlignment->Center,ExpressionUUID->
+           "782aeeff-7d3e-4620-84e4-43547d2d419a"], 
+          TemplateBox[{8},
+           "Spacer1"]}]],
+         TextAlignment->Center,ExpressionUUID->
+         "b6ec4ca7-68da-458a-a74e-071d3ceecbdc"],
+        Background->RGBColor[0.490196, 0.576471, 0.690196],
+        ItemSize->Full], ""}
+     },
+     GridBoxAlignment->{"Rows" -> {{Center}}},
+     GridBoxItemSize->{"Columns" -> {Full, 
+         Scaled[0.02]}, "Rows" -> {{2.5}}}], Cell[TextData[{
+     Cell[BoxData[
+      TagBox[
+       ActionMenuBox[
+        FrameBox[Cell[TextData[{
+          "Related Guides",
+          " ",
+          Cell[BoxData[
+           GraphicsBox[
+            {GrayLevel[0.66667], Thickness[0.13], 
+             LineBox[{{-1.8, 0.5}, {0, 0}, {1.8, 0.5}}]},
+            AspectRatio->1,
+            ImageSize->20,
+            PlotRange->{{-3, 4}, {-1, 1}}]],ExpressionUUID->
+           "74617c47-6fc8-4833-b93e-58a148679771"]
+         }],ExpressionUUID->"f96b85d7-8b87-46e2-9081-320a8e49602b"],
+         StripOnInput->False], {"\<\"Fretica\"\>":>Documentation`HelpLookup[
+        "paclet:Fretica/guide/Fretica"]},
+        Appearance->None,
+        MenuAppearance->Automatic,
+        MenuStyle->"MoreAbout"],
+       MouseAppearanceTag["LinkHand"]]],
+      LineSpacing->{1.4, 0},ExpressionUUID->
+      "30391747-cd54-4472-b267-78414ae3f099"],
+     "\[ThickSpace]\[ThickSpace]\[ThickSpace]\[ThickSpace]\[ThickSpace]\
+\[ThickSpace]",
+     Cell[BoxData[
+      TagBox[
+       ActionMenuBox[
+        FrameBox[Cell[TextData[{
+          "URL",
+          " ",
+          Cell[BoxData[
+           GraphicsBox[
+            {GrayLevel[0.66667], Thickness[0.13], 
+             LineBox[{{-1.8, 0.5}, {0, 0}, {1.8, 0.5}}]},
+            AspectRatio->1,
+            ImageSize->20,
+            PlotRange->{{-3, 4}, {-1, 1}}]],ExpressionUUID->
+           "b39a8f6f-dc93-4b75-bc04-507fd3e5a2a6"]
+         }],ExpressionUUID->"1bf8fb94-16c1-4712-8fbf-b7a8a92cb5df"],
+         StripOnInput->
+          False], {"\<\"Fretica/ref/\
+FHMMInitWithPhotonByPhotonDataFromBurstList\"\>":>
+        None, "\<\"Copy Wolfram Documentation Center URL\"\>":>
+        Module[{DocumentationSearch`Private`nb$}, 
+         DocumentationSearch`Private`nb$ = NotebookPut[
+            Notebook[{
+              Cell[
+              "Fretica/ref/FHMMInitWithPhotonByPhotonDataFromBurstList"]}, 
+             Visible -> False]]; 
+         SelectionMove[DocumentationSearch`Private`nb$, All, Notebook]; 
+         FrontEndTokenExecute[DocumentationSearch`Private`nb$, "Copy"]; 
+         NotebookClose[DocumentationSearch`Private`nb$]; Null], 
+        Delimiter, "\<\"Copy web URL\"\>":>
+        Module[{DocumentationSearch`Private`nb$}, 
+         DocumentationSearch`Private`nb$ = NotebookPut[
+            Notebook[{
+              Cell[
+               BoxData[
+                MakeBoxes[
+                 Hyperlink[
+                 "http://reference.wolfram.com/language/Fretica/ref/\
+FHMMInitWithPhotonByPhotonDataFromBurstList.html"], StandardForm]], "Input", 
+               TextClipboardType -> "PlainText"]}, Visible -> False]]; 
+         SelectionMove[DocumentationSearch`Private`nb$, All, Notebook]; 
+         FrontEndTokenExecute[DocumentationSearch`Private`nb$, "Copy"]; 
+         NotebookClose[DocumentationSearch`Private`nb$]; 
+         Null], "\<\"Go to web URL\"\>":>FrontEndExecute[{
+          NotebookLocate[{
+            URL[If[
+               TrueQ[DocumentationBuild`Make`Private`wsmlinkQ$133229], 
+               "http://reference.wolfram.com/system-modeler/", 
+               "http://reference.wolfram.com/language/"] <> 
+             "Fretica/ref/FHMMInitWithPhotonByPhotonDataFromBurstList" <> 
+             ".html"], None}]}]},
+        Appearance->None,
+        MenuAppearance->Automatic,
+        MenuStyle->"URLMenu"],
+       MouseAppearanceTag["LinkHand"]]],
+      LineSpacing->{1.4, 0},ExpressionUUID->
+      "f48d0c79-d8a4-414a-a9d5-41e519c95eab"]
+    }], "AnchorBar",
+     CacheGraphics->False,ExpressionUUID->
+     "f467dbb4-355e-41cf-9fb4-c77ef9cac9e1"]}
+  }]], "AnchorBarGrid",
+ GridBoxOptions->{GridBoxItemSize->{"Columns" -> {
+     Scaled[0.65], {
+      Scaled[0.34]}}, "ColumnsIndexed" -> {}, "Rows" -> {{1.}}, 
+   "RowsIndexed" -> {}}},
+ CellID->1,ExpressionUUID->"a1b7f08f-3cac-4ae6-ada7-d7e72ac9cca2"],
+
+Cell["Fretica`", "ContextNameCell",ExpressionUUID->"5d753407-0b54-4f2b-84e4-819338a5df80"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[GridBox[{
+   {Cell[TextData[{
+     Cell[
+     "FHMMInitWithPhotonByPhotonDataFromBurstList", "ObjectName",
+      ExpressionUUID->"579aecbb-32af-4602-8200-545af025d5f2"],
+     Cell[BoxData[
+      TemplateBox[{8},
+       "Spacer1"]],ExpressionUUID->"810472e3-4b79-4cf8-bcf4-0299f6fb1943"],
+     Cell[BoxData[
+     ""], "ObjectNameTranslation",ExpressionUUID->
+      "02794b0d-30d2-4cb3-a99c-9c1cf854b2ea"]
+    }],ExpressionUUID->"5ebaff55-a125-4122-ad48-604a04f6c52c"], 
+    "\[SpanFromLeft]"}
+  }]], "ObjectNameGrid",ExpressionUUID->"7adc133f-024b-4cd2-acd7-\
+d79b9f29ad6c"],
+
+Cell[BoxData[GridBox[{
+   {"", Cell[TextData[{
+     "FHMMInitWithPhotonByPhotonDataFromBurstList[colormap] uses the burst \
+list to initialize Fretica's hidden Markov system with photon\[Hyphen]by\
+\[Hyphen]photon time traces of the form ",
+     Cell[BoxData[
+      FormBox[
+       RowBox[{
+        RowBox[{
+         StyleBox["t", "TI"], 
+         SubscriptBox[
+          StyleBox["r", "TI"], 
+          StyleBox["j", "TI"]]}], " ", "\[LongEqual]", 
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{"{", 
+           RowBox[{
+            RowBox[{
+             StyleBox["d", "TI"], 
+             SubscriptBox[
+              StyleBox["t", "TI"], "1"]}], ",", 
+            SubscriptBox[
+             StyleBox["c", "TI"], "1"]}], "}"}], ",", 
+          RowBox[{
+           RowBox[{"{", 
+            RowBox[{
+             RowBox[{
+              StyleBox["d", "TI"], 
+              SubscriptBox[
+               StyleBox["t", "TI"], "2"]}], ",", 
+             SubscriptBox[
+              StyleBox["c", "TI"], "2"]}], "}"}], "\[Ellipsis]"}]}], "}"}]}], 
+       TraditionalForm]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "ebafb881-6541-48fd-9295-86182074eaf4"],
+     ", where ",
+     Cell[BoxData[
+      FormBox[
+       StyleBox["j", "TI"], TraditionalForm]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "c0f8d277-3761-4049-83a8-1a863a329a6d"],
+     " represents the ",
+     Cell[BoxData[
+      FormBox[
+       StyleBox["j", "TI"], TraditionalForm]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "babbdc45-58fc-44c0-9061-21c7f6bcb6e4"],
+     "th burst. ",
+     Cell[BoxData[
+      FormBox[
+       RowBox[{
+        StyleBox["d", "TI"], 
+        SubscriptBox[
+         StyleBox["t", "TI"], 
+         StyleBox["i", "TI"]]}], TraditionalForm]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "fdd9c4f4-4247-4f43-a604-d732c61c771f"],
+     " is the inter\[Hyphen]photon time in seconds (i.e. the time interval to \
+the preceding photon), and ",
+     Cell[BoxData[
+      FormBox[
+       SubscriptBox[
+        StyleBox["c", "TI"], 
+        StyleBox["i", "TI"]], TraditionalForm]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "4876c766-d25a-4d49-9d6f-65c16baffa74"],
+     " is the detection channel (color) of the ",
+     Cell[BoxData[
+      FormBox[
+       StyleBox["i", "TI"], TraditionalForm]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "611bd18d-19f6-49b9-8e4c-781984a78548"],
+     "th photon. colormap is a list of integers. Photons detected in \
+detection route ",
+     Cell[BoxData[
+      FormBox[
+       StyleBox["r", "TI"], TraditionalForm]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "a0b68829-dc4c-4b3b-acde-4621125986ac"],
+     " are colored with colormap[[",
+     Cell[BoxData[
+      FormBox[
+       StyleBox["r", "TI"], TraditionalForm]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "e68829c8-4988-4834-8c99-e0f7057cacc6"],
+     "]], if colormap[[",
+     Cell[BoxData[
+      FormBox[
+       StyleBox["r", "TI"], TraditionalForm]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "76bee52a-5cbd-40a8-8093-4226e2ec036a"],
+     "]]",
+     Cell[BoxData[
+      FormBox[">", TraditionalForm]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "6919efb2-888d-4aaf-bd21-676acb684235"],
+     "0. If colormap[[",
+     Cell[BoxData[
+      FormBox[
+       StyleBox["r", "TI"], TraditionalForm]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "64da1372-0c16-44d0-8106-0d23fe2002ee"],
+     "]]\[LongEqual]\[LongEqual]0, photons detected in route r are ignored. \
+For example, colormap\[LongEqual]",
+     Cell[BoxData[
+      FormBox[
+       RowBox[{"{", " ", "\[Null]"}], TraditionalForm]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "13515848-390b-43f6-9fdf-ef45ca017f3b"],
+     "1,2,1,2,0,0",
+     Cell[BoxData[
+      FormBox["}", TraditionalForm]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "1a490120-090f-4ef6-aeb3-87946ab15960"],
+     " colors photons detected in detection routes one and three as 1 and \
+those in detection routes two and four as 2, while photons in route five and \
+six are ignored."
+    }],ExpressionUUID->"be3c3d02-e4bb-4b00-813d-22017f68a0a7"]},
+   {"", Cell["\<\
+If lifetime channel constraints are enabled (e.g. in PIE mode), all photons \
+of a burst not fulfilling the main\[Hyphen]channel constraints are ignored.\
+\>",ExpressionUUID->"9c7fad11-d4b4-44ad-92fe-b8b1bce097a8"]},
+   {"", Cell[
+    "Options:",ExpressionUUID->"125379c6-8951-4b77-be90-fa1a095f8143"]},
+   {"", Cell[TextData[{
+     "FHMMFirstTauZero",
+     Cell[BoxData[
+      FormBox["\[Rule]", TraditionalForm]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "f667c019-f87e-4c62-90bd-77d8dcd2d5d4"],
+     "True (default) sets the first inter\[Hyphen]photon time in each trace \
+to zero (",
+     Cell[BoxData[
+      FormBox[
+       RowBox[{
+        RowBox[{
+         StyleBox["d", "TI"], 
+         SubscriptBox[
+          StyleBox["t", "TI"], "1"]}], " ", "\[LongEqual]", "0"}], 
+       TraditionalForm]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "7efe931b-8e41-4ef8-9f3a-b3301a202785"],
+     "). FHMMFirstTauZero",
+     Cell[BoxData[
+      FormBox["\[Rule]", TraditionalForm]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "d0928a92-eea9-4416-8aef-b110cdf23010"],
+     "False sets the first inter\[Hyphen]photon time to the time difference \
+between detection of the first photon of the current burst and the last \
+photon of the preceding burst."
+    }],ExpressionUUID->"d4cac056-de8b-4b5c-90ee-aec2c7c341d7"]},
+   {"", Cell[TextData[{
+     "FBurstData",
+     Cell[BoxData[
+      FormBox["\[Rule]", TraditionalForm]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "569f99f2-1245-49e3-93b4-09010b29a853"],
+     "All (default) all bursts are used."
+    }],ExpressionUUID->"b2a3c059-fb7c-450d-a147-449415d6e120"]},
+   {"", Cell[TextData[{
+     "FBurstData",
+     Cell[BoxData[
+      FormBox["\[Rule]", TraditionalForm]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "c68ea93b-4e28-41b3-b0fa-7edd69d38986"],
+     "FSelected only selected bursts are used."
+    }],ExpressionUUID->"e9e4df1e-953b-4519-a9fd-ab300ad65e22"]}
+  }]], "Usage",
+ CellID->132716024,ExpressionUUID->"bdb22413-a150-4780-b3f2-f5d901df0b40"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[Cell[BoxData[
+ ButtonBox[Cell[TextData[{
+   Cell[BoxData[
+    DynamicBox[ToBoxes[
+      If[
+       MatchQ[
+        CurrentValue[
+         EvaluationNotebook[], {TaggingRules, "Openers", "NotesSection"}, 
+         Closed], 
+        Alternatives[Open, True]], 
+       Style[
+        Graphics[{
+          Thickness[0.18], 
+          RGBColor[0.8509803921568627, 0.396078431372549, 0], 
+          Line[{{-1.8, 0.5}, {0, 0}, {1.8, 0.5}}]}, AspectRatio -> 1, 
+         PlotRange -> {{-3, 4}, {-1, 1}}, ImageSize -> 20], Magnification -> 
+        0.68 Inherited], 
+       Rotate[
+        Style[
+         Graphics[{
+           Thickness[0.18], 
+           RGBColor[0.8509803921568627, 0.396078431372549, 0], 
+           Line[{{-1.8, 0.5}, {0, 0}, {1.8, 0.5}}]}, AspectRatio -> 1, 
+          PlotRange -> {{-3, 4}, {-1, 1}}, ImageSize -> 20], Magnification -> 
+         0.68 Inherited], Rational[1, 2] Pi, {-1.65, -1}]]],
+     ImageSizeCache->{
+      13.600000000000001`, {0.5800000000000001, 13.020000000000001`}}]],
+    ExpressionUUID->"858dbe20-19dd-4c3b-bc02-a5febbde316f"],
+   Cell[BoxData[
+    TemplateBox[{1},
+     "Spacer1"]],ExpressionUUID->"80a21822-aba9-41e2-b732-e60da404895b"],
+   "Details and Options"
+  }], "NotesFrameText",ExpressionUUID->"4fd556f7-f744-48f9-a42e-4ced2c1046f9"],
+  Appearance->{Automatic, None, "Normal", Automatic},
+  BaseStyle->None,
+  ButtonFunction:>(FrontEndExecute[{
+     FrontEnd`SelectionMove[
+      FrontEnd`SelectedNotebook[], All, ButtonCell], 
+     FrontEndToken["OpenCloseGroup"], 
+     FrontEnd`SelectionMove[
+      FrontEnd`SelectedNotebook[], After, CellContents]}]& ),
+  Evaluator->None,
+  Method->
+   "Preemptive"]],ExpressionUUID->"1eb7926a-1e7c-469a-b9bb-4eae42695cd9"]], \
+"NotesSection",
+ WholeCellGroupOpener->True,
+ CellGroupingRules->{"SectionGrouping", 50},
+ CacheGraphics->False,
+ CellID->892685693,ExpressionUUID->"026e601d-fa6f-4f24-aea6-db672d3d9ce1"],
+
+Cell["The following options can be given: ", "Notes",
+ CellID->456967733,ExpressionUUID->"0c2745fa-c701-4d8d-8116-fabdc035aa9a"],
+
+Cell[BoxData[GridBox[{
+   {Cell["      ", "TableRowIcon",ExpressionUUID->
+     "8b100784-2f8b-4b06-afcb-1e54b5bfbc01"], 
+    TemplateBox[{
+      Cell[
+       TextData["FBurstData"]], "paclet:Fretica/ref/FBurstData", 
+      "Fretica Package Symbol"},
+     "PackageLink",
+     BaseStyle->"3ColumnTableMod"], 
+    TemplateBox[{
+      Cell[
+       TextData["All"]], "paclet:ref/All"},
+     "RefLink",
+     BaseStyle->{"3ColumnTableMod"}], Cell[TextData[{
+     "Option for sp",
+     Cell[BoxData[
+      TemplateBox[{
+        Cell[
+         TextData["e"]], "paclet:Fretica/ref/e", "Fretica Package Symbol"},
+       "PackageLink",
+       BaseStyle->"3ColumnTableMod"]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "5b430e33-34ad-44a5-b04e-c1d9333e40d0"],
+     "cifying that som",
+     Cell[BoxData[
+      TemplateBox[{
+        Cell[
+         TextData["e"]], "paclet:Fretica/ref/e", "Fretica Package Symbol"},
+       "PackageLink",
+       BaseStyle->"3ColumnTableMod"]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "1a1b6129-7e0c-4470-8167-f84943ae1086"],
+     "thing is calculat",
+     Cell[BoxData[
+      TemplateBox[{
+        Cell[
+         TextData["e"]], "paclet:Fretica/ref/e", "Fretica Package Symbol"},
+       "PackageLink",
+       BaseStyle->"3ColumnTableMod"]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "d609c00d-7fa9-461a-9b8e-35ed0ba58e45"],
+     "d only for th",
+     Cell[BoxData[
+      TemplateBox[{
+        Cell[
+         TextData["e"]], "paclet:Fretica/ref/e", "Fretica Package Symbol"},
+       "PackageLink",
+       BaseStyle->"3ColumnTableMod"]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "ebf75f5d-34b4-47ff-9a4a-42b61c4dca53"],
+     " burst photons. "
+    }], "TableText",ExpressionUUID->"a5f64bf8-af93-4b06-8faf-52cdd2d631aa"]},
+   {Cell["      ", "TableRowIcon",ExpressionUUID->
+     "b89cf516-c61e-4b61-bdad-aad377d1b994"], 
+    TemplateBox[{
+      Cell[
+       TextData["FHMMFirstTauZero"]], "paclet:Fretica/ref/FHMMFirstTauZero", 
+      "Fretica Package Symbol"},
+     "PackageLink",
+     BaseStyle->"3ColumnTableMod"], 
+    TemplateBox[{
+      Cell[
+       TextData["True"]], "paclet:ref/True"},
+     "RefLink",
+     BaseStyle->{"3ColumnTableMod"}], Cell[TextData[{
+     Cell[BoxData[
+      TemplateBox[{
+        Cell[
+         TextData["FHMMFirstTauZero"]], "paclet:Fretica/ref/FHMMFirstTauZero",
+         "Fretica Package Symbol"},
+       "PackageLink",
+       BaseStyle->"3ColumnTableMod"]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "b8b23e16-777b-416f-b107-e381acbbdebe"],
+     " is an option of ",
+     Cell[BoxData[
+     "FHMMInitWithPhotonByPhotonDataFromBurstList"], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "74067b05-b3d3-4211-8808-d27d5cd70fa5"],
+     ". "
+    }], "TableText",ExpressionUUID->"d98bb731-04b7-46ae-8fac-9e98f097e24f"]}
+  }]], "3ColumnTableMod",
+ GridBoxOptions->{
+ GridBoxBackground->{"Columns" -> {{None}}, "Rows" -> {None, {None}}},
+ GridBoxDividers->{"Rows" -> {{True, True, True}}}},
+ CellID->286335089,ExpressionUUID->"7b3aed19-1e5c-4df5-8b36-88f570c2d074"]
+}, Dynamic[CurrentValue[
+ EvaluationNotebook[], {TaggingRules, "Openers", "NotesSection"}, Closed]]]],
+
+Cell[BoxData[GridBox[{
+   {
+    DynamicBox[FEPrivate`ImportImage[
+      FrontEnd`FileName[{"Documentation", "FooterIcons"}, "RelatedGuide.png"]],
+     ImageSizeCache->{50., {27., 33.}}], GridBox[{
+      {
+       StyleBox[
+        RowBox[{"Related", " ", "Guides"}], "MoreAboutSection"]},
+      {
+       RowBox[{"\[FilledVerySmallSquare]", Cell[BoxData[
+         TemplateBox[{
+           Cell[
+            TextData["Fretica"]], "paclet:Fretica/guide/Fretica"},
+          "RefLinkPlain",
+          BaseStyle->{"MoreAbout"}]], "MoreAbout",ExpressionUUID->
+         "2b6e97e4-c7cf-4510-ab7b-5b540edbdeb1"]}]}
+     }]}
+  }]], "MoreAboutSection",ExpressionUUID->"19bba62d-e027-476c-8076-\
+c7fb1f6b99f7"],
+
+Cell[BoxData[GridBox[{
+   {
+    TemplateBox[{29},
+     "Spacer1"], GridBox[{
+      {
+       RowBox[{
+        TemplateBox[{17},
+         "Spacer1"], 
+        StyleBox[
+         RowBox[{"Related", " ", "Links"}], "RelatedLinksSection"]}]},
+      {Cell[TextData[Cell[BoxData[
+        RowBox[{
+         TemplateBox[{16},
+          "Spacer1"], "\[FilledVerySmallSquare]", Cell[BoxData[
+          TemplateBox[{
+            Cell[
+             TextData[
+              Cell[
+               TextData[{
+                 Cell[
+                  BoxData[
+                   TemplateBox[{2}, "Spacer1"]]], "Schuler Lab"}]]]], 
+            "https://schuler.bioc.uzh.ch/programs/"},
+           "WebLink",
+           BaseStyle->{"RelatedLinks"}]],ExpressionUUID->
+          "1833b9b1-2867-4507-9a17-2236f47a60e3"]}]],ExpressionUUID->
+        "9aae1f18-6ca5-4572-88cf-ac16ea9fe2f8"]], "RelatedLinks",
+        ExpressionUUID->"3ff43031-88c3-419a-9e94-6b4c274de009"]}
+     }]}
+  }]], "RelatedLinksSection",ExpressionUUID->"929e89c1-03e0-4d4b-85c2-\
+9e3e9a074533"],
+
+Cell[" ", "FooterCell",ExpressionUUID->"acad57f4-3acd-44cc-8b1a-bd77fa7f83a8"]
+},
+Saveable->False,
+ScreenStyleEnvironment->"Working",
+WindowSize->{900., 604.8},
+WindowMargins->{{0, Automatic}, {Automatic, 0}},
+WindowTitle->"FHMMInitWithPhotonByPhotonDataFromBurstList",
+TaggingRules->{
+ "ModificationHighlight" -> False, "ColorType" -> "", "LinkTrails" -> "", 
+  "HasOptions" -> True, "ExampleCounter" -> 1, 
+  "Openers" -> {
+   "PrimaryExamplesSection" -> Open, "ExampleSection" -> {"0" -> Open}, 
+    "NotesSection" -> Closed}, "NewStyles" -> True, 
+  "CitationPopupData" -> $Failed, "ShowCitation" -> False, "RootCaptions" -> 
+  "", "Metadata" -> {
+   "built" -> "{2023, 3, 6, 14, 29, 35.9517438}", 
+    "history" -> {"XX", "", "", ""}, "context" -> "Fretica`", 
+    "keywords" -> {}, "specialkeywords" -> {}, 
+    "tutorialcollectionlinks" -> {}, "index" -> True, "label" -> 
+    "Fretica Symbol", "language" -> "en", "paclet" -> "Fretica", "status" -> 
+    "None", "summary" -> 
+    "FHMMInitWithPhotonByPhotonDataFromBurstList[colormap] uses the burst \
+list to initialize Fretica's hidden Markov system with photon-by-photon time \
+traces of the form t rj == {{d t1, c1}, {d t2, c2} ...}, where j represents \
+the jth burst. d ti is the inter-photon time in seconds (i.e. the time \
+interval to the preceding photon), and ci is the detection channel (color) of \
+the ith photon. colormap is a list of integers. Photons detected in detection \
+route r are colored with colormap[[r]], if colormap[[r]]>0. If \
+colormap[[r]]====0, photons detected in route r are ignored. For example, \
+colormap=={ \\[Null]1,2,1,2,0,0} colors photons detected in detection routes \
+one and three as 1 and those in detection routes two and four as 2, while \
+photons in route five and six are ignored. If lifetime channel constraints \
+are enabled (e.g. in PIE mode), all photons of a burst not fulfilling the \
+main-channel constraints are ignored. Options: FHMMFirstTauZero->True \
+(default) sets the first inter-photon time in each trace to zero (d t1 == 0). \
+FHMMFirstTauZero->False sets the first inter-photon time to the time \
+difference between detection of the first photon of the current burst and the \
+last photon of the preceding burst. FBurstData->All (default) all bursts are \
+used. FBurstData->FSelected only selected bursts are used.", "synonyms" -> {},
+     "tabletags" -> {}, "title" -> 
+    "FHMMInitWithPhotonByPhotonDataFromBurstList", "titlemodifier" -> "", 
+    "windowtitle" -> "FHMMInitWithPhotonByPhotonDataFromBurstList", "type" -> 
+    "Symbol", "uri" -> 
+    "Fretica/ref/FHMMInitWithPhotonByPhotonDataFromBurstList"}},
+CellContext->"Global`",
+FrontEndVersion->"13.2 for Microsoft Windows (64-bit) (January 30, 2023)",
+StyleDefinitions->Notebook[{
+   Cell[
+    StyleData[
+    StyleDefinitions -> FrontEnd`FileName[{"Wolfram"}, "Reference.nb"]]], 
+   Cell[
+    StyleData["Input"], CellContext -> "Global`"], 
+   Cell[
+    StyleData["Output"], CellContext -> "Global`"]}, Visible -> False, 
+  FrontEndVersion -> "13.2 for Microsoft Windows (64-bit) (January 30, 2023)",
+   StyleDefinitions -> "Default.nb"],
+ExpressionUUID->"1a3fc14d-039e-4d4a-915d-269413982e94"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[615, 21, 4503, 108, 70, "AnchorBarGrid",ExpressionUUID->"a1b7f08f-3cac-4ae6-ada7-d7e72ac9cca2",
+ CellID->1],
+Cell[5121, 131, 90, 0, 70, "ContextNameCell",ExpressionUUID->"5d753407-0b54-4f2b-84e4-819338a5df80"],
+Cell[CellGroupData[{
+Cell[5236, 135, 586, 14, 70, "ObjectNameGrid",ExpressionUUID->"7adc133f-024b-4cd2-acd7-d79b9f29ad6c"],
+Cell[5825, 151, 6659, 168, 70, "Usage",ExpressionUUID->"bdb22413-a150-4780-b3f2-f5d901df0b40",
+ CellID->132716024]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[12521, 324, 1919, 48, 70, "NotesSection",ExpressionUUID->"026e601d-fa6f-4f24-aea6-db672d3d9ce1",
+ CellGroupingRules->{"SectionGrouping", 50},
+ CellID->892685693],
+Cell[14443, 374, 128, 1, 70, "Notes",ExpressionUUID->"0c2745fa-c701-4d8d-8116-fabdc035aa9a",
+ CellID->456967733],
+Cell[14574, 377, 3209, 85, 70, "3ColumnTableMod",ExpressionUUID->"7b3aed19-1e5c-4df5-8b36-88f570c2d074",
+ CellID->286335089]
+}, Dynamic[CurrentValue[EvaluationNotebook[], {TaggingRules, "Openers", "NotesSection"}, Closed]]]],
+Cell[17888, 466, 697, 18, 70, "MoreAboutSection",ExpressionUUID->"19bba62d-e027-476c-8076-c7fb1f6b99f7"],
+Cell[18588, 486, 1043, 30, 70, "RelatedLinksSection",ExpressionUUID->"929e89c1-03e0-4d4b-85c2-9e3e9a074533"],
+Cell[19634, 518, 78, 0, 70, "FooterCell",ExpressionUUID->"acad57f4-3acd-44cc-8b1a-bd77fa7f83a8"]
+}
+]
+*)
+
+(* End of internal cache information *)
+
