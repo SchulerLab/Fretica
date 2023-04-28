@@ -1,0 +1,581 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 13.2' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     21394,        571]
+NotebookOptionsPosition[     18417,        507]
+NotebookOutlinePosition[     20234,        554]
+CellTagsIndexPosition[     20191,        551]
+WindowTitle->FBunch
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[GridBox[{
+   {GridBox[{
+      {
+       ItemBox[Cell[BoxData[
+         RowBox[{
+          TemplateBox[{12},
+           "Spacer1"], Cell["FRETICA SYMBOL", "PacletNameCell",
+           TextAlignment->Center,ExpressionUUID->
+           "49da9710-fb13-494f-a60e-6e1d05c2ace6"], 
+          TemplateBox[{8},
+           "Spacer1"]}]],
+         TextAlignment->Center,ExpressionUUID->
+         "8f17bfb2-7288-4777-97f3-d68d63a5d931"],
+        Background->RGBColor[0.490196, 0.576471, 0.690196],
+        ItemSize->Full], ""}
+     },
+     GridBoxAlignment->{"Rows" -> {{Center}}},
+     GridBoxItemSize->{"Columns" -> {Full, 
+         Scaled[0.02]}, "Rows" -> {{2.5}}}], Cell[TextData[{
+     Cell[BoxData[
+      TagBox[
+       ActionMenuBox[
+        FrameBox[Cell[TextData[{
+          "Related Guides",
+          " ",
+          Cell[BoxData[
+           GraphicsBox[
+            {GrayLevel[0.66667], Thickness[0.13], 
+             LineBox[{{-1.8, 0.5}, {0, 0}, {1.8, 0.5}}]},
+            AspectRatio->1,
+            ImageSize->20,
+            PlotRange->{{-3, 4}, {-1, 1}}]],ExpressionUUID->
+           "0b60976f-9974-4394-aa5b-b33ac675c084"]
+         }],ExpressionUUID->"f83ed635-770c-4507-bb82-55c9e38bb3d3"],
+         StripOnInput->False], {"\<\"Fretica\"\>":>Documentation`HelpLookup[
+        "paclet:Fretica/guide/Fretica"]},
+        Appearance->None,
+        MenuAppearance->Automatic,
+        MenuStyle->"MoreAbout"],
+       MouseAppearanceTag["LinkHand"]]],
+      LineSpacing->{1.4, 0},ExpressionUUID->
+      "7d11ccd6-b01a-4c63-a28e-d5aa6db9d3b1"],
+     "\[ThickSpace]\[ThickSpace]\[ThickSpace]\[ThickSpace]\[ThickSpace]\
+\[ThickSpace]",
+     Cell[BoxData[
+      TagBox[
+       ActionMenuBox[
+        FrameBox[Cell[TextData[{
+          "URL",
+          " ",
+          Cell[BoxData[
+           GraphicsBox[
+            {GrayLevel[0.66667], Thickness[0.13], 
+             LineBox[{{-1.8, 0.5}, {0, 0}, {1.8, 0.5}}]},
+            AspectRatio->1,
+            ImageSize->20,
+            PlotRange->{{-3, 4}, {-1, 1}}]],ExpressionUUID->
+           "1b83d70a-8c12-4d9e-937b-3db4572d0526"]
+         }],ExpressionUUID->"cbe5cb7f-77da-44ae-ac61-5244ac1c959e"],
+         StripOnInput->False], {"\<\"Fretica/ref/FBunch\"\>":>
+        None, "\<\"Copy Wolfram Documentation Center URL\"\>":>
+        Module[{DocumentationSearch`Private`nb$}, 
+         DocumentationSearch`Private`nb$ = NotebookPut[
+            Notebook[{
+              Cell["Fretica/ref/FBunch"]}, Visible -> False]]; 
+         SelectionMove[DocumentationSearch`Private`nb$, All, Notebook]; 
+         FrontEndTokenExecute[DocumentationSearch`Private`nb$, "Copy"]; 
+         NotebookClose[DocumentationSearch`Private`nb$]; Null], 
+        Delimiter, "\<\"Copy web URL\"\>":>
+        Module[{DocumentationSearch`Private`nb$}, 
+         DocumentationSearch`Private`nb$ = NotebookPut[
+            Notebook[{
+              Cell[
+               BoxData[
+                MakeBoxes[
+                 Hyperlink[
+                 "http://reference.wolfram.com/language/Fretica/ref/FBunch.\
+html"], StandardForm]], "Input", TextClipboardType -> "PlainText"]}, Visible -> 
+             False]]; SelectionMove[
+          DocumentationSearch`Private`nb$, All, Notebook]; 
+         FrontEndTokenExecute[DocumentationSearch`Private`nb$, "Copy"]; 
+         NotebookClose[DocumentationSearch`Private`nb$]; 
+         Null], "\<\"Go to web URL\"\>":>FrontEndExecute[{
+          NotebookLocate[{
+            URL[If[
+               TrueQ[DocumentationBuild`Make`Private`wsmlinkQ$58796], 
+               "http://reference.wolfram.com/system-modeler/", 
+               "http://reference.wolfram.com/language/"] <> 
+             "Fretica/ref/FBunch" <> ".html"], None}]}]},
+        Appearance->None,
+        MenuAppearance->Automatic,
+        MenuStyle->"URLMenu"],
+       MouseAppearanceTag["LinkHand"]]],
+      LineSpacing->{1.4, 0},ExpressionUUID->
+      "6c8cef19-45c6-4454-8d63-3f68d0362af6"]
+    }], "AnchorBar",
+     CacheGraphics->False,ExpressionUUID->
+     "7b4eb028-68a6-4b28-b020-3a199898c41b"]}
+  }]], "AnchorBarGrid",
+ GridBoxOptions->{GridBoxItemSize->{"Columns" -> {
+     Scaled[0.65], {
+      Scaled[0.34]}}, "ColumnsIndexed" -> {}, "Rows" -> {{1.}}, 
+   "RowsIndexed" -> {}}},
+ CellID->1,ExpressionUUID->"2a45bfc4-2a6c-4e60-bbeb-5ea5c6cb8f2a"],
+
+Cell["Fretica`", "ContextNameCell",ExpressionUUID->"20912ef0-d7c7-4ab3-b833-51f587abef49"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[GridBox[{
+   {Cell[TextData[{
+     Cell[
+     "FBunch", "ObjectName",ExpressionUUID->
+      "32fbb70b-b060-49af-87b2-617c6a7ba863"],
+     Cell[BoxData[
+      TemplateBox[{8},
+       "Spacer1"]],ExpressionUUID->"5053d000-e372-4b9a-897d-f57e6b8adb4f"],
+     Cell[BoxData[
+     ""], "ObjectNameTranslation",ExpressionUUID->
+      "76ed43c0-c4a8-4528-b07e-dde560834e6a"]
+    }],ExpressionUUID->"d847e119-75e5-4b82-a91d-db9913297bf0"], 
+    "\[SpanFromLeft]"}
+  }]], "ObjectNameGrid",ExpressionUUID->"36f04080-6886-4b7a-97e6-\
+ab5e56671625"],
+
+Cell[BoxData[GridBox[{
+   {"", Cell["\<\
+Legacy code. Use of FBunch is discouraged. Use FnsFCS instead. \
+\>",ExpressionUUID->"f1e0d77c-8067-4420-a0d3-c248a8cf3ff6"]}
+  }]], "Usage",
+ CellID->6920984,ExpressionUUID->"b786be1e-e066-4b2b-b144-e9a7e2d69ca1"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[Cell[BoxData[
+ ButtonBox[Cell[TextData[{
+   Cell[BoxData[
+    DynamicBox[ToBoxes[
+      If[
+       MatchQ[
+        CurrentValue[
+         EvaluationNotebook[], {TaggingRules, "Openers", "NotesSection"}, 
+         Closed], 
+        Alternatives[Open, True]], 
+       Style[
+        Graphics[{
+          Thickness[0.18], 
+          RGBColor[0.8509803921568627, 0.396078431372549, 0], 
+          Line[{{-1.8, 0.5}, {0, 0}, {1.8, 0.5}}]}, AspectRatio -> 1, 
+         PlotRange -> {{-3, 4}, {-1, 1}}, ImageSize -> 20], Magnification -> 
+        0.68 Inherited], 
+       Rotate[
+        Style[
+         Graphics[{
+           Thickness[0.18], 
+           RGBColor[0.8509803921568627, 0.396078431372549, 0], 
+           Line[{{-1.8, 0.5}, {0, 0}, {1.8, 0.5}}]}, AspectRatio -> 1, 
+          PlotRange -> {{-3, 4}, {-1, 1}}, ImageSize -> 20], Magnification -> 
+         0.68 Inherited], Rational[1, 2] Pi, {-1.65, -1}]]],
+     ImageSizeCache->{
+      13.600000000000001`, {0.5800000000000001, 13.020000000000001`}}]],
+    ExpressionUUID->"1e4f0c7e-eb10-4924-8b98-8c8a523d2eb6"],
+   Cell[BoxData[
+    TemplateBox[{1},
+     "Spacer1"]],ExpressionUUID->"7c86b1b4-6bf4-4a0f-877d-8d8a5e48fe5c"],
+   "Details and Options"
+  }], "NotesFrameText",ExpressionUUID->"8bbc555a-900f-49cd-9344-ed6eca7a916a"],
+  Appearance->{Automatic, None, "Normal", Automatic},
+  BaseStyle->None,
+  ButtonFunction:>(FrontEndExecute[{
+     FrontEnd`SelectionMove[
+      FrontEnd`SelectedNotebook[], All, ButtonCell], 
+     FrontEndToken["OpenCloseGroup"], 
+     FrontEnd`SelectionMove[
+      FrontEnd`SelectedNotebook[], After, CellContents]}]& ),
+  Evaluator->None,
+  Method->
+   "Preemptive"]],ExpressionUUID->"073d1f92-734e-4e2a-a03e-921abfc6482b"]], \
+"NotesSection",
+ WholeCellGroupOpener->True,
+ CellGroupingRules->{"SectionGrouping", 50},
+ CacheGraphics->False,
+ CellID->7135748,ExpressionUUID->"4e5c77b6-2293-4d96-91be-9ffa24eedcd9"],
+
+Cell["The following options can be given: ", "Notes",
+ CellID->133263339,ExpressionUUID->"484e5143-29b7-44f1-8c10-53cb1f79749a"],
+
+Cell[BoxData[GridBox[{
+   {Cell["      ", "TableRowIcon",ExpressionUUID->
+     "3eb7d04a-ba4a-4f0a-a371-79c105c7f129"], 
+    TemplateBox[{
+      Cell[
+       TextData["FPhotonData"]], "paclet:Fretica/ref/FPhotonData", 
+      "Fretica Package Symbol"},
+     "PackageLink",
+     BaseStyle->"3ColumnTableMod"], 
+    TemplateBox[{
+      Cell[
+       TextData["All"]], "paclet:ref/All"},
+     "RefLink",
+     BaseStyle->{"3ColumnTableMod"}], Cell[TextData[{
+     "Option for ",
+     Cell[BoxData[
+      TemplateBox[{
+        Cell[
+         TextData["FLifeTimeHisto"]], "paclet:Fretica/ref/FLifeTimeHisto", 
+        "Fretica Package Symbol"},
+       "PackageLink",
+       BaseStyle->"3ColumnTableMod"]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "60257a1c-79b0-4f14-8cdf-b7fcd97e420f"],
+     ". ",
+     Cell[BoxData[
+      TemplateBox[{
+        Cell[
+         TextData["Pos"]], "paclet:Fretica/ref/Pos", "Fretica Package Symbol"},
+       "PackageLink",
+       BaseStyle->"3ColumnTableMod"]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "5beefa55-5256-42af-ab55-6c73227e7868"],
+     "sibl",
+     Cell[BoxData[
+      TemplateBox[{
+        Cell[
+         TextData["e"]], "paclet:Fretica/ref/e", "Fretica Package Symbol"},
+       "PackageLink",
+       BaseStyle->"3ColumnTableMod"]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "98f02b76-88a2-4d07-a0a9-860cc385a3b2"],
+     " valu",
+     Cell[BoxData[
+      TemplateBox[{
+        Cell[
+         TextData["e"]], "paclet:Fretica/ref/e", "Fretica Package Symbol"},
+       "PackageLink",
+       BaseStyle->"3ColumnTableMod"]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "937dcc44-496c-410a-9e1d-0ef523806b36"],
+     "s: ",
+     Cell[BoxData[
+      TemplateBox[{
+        Cell[
+         TextData["All"]], "paclet:ref/All"},
+       "RefLink",
+       BaseStyle->{"3ColumnTableMod"}]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "90e42fc3-0b36-4f10-bc22-609ac48fcc6e"],
+     ", ",
+     Cell[BoxData[
+      TemplateBox[{
+        Cell[
+         TextData["FBursts"]], "paclet:Fretica/ref/FBursts", 
+        "Fretica Package Symbol"},
+       "PackageLink",
+       BaseStyle->"3ColumnTableMod"]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "63e6e9f2-f14a-423a-821b-0ae3f37989cd"],
+     ", ",
+     Cell[BoxData[
+      TemplateBox[{
+        Cell[
+         TextData["FNonBursts"]], "paclet:Fretica/ref/FNonBursts", 
+        "Fretica Package Symbol"},
+       "PackageLink",
+       BaseStyle->"3ColumnTableMod"]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "73883d9f-96da-4b12-b859-841f58938c56"],
+     ", and ",
+     Cell[BoxData[
+      TemplateBox[{
+        Cell[
+         TextData["FSelectedBursts"]], "paclet:Fretica/ref/FSelectedBursts", 
+        "Fretica Package Symbol"},
+       "PackageLink",
+       BaseStyle->"3ColumnTableMod"]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "d3320531-9d94-4395-8e59-aa0883766e34"],
+     ". "
+    }], "TableText",ExpressionUUID->"c2155580-cda5-4dbf-822a-7d85b4bb693a"]},
+   {Cell["      ", "TableRowIcon",ExpressionUUID->
+     "49d57cc1-dbf6-4d5a-98ee-119beb8d37ed"], 
+    TemplateBox[{
+      Cell[
+       TextData["FOutput"]], "paclet:Fretica/ref/FOutput", 
+      "Fretica Package Symbol"},
+     "PackageLink",
+     BaseStyle->"3ColumnTableMod"], 
+    TemplateBox[{
+      Cell[
+       TextData["FData"]], "paclet:Fretica/ref/FData", 
+      "Fretica Package Symbol"},
+     "PackageLink",
+     BaseStyle->"3ColumnTableMod"], Cell[TextData[{
+     Cell[BoxData[
+      TemplateBox[{
+        Cell[
+         TextData["FOutput"]], "paclet:Fretica/ref/FOutput", 
+        "Fretica Package Symbol"},
+       "PackageLink",
+       BaseStyle->"3ColumnTableMod"]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "4a624272-a1c3-46c4-bcb8-24b8a7a8b93a"],
+     " is an option for d",
+     Cell[BoxData[
+      TemplateBox[{
+        Cell[
+         TextData["e"]], "paclet:Fretica/ref/e", "Fretica Package Symbol"},
+       "PackageLink",
+       BaseStyle->"3ColumnTableMod"]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "e64e7b70-4c84-4582-b445-e9d938524c7a"],
+     "fining th",
+     Cell[BoxData[
+      TemplateBox[{
+        Cell[
+         TextData["e"]], "paclet:Fretica/ref/e", "Fretica Package Symbol"},
+       "PackageLink",
+       BaseStyle->"3ColumnTableMod"]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "79a462a0-cbd6-4d6c-98bc-4fa214d3e2e6"],
+     " output of som",
+     Cell[BoxData[
+      TemplateBox[{
+        Cell[
+         TextData["e"]], "paclet:Fretica/ref/e", "Fretica Package Symbol"},
+       "PackageLink",
+       BaseStyle->"3ColumnTableMod"]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "eb60483e-49e5-48c0-86ab-7af756728c9c"],
+     " Fr",
+     Cell[BoxData[
+      TemplateBox[{
+        Cell[
+         TextData["e"]], "paclet:Fretica/ref/e", "Fretica Package Symbol"},
+       "PackageLink",
+       BaseStyle->"3ColumnTableMod"]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "b38e305a-1991-44ce-b369-6ed8c8b32e64"],
+     "tica functions. ",
+     Cell[BoxData[
+      TemplateBox[{
+        Cell[
+         TextData["In"]], "paclet:ref/In"},
+       "RefLink",
+       BaseStyle->{"3ColumnTableMod"}]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "13ad8cfc-8a41-4fa2-a444-afc894bc087f"],
+     " g",
+     Cell[BoxData[
+      TemplateBox[{
+        Cell[
+         TextData["e"]], "paclet:Fretica/ref/e", "Fretica Package Symbol"},
+       "PackageLink",
+       BaseStyle->"3ColumnTableMod"]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "addbb5c2-d326-4975-a42d-4a6284ade885"],
+     "rn",
+     Cell[BoxData[
+      TemplateBox[{
+        Cell[
+         TextData["e"]], "paclet:Fretica/ref/e", "Fretica Package Symbol"},
+       "PackageLink",
+       BaseStyle->"3ColumnTableMod"]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "1f219c32-b4dc-4d63-8b13-a21e5253794e"],
+     "ral, th",
+     Cell[BoxData[
+      TemplateBox[{
+        Cell[
+         TextData["e"]], "paclet:Fretica/ref/e", "Fretica Package Symbol"},
+       "PackageLink",
+       BaseStyle->"3ColumnTableMod"]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "52dc1f06-c9be-4302-b873-01b67d290581"],
+     " option valu",
+     Cell[BoxData[
+      TemplateBox[{
+        Cell[
+         TextData["e"]], "paclet:Fretica/ref/e", "Fretica Package Symbol"},
+       "PackageLink",
+       BaseStyle->"3ColumnTableMod"]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "00591924-feea-4dfd-bf54-f5167faea19a"],
+     " can b",
+     Cell[BoxData[
+      TemplateBox[{
+        Cell[
+         TextData["e"]], "paclet:Fretica/ref/e", "Fretica Package Symbol"},
+       "PackageLink",
+       BaseStyle->"3ColumnTableMod"]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "2024187e-f354-4719-88ad-ec365d0215c8"],
+     " Foutput\[Rule]",
+     Cell[BoxData[
+      TemplateBox[{
+        Cell[
+         TextData["FGraph"]], "paclet:Fretica/ref/FGraph", 
+        "Fretica Package Symbol"},
+       "PackageLink",
+       BaseStyle->"3ColumnTableMod"]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "46c75b19-83b6-4d9a-b324-446f94334576"],
+     " for graphical output or Foutput\[Rule]",
+     Cell[BoxData[
+      TemplateBox[{
+        Cell[
+         TextData["FData"]], "paclet:Fretica/ref/FData", 
+        "Fretica Package Symbol"},
+       "PackageLink",
+       BaseStyle->"3ColumnTableMod"]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "563547eb-c6ad-41ac-9900-b97ef73761c6"],
+     " for num",
+     Cell[BoxData[
+      TemplateBox[{
+        Cell[
+         TextData["e"]], "paclet:Fretica/ref/e", "Fretica Package Symbol"},
+       "PackageLink",
+       BaseStyle->"3ColumnTableMod"]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "7917e6e1-8e46-4b20-ba06-e09f95b2034e"],
+     "rical output. "
+    }], "TableText",ExpressionUUID->"71f40c0b-43e9-4c6c-bcd1-6ed8e1cfacf2"]}
+  }]], "3ColumnTableMod",
+ GridBoxOptions->{
+ GridBoxBackground->{"Columns" -> {{None}}, "Rows" -> {None, {None}}},
+ GridBoxDividers->{"Rows" -> {{True, True, True}}}},
+ CellID->61349359,ExpressionUUID->"8eb9471e-2622-4b61-864d-71ad6d1d81c2"]
+}, Dynamic[CurrentValue[
+ EvaluationNotebook[], {TaggingRules, "Openers", "NotesSection"}, Closed]]]],
+
+Cell[BoxData[GridBox[{
+   {
+    DynamicBox[FEPrivate`ImportImage[
+      FrontEnd`FileName[{"Documentation", "FooterIcons"}, "RelatedGuide.png"]],
+     ImageSizeCache->{50., {27., 33.}}], GridBox[{
+      {
+       StyleBox[
+        RowBox[{"Related", " ", "Guides"}], "MoreAboutSection"]},
+      {
+       RowBox[{"\[FilledVerySmallSquare]", Cell[BoxData[
+         TemplateBox[{
+           Cell[
+            TextData["Fretica"]], "paclet:Fretica/guide/Fretica"},
+          "RefLinkPlain",
+          BaseStyle->{"MoreAbout"}]], "MoreAbout",ExpressionUUID->
+         "070d3f85-6643-4457-95c1-ea6eae4f0984"]}]}
+     }]}
+  }]], "MoreAboutSection",ExpressionUUID->"321e8c2e-d951-4ed6-8d07-\
+34f8358c35aa"],
+
+Cell[BoxData[GridBox[{
+   {
+    TemplateBox[{29},
+     "Spacer1"], GridBox[{
+      {
+       RowBox[{
+        TemplateBox[{17},
+         "Spacer1"], 
+        StyleBox[
+         RowBox[{"Related", " ", "Links"}], "RelatedLinksSection"]}]},
+      {Cell[TextData[Cell[BoxData[
+        RowBox[{
+         TemplateBox[{16},
+          "Spacer1"], "\[FilledVerySmallSquare]", Cell[BoxData[
+          TemplateBox[{
+            Cell[
+             TextData[
+              Cell[
+               TextData[{
+                 Cell[
+                  BoxData[
+                   TemplateBox[{2}, "Spacer1"]]], "Schuler Lab"}]]]], 
+            "https://schuler.bioc.uzh.ch/programs/"},
+           "WebLink",
+           BaseStyle->{"RelatedLinks"}]],ExpressionUUID->
+          "11951ede-695d-47cd-85b6-140facde3600"]}]],ExpressionUUID->
+        "e284f6de-57b1-40cb-ba60-412b9dc98730"]], "RelatedLinks",
+        ExpressionUUID->"d8359ed3-cda8-4fea-b19e-602632924e52"]}
+     }]}
+  }]], "RelatedLinksSection",ExpressionUUID->"3d098c04-37b9-49c1-9aa9-\
+84c8e962fea0"],
+
+Cell[" ", "FooterCell",ExpressionUUID->"4e87d8cf-f9fb-4640-845e-2a6c4da7f954"]
+},
+Saveable->False,
+ScreenStyleEnvironment->"Working",
+WindowSize->{900., 604.8},
+WindowMargins->{{0, Automatic}, {Automatic, 0}},
+WindowTitle->"FBunch",
+TaggingRules->{
+ "ModificationHighlight" -> False, "ColorType" -> "", "LinkTrails" -> "", 
+  "HasOptions" -> True, "ExampleCounter" -> 1, 
+  "Openers" -> {
+   "PrimaryExamplesSection" -> Open, "ExampleSection" -> {"0" -> Open}, 
+    "NotesSection" -> Closed}, "NewStyles" -> True, 
+  "CitationPopupData" -> $Failed, "ShowCitation" -> False, "RootCaptions" -> 
+  "", "Metadata" -> {
+   "built" -> "{2023, 3, 6, 14, 27, 51.7453587}", 
+    "history" -> {"XX", "", "", ""}, "context" -> "Fretica`", 
+    "keywords" -> {}, "specialkeywords" -> {}, 
+    "tutorialcollectionlinks" -> {}, "index" -> True, "label" -> 
+    "Fretica Symbol", "language" -> "en", "paclet" -> "Fretica", "status" -> 
+    "None", "summary" -> 
+    "Legacy code. Use of FBunch is discouraged. Use FnsFCS instead. ", 
+    "synonyms" -> {}, "tabletags" -> {}, "title" -> "FBunch", "titlemodifier" -> 
+    "", "windowtitle" -> "FBunch", "type" -> "Symbol", "uri" -> 
+    "Fretica/ref/FBunch"}},
+CellContext->"Global`",
+FrontEndVersion->"13.2 for Microsoft Windows (64-bit) (January 30, 2023)",
+StyleDefinitions->Notebook[{
+   Cell[
+    StyleData[
+    StyleDefinitions -> FrontEnd`FileName[{"Wolfram"}, "Reference.nb"]]], 
+   Cell[
+    StyleData["Input"], CellContext -> "Global`"], 
+   Cell[
+    StyleData["Output"], CellContext -> "Global`"]}, Visible -> False, 
+  FrontEndVersion -> "13.2 for Microsoft Windows (64-bit) (January 30, 2023)",
+   StyleDefinitions -> "Default.nb"],
+ExpressionUUID->"d09bbf0b-06a3-45cd-bc81-07d1f9e4ad9e"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[578, 21, 4297, 103, 70, "AnchorBarGrid",ExpressionUUID->"2a45bfc4-2a6c-4e60-bbeb-5ea5c6cb8f2a",
+ CellID->1],
+Cell[4878, 126, 90, 0, 70, "ContextNameCell",ExpressionUUID->"20912ef0-d7c7-4ab3-b833-51f587abef49"],
+Cell[CellGroupData[{
+Cell[4993, 130, 549, 14, 70, "ObjectNameGrid",ExpressionUUID->"36f04080-6886-4b7a-97e6-ab5e56671625"],
+Cell[5545, 146, 255, 5, 70, "Usage",ExpressionUUID->"b786be1e-e066-4b2b-b144-e9a7e2d69ca1",
+ CellID->6920984]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[5837, 156, 1917, 48, 70, "NotesSection",ExpressionUUID->"4e5c77b6-2293-4d96-91be-9ffa24eedcd9",
+ CellGroupingRules->{"SectionGrouping", 50},
+ CellID->7135748],
+Cell[7757, 206, 128, 1, 70, "Notes",ExpressionUUID->"484e5143-29b7-44f1-8c10-53cb1f79749a",
+ CellID->133263339],
+Cell[7888, 209, 8596, 240, 70, "3ColumnTableMod",ExpressionUUID->"8eb9471e-2622-4b61-864d-71ad6d1d81c2",
+ CellID->61349359]
+}, Dynamic[CurrentValue[EvaluationNotebook[], {TaggingRules, "Openers", "NotesSection"}, Closed]]]],
+Cell[16589, 453, 697, 18, 70, "MoreAboutSection",ExpressionUUID->"321e8c2e-d951-4ed6-8d07-34f8358c35aa"],
+Cell[17289, 473, 1043, 30, 70, "RelatedLinksSection",ExpressionUUID->"3d098c04-37b9-49c1-9aa9-84c8e962fea0"],
+Cell[18335, 505, 78, 0, 70, "FooterCell",ExpressionUUID->"4e87d8cf-f9fb-4640-845e-2a6c4da7f954"]
+}
+]
+*)
+
+(* End of internal cache information *)
+
