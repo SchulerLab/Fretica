@@ -14,3 +14,5 @@ Type “Fretica” and press F1 to open the documentation.
 
 Alternatively, Fretica can be downloaded and installed manually following the instructions in the ReadMe file.
 Fretica is only available for Windows.
+
+Fretica by Daniel Nettels and Ben Schuler is licensed under a Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License
