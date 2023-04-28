@@ -1,0 +1,1453 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 13.2' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     57981,       1443]
+NotebookOptionsPosition[     54251,       1369]
+NotebookOutlinePosition[     56694,       1424]
+CellTagsIndexPosition[     56651,       1421]
+WindowTitle->FTimeCorrelateWeighted
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[GridBox[{
+   {GridBox[{
+      {
+       ItemBox[Cell[BoxData[
+         RowBox[{
+          TemplateBox[{12},
+           "Spacer1"], Cell["FRETICA SYMBOL", "PacletNameCell",
+           TextAlignment->Center,ExpressionUUID->
+           "75a7dbdd-f001-4219-b8d0-b9a15732741f"], 
+          TemplateBox[{8},
+           "Spacer1"]}]],
+         TextAlignment->Center,ExpressionUUID->
+         "bf7a114b-ced3-4814-ac11-d3706cccb204"],
+        Background->RGBColor[0.490196, 0.576471, 0.690196],
+        ItemSize->Full], ""}
+     },
+     GridBoxAlignment->{"Rows" -> {{Center}}},
+     GridBoxItemSize->{"Columns" -> {Full, 
+         Scaled[0.02]}, "Rows" -> {{2.5}}}], Cell[TextData[{
+     Cell[BoxData[
+      TagBox[
+       ActionMenuBox[
+        FrameBox[Cell[TextData[{
+          "Related Guides",
+          " ",
+          Cell[BoxData[
+           GraphicsBox[
+            {GrayLevel[0.66667], Thickness[0.13], 
+             LineBox[{{-1.8, 0.5}, {0, 0}, {1.8, 0.5}}]},
+            AspectRatio->1,
+            ImageSize->20,
+            PlotRange->{{-3, 4}, {-1, 1}}]],ExpressionUUID->
+           "69b38aa1-e2a8-4a6c-8241-fae57ad71206"]
+         }],ExpressionUUID->"bb44499c-5690-455e-84b2-46ff7d0b6362"],
+         StripOnInput->False], {"\<\"Fretica\"\>":>Documentation`HelpLookup[
+        "paclet:Fretica/guide/Fretica"]},
+        Appearance->None,
+        MenuAppearance->Automatic,
+        MenuStyle->"MoreAbout"],
+       MouseAppearanceTag["LinkHand"]]],
+      LineSpacing->{1.4, 0},ExpressionUUID->
+      "40a680c6-b26c-43e6-8632-57a5cbe0ecd3"],
+     "\[ThickSpace]\[ThickSpace]\[ThickSpace]\[ThickSpace]\[ThickSpace]\
+\[ThickSpace]",
+     Cell[BoxData[
+      TagBox[
+       ActionMenuBox[
+        FrameBox[Cell[TextData[{
+          "URL",
+          " ",
+          Cell[BoxData[
+           GraphicsBox[
+            {GrayLevel[0.66667], Thickness[0.13], 
+             LineBox[{{-1.8, 0.5}, {0, 0}, {1.8, 0.5}}]},
+            AspectRatio->1,
+            ImageSize->20,
+            PlotRange->{{-3, 4}, {-1, 1}}]],ExpressionUUID->
+           "2fbab9c5-3359-4ce2-a51f-0a88854e4716"]
+         }],ExpressionUUID->"3c8c9067-be5b-42dc-a333-1011748542c5"],
+         StripOnInput->False], {"\<\"Fretica/ref/FTimeCorrelateWeighted\"\>":>
+        None, "\<\"Copy Wolfram Documentation Center URL\"\>":>
+        Module[{DocumentationSearch`Private`nb$}, 
+         DocumentationSearch`Private`nb$ = NotebookPut[
+            Notebook[{
+              Cell["Fretica/ref/FTimeCorrelateWeighted"]}, Visible -> False]]; 
+         SelectionMove[DocumentationSearch`Private`nb$, All, Notebook]; 
+         FrontEndTokenExecute[DocumentationSearch`Private`nb$, "Copy"]; 
+         NotebookClose[DocumentationSearch`Private`nb$]; Null], 
+        Delimiter, "\<\"Copy web URL\"\>":>
+        Module[{DocumentationSearch`Private`nb$}, 
+         DocumentationSearch`Private`nb$ = NotebookPut[
+            Notebook[{
+              Cell[
+               BoxData[
+                MakeBoxes[
+                 Hyperlink[
+                 "http://reference.wolfram.com/language/Fretica/ref/\
+FTimeCorrelateWeighted.html"], StandardForm]], "Input", TextClipboardType -> 
+               "PlainText"]}, Visible -> False]]; 
+         SelectionMove[DocumentationSearch`Private`nb$, All, Notebook]; 
+         FrontEndTokenExecute[DocumentationSearch`Private`nb$, "Copy"]; 
+         NotebookClose[DocumentationSearch`Private`nb$]; 
+         Null], "\<\"Go to web URL\"\>":>FrontEndExecute[{
+          NotebookLocate[{
+            URL[If[
+               TrueQ[DocumentationBuild`Make`Private`wsmlinkQ$241050], 
+               "http://reference.wolfram.com/system-modeler/", 
+               "http://reference.wolfram.com/language/"] <> 
+             "Fretica/ref/FTimeCorrelateWeighted" <> ".html"], None}]}]},
+        Appearance->None,
+        MenuAppearance->Automatic,
+        MenuStyle->"URLMenu"],
+       MouseAppearanceTag["LinkHand"]]],
+      LineSpacing->{1.4, 0},ExpressionUUID->
+      "8bdd6928-969d-4873-8b55-be7f4a3358b2"]
+    }], "AnchorBar",
+     CacheGraphics->False,ExpressionUUID->
+     "d085cc57-f4bf-4fff-9e00-1590d8643522"]}
+  }]], "AnchorBarGrid",
+ GridBoxOptions->{GridBoxItemSize->{"Columns" -> {
+     Scaled[0.65], {
+      Scaled[0.34]}}, "ColumnsIndexed" -> {}, "Rows" -> {{1.}}, 
+   "RowsIndexed" -> {}}},
+ CellID->1,ExpressionUUID->"d74785d6-c266-4ff1-aa31-bf815ff6e482"],
+
+Cell["Fretica`", "ContextNameCell",ExpressionUUID->"6b7e6379-7fc2-4bed-a0aa-466d95070c60"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[GridBox[{
+   {Cell[TextData[{
+     Cell[
+     "FTimeCorrelateWeighted", "ObjectName",ExpressionUUID->
+      "de8e36e3-4d77-42dc-92b2-2f9bd10bb55d"],
+     Cell[BoxData[
+      TemplateBox[{8},
+       "Spacer1"]],ExpressionUUID->"9ea82671-34e6-429b-9845-c94847f3e4b0"],
+     Cell[BoxData[
+     ""], "ObjectNameTranslation",ExpressionUUID->
+      "e0c3dbad-e47f-4192-a984-6975380b6689"]
+    }],ExpressionUUID->"7a9013d3-06b7-405c-9bca-a71b20dd166e"], 
+    "\[SpanFromLeft]"}
+  }]], "ObjectNameGrid",ExpressionUUID->"2b82007a-cee4-491f-9cdd-\
+6ede5ae7ccbd"],
+
+Cell[BoxData[GridBox[{
+   {"", Cell[TextData[{
+     "FTimeCorrelateWeighted[ { {t11, w11}, {t12, w12}},..}, { {t21, w21}, \
+{t22, w22}},..}, taumin, taumax, ",
+     Cell[BoxData[
+      StyleBox["inttime2realtime",
+       FontSlant->"Italic"]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "40c10bca-18f1-4ec9-8130-2305fb2ece13"],
+     "] correlates to time series using weights. FTimeCorrelateWeighted uses \
+the algorithm described by Wahl et al. \
+(https://doi.org/10.1364/OE.11.003583). The weights wij are real numbers. \
+taumin and taumax define the wanted range of lagtimes (in real time units). \
+Multiplication with ",
+     Cell[BoxData[
+      StyleBox["inttime2realtime",
+       FontSlant->"Italic"]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "0f285be6-5a4a-486b-8647-d343467c8936"],
+     " converts from integer time units to real time units."
+    }],ExpressionUUID->"0c6d28a5-65e1-42cb-a979-f79ea8a45774"]},
+   {"", Cell[
+    "Options:",ExpressionUUID->"1bb440a2-32e3-4ae4-8dbd-df9d4db5ec69"]},
+   {"", Cell[TextData[{
+     Cell[BoxData[
+      FormBox[
+       RowBox[{" ", " "}], TraditionalForm]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "8d3f1a18-5c9d-45c1-b2cd-d2cdcddd90c2"],
+     " FOutput",
+     Cell[BoxData[
+      FormBox["\[Rule]", TraditionalForm]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "8b22e810-7d06-4727-8220-daa8052190a0"],
+     "FData (default) or FOutput",
+     Cell[BoxData[
+      FormBox["\[Rule]", TraditionalForm]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "5fc5ec11-3f91-4252-afe5-efe42b0e4f98"],
+     "FGraph or FOutput",
+     Cell[BoxData[
+      FormBox["\[Rule]", TraditionalForm]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "c635e195-f94a-4c20-8fc5-d12a354d0d5b"],
+     "FRawData"
+    }],ExpressionUUID->"4ca308c7-1696-4ac8-971e-8105f24cecd0"]},
+   {"", Cell[TextData[{
+     Cell[BoxData[
+      FormBox[
+       RowBox[{" ", " "}], TraditionalForm]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "4a93ca1c-1310-4fab-8732-0cfe96d6ae3d"],
+     " FNumberOfStepsInCascade",
+     Cell[BoxData[
+      FormBox["\[Rule]", TraditionalForm]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "0a14413c-65a7-4680-abfb-8082cb1d0faf"],
+     "10 (default) or any other integer value ",
+     Cell[BoxData[
+      FormBox[">", TraditionalForm]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "2c7ac1d2-7605-4caa-a00b-42f50a19bfef"],
+     "0"
+    }],ExpressionUUID->"5b39164b-2364-4537-831b-f63175c7d488"]}
+  }]], "Usage",
+ CellID->609868734,ExpressionUUID->"f1e77d7f-eace-4dda-90b3-06762cc0ac0f"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[Cell[BoxData[
+ ButtonBox[Cell[TextData[{
+   Cell[BoxData[
+    DynamicBox[ToBoxes[
+      If[
+       MatchQ[
+        CurrentValue[
+         EvaluationNotebook[], {TaggingRules, "Openers", "NotesSection"}, 
+         Closed], 
+        Alternatives[Open, True]], 
+       Style[
+        Graphics[{
+          Thickness[0.18], 
+          RGBColor[0.8509803921568627, 0.396078431372549, 0], 
+          Line[{{-1.8, 0.5}, {0, 0}, {1.8, 0.5}}]}, AspectRatio -> 1, 
+         PlotRange -> {{-3, 4}, {-1, 1}}, ImageSize -> 20], Magnification -> 
+        0.68 Inherited], 
+       Rotate[
+        Style[
+         Graphics[{
+           Thickness[0.18], 
+           RGBColor[0.8509803921568627, 0.396078431372549, 0], 
+           Line[{{-1.8, 0.5}, {0, 0}, {1.8, 0.5}}]}, AspectRatio -> 1, 
+          PlotRange -> {{-3, 4}, {-1, 1}}, ImageSize -> 20], Magnification -> 
+         0.68 Inherited], Rational[1, 2] Pi, {-1.65, -1}]]],
+     ImageSizeCache->{
+      13.600000000000001`, {0.5800000000000001, 13.020000000000001`}}]],
+    ExpressionUUID->"f8dba252-4a17-4a52-859b-896e42103bcf"],
+   Cell[BoxData[
+    TemplateBox[{1},
+     "Spacer1"]],ExpressionUUID->"956dbed4-a979-4065-95d6-99e610527348"],
+   "Details and Options"
+  }], "NotesFrameText",ExpressionUUID->"1e99817f-0c64-4a0a-be3e-bb0ffa99acc9"],
+  Appearance->{Automatic, None, "Normal", Automatic},
+  BaseStyle->None,
+  ButtonFunction:>(FrontEndExecute[{
+     FrontEnd`SelectionMove[
+      FrontEnd`SelectedNotebook[], All, ButtonCell], 
+     FrontEndToken["OpenCloseGroup"], 
+     FrontEnd`SelectionMove[
+      FrontEnd`SelectedNotebook[], After, CellContents]}]& ),
+  Evaluator->None,
+  Method->
+   "Preemptive"]],ExpressionUUID->"f7b9b4df-f9a7-49c5-8df0-b72262a73936"]], \
+"NotesSection",
+ WholeCellGroupOpener->True,
+ CellGroupingRules->{"SectionGrouping", 50},
+ CacheGraphics->False,
+ CellID->392870448,ExpressionUUID->"b9289544-eae0-4be6-b82e-d822b8a6ea07"],
+
+Cell[TextData[Cell[BoxData[
+ TemplateBox[{
+   Cell[
+    TextData["Nothing"]], "paclet:ref/Nothing"},
+  "RefLink",
+  BaseStyle->{"InlineFormula"}]], "InlineFormula",
+ FontFamily->
+  "Source Sans Pro",ExpressionUUID->"8e9166fe-d32f-45b8-aded-d7d7391fb297"]], \
+"Input",
+ CellID->11419140,ExpressionUUID->"4de17bbb-a86b-40f1-957d-b3abaa60e1a5"],
+
+Cell["The following options can be given: ", "Notes",
+ CellID->173814088,ExpressionUUID->"73b96588-433e-49f5-82af-0f0a2506adf5"],
+
+Cell[BoxData[GridBox[{
+   {Cell["      ", "TableRowIcon",ExpressionUUID->
+     "9d6b3eca-9dac-440f-9faa-fd9bafefd20f"], 
+    TemplateBox[{
+      Cell[
+       TextData["FNumberOfStepsInCascade"]], 
+      "paclet:Fretica/ref/FNumberOfStepsInCascade", "Fretica Package Symbol"},
+     "PackageLink",
+     BaseStyle->"3ColumnTableMod"], "10", Cell[TextData[{
+     Cell[BoxData[
+      TemplateBox[{
+        Cell[
+         TextData["FNumberOfStepsInCascade"]], 
+        "paclet:Fretica/ref/FNumberOfStepsInCascade", 
+        "Fretica Package Symbol"},
+       "PackageLink",
+       BaseStyle->"3ColumnTableMod"]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "e55517f2-8578-4366-bbcf-5719d7e4ccf4"],
+     " is an option of ",
+     Cell[BoxData[
+      TemplateBox[{
+        Cell[
+         TextData["FFCSW"]], "paclet:Fretica/ref/FFCSW", 
+        "Fretica Package Symbol"},
+       "PackageLink",
+       BaseStyle->"3ColumnTableMod"]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "51b223e9-6896-49d9-9681-944a32a0737c"],
+     ". "
+    }], "TableText",ExpressionUUID->"51b05a6f-c3ed-4e27-b862-57708a8095b9"]},
+   {Cell["      ", "TableRowIcon",ExpressionUUID->
+     "64f3765f-96b6-444d-a957-35e4703bc135"], 
+    TemplateBox[{
+      Cell[
+       TextData["FOutput"]], "paclet:Fretica/ref/FOutput", 
+      "Fretica Package Symbol"},
+     "PackageLink",
+     BaseStyle->"3ColumnTableMod"], 
+    TemplateBox[{
+      Cell[
+       TextData["FData"]], "paclet:Fretica/ref/FData", 
+      "Fretica Package Symbol"},
+     "PackageLink",
+     BaseStyle->"3ColumnTableMod"], Cell[TextData[{
+     "FOutput is an option for defining the output of some Fretica functions. \
+In gerneral, the option value can be Foutput",
+     Cell[BoxData["$Failed"], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "33500058-6f1b-4575-919b-5be8ae353b69"],
+     ",\nTraditionalForm]\)FGraph for graphical output or Foutput",
+     Cell[BoxData["$Failed"], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "b28bd03f-767b-4f08-99a0-e278ec03cf9a"],
+     ",\nTraditionalForm]\)FData for numerical output. "
+    }], "TableText",ExpressionUUID->"6c732c74-3a60-44a7-962e-8de975309631"]},
+   {Cell["      ", "TableRowIcon",ExpressionUUID->
+     "873af8ae-1a9a-4ad8-b397-c589fc62ebca"], 
+    TemplateBox[{
+      Cell[
+       TextData["AlignmentPoint"]], "paclet:ref/AlignmentPoint"},
+     "RefLink",
+     BaseStyle->{"3ColumnTableMod"}], 
+    TemplateBox[{
+      Cell[
+       TextData["Center"]], "paclet:ref/Center"},
+     "RefLink",
+     BaseStyle->{"3ColumnTableMod"}], Cell["\<\
+AlignmentPoint is an option which specifies how objects should by default be \
+aligned when they appear in Inset.\
+\>", "TableText",ExpressionUUID->"68a9f493-4856-4cec-b2f8-f04fda984324"]},
+   {Cell["      ", "TableRowIcon",ExpressionUUID->
+     "502ffcf4-5a93-43b7-b9e5-0510719af0bf"], 
+    TemplateBox[{
+      Cell[
+       TextData["AspectRatio"]], "paclet:ref/AspectRatio"},
+     "RefLink",
+     BaseStyle->{"3ColumnTableMod"}], 
+    RowBox[{"     ", 
+     RowBox[{"1", "\n", 
+      RowBox[{"--", 
+       RowBox[{"--", 
+        RowBox[{"--", 
+         RowBox[{"--", 
+          RowBox[{"--", 
+           RowBox[{"-", "\n", "GoldenRatio"}]}]}]}]}]}]}]}], Cell["\<\
+AspectRatio is an option for Graphics and related functions that specifies \
+the ratio of height to width for a plot. \
+\>", "TableText",ExpressionUUID->"d61319ea-596d-4f96-8f16-7a112a0cba25"]},
+   {Cell["      ", "TableRowIcon",ExpressionUUID->
+     "3ac118e6-6f17-4576-9dec-cec57907bcb1"], 
+    TemplateBox[{
+      Cell[
+       TextData["Axes"]], "paclet:ref/Axes"},
+     "RefLink",
+     BaseStyle->{"3ColumnTableMod"}], 
+    TemplateBox[{
+      Cell[
+       TextData["Automatic"]], "paclet:ref/Automatic"},
+     "RefLink",
+     BaseStyle->{"3ColumnTableMod"}], Cell["\<\
+Axes is an option for graphics functions that specifies whether axes should \
+be drawn. \
+\>", "TableText",ExpressionUUID->"671bd197-ea13-4a99-bd88-471a47003844"]},
+   {Cell["      ", "TableRowIcon",ExpressionUUID->
+     "ff9f983f-31c2-42c6-b3f2-69e08bbbc32f"], 
+    TemplateBox[{
+      Cell[
+       TextData["AxesLabel"]], "paclet:ref/AxesLabel"},
+     "RefLink",
+     BaseStyle->{"3ColumnTableMod"}], 
+    TemplateBox[{
+      Cell[
+       TextData["None"]], "paclet:ref/None"},
+     "RefLink",
+     BaseStyle->{"3ColumnTableMod"}], Cell["\<\
+AxesLabel is an option for graphics functions that specifies labels for axes. \
+\>", "TableText",ExpressionUUID->"b0e66995-b4e2-4f86-8636-da2dd778742b"]},
+   {Cell["      ", "TableRowIcon",ExpressionUUID->
+     "4ae24713-e364-46d0-b690-51012233c983"], 
+    TemplateBox[{
+      Cell[
+       TextData["AxesOrigin"]], "paclet:ref/AxesOrigin"},
+     "RefLink",
+     BaseStyle->{"3ColumnTableMod"}], 
+    TemplateBox[{
+      Cell[
+       TextData["Automatic"]], "paclet:ref/Automatic"},
+     "RefLink",
+     BaseStyle->{"3ColumnTableMod"}], Cell["\<\
+AxesOrigin is an option for graphics functions that specifies where any axes \
+drawn should cross. \
+\>", "TableText",ExpressionUUID->"c9c51377-772c-49c2-96ab-c6b92090d3fd"]},
+   {Cell["      ", "TableRowIcon",ExpressionUUID->
+     "6a3780a1-3607-4d83-a438-8550aeff6ee4"], 
+    TemplateBox[{
+      Cell[
+       TextData["AxesStyle"]], "paclet:ref/AxesStyle"},
+     "RefLink",
+     BaseStyle->{"3ColumnTableMod"}], 
+    RowBox[{"{", "}"}], Cell["\<\
+AxesStyle is an option for graphics functions that specifies how axes should \
+be rendered. \
+\>", "TableText",ExpressionUUID->"e09d126d-aee9-43b5-84c2-cd2b35ba3aa7"]},
+   {Cell["      ", "TableRowIcon",ExpressionUUID->
+     "99aeb9d0-f6d4-4b24-ae39-5f6f3df979f4"], 
+    TemplateBox[{
+      Cell[
+       TextData["Background"]], "paclet:ref/Background"},
+     "RefLink",
+     BaseStyle->{"3ColumnTableMod"}], 
+    TemplateBox[{
+      Cell[
+       TextData["None"]], "paclet:ref/None"},
+     "RefLink",
+     BaseStyle->{"3ColumnTableMod"}], Cell["\<\
+Background is an option that specifies what background color to use. \
+\>", "TableText",ExpressionUUID->"d6720c90-80db-44bb-9df2-0f171ff5d48c"]},
+   {Cell["      ", "TableRowIcon",ExpressionUUID->
+     "238e9528-1d3c-492f-9b04-b272ed262e1d"], 
+    TemplateBox[{
+      Cell[
+       TextData["BaselinePosition"]], "paclet:ref/BaselinePosition"},
+     "RefLink",
+     BaseStyle->{"3ColumnTableMod"}], 
+    TemplateBox[{
+      Cell[
+       TextData["Automatic"]], "paclet:ref/Automatic"},
+     "RefLink",
+     BaseStyle->{"3ColumnTableMod"}], Cell[TextData[{
+     "Baseline",
+     Cell[BoxData[
+      TemplateBox[{
+        Cell[
+         TextData["Pos"]], "paclet:Fretica/ref/Pos", "Fretica Package Symbol"},
+       "PackageLink",
+       BaseStyle->"3ColumnTableMod"]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "b3fd4c67-4d2a-4e81-b968-1e0b93c92a7a"],
+     "ition is an option that specifies where the baseline of an object is \
+considered to be for purposes of alignment with surrounding text or other \
+expressions. "
+    }], "TableText",ExpressionUUID->"2c73042a-73f4-448d-87d8-97b3eeffe91e"]},
+   {Cell["      ", "TableRowIcon",ExpressionUUID->
+     "b9f9a254-1f54-428d-8394-375bc38fe4a3"], 
+    TemplateBox[{
+      Cell[
+       TextData["BaseStyle"]], "paclet:ref/BaseStyle"},
+     "RefLink",
+     BaseStyle->{"3ColumnTableMod"}], 
+    RowBox[{"{", "}"}], Cell["\<\
+BaseStyle is an option for formatting and related constructs that specifies \
+the base style to use for them. \
+\>", "TableText",ExpressionUUID->"cadbb5b5-7931-4764-812f-cf14237194bb"]},
+   {Cell["      ", "TableRowIcon",ExpressionUUID->
+     "39c010d9-0f6a-42a8-b3dd-9f2ba8a60f60"], 
+    TemplateBox[{
+      Cell[
+       TextData["ClippingStyle"]], "paclet:ref/ClippingStyle"},
+     "RefLink",
+     BaseStyle->{"3ColumnTableMod"}], 
+    TemplateBox[{
+      Cell[
+       TextData["None"]], "paclet:ref/None"},
+     "RefLink",
+     BaseStyle->{"3ColumnTableMod"}], Cell["\<\
+ClippingStyle is an option for plotting functions that specifies the style of \
+what should be drawn when curves or surfaces would extend beyond the plot \
+range. \
+\>", "TableText",ExpressionUUID->"340392d7-71e3-4477-b40f-3171c21a5d82"]},
+   {Cell["      ", "TableRowIcon",ExpressionUUID->
+     "66bb630d-5b8c-46ef-980c-b45124eaba7b"], 
+    TemplateBox[{
+      Cell[
+       TextData["ColorFunction"]], "paclet:ref/ColorFunction"},
+     "RefLink",
+     BaseStyle->{"3ColumnTableMod"}], 
+    TemplateBox[{
+      Cell[
+       TextData["Automatic"]], "paclet:ref/Automatic"},
+     "RefLink",
+     BaseStyle->{"3ColumnTableMod"}], Cell["\<\
+ColorFunction is an option for graphics functions that specifies a function \
+to apply to determine colors of elements. \
+\>", "TableText",ExpressionUUID->"cd47de6b-f6e2-491e-8ea0-a5729f1b23c8"]},
+   {Cell["      ", "TableRowIcon",ExpressionUUID->
+     "1df532eb-7702-41e6-b6a6-41e2c9ce6930"], 
+    TemplateBox[{
+      Cell[
+       TextData["ColorFunctionScaling"]], "paclet:ref/ColorFunctionScaling"},
+     "RefLink",
+     BaseStyle->{"3ColumnTableMod"}], 
+    TemplateBox[{
+      Cell[
+       TextData["True"]], "paclet:ref/True"},
+     "RefLink",
+     BaseStyle->{"3ColumnTableMod"}], Cell["\<\
+ColorFunctionScaling is an option for graphics functions that specifies \
+whether arguments supplied to a color function should be scaled to lie \
+between 0 and 1. \
+\>", "TableText",ExpressionUUID->"bf9644e5-dd95-49dd-91d9-b1359916cc35"]},
+   {Cell["      ", "TableRowIcon",ExpressionUUID->
+     "939d497f-0129-4484-87d4-60301a96977b"], 
+    TemplateBox[{
+      Cell[
+       TextData["ColorOutput"]], "paclet:ref/ColorOutput"},
+     "RefLink",
+     BaseStyle->{"3ColumnTableMod"}], 
+    TemplateBox[{
+      Cell[
+       TextData["Automatic"]], "paclet:ref/Automatic"},
+     "RefLink",
+     BaseStyle->{"3ColumnTableMod"}], Cell["\<\
+ColorOutput is an option for graphics functions that specifies the type of \
+color output to produce. \
+\>", "TableText",ExpressionUUID->"73687f23-1945-43fe-a4e2-c03448636dcb"]},
+   {Cell["      ", "TableRowIcon",ExpressionUUID->
+     "024aff9e-5888-4b7d-b915-b916a92ce910"], 
+    TemplateBox[{
+      Cell[
+       TextData["ContentSelectable"]], "paclet:ref/ContentSelectable"},
+     "RefLink",
+     BaseStyle->{"3ColumnTableMod"}], 
+    TemplateBox[{
+      Cell[
+       TextData["Automatic"]], "paclet:ref/Automatic"},
+     "RefLink",
+     BaseStyle->{"3ColumnTableMod"}], Cell["\<\
+ContentSelectable is an option to constructs such as Inset, Graphics, and \
+GraphicsGroup that specifies whether and how content within them should be \
+selectable. \
+\>", "TableText",ExpressionUUID->"de26dc9b-4c87-4e11-9808-333c74cda0a1"]},
+   {Cell["      ", "TableRowIcon",ExpressionUUID->
+     "20b50e86-552d-40e4-8ad1-26015c7a3faa"], 
+    TemplateBox[{
+      Cell[
+       TextData["CoordinatesToolOptions"]], 
+      "paclet:ref/CoordinatesToolOptions"},
+     "RefLink",
+     BaseStyle->{"3ColumnTableMod"}], 
+    TemplateBox[{
+      Cell[
+       TextData["Automatic"]], "paclet:ref/Automatic"},
+     "RefLink",
+     BaseStyle->{"3ColumnTableMod"}], Cell[TextData[{
+     "CoordinatesToolOptions is an option for Graphics that gives values of \
+options associated with the ",
+     Cell[BoxData[
+      StyleBox[
+       RowBox[{"Get", " ", "Coordinates"}], "MenuName"]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "079d5878-3482-4884-9f2a-6fd72dd1a129"],
+     " tool."
+    }], "TableText",ExpressionUUID->"e6c2d036-32b6-4709-9eee-3a5297b23b28"]},
+   {Cell["      ", "TableRowIcon",ExpressionUUID->
+     "158831b8-e9bc-4568-9fc7-4fc5e7a405b3"], 
+    TemplateBox[{
+      Cell[
+       TextData["DataRange"]], "paclet:ref/DataRange"},
+     "RefLink",
+     BaseStyle->{"3ColumnTableMod"}], 
+    TemplateBox[{
+      Cell[
+       TextData["Automatic"]], "paclet:ref/Automatic"},
+     "RefLink",
+     BaseStyle->{"3ColumnTableMod"}], Cell["\<\
+DataRange is an option for functions such as ListPlot and ListDensityPlot \
+that specifies what range of actual coordinates the data should be assumed to \
+occupy. \
+\>", "TableText",ExpressionUUID->"516bd1eb-8e37-4aff-9b5a-6721cdd8a923"]},
+   {Cell["      ", "TableRowIcon",ExpressionUUID->
+     "37b3655d-582e-4747-a2d4-c4d91493f247"], 
+    TemplateBox[{
+      Cell[
+       TextData["DisplayFunction"]], "paclet:ref/DisplayFunction"},
+     "RefLink",
+     BaseStyle->{"3ColumnTableMod"}], 
+    TemplateBox[{
+      Cell[
+       TextData["$DisplayFunction"]], "paclet:ref/$DisplayFunction"},
+     "RefLink",
+     BaseStyle->{"3ColumnTableMod"}], Cell["\<\
+DisplayFunction is an option for graphics and sound functions that specifies \
+a function to apply to graphics and sound objects before returning them.\
+\>", "TableText",ExpressionUUID->"7790fb5b-0650-4ecd-89de-ddbe711c62a8"]},
+   {Cell["      ", "TableRowIcon",ExpressionUUID->
+     "02a5d6a2-24db-471f-a54e-01a725216f26"], 
+    TemplateBox[{
+      Cell[
+       TextData["Epilog"]], "paclet:ref/Epilog"},
+     "RefLink",
+     BaseStyle->{"3ColumnTableMod"}], 
+    RowBox[{"{", "}"}], Cell["\<\
+Epilog is an option for graphics functions that gives a list of graphics \
+primitives to be rendered after the main part of the graphics is rendered. \
+\>", "TableText",ExpressionUUID->"00bff540-b265-4a3f-8e5b-71e127f69b76"]},
+   {Cell["      ", "TableRowIcon",ExpressionUUID->
+     "f70dbcee-6e21-41d5-8dd5-454ed84624ff"], 
+    TemplateBox[{
+      Cell[
+       TextData["Filling"]], "paclet:ref/Filling"},
+     "RefLink",
+     BaseStyle->{"3ColumnTableMod"}], 
+    TemplateBox[{
+      Cell[
+       TextData["None"]], "paclet:ref/None"},
+     "RefLink",
+     BaseStyle->{"3ColumnTableMod"}], Cell["\<\
+Filling is an option for ListPlot, Plot, Plot3D, and related functions that \
+specifies what filling to add under points, curves, and surfaces. \
+\>", "TableText",ExpressionUUID->"db90ff61-187d-410f-82f5-081cae0fb8c6"]},
+   {Cell["      ", "TableRowIcon",ExpressionUUID->
+     "c2602d3d-290d-46fb-a3ac-eb3d4068919c"], 
+    TemplateBox[{
+      Cell[
+       TextData["FillingStyle"]], "paclet:ref/FillingStyle"},
+     "RefLink",
+     BaseStyle->{"3ColumnTableMod"}], 
+    TemplateBox[{
+      Cell[
+       TextData["Automatic"]], "paclet:ref/Automatic"},
+     "RefLink",
+     BaseStyle->{"3ColumnTableMod"}], Cell["\<\
+FillingStyle is an option for ListPlot, Plot, Plot3D, and related functions \
+that specifies the default style of filling to be used. \
+\>", "TableText",ExpressionUUID->"d608ccf1-73fe-4af8-978e-7b018ef7e8c5"]},
+   {Cell["      ", "TableRowIcon",ExpressionUUID->
+     "d930d6b7-9f62-44c5-b377-7cb4ea116de8"], 
+    TemplateBox[{
+      Cell[
+       TextData["FormatType"]], "paclet:ref/FormatType"},
+     "RefLink",
+     BaseStyle->{"3ColumnTableMod"}], 
+    TemplateBox[{
+      Cell[
+       TextData["TraditionalForm"]], "paclet:ref/TraditionalForm"},
+     "RefLink",
+     BaseStyle->{"3ColumnTableMod"}], Cell["\<\
+FormatType is an option for output streams, graphics, and functions such as \
+Text that specifies the default format type to use when outputting \
+expressions. \
+\>", "TableText",ExpressionUUID->"7f98ba52-82bc-4b21-923f-21256e646109"]},
+   {Cell["      ", "TableRowIcon",ExpressionUUID->
+     "27f04131-7283-4ac6-89c4-567ff7799f8b"], 
+    TemplateBox[{
+      Cell[
+       TextData["Frame"]], "paclet:ref/Frame"},
+     "RefLink",
+     BaseStyle->{"3ColumnTableMod"}], 
+    TemplateBox[{
+      Cell[
+       TextData["Automatic"]], "paclet:ref/Automatic"},
+     "RefLink",
+     BaseStyle->{"3ColumnTableMod"}], Cell["\<\
+Frame is an option for Graphics, Grid, and other constructs that specifies \
+whether to include a frame. \
+\>", "TableText",ExpressionUUID->"9da41f05-6d10-4fff-99e2-f8af3ef3f19e"]},
+   {Cell["      ", "TableRowIcon",ExpressionUUID->
+     "28cdae6c-5065-442f-9269-0cf9e775ec69"], 
+    TemplateBox[{
+      Cell[
+       TextData["FrameLabel"]], "paclet:ref/FrameLabel"},
+     "RefLink",
+     BaseStyle->{"3ColumnTableMod"}], 
+    TemplateBox[{
+      Cell[
+       TextData["None"]], "paclet:ref/None"},
+     "RefLink",
+     BaseStyle->{"3ColumnTableMod"}], Cell["\<\
+FrameLabel is an option for Graphics, Manipulate, and related functions that \
+specifies labels to be placed on the edges of a frame. \
+\>", "TableText",ExpressionUUID->"25f97779-e7a8-4b95-a77b-5be9bf40a270"]},
+   {Cell["      ", "TableRowIcon",ExpressionUUID->
+     "d1a69c37-05bf-40bd-a6e7-10c20f8d1ce0"], 
+    TemplateBox[{
+      Cell[
+       TextData["FrameStyle"]], "paclet:ref/FrameStyle"},
+     "RefLink",
+     BaseStyle->{"3ColumnTableMod"}], 
+    RowBox[{"{", "}"}], Cell["\<\
+FrameStyle is an option for Graphics, Grid, and other constructs that \
+specifies the style in which to draw frames.\
+\>", "TableText",ExpressionUUID->"bb891c9f-cd7a-4d42-b09b-62bd43bc5d73"]},
+   {Cell["      ", "TableRowIcon",ExpressionUUID->
+     "9f1ee879-a762-4d1b-b48c-c1a5395f651b"], 
+    TemplateBox[{
+      Cell[
+       TextData["FrameTicks"]], "paclet:ref/FrameTicks"},
+     "RefLink",
+     BaseStyle->{"3ColumnTableMod"}], 
+    TemplateBox[{
+      Cell[
+       TextData["Automatic"]], "paclet:ref/Automatic"},
+     "RefLink",
+     BaseStyle->{"3ColumnTableMod"}], Cell["\<\
+FrameTicks is an option for 2D graphics functions that specifies tick marks \
+for the edges of a frame. \
+\>", "TableText",ExpressionUUID->"d1acf55e-63af-4544-bc7c-80584e103596"]},
+   {Cell["      ", "TableRowIcon",ExpressionUUID->
+     "1317a0dc-2c2a-4c8d-bae0-08f26dee3e80"], 
+    TemplateBox[{
+      Cell[
+       TextData["FrameTicksStyle"]], "paclet:ref/FrameTicksStyle"},
+     "RefLink",
+     BaseStyle->{"3ColumnTableMod"}], 
+    RowBox[{"{", "}"}], Cell["\<\
+FrameTicksStyle is an option for 2D graphics functions that specifies how \
+frame ticks should be rendered.\
+\>", "TableText",ExpressionUUID->"d651d04f-56fd-4158-bbb7-3948f513c282"]},
+   {Cell["      ", "TableRowIcon",ExpressionUUID->
+     "99e2bbd5-d82b-456f-83f8-2a2f586efe70"], 
+    TemplateBox[{
+      Cell[
+       TextData["GridLines"]], "paclet:ref/GridLines"},
+     "RefLink",
+     BaseStyle->{"3ColumnTableMod"}], 
+    TemplateBox[{
+      Cell[
+       TextData["None"]], "paclet:ref/None"},
+     "RefLink",
+     BaseStyle->{"3ColumnTableMod"}], Cell["\<\
+GridLines is an option for two-dimensional graphics functions that specifies \
+grid lines. \
+\>", "TableText",ExpressionUUID->"121c7a46-ddae-4c73-a33c-7d25354c931a"]},
+   {Cell["      ", "TableRowIcon",ExpressionUUID->
+     "43520b8a-2ef5-4495-a34e-70584efc20fb"], 
+    TemplateBox[{
+      Cell[
+       TextData["GridLinesStyle"]], "paclet:ref/GridLinesStyle"},
+     "RefLink",
+     BaseStyle->{"3ColumnTableMod"}], 
+    RowBox[{"{", "}"}], Cell["\<\
+GridLinesStyle is an option for 2D graphics functions that specifies how grid \
+lines should be rendered.\
+\>", "TableText",ExpressionUUID->"2b1a18e3-cf60-43de-ac29-8c4a095977af"]},
+   {Cell["      ", "TableRowIcon",ExpressionUUID->
+     "09456503-6105-4e4d-a90b-1fdd0b2be248"], 
+    TemplateBox[{
+      Cell[
+       TextData["ImageMargins"]], "paclet:ref/ImageMargins"},
+     "RefLink",
+     BaseStyle->{"3ColumnTableMod"}], "0.", Cell["\<\
+ImageMargins is an option that specifies the absolute margins to leave around \
+the image displayed for an object. \
+\>", "TableText",ExpressionUUID->"26e867be-601e-4164-90bb-2572d2b9d630"]},
+   {Cell["      ", "TableRowIcon",ExpressionUUID->
+     "9fe544c8-bc83-454d-9f2d-6ab88b25bad1"], 
+    TemplateBox[{
+      Cell[
+       TextData["ImagePadding"]], "paclet:ref/ImagePadding"},
+     "RefLink",
+     BaseStyle->{"3ColumnTableMod"}], 
+    TemplateBox[{
+      Cell[
+       TextData["All"]], "paclet:ref/All"},
+     "RefLink",
+     BaseStyle->{"3ColumnTableMod"}], Cell["\<\
+ImagePadding is an option for graphics functions that specifies what absolute \
+extra padding should be left for extended objects such as thick lines and \
+annotations such as tick and axis labels.\
+\>", "TableText",ExpressionUUID->"80990000-8cd7-4c45-8c40-d90ca655ce46"]},
+   {Cell["      ", "TableRowIcon",ExpressionUUID->
+     "961c6be1-fe09-4486-bc3e-c6c4563b5a0f"], 
+    TemplateBox[{
+      Cell[
+       TextData["ImageSize"]], "paclet:ref/ImageSize"},
+     "RefLink",
+     BaseStyle->{"3ColumnTableMod"}], 
+    TemplateBox[{
+      Cell[
+       TextData["Automatic"]], "paclet:ref/Automatic"},
+     "RefLink",
+     BaseStyle->{"3ColumnTableMod"}], Cell["\<\
+ImageSize is an option that specifies the overall size of an image to display \
+for an object. \
+\>", "TableText",ExpressionUUID->"f5068af1-a981-49e5-98a1-4ae949a8af64"]},
+   {Cell["      ", "TableRowIcon",ExpressionUUID->
+     "2aa9f317-ad16-4717-bd38-cdd98b2204ce"], 
+    TemplateBox[{
+      Cell[
+       TextData["InterpolationOrder"]], "paclet:ref/InterpolationOrder"},
+     "RefLink",
+     BaseStyle->{"3ColumnTableMod"}], 
+    TemplateBox[{
+      Cell[
+       TextData["None"]], "paclet:ref/None"},
+     "RefLink",
+     BaseStyle->{"3ColumnTableMod"}], Cell["\<\
+InterpolationOrder is an option for Interpolation, as well as ListLinePlot, \
+ListPlot3D, ListContourPlot, and related functions, that specifies what order \
+of interpolation to use.\
+\>", "TableText",ExpressionUUID->"9961b12a-eb9f-4fa0-9098-9d316a624ea3"]},
+   {Cell["      ", "TableRowIcon",ExpressionUUID->
+     "4ff50cee-99c2-4f66-bd85-a55bf8a25499"], 
+    TemplateBox[{
+      Cell[
+       TextData["IntervalMarkers"]], "paclet:ref/IntervalMarkers"},
+     "RefLink",
+     BaseStyle->{"3ColumnTableMod"}], 
+    TemplateBox[{
+      Cell[
+       TextData["Automatic"]], "paclet:ref/Automatic"},
+     "RefLink",
+     BaseStyle->{"3ColumnTableMod"}], Cell["\<\
+IntervalMarkers is an option for plotting functions such as ListPlot and \
+BarChart that specifies how to represent uncertainty intervals.\
+\>", "TableText",ExpressionUUID->"5b5ad314-94b9-423d-b303-92606cd0ca61"]},
+   {Cell["      ", "TableRowIcon",ExpressionUUID->
+     "67a493d1-79fc-417b-ac2e-3fcc80a337d3"], 
+    TemplateBox[{
+      Cell[
+       TextData["IntervalMarkersStyle"]], "paclet:ref/IntervalMarkersStyle"},
+     "RefLink",
+     BaseStyle->{"3ColumnTableMod"}], 
+    TemplateBox[{
+      Cell[
+       TextData["Automatic"]], "paclet:ref/Automatic"},
+     "RefLink",
+     BaseStyle->{"3ColumnTableMod"}], Cell[TextData[{
+     Cell[BoxData[
+      RowBox[{"IntervalMarkersStyle", " "}]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "df296289-a31e-4fce-8ec7-a6061a095969"],
+     " is an option for plotting functions that specifies styles in which \
+uncertainty intervals are drawn."
+    }], "TableText",ExpressionUUID->"8d2c4075-aa8d-43bc-a088-1bd55e1dab7d"]},
+   {Cell["      ", "TableRowIcon",ExpressionUUID->
+     "5ac9e08f-4496-4972-ba12-d2534b7c998a"], 
+    TemplateBox[{
+      Cell[
+       TextData["Joined"]], "paclet:ref/Joined"},
+     "RefLink",
+     BaseStyle->{"3ColumnTableMod"}], 
+    TemplateBox[{
+      Cell[
+       TextData["False"]], "paclet:ref/False"},
+     "RefLink",
+     BaseStyle->{"3ColumnTableMod"}], Cell["\<\
+Joined is an option for ListPlot and related functions that specifies whether \
+points in each dataset should be joined into a line, or should be plotted as \
+separate points. \
+\>", "TableText",ExpressionUUID->"4023cfd3-7e0e-4442-8068-a1d0250fde90"]},
+   {Cell["      ", "TableRowIcon",ExpressionUUID->
+     "830cc6b1-c7c9-4dfb-8f85-c107487dcf5c"], 
+    TemplateBox[{
+      Cell[
+       TextData["LabelingFunction"]], "paclet:ref/LabelingFunction"},
+     "RefLink",
+     BaseStyle->{"3ColumnTableMod"}], 
+    TemplateBox[{
+      Cell[
+       TextData["Automatic"]], "paclet:ref/Automatic"},
+     "RefLink",
+     BaseStyle->{"3ColumnTableMod"}], Cell["\<\
+LabelingFunction is an option for data visualization functions to \
+automatically label elements of a visualization.\
+\>", "TableText",ExpressionUUID->"4cf5e5b6-a282-4039-b2c7-97923bba8183"]},
+   {Cell["      ", "TableRowIcon",ExpressionUUID->
+     "003a6c5b-e1ef-41fa-a246-ac53e84cee05"], 
+    TemplateBox[{
+      Cell[
+       TextData["LabelingSize"]], "paclet:ref/LabelingSize"},
+     "RefLink",
+     BaseStyle->{"3ColumnTableMod"}], 
+    TemplateBox[{
+      Cell[
+       TextData["Automatic"]], "paclet:ref/Automatic"},
+     "RefLink",
+     BaseStyle->{"3ColumnTableMod"}], Cell["\<\
+LabelingSize is an option to visualization functions that specifies the size \
+to be used for labels and callouts.\
+\>", "TableText",ExpressionUUID->"007e06e0-0e48-4961-9090-8d3991052d2f"]},
+   {Cell["      ", "TableRowIcon",ExpressionUUID->
+     "e67151cf-c0ee-4f81-8a62-6596b83c96dc"], 
+    TemplateBox[{
+      Cell[
+       TextData["LabelStyle"]], "paclet:ref/LabelStyle"},
+     "RefLink",
+     BaseStyle->{"3ColumnTableMod"}], 
+    RowBox[{"{", "}"}], Cell["\<\
+LabelStyle is an option for formatting and related constructs that specifies \
+the style to use in displaying their label-like elements. \
+\>", "TableText",ExpressionUUID->"c8237ff0-cd1b-4b6f-af85-64b489bb0e97"]},
+   {Cell["      ", "TableRowIcon",ExpressionUUID->
+     "a407572a-91df-4ae7-81a4-6a77557fabd0"], 
+    TemplateBox[{
+      Cell[
+       TextData["MaxPlotPoints"]], "paclet:ref/MaxPlotPoints"},
+     "RefLink",
+     BaseStyle->{"3ColumnTableMod"}], 
+    TemplateBox[{
+      Cell[
+       TextData["Infinity"]], "paclet:ref/Infinity"},
+     "RefLink",
+     BaseStyle->{"3ColumnTableMod"}], Cell["\<\
+MaxPlotPoints is an option for plotting functions like ArrayPlot and \
+ListPlot3D that specifies the maximum number of points that will explicitly \
+be included in the output. \
+\>", "TableText",ExpressionUUID->"c471df16-402a-45ef-861c-f54bc42fb48f"]},
+   {Cell["      ", "TableRowIcon",ExpressionUUID->
+     "84aad7d7-6412-46b1-95d8-a4773107ae9e"], 
+    TemplateBox[{
+      Cell[
+       TextData["Mesh"]], "paclet:ref/Mesh"},
+     "RefLink",
+     BaseStyle->{"3ColumnTableMod"}], 
+    TemplateBox[{
+      Cell[
+       TextData["None"]], "paclet:ref/None"},
+     "RefLink",
+     BaseStyle->{"3ColumnTableMod"}], Cell["\<\
+Mesh is an option for Plot3D, DensityPlot, and other plotting functions that \
+specifies what mesh should be drawn. \
+\>", "TableText",ExpressionUUID->"12af58f1-51e9-43d3-8510-2e923d39f92f"]},
+   {Cell["      ", "TableRowIcon",ExpressionUUID->
+     "74e0d0da-688b-4786-8876-50240a9cf710"], 
+    TemplateBox[{
+      Cell[
+       TextData["MeshFunctions"]], "paclet:ref/MeshFunctions"},
+     "RefLink",
+     BaseStyle->{"3ColumnTableMod"}], 
+    RowBox[{"{", 
+     RowBox[{"#1", " ", "&"}], " ", "}"}], Cell["\<\
+MeshFunctions is an option for plotting functions that specifies functions to \
+use to determine the placement of mesh divisions. \
+\>", "TableText",ExpressionUUID->"2dfe7903-23d5-4f8b-87d0-7c97587d82ab"]},
+   {Cell["      ", "TableRowIcon",ExpressionUUID->
+     "8d2494f4-a2f7-4867-92ff-04ea77d86ae5"], 
+    TemplateBox[{
+      Cell[
+       TextData["MeshShading"]], "paclet:ref/MeshShading"},
+     "RefLink",
+     BaseStyle->{"3ColumnTableMod"}], 
+    TemplateBox[{
+      Cell[
+       TextData["None"]], "paclet:ref/None"},
+     "RefLink",
+     BaseStyle->{"3ColumnTableMod"}], Cell["\<\
+MeshShading is an option for plotting functions that gives lists of colors to \
+use for regions between mesh divisions. \
+\>", "TableText",ExpressionUUID->"0620d8eb-fa11-4ad5-9ae9-622b6fd6406d"]},
+   {Cell["      ", "TableRowIcon",ExpressionUUID->
+     "7fbf403f-5123-4e6a-920a-3ce7f5ecf13e"], 
+    TemplateBox[{
+      Cell[
+       TextData["MeshStyle"]], "paclet:ref/MeshStyle"},
+     "RefLink",
+     BaseStyle->{"3ColumnTableMod"}], 
+    TemplateBox[{
+      Cell[
+       TextData["Automatic"]], "paclet:ref/Automatic"},
+     "RefLink",
+     BaseStyle->{"3ColumnTableMod"}], Cell["\<\
+MeshStyle is an option for Plot3D, DensityPlot, and other plotting functions \
+that specifies the style in which to draw a mesh. \
+\>", "TableText",ExpressionUUID->"49a202cf-eb4a-4410-a9d6-e75427799c50"]},
+   {Cell["      ", "TableRowIcon",ExpressionUUID->
+     "1b71a9e6-0222-491a-a274-f7327f4e4abe"], 
+    TemplateBox[{
+      Cell[
+       TextData["Method"]], "paclet:ref/Method"},
+     "RefLink",
+     BaseStyle->{"3ColumnTableMod"}], 
+    TemplateBox[{
+      Cell[
+       TextData["Automatic"]], "paclet:ref/Automatic"},
+     "RefLink",
+     BaseStyle->{"3ColumnTableMod"}], Cell["\<\
+Method is an option for various algorithm-intensive functions that specifies \
+what internal methods they should use.\
+\>", "TableText",ExpressionUUID->"f9ea7dfd-da88-4dc4-83bb-32ed96779b68"]},
+   {Cell["      ", "TableRowIcon",ExpressionUUID->
+     "6c57c0b4-2f41-4346-b4fb-bbfab0a213b6"], 
+    TemplateBox[{
+      Cell[
+       TextData["MultiaxisArrangement"]], "paclet:ref/MultiaxisArrangement"},
+     "RefLink",
+     BaseStyle->{"3ColumnTableMod"}], 
+    TemplateBox[{
+      Cell[
+       TextData["None"]], "paclet:ref/None"},
+     "RefLink",
+     BaseStyle->{"3ColumnTableMod"}], Cell["\<\
+MultiaxisArrangement is an option to plotting functions that specifies how \
+multiple axes are arranged.\
+\>", "TableText",ExpressionUUID->"2742294a-ef17-4adf-8e5e-9a4c5e141cae"]},
+   {Cell["      ", "TableRowIcon",ExpressionUUID->
+     "08c8cdd9-94bd-4fbb-9afc-2e08c1f957a1"], 
+    TemplateBox[{
+      Cell[
+       TextData["PerformanceGoal"]], "paclet:ref/PerformanceGoal"},
+     "RefLink",
+     BaseStyle->{"3ColumnTableMod"}], 
+    TemplateBox[{
+      Cell[
+       TextData["$PerformanceGoal"]], "paclet:ref/$PerformanceGoal"},
+     "RefLink",
+     BaseStyle->{"3ColumnTableMod"}], Cell["\<\
+PerformanceGoal is an option for various algorithmic and presentational \
+functions that specifies what aspect of performance to try to optimize with \
+Automatic settings for options.\
+\>", "TableText",ExpressionUUID->"71bf4ae9-5419-46f2-96f5-6783246d7cd3"]},
+   {Cell["      ", "TableRowIcon",ExpressionUUID->
+     "6762ed54-fcd5-4cdb-8d04-f976d052af10"], 
+    TemplateBox[{
+      Cell[
+       TextData["PlotLabel"]], "paclet:ref/PlotLabel"},
+     "RefLink",
+     BaseStyle->{"3ColumnTableMod"}], 
+    TemplateBox[{
+      Cell[
+       TextData["None"]], "paclet:ref/None"},
+     "RefLink",
+     BaseStyle->{"3ColumnTableMod"}], Cell["\<\
+PlotLabel is an option for graphics functions that specifies an overall label \
+for a plot. \
+\>", "TableText",ExpressionUUID->"f0eca9fd-d0ae-48ae-ba63-a2a59ed34e4b"]},
+   {Cell["      ", "TableRowIcon",ExpressionUUID->
+     "d4e25b0d-9c2b-44b1-be9a-3d588ae59f4b"], 
+    TemplateBox[{
+      Cell[
+       TextData["PlotLabels"]], "paclet:ref/PlotLabels"},
+     "RefLink",
+     BaseStyle->{"3ColumnTableMod"}], 
+    TemplateBox[{
+      Cell[
+       TextData["None"]], "paclet:ref/None"},
+     "RefLink",
+     BaseStyle->{"3ColumnTableMod"}], Cell["\<\
+PlotLabels is an option for visualization functions that specifies what \
+labels to use for each data source.\
+\>", "TableText",ExpressionUUID->"cad45ee6-8730-4632-8f3d-3ae04e9a4d02"]},
+   {Cell["      ", "TableRowIcon",ExpressionUUID->
+     "5716b4ff-faa4-47d6-a0a2-39bea951534c"], 
+    TemplateBox[{
+      Cell[
+       TextData["PlotLayout"]], "paclet:ref/PlotLayout"},
+     "RefLink",
+     BaseStyle->{"3ColumnTableMod"}], "\"\<Overlaid\>\"", Cell["\<\
+PlotLayout is an option for plotting functions that specifies the layout of \
+multiple components in a plot.\
+\>", "TableText",ExpressionUUID->"062a3303-38c0-447d-8ab4-fa5763f49796"]},
+   {Cell["      ", "TableRowIcon",ExpressionUUID->
+     "fdc21baa-23d0-45e8-937a-a6b6e5b0bddc"], 
+    TemplateBox[{
+      Cell[
+       TextData["PlotLegends"]], "paclet:ref/PlotLegends"},
+     "RefLink",
+     BaseStyle->{"3ColumnTableMod"}], 
+    TemplateBox[{
+      Cell[
+       TextData["None"]], "paclet:ref/None"},
+     "RefLink",
+     BaseStyle->{"3ColumnTableMod"}], Cell["\<\
+PlotLegends is an option for plot functions that specifies what legends to \
+use. \
+\>", "TableText",ExpressionUUID->"65f7159e-223d-4708-b45b-b493a8016e4c"]},
+   {Cell["      ", "TableRowIcon",ExpressionUUID->
+     "5260d8ef-97fe-41ff-9a4a-a3d7be4a7317"], 
+    TemplateBox[{
+      Cell[
+       TextData["PlotMarkers"]], "paclet:ref/PlotMarkers"},
+     "RefLink",
+     BaseStyle->{"3ColumnTableMod"}], 
+    TemplateBox[{
+      Cell[
+       TextData["None"]], "paclet:ref/None"},
+     "RefLink",
+     BaseStyle->{"3ColumnTableMod"}], Cell["\<\
+PlotMarkers is an option for graphics functions like ListPlot and \
+ListLinePlot that specifies what markers to draw at the points plotted. \
+\>", "TableText",ExpressionUUID->"179c48cd-c277-4894-b167-97b1b1ed7f28"]},
+   {Cell["      ", "TableRowIcon",ExpressionUUID->
+     "708158d9-643d-42a9-93b8-2365f5a445a6"], 
+    TemplateBox[{
+      Cell[
+       TextData["PlotRange"]], "paclet:ref/PlotRange"},
+     "RefLink",
+     BaseStyle->{"3ColumnTableMod"}], 
+    TemplateBox[{
+      Cell[
+       TextData["Automatic"]], "paclet:ref/Automatic"},
+     "RefLink",
+     BaseStyle->{"3ColumnTableMod"}], Cell["\<\
+PlotRange is an option for graphics functions that specifies what range of \
+coordinates to include in a plot. \
+\>", "TableText",ExpressionUUID->"8d31bf9a-8f49-4196-ae8f-7a5a57b9f87a"]},
+   {Cell["      ", "TableRowIcon",ExpressionUUID->
+     "c4817f30-627a-4eaf-a7e2-4d6c7d675e68"], 
+    TemplateBox[{
+      Cell[
+       TextData["PlotRangeClipping"]], "paclet:ref/PlotRangeClipping"},
+     "RefLink",
+     BaseStyle->{"3ColumnTableMod"}], 
+    TemplateBox[{
+      Cell[
+       TextData["True"]], "paclet:ref/True"},
+     "RefLink",
+     BaseStyle->{"3ColumnTableMod"}], Cell["\<\
+PlotRangeClipping is an option for graphics functions that specifies whether \
+graphics objects should be clipped at the edge of the region defined by \
+PlotRange, or should be allowed to extend to the actual edge of the image. \
+\>", "TableText",ExpressionUUID->"aebd2a8c-64c5-4637-8bb6-71ca67b1d459"]},
+   {Cell["      ", "TableRowIcon",ExpressionUUID->
+     "b641054c-5c81-40fe-b16d-f87e0d72b6d3"], 
+    TemplateBox[{
+      Cell[
+       TextData["PlotRangePadding"]], "paclet:ref/PlotRangePadding"},
+     "RefLink",
+     BaseStyle->{"3ColumnTableMod"}], 
+    TemplateBox[{
+      Cell[
+       TextData["Automatic"]], "paclet:ref/Automatic"},
+     "RefLink",
+     BaseStyle->{"3ColumnTableMod"}], Cell["\<\
+PlotRangePadding is an option for graphics functions that specifies how much \
+further axes etc. should extend beyond the range of coordinates specified by \
+PlotRange. \
+\>", "TableText",ExpressionUUID->"532954f1-155d-4ff7-b124-54173b0f9d6e"]},
+   {Cell["      ", "TableRowIcon",ExpressionUUID->
+     "c435d25f-6b2d-4459-9175-26f459a6324e"], 
+    TemplateBox[{
+      Cell[
+       TextData["PlotRegion"]], "paclet:ref/PlotRegion"},
+     "RefLink",
+     BaseStyle->{"3ColumnTableMod"}], 
+    TemplateBox[{
+      Cell[
+       TextData["Automatic"]], "paclet:ref/Automatic"},
+     "RefLink",
+     BaseStyle->{"3ColumnTableMod"}], Cell["\<\
+PlotRegion is an option for graphics functions that specifies what region of \
+the final display area a plot should fill. \
+\>", "TableText",ExpressionUUID->"a8c1a33e-5eb7-4154-bb88-5538c73ad58c"]},
+   {Cell["      ", "TableRowIcon",ExpressionUUID->
+     "1c5895ae-479f-4469-8d02-eb03861afc87"], 
+    TemplateBox[{
+      Cell[
+       TextData["PlotStyle"]], "paclet:ref/PlotStyle"},
+     "RefLink",
+     BaseStyle->{"3ColumnTableMod"}], 
+    TemplateBox[{
+      Cell[
+       TextData["Automatic"]], "paclet:ref/Automatic"},
+     "RefLink",
+     BaseStyle->{"3ColumnTableMod"}], Cell["\<\
+PlotStyle is an option for plotting and related functions that specifies \
+styles in which objects are to be drawn. \
+\>", "TableText",ExpressionUUID->"cd2e441c-34cd-4855-943d-0eeaac532b5c"]},
+   {Cell["      ", "TableRowIcon",ExpressionUUID->
+     "c7e5cb83-299e-42d2-828e-a7f06af0e675"], 
+    TemplateBox[{
+      Cell[
+       TextData["PlotTheme"]], "paclet:ref/PlotTheme"},
+     "RefLink",
+     BaseStyle->{"3ColumnTableMod"}], 
+    TemplateBox[{
+      Cell[
+       TextData["$PlotTheme"]], "paclet:ref/$PlotTheme"},
+     "RefLink",
+     BaseStyle->{"3ColumnTableMod"}], Cell["\<\
+PlotTheme is an option for plotting and related functions that specifies an \
+overall theme for visualization elements and styles. \
+\>", "TableText",ExpressionUUID->"0b4c3ddc-3393-40c1-b0b0-2f29d9354912"]},
+   {Cell["      ", "TableRowIcon",ExpressionUUID->
+     "f253eb21-0035-49fd-906d-8d5806c86336"], 
+    TemplateBox[{
+      Cell[
+       TextData["PreserveImageOptions"]], "paclet:ref/PreserveImageOptions"},
+     "RefLink",
+     BaseStyle->{"3ColumnTableMod"}], 
+    TemplateBox[{
+      Cell[
+       TextData["Automatic"]], "paclet:ref/Automatic"},
+     "RefLink",
+     BaseStyle->{"3ColumnTableMod"}], Cell["\<\
+PreserveImageOptions is an option to graphics and related functions that \
+specifies whether image size and certain other options should be preserved \
+from the previous version of a graphic if the graphic is replaced by a new \
+one in output.\
+\>", "TableText",ExpressionUUID->"3ac49611-aada-460d-8c35-e75578a5d406"]},
+   {Cell["      ", "TableRowIcon",ExpressionUUID->
+     "e2e1bb82-3b0b-4395-abbe-9563299ab9d4"], 
+    TemplateBox[{
+      Cell[
+       TextData["Prolog"]], "paclet:ref/Prolog"},
+     "RefLink",
+     BaseStyle->{"3ColumnTableMod"}], 
+    RowBox[{"{", "}"}], Cell["\<\
+Prolog is an option for graphics functions which gives a list of graphics \
+primitives to be rendered before the main part of the graphics is rendered. \
+\>", "TableText",ExpressionUUID->"3109f6e8-8c5d-4e7b-8216-9761d9a95c9f"]},
+   {Cell["      ", "TableRowIcon",ExpressionUUID->
+     "64f1a02d-50b8-4f12-b9d5-40e352f8c2d6"], 
+    TemplateBox[{
+      Cell[
+       TextData["RotateLabel"]], "paclet:ref/RotateLabel"},
+     "RefLink",
+     BaseStyle->{"3ColumnTableMod"}], 
+    TemplateBox[{
+      Cell[
+       TextData["True"]], "paclet:ref/True"},
+     "RefLink",
+     BaseStyle->{"3ColumnTableMod"}], Cell["\<\
+RotateLabel is an option for graphics and related functions that specifies \
+whether labels on vertical frame axes should be rotated to be vertical. \
+\>", "TableText",ExpressionUUID->"84d56e22-6a95-4f65-a26e-0e3579c3437b"]},
+   {Cell["      ", "TableRowIcon",ExpressionUUID->
+     "785667a3-ecc5-429c-906d-653028a28bd9"], 
+    TemplateBox[{
+      Cell[
+       TextData["ScalingFunctions"]], "paclet:ref/ScalingFunctions"},
+     "RefLink",
+     BaseStyle->{"3ColumnTableMod"}], 
+    TemplateBox[{
+      Cell[
+       TextData["None"]], "paclet:ref/None"},
+     "RefLink",
+     BaseStyle->{"3ColumnTableMod"}], Cell[TextData[{
+     "ScalingFunctions is an option for ListPlot, BarChart, ",
+     Cell[BoxData[
+      TemplateBox[{
+        Cell[
+         TextData["Histo"]], "paclet:Fretica/ref/Histo", 
+        "Fretica Package Symbol"},
+       "PackageLink",
+       BaseStyle->"3ColumnTableMod"]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "c8505180-5aca-4b31-954c-d8cb718867bb"],
+     "gram, and other plotting functions that specifies what scaling \
+functions should be used. "
+    }], "TableText",ExpressionUUID->"df9b7b4d-ae48-4178-be6b-c8a104ca98d2"]},
+   {Cell["      ", "TableRowIcon",ExpressionUUID->
+     "893b2000-6403-4c04-9ad2-e109283b714d"], 
+    TemplateBox[{
+      Cell[
+       TextData["TargetUnits"]], "paclet:ref/TargetUnits"},
+     "RefLink",
+     BaseStyle->{"3ColumnTableMod"}], 
+    TemplateBox[{
+      Cell[
+       TextData["Automatic"]], "paclet:ref/Automatic"},
+     "RefLink",
+     BaseStyle->{"3ColumnTableMod"}], Cell["\<\
+TargetUnits is an option used to specify the desired output units for \
+visualization functions operating on Quantity expressions.\
+\>", "TableText",ExpressionUUID->"16f7162c-403e-4f97-8cd2-cbea4eda2343"]},
+   {Cell["      ", "TableRowIcon",ExpressionUUID->
+     "e566e42a-d0ce-4efc-a265-af677a93a48e"], 
+    TemplateBox[{
+      Cell[
+       TextData["Ticks"]], "paclet:ref/Ticks"},
+     "RefLink",
+     BaseStyle->{"3ColumnTableMod"}], 
+    TemplateBox[{
+      Cell[
+       TextData["Automatic"]], "paclet:ref/Automatic"},
+     "RefLink",
+     BaseStyle->{"3ColumnTableMod"}], Cell["\<\
+Ticks is an option for graphics functions that specifies tick marks for axes. \
+\>", "TableText",ExpressionUUID->"8d6cdb58-1af5-4b7b-9139-7cdef039c8d2"]},
+   {Cell["      ", "TableRowIcon",ExpressionUUID->
+     "af7a1092-6f61-4c11-b78e-484fd76de040"], 
+    TemplateBox[{
+      Cell[
+       TextData["TicksStyle"]], "paclet:ref/TicksStyle"},
+     "RefLink",
+     BaseStyle->{"3ColumnTableMod"}], 
+    RowBox[{"{", "}"}], Cell["\<\
+TicksStyle is an option for graphics functions which specifies how ticks \
+should be rendered.\
+\>", "TableText",ExpressionUUID->"9c0cddd8-e615-4bf4-a604-fa1e930128d2"]}
+  }]], "3ColumnTableMod",
+ GridBoxOptions->{
+ GridBoxBackground->{
+  "Columns" -> {{None}}, 
+   "Rows" -> {
+    None, None, None, None, None, None, None, None, None, None, None, None, 
+     None, None, None, None, None, None, None, None, None, None, None, None, 
+     None, None, None, None, None, None, None, None, None, None, None, None, 
+     None, None, None, None, None, None, None, None, None, None, None, None, 
+     None, None, None, None, None, None, None, None, None, None, None, None, 
+     None, None, None, None, None, {None}}},
+ GridBoxDividers->{
+  "Rows" -> {{
+     True, True, True, True, True, True, True, True, True, True, True, True, 
+      True, True, True, True, True, True, True, True, True, True, True, True, 
+      True, True, True, True, True, True, True, True, True, True, True, True, 
+      True, True, True, True, True, True, True, True, True, True, True, True, 
+      True, True, True, True, True, True, True, True, True, True, True, True, 
+      True, True, True, True, True, True, True}}}},
+ CellID->456150119,ExpressionUUID->"e58a6845-98cd-4e45-9530-9ee8c3bd9577"]
+}, Dynamic[CurrentValue[
+ EvaluationNotebook[], {TaggingRules, "Openers", "NotesSection"}, Closed]]]],
+
+Cell[BoxData[GridBox[{
+   {
+    DynamicBox[FEPrivate`ImportImage[
+      FrontEnd`FileName[{"Documentation", "FooterIcons"}, "RelatedGuide.png"]],
+     ImageSizeCache->{50., {27., 33.}}], GridBox[{
+      {
+       StyleBox[
+        RowBox[{"Related", " ", "Guides"}], "MoreAboutSection"]},
+      {
+       RowBox[{"\[FilledVerySmallSquare]", Cell[BoxData[
+         TemplateBox[{
+           Cell[
+            TextData["Fretica"]], "paclet:Fretica/guide/Fretica"},
+          "RefLinkPlain",
+          BaseStyle->{"MoreAbout"}]], "MoreAbout",ExpressionUUID->
+         "0811f6cd-169d-4f98-a796-fafccd1ba36a"]}]}
+     }]}
+  }]], "MoreAboutSection",ExpressionUUID->"2d674379-bca6-4e35-b62a-\
+7841ff2308af"],
+
+Cell[BoxData[GridBox[{
+   {
+    TemplateBox[{29},
+     "Spacer1"], GridBox[{
+      {
+       RowBox[{
+        TemplateBox[{17},
+         "Spacer1"], 
+        StyleBox[
+         RowBox[{"Related", " ", "Links"}], "RelatedLinksSection"]}]},
+      {Cell[TextData[Cell[BoxData[
+        RowBox[{
+         TemplateBox[{16},
+          "Spacer1"], "\[FilledVerySmallSquare]", Cell[BoxData[
+          TemplateBox[{
+            Cell[
+             TextData[
+              Cell[
+               TextData[{
+                 Cell[
+                  BoxData[
+                   TemplateBox[{2}, "Spacer1"]]], "Schuler Lab"}]]]], 
+            "https://schuler.bioc.uzh.ch/programs/"},
+           "WebLink",
+           BaseStyle->{"RelatedLinks"}]],ExpressionUUID->
+          "11ccaf45-50d8-45ad-9777-94d14af1c329"]}]],ExpressionUUID->
+        "d9cb1e92-f7a4-44e4-bb74-6daa34a18cf7"]], "RelatedLinks",
+        ExpressionUUID->"226c2ae9-5794-468c-a095-3c602f4b9224"]}
+     }]}
+  }]], "RelatedLinksSection",ExpressionUUID->"7de9b2c6-9e5c-4c9a-90e0-\
+d9145fdb03fe"],
+
+Cell[" ", "FooterCell",ExpressionUUID->"02ed1dc5-ba65-46dd-b307-78f52fee1f5d"]
+},
+Saveable->False,
+ScreenStyleEnvironment->"Working",
+WindowSize->{900., 604.8},
+WindowMargins->{{0, Automatic}, {Automatic, 0}},
+WindowTitle->"FTimeCorrelateWeighted",
+TaggingRules->{
+ "ModificationHighlight" -> False, "ColorType" -> "", "LinkTrails" -> "", 
+  "HasOptions" -> True, "ExampleCounter" -> 1, 
+  "Openers" -> {
+   "PrimaryExamplesSection" -> Open, "ExampleSection" -> {"0" -> Open}, 
+    "NotesSection" -> Closed}, "NewStyles" -> True, 
+  "CitationPopupData" -> $Failed, "ShowCitation" -> False, "RootCaptions" -> 
+  "", "Metadata" -> {
+   "built" -> "{2023, 3, 6, 14, 32, 16.5088410}", 
+    "history" -> {"XX", "", "", ""}, "context" -> "Fretica`", 
+    "keywords" -> {}, "specialkeywords" -> {}, 
+    "tutorialcollectionlinks" -> {}, "index" -> True, "label" -> 
+    "Fretica Symbol", "language" -> "en", "paclet" -> "Fretica", "status" -> 
+    "None", "summary" -> 
+    "FTimeCorrelateWeighted[ { {t11, w11}, {t12, w12}},..}, { {t21, w21}, \
+{t22, w22}},..}, taumin, taumax, inttime2realtime] correlates to time series \
+using weights. FTimeCorrelateWeighted uses the algorithm described by Wahl et \
+al. (https://doi.org/10.1364/OE.11.003583). The weights wij are real numbers. \
+taumin and taumax define the wanted range of lagtimes (in real time units). \
+Multiplication with inttime2realtime converts from integer time units to real \
+time units. Options: FOutput->FData (default) or FOutput->FGraph or \
+FOutput->FRawData FNumberOfStepsInCascade->10 (default) or any other integer \
+value >0", "synonyms" -> {}, "tabletags" -> {}, "title" -> 
+    "FTimeCorrelateWeighted", "titlemodifier" -> "", "windowtitle" -> 
+    "FTimeCorrelateWeighted", "type" -> "Symbol", "uri" -> 
+    "Fretica/ref/FTimeCorrelateWeighted"}},
+CellContext->"Global`",
+FrontEndVersion->"13.2 for Microsoft Windows (64-bit) (January 30, 2023)",
+StyleDefinitions->Notebook[{
+   Cell[
+    StyleData[
+    StyleDefinitions -> FrontEnd`FileName[{"Wolfram"}, "Reference.nb"]]], 
+   Cell[
+    StyleData["Input"], CellContext -> "Global`"], 
+   Cell[
+    StyleData["Output"], CellContext -> "Global`"]}, Visible -> False, 
+  FrontEndVersion -> "13.2 for Microsoft Windows (64-bit) (January 30, 2023)",
+   StyleDefinitions -> "Default.nb"],
+ExpressionUUID->"f570b84d-ce6d-47b7-94ca-bf0133bc2976"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[594, 21, 4363, 103, 70, "AnchorBarGrid",ExpressionUUID->"d74785d6-c266-4ff1-aa31-bf815ff6e482",
+ CellID->1],
+Cell[4960, 126, 90, 0, 70, "ContextNameCell",ExpressionUUID->"6b7e6379-7fc2-4bed-a0aa-466d95070c60"],
+Cell[CellGroupData[{
+Cell[5075, 130, 565, 14, 70, "ObjectNameGrid",ExpressionUUID->"2b82007a-cee4-491f-9cdd-6ede5ae7ccbd"],
+Cell[5643, 146, 2812, 65, 70, "Usage",ExpressionUUID->"f1e77d7f-eace-4dda-90b3-06762cc0ac0f",
+ CellID->609868734]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[8492, 216, 1919, 48, 70, "NotesSection",ExpressionUUID->"b9289544-eae0-4be6-b82e-d822b8a6ea07",
+ CellGroupingRules->{"SectionGrouping", 50},
+ CellID->392870448],
+Cell[10414, 266, 341, 9, 70, "Input",ExpressionUUID->"4de17bbb-a86b-40f1-957d-b3abaa60e1a5",
+ CellID->11419140],
+Cell[10758, 277, 128, 1, 70, "Notes",ExpressionUUID->"73b96588-433e-49f5-82af-0f0a2506adf5",
+ CellID->173814088],
+Cell[10889, 280, 41429, 1031, 70, "3ColumnTableMod",ExpressionUUID->"e58a6845-98cd-4e45-9530-9ee8c3bd9577",
+ CellID->456150119]
+}, Dynamic[CurrentValue[EvaluationNotebook[], {TaggingRules, "Openers", "NotesSection"}, Closed]]]],
+Cell[52423, 1315, 697, 18, 70, "MoreAboutSection",ExpressionUUID->"2d674379-bca6-4e35-b62a-7841ff2308af"],
+Cell[53123, 1335, 1043, 30, 70, "RelatedLinksSection",ExpressionUUID->"7de9b2c6-9e5c-4c9a-90e0-d9145fdb03fe"],
+Cell[54169, 1367, 78, 0, 70, "FooterCell",ExpressionUUID->"02ed1dc5-ba65-46dd-b307-78f52fee1f5d"]
+}
+]
+*)
+
+(* End of internal cache information *)
+

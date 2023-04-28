@@ -1,0 +1,4546 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 13.2' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[    166427,       4536]
+NotebookOptionsPosition[    161465,       4446]
+NotebookOutlinePosition[    165248,       4519]
+CellTagsIndexPosition[    165205,       4516]
+WindowTitle->FScanImage
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[GridBox[{
+   {GridBox[{
+      {
+       ItemBox[Cell[BoxData[
+         RowBox[{
+          TemplateBox[{12},
+           "Spacer1"], Cell["FRETICA SYMBOL", "PacletNameCell",
+           TextAlignment->Center,ExpressionUUID->
+           "6da85642-2f09-4394-b5ef-fcf56159fe62"], 
+          TemplateBox[{8},
+           "Spacer1"]}]],
+         TextAlignment->Center,ExpressionUUID->
+         "45be224c-6f23-4aac-b5d4-497442e0a384"],
+        Background->RGBColor[0.490196, 0.576471, 0.690196],
+        ItemSize->Full], ""}
+     },
+     GridBoxAlignment->{"Rows" -> {{Center}}},
+     GridBoxItemSize->{"Columns" -> {Full, 
+         Scaled[0.02]}, "Rows" -> {{2.5}}}], Cell[TextData[{
+     Cell[BoxData[
+      TagBox[
+       ActionMenuBox[
+        FrameBox[Cell[TextData[{
+          "Related Guides",
+          " ",
+          Cell[BoxData[
+           GraphicsBox[
+            {GrayLevel[0.66667], Thickness[0.13], 
+             LineBox[{{-1.8, 0.5}, {0, 0}, {1.8, 0.5}}]},
+            AspectRatio->1,
+            ImageSize->20,
+            PlotRange->{{-3, 4}, {-1, 1}}]],ExpressionUUID->
+           "e3228314-9500-4f76-b883-f81f0950bc2f"]
+         }],ExpressionUUID->"f70d719d-2fdf-45e9-8c45-5f45c6d18a45"],
+         StripOnInput->False], {"\<\"Fretica\"\>":>Documentation`HelpLookup[
+        "paclet:Fretica/guide/Fretica"]},
+        Appearance->None,
+        MenuAppearance->Automatic,
+        MenuStyle->"MoreAbout"],
+       MouseAppearanceTag["LinkHand"]]],
+      LineSpacing->{1.4, 0},ExpressionUUID->
+      "7fbbfd4c-99e4-4649-a3ff-c67f1db690d2"],
+     "\[ThickSpace]\[ThickSpace]\[ThickSpace]\[ThickSpace]\[ThickSpace]\
+\[ThickSpace]",
+     Cell[BoxData[
+      TagBox[
+       ActionMenuBox[
+        FrameBox[Cell[TextData[{
+          "URL",
+          " ",
+          Cell[BoxData[
+           GraphicsBox[
+            {GrayLevel[0.66667], Thickness[0.13], 
+             LineBox[{{-1.8, 0.5}, {0, 0}, {1.8, 0.5}}]},
+            AspectRatio->1,
+            ImageSize->20,
+            PlotRange->{{-3, 4}, {-1, 1}}]],ExpressionUUID->
+           "b2f3a430-06cb-4efb-a1a8-87f4681feab6"]
+         }],ExpressionUUID->"3c80ccf2-75d3-442b-80da-835fa1d6574a"],
+         StripOnInput->False], {"\<\"Fretica/ref/FScanImage\"\>":>
+        None, "\<\"Copy Wolfram Documentation Center URL\"\>":>
+        Module[{DocumentationSearch`Private`nb$}, 
+         DocumentationSearch`Private`nb$ = NotebookPut[
+            Notebook[{
+              Cell["Fretica/ref/FScanImage"]}, Visible -> False]]; 
+         SelectionMove[DocumentationSearch`Private`nb$, All, Notebook]; 
+         FrontEndTokenExecute[DocumentationSearch`Private`nb$, "Copy"]; 
+         NotebookClose[DocumentationSearch`Private`nb$]; Null], 
+        Delimiter, "\<\"Copy web URL\"\>":>
+        Module[{DocumentationSearch`Private`nb$}, 
+         DocumentationSearch`Private`nb$ = NotebookPut[
+            Notebook[{
+              Cell[
+               BoxData[
+                MakeBoxes[
+                 Hyperlink[
+                 "http://reference.wolfram.com/language/Fretica/ref/\
+FScanImage.html"], StandardForm]], "Input", TextClipboardType -> 
+               "PlainText"]}, Visible -> False]]; 
+         SelectionMove[DocumentationSearch`Private`nb$, All, Notebook]; 
+         FrontEndTokenExecute[DocumentationSearch`Private`nb$, "Copy"]; 
+         NotebookClose[DocumentationSearch`Private`nb$]; 
+         Null], "\<\"Go to web URL\"\>":>FrontEndExecute[{
+          NotebookLocate[{
+            URL[If[
+               TrueQ[DocumentationBuild`Make`Private`wsmlinkQ$224819], 
+               "http://reference.wolfram.com/system-modeler/", 
+               "http://reference.wolfram.com/language/"] <> 
+             "Fretica/ref/FScanImage" <> ".html"], None}]}]},
+        Appearance->None,
+        MenuAppearance->Automatic,
+        MenuStyle->"URLMenu"],
+       MouseAppearanceTag["LinkHand"]]],
+      LineSpacing->{1.4, 0},ExpressionUUID->
+      "39e90861-2b4b-41db-838c-15b23a26a249"]
+    }], "AnchorBar",
+     CacheGraphics->False,ExpressionUUID->
+     "3ea22db9-3c87-4829-b97c-6b8bdf1539fa"]}
+  }]], "AnchorBarGrid",
+ GridBoxOptions->{GridBoxItemSize->{"Columns" -> {
+     Scaled[0.65], {
+      Scaled[0.34]}}, "ColumnsIndexed" -> {}, "Rows" -> {{1.}}, 
+   "RowsIndexed" -> {}}},
+ CellID->1,ExpressionUUID->"24276ea8-3ecc-4bd0-aafc-7ba1c82f4052"],
+
+Cell["Fretica`", "ContextNameCell",ExpressionUUID->"d1e28e24-299d-40b6-8038-1d76532111a7"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[GridBox[{
+   {Cell[TextData[{
+     Cell[
+     "FScanImage", "ObjectName",ExpressionUUID->
+      "24b3507e-9d7c-4f40-a6cb-7f5a794957e1"],
+     Cell[BoxData[
+      TemplateBox[{8},
+       "Spacer1"]],ExpressionUUID->"27a2324d-8661-4668-903d-ea91960b8d48"],
+     Cell[BoxData[
+     ""], "ObjectNameTranslation",ExpressionUUID->
+      "bae0f17e-722c-40dc-a4bf-06a82539fe92"]
+    }],ExpressionUUID->"69809124-0273-43dd-a8d4-4c5c22ce0186"], 
+    "\[SpanFromLeft]"}
+  }]], "ObjectNameGrid",ExpressionUUID->"8f17eeac-a58c-47ec-b0b0-\
+150d3132d8a9"],
+
+Cell[BoxData[GridBox[{
+   {"", Cell[TextData[{
+     "FScanImage[intensityarray,",
+     Cell[BoxData[
+      FormBox[
+       RowBox[{"{", 
+        RowBox[{
+         SubscriptBox[
+          StyleBox["i", "TI"], "1"], " ", ",", 
+         SubscriptBox[
+          StyleBox["i", "TI"], "2"]}], "}"}], TraditionalForm]], 
+      "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "6b5ce42d-30f0-45c1-a8fb-03ba27b1d822"],
+     ",opt]"
+    }],ExpressionUUID->"8687a9ff-acd8-44fe-98de-0e1492415817"]},
+   {"", Cell[TextData[{
+     "or FScanImage[intensityarray,",
+     Cell[BoxData[
+      FormBox[
+       RowBox[{"{", 
+        RowBox[{
+         SubscriptBox[
+          StyleBox["i", "TI"], "1"], " ", ",", 
+         SubscriptBox[
+          StyleBox["i", "TI"], "2"]}], "}"}], TraditionalForm]], 
+      "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "6c503b3d-467b-4b31-90eb-c88b24283478"],
+     ",",
+     Cell[BoxData[
+      FormBox[
+       RowBox[{"{", 
+        RowBox[{
+         SubscriptBox[
+          StyleBox["x", "TI"], "0"], " ", ",", 
+         SubscriptBox[
+          StyleBox["y", "TI"], "0"], ",", 
+         RowBox[{"\[CapitalDelta]", 
+          StyleBox["x", "TI"]}], ",", 
+         RowBox[{"\[CapitalDelta]", 
+          StyleBox["y", "TI"]}]}], "}"}], TraditionalForm]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "772ea997-3ad4-454b-ba2e-82e0a40f1be8"],
+     ", opt]"
+    }],ExpressionUUID->"3d87ed88-c387-4975-baf7-03225ccc5e28"]},
+   {"", Cell[TextData[{
+     "or FScanImage[parameterarray,",
+     Cell[BoxData[
+      FormBox[
+       RowBox[{
+        RowBox[{"{", 
+         RowBox[{
+          SubscriptBox[
+           StyleBox["i", "TI"], "1"], ",", 
+          SubscriptBox[
+           StyleBox["i", "TI"], "2"]}], "}"}], " ", ",", 
+        RowBox[{"{", 
+         RowBox[{
+          SubscriptBox[
+           StyleBox["p", "TI"], "1"], ",", 
+          SubscriptBox[
+           StyleBox["p", "TI"], "2"]}], "}"}]}], TraditionalForm]], 
+      "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "b69d6f35-e0b9-418d-94b1-6b777bbdba53"],
+     ",opt]"
+    }],ExpressionUUID->"4c4b8625-5a6b-4e2c-b729-69ce8651eaea"]},
+   {"", Cell[TextData[{
+     "or FScanImage[parameterarray,",
+     Cell[BoxData[
+      FormBox[
+       RowBox[{
+        RowBox[{"{", 
+         RowBox[{
+          SubscriptBox[
+           StyleBox["i", "TI"], "1"], ",", 
+          SubscriptBox[
+           StyleBox["i", "TI"], "2"]}], "}"}], " ", ",", 
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{
+           StyleBox["p", "TI"], "1"}], ",", 
+          RowBox[{
+           StyleBox["p", "TI"], "2"}]}], "}"}], ",", 
+        RowBox[{"{", 
+         RowBox[{
+          SubscriptBox[
+           StyleBox["x", "TI"], "0"], ",", 
+          SubscriptBox[
+           StyleBox["y", "TI"], "0"], ",", 
+          RowBox[{"\[CapitalDelta]", 
+           StyleBox["x", "TI"]}], ",", 
+          RowBox[{"\[CapitalDelta]", 
+           StyleBox["y", "TI"]}]}], "}"}]}], TraditionalForm]], 
+      "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "d4ae66b8-eddf-4e98-9333-1d0a8aaa9887"],
+     ",opt]"
+    }],ExpressionUUID->"069e8de7-d8e0-4e11-ad86-60e4c4aabd69"]},
+   {"", Cell["\<\
+FScanImage is used to display data returned by FGetFromPiezoScan. The array \
+data need to match one of two possible forms denoted above as intensityarray \
+or parameterarray.\
+\>",ExpressionUUID->"d2f64cd1-1310-4a5f-8fc5-825c70167c0a"]},
+   {"", Cell["\<\
+intensityarray must be a two\[Hyphen]dimensional array of numbers, typically \
+obtained from expressions like FGetFromPiezoScan[\"n1\"+\"n2\"].\
+\>",ExpressionUUID->"d819ca06-7a5e-421f-9f70-fe10c9181f2f"]},
+   {"", Cell[TextData[{
+     "parameterarray must be a two\[Hyphen]dimensional array of pairs of \
+numbers of the form ",
+     Cell[BoxData[
+      FormBox[
+       RowBox[{"{", 
+        RowBox[{
+         StyleBox["i", "TI"], " ", ",", 
+         StyleBox["p", "TI"]}], "}"}], TraditionalForm]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "3f866904-6bcd-4122-a49c-0a482f58ca89"],
+     ", typically obtained from expressions like FGetFromPiezoScan[ Hold@",
+     Cell[BoxData[
+      FormBox[
+       RowBox[{"{", " ", "\[Null]"}], TraditionalForm]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "9c543987-d68d-4d3f-b86b-ffafba57b92b"],
+     "\"n1\"+\"n2\",\"E\"",
+     Cell[BoxData[
+      FormBox[
+       SuperscriptBox["}", 
+        StyleBox["T",
+         FontSlant->"Plain"]], TraditionalForm]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "18a545cb-de62-44c5-a1b5-e80d25538e72"],
+     "]."
+    }],ExpressionUUID->"49c75673-3fdd-4567-a862-f4844ad31361"]},
+   {"", Cell[TextData[{
+     "If an intensity array is supplied, FScanImage displays a grayscale \
+image of the pixels in the array. In case of a parameter array, the image is \
+colored. ",
+     Cell[BoxData[
+      FormBox[
+       StyleBox["i", "TI"], TraditionalForm]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "746103ab-66c6-45f6-8aca-facf30672684"],
+     " and ",
+     Cell[BoxData[
+      FormBox[
+       StyleBox["p", "TI"], TraditionalForm]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "644cbd1e-3f37-47c0-978a-aca12ec9cabc"],
+     " are displayed as brightness and color hue, respectively. ",
+     Cell[BoxData[
+      FormBox[
+       RowBox[{"{", 
+        RowBox[{
+         SubscriptBox[
+          StyleBox["i", "TI"], "1"], " ", ",", 
+         SubscriptBox[
+          StyleBox["i", "TI"], "2"]}], "}"}], TraditionalForm]], 
+      "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "23ad487e-f388-4852-ba04-ef7b8fc809bb"],
+     " defines the brightness range from darkest (black) to brightest. All \
+intensity values below ",
+     Cell[BoxData[
+      FormBox[
+       SubscriptBox[
+        StyleBox["i", "TI"], "1"], TraditionalForm]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "babe400f-2806-4ab8-9e8a-90dd2b36b0dc"],
+     " are displayed in black, all intensities above ",
+     Cell[BoxData[
+      FormBox[
+       SubscriptBox[
+        StyleBox["i", "TI"], "2"], TraditionalForm]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "f90b4f26-db74-4111-bfd3-a2d60f4e2d76"],
+     " are displayed with maximal brightness. ",
+     Cell[BoxData[
+      FormBox[
+       RowBox[{"{", 
+        RowBox[{
+         SubscriptBox[
+          StyleBox["p", "TI"], "1"], " ", ",", 
+         SubscriptBox[
+          StyleBox["p", "TI"], "2"]}], "}"}], TraditionalForm]], 
+      "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "8d1b16fd-e15c-490c-8832-02c89e741c01"],
+     " defines the hue range from blue to red. All pixels with a parameter \
+value below ",
+     Cell[BoxData[
+      FormBox[
+       SubscriptBox[
+        StyleBox["p", "TI"], "1"], TraditionalForm]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "a899f5e7-3bde-44b2-8baa-24f30e7bb114"],
+     " are displayed in blue, all values above ",
+     Cell[BoxData[
+      FormBox[
+       SubscriptBox[
+        StyleBox["p", "TI"], "2"], TraditionalForm]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "b9e4f96d-4d1e-4cfa-9735-c0ab35e59106"],
+     " are displayed in red."
+    }],ExpressionUUID->"fa00f83d-509b-46d6-ac8b-2acbb0b9c3fe"]},
+   {"", Cell[TextData[{
+     "The values of ",
+     Cell[BoxData[
+      FormBox[
+       StyleBox["i", "TI"], TraditionalForm]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "df974837-235d-4d5c-b623-ad6e878bd6d2"],
+     " and ",
+     Cell[BoxData[
+      FormBox[
+       StyleBox["p", "TI"], TraditionalForm]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "234220a7-9031-4598-9bb8-22b092f1c1e4"],
+     " for each pixel can be read with the coordinate tool. (Select the image \
+and press the \".\"\[Hyphen]key.)"
+    }],ExpressionUUID->"9c8c829c-92b2-4360-8835-bcb6060afd1d"]},
+   {"", Cell[TextData[{
+     Cell[BoxData[
+      FormBox[
+       RowBox[{"{", 
+        RowBox[{
+         SubscriptBox[
+          StyleBox["x", "TI"], "0"], ",", 
+         SubscriptBox[
+          StyleBox["y", "TI"], "0"], ",", 
+         RowBox[{"\[CapitalDelta]", 
+          StyleBox["x", "TI"]}], ",", 
+         RowBox[{"\[CapitalDelta]", 
+          StyleBox["y", "TI"]}]}], "}"}], TraditionalForm]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "06321f18-d161-4da7-b690-6167872392a6"],
+     " is used to label the axes ticks. ",
+     Cell[BoxData[
+      FormBox[
+       SubscriptBox[
+        StyleBox["x", "TI"], "0"], TraditionalForm]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "1d0cdf46-a098-4a0f-8e50-5fed0ffe2d01"],
+     " and ",
+     Cell[BoxData[
+      FormBox[
+       SubscriptBox[
+        StyleBox["y", "TI"], "0"], TraditionalForm]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "8f96d3f1-ecd9-43bf-b3ee-528dd109da77"],
+     " define the bottom left corner of the image. ",
+     Cell[BoxData[
+      FormBox[
+       RowBox[{"\[CapitalDelta]", 
+        StyleBox["x", "TI"]}], TraditionalForm]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "e90ba939-f192-4cb3-b2d1-63d2c21448e5"],
+     " and",
+     Cell[BoxData[
+      FormBox[
+       RowBox[{"\[CapitalDelta]", 
+        StyleBox["y", "TI"]}], TraditionalForm]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "1f70eec8-24e9-4f48-9fc2-b192a7b7a9b1"],
+     " are the pixel resolution in ",
+     Cell[BoxData[
+      FormBox[
+       StyleBox["x", "TI"], TraditionalForm]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "dd4d3c36-3697-4286-8223-65414e140958"],
+     " and ",
+     Cell[BoxData[
+      FormBox[
+       StyleBox["y", "TI"], TraditionalForm]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "51b5d090-70c9-4091-8069-9fb8e68838e2"],
+     " direction, respectively."
+    }],ExpressionUUID->"06ab8fa2-9897-4dea-9a55-38d8b495ee91"]},
+   {"", Cell["\<\
+These numbers are automatically taken from the TTTR file header in case they \
+are not given explicitly.\
+\>",ExpressionUUID->"591fa7c0-d6fd-4edc-9359-07cfc5d2b596"]},
+   {"", Cell["\<\
+The graphical output of FScanImage can be changed by applying the options of \
+Graphics.\
+\>",ExpressionUUID->"f5640dde-1b14-4c45-a87f-8e9aa1e40a4e"]},
+   {"", Cell[
+    "A color legend can be obtained from FScanImageColorLegend.",
+     ExpressionUUID->"d15f4810-c339-4b50-86d2-06936d72e365"]},
+   {"", Cell[" ",ExpressionUUID->"98fdde75-7bcc-49f4-a17a-557f37e4b6b3"]}
+  }]], "Usage",
+ CellID->26973841,ExpressionUUID->"5106d2b1-8851-4013-b5ad-9a3428fb535b"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[Cell[BoxData[
+ ButtonBox[Cell[TextData[{
+   Cell[BoxData[
+    DynamicBox[ToBoxes[
+      If[
+       MatchQ[
+        CurrentValue[
+         EvaluationNotebook[], {TaggingRules, "Openers", "NotesSection"}, 
+         Closed], 
+        Alternatives[Open, True]], 
+       Style[
+        Graphics[{
+          Thickness[0.18], 
+          RGBColor[0.8509803921568627, 0.396078431372549, 0], 
+          Line[{{-1.8, 0.5}, {0, 0}, {1.8, 0.5}}]}, AspectRatio -> 1, 
+         PlotRange -> {{-3, 4}, {-1, 1}}, ImageSize -> 20], Magnification -> 
+        0.68 Inherited], 
+       Rotate[
+        Style[
+         Graphics[{
+           Thickness[0.18], 
+           RGBColor[0.8509803921568627, 0.396078431372549, 0], 
+           Line[{{-1.8, 0.5}, {0, 0}, {1.8, 0.5}}]}, AspectRatio -> 1, 
+          PlotRange -> {{-3, 4}, {-1, 1}}, ImageSize -> 20], Magnification -> 
+         0.68 Inherited], Rational[1, 2] Pi, {-1.65, -1}]]],
+     ImageSizeCache->{
+      13.600000000000001`, {0.5800000000000001, 13.020000000000001`}}]],
+    ExpressionUUID->"8e2afb29-828a-48a4-b77c-017213ae7606"],
+   Cell[BoxData[
+    TemplateBox[{1},
+     "Spacer1"]],ExpressionUUID->"ad476293-7b8c-4b77-b535-042393d1f055"],
+   "Details and Options"
+  }], "NotesFrameText",ExpressionUUID->"f1470f15-fc4b-4db3-85f9-991ace2102ea"],
+  Appearance->{Automatic, None, "Normal", Automatic},
+  BaseStyle->None,
+  ButtonFunction:>(FrontEndExecute[{
+     FrontEnd`SelectionMove[
+      FrontEnd`SelectedNotebook[], All, ButtonCell], 
+     FrontEndToken["OpenCloseGroup"], 
+     FrontEnd`SelectionMove[
+      FrontEnd`SelectedNotebook[], After, CellContents]}]& ),
+  Evaluator->None,
+  Method->
+   "Preemptive"]],ExpressionUUID->"f62df70a-e704-4d5f-a68a-6983ee0f266d"]], \
+"NotesSection",
+ WholeCellGroupOpener->True,
+ CellGroupingRules->{"SectionGrouping", 50},
+ CacheGraphics->False,
+ CellID->196672564,ExpressionUUID->"e4bf21fa-3089-4fb9-8c63-3993f70ae6f9"],
+
+Cell["The following options can be given: ", "Notes",
+ CellID->79584015,ExpressionUUID->"b29492cc-015c-46fe-b2e5-465f7c72ecb7"],
+
+Cell[BoxData[GridBox[{
+   {Cell["      ", "TableRowIcon",ExpressionUUID->
+     "8b8798e0-5744-45b4-abfd-77dd14f0fb87"], 
+    TemplateBox[{
+      Cell[
+       TextData["FScanImageParamName"]], 
+      "paclet:Fretica/ref/FScanImageParamName", "Fretica Package Symbol"},
+     "PackageLink",
+     BaseStyle->"3ColumnTableMod"], "\"\<param\>\"", Cell[TextData[{
+     Cell[BoxData["FScanImage"], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "b1065a92-2ff6-4392-a14b-da07542cae80"],
+     "ParamNam",
+     Cell[BoxData[
+      TemplateBox[{
+        Cell[
+         TextData["e"]], "paclet:Fretica/ref/e", "Fretica Package Symbol"},
+       "PackageLink",
+       BaseStyle->"3ColumnTableMod"]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "a554cafc-6366-43c7-9c0c-cec23798dd50"],
+     " is an option of ",
+     Cell[BoxData["FScanImage"], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "e0d2a1fb-285f-4710-90e5-dfeb6a38d403"],
+     ". "
+    }], "TableText",ExpressionUUID->"ded4a96c-032a-4f05-9d91-68cb9ae7a8cd"]},
+   {Cell["      ", "TableRowIcon",ExpressionUUID->
+     "54460f2e-ebaf-46d2-a602-80cc9ee741e3"], 
+    TemplateBox[{
+      Cell[
+       TextData["AlignmentPoint"]], "paclet:ref/AlignmentPoint"},
+     "RefLink",
+     BaseStyle->{"3ColumnTableMod"}], 
+    TemplateBox[{
+      Cell[
+       TextData["Center"]], "paclet:ref/Center"},
+     "RefLink",
+     BaseStyle->{"3ColumnTableMod"}], Cell[TextData[{
+     "Alignm",
+     Cell[BoxData[
+      TemplateBox[{
+        Cell[
+         TextData["e"]], "paclet:Fretica/ref/e", "Fretica Package Symbol"},
+       "PackageLink",
+       BaseStyle->"3ColumnTableMod"]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "0f25c732-e3ff-42df-927e-111f52cbc12a"],
+     "ntPoint is an option which sp",
+     Cell[BoxData[
+      TemplateBox[{
+        Cell[
+         TextData["e"]], "paclet:Fretica/ref/e", "Fretica Package Symbol"},
+       "PackageLink",
+       BaseStyle->"3ColumnTableMod"]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "6a08d682-c9dd-418e-b15e-ed3110e9c4f1"],
+     "cifi",
+     Cell[BoxData[
+      TemplateBox[{
+        Cell[
+         TextData["e"]], "paclet:Fretica/ref/e", "Fretica Package Symbol"},
+       "PackageLink",
+       BaseStyle->"3ColumnTableMod"]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "78124ef0-782c-4f89-beec-1a241bc3b023"],
+     "s how obj",
+     Cell[BoxData[
+      TemplateBox[{
+        Cell[
+         TextData["e"]], "paclet:Fretica/ref/e", "Fretica Package Symbol"},
+       "PackageLink",
+       BaseStyle->"3ColumnTableMod"]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "71612377-0da0-4421-8220-d448cee184b3"],
+     "cts should by d",
+     Cell[BoxData[
+      TemplateBox[{
+        Cell[
+         TextData["e"]], "paclet:Fretica/ref/e", "Fretica Package Symbol"},
+       "PackageLink",
+       BaseStyle->"3ColumnTableMod"]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "2f61887a-e83b-46d4-b687-25cf21b402f2"],
+     "fault b",
+     Cell[BoxData[
+      TemplateBox[{
+        Cell[
+         TextData["e"]], "paclet:Fretica/ref/e", "Fretica Package Symbol"},
+       "PackageLink",
+       BaseStyle->"3ColumnTableMod"]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "8e27d7c6-a3f9-4905-a000-70f4b670ea1c"],
+     " align",
+     Cell[BoxData[
+      TemplateBox[{
+        Cell[
+         TextData["e"]], "paclet:Fretica/ref/e", "Fretica Package Symbol"},
+       "PackageLink",
+       BaseStyle->"3ColumnTableMod"]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "e62d0345-f879-4788-bdbd-f55e9ca83be5"],
+     "d wh",
+     Cell[BoxData[
+      TemplateBox[{
+        Cell[
+         TextData["e"]], "paclet:Fretica/ref/e", "Fretica Package Symbol"},
+       "PackageLink",
+       BaseStyle->"3ColumnTableMod"]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "b539ed27-6c36-47a4-aa9d-b0440e290535"],
+     "n th",
+     Cell[BoxData[
+      TemplateBox[{
+        Cell[
+         TextData["e"]], "paclet:Fretica/ref/e", "Fretica Package Symbol"},
+       "PackageLink",
+       BaseStyle->"3ColumnTableMod"]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "95a73d15-e9f3-4674-9d34-aed4f4f30b10"],
+     "y app",
+     Cell[BoxData[
+      TemplateBox[{
+        Cell[
+         TextData["e"]], "paclet:Fretica/ref/e", "Fretica Package Symbol"},
+       "PackageLink",
+       BaseStyle->"3ColumnTableMod"]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "c67718a1-cb19-49b1-a406-71c93e48e8a8"],
+     "ar in Ins",
+     Cell[BoxData[
+      TemplateBox[{
+        Cell[
+         TextData["e"]], "paclet:Fretica/ref/e", "Fretica Package Symbol"},
+       "PackageLink",
+       BaseStyle->"3ColumnTableMod"]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "aefc020d-e1d5-42a2-9102-fc887f003b51"],
+     "t."
+    }], "TableText",ExpressionUUID->"b3fb4534-1cb9-4717-9ffc-c2c043c91a82"]},
+   {Cell["      ", "TableRowIcon",ExpressionUUID->
+     "afb1a4dd-078b-4bfa-a30e-7a7cda29b959"], 
+    TemplateBox[{
+      Cell[
+       TextData["AspectRatio"]], "paclet:ref/AspectRatio"},
+     "RefLink",
+     BaseStyle->{"3ColumnTableMod"}], 
+    TemplateBox[{
+      Cell[
+       TextData["Automatic"]], "paclet:ref/Automatic"},
+     "RefLink",
+     BaseStyle->{"3ColumnTableMod"}], Cell[TextData[{
+     "Asp",
+     Cell[BoxData[
+      TemplateBox[{
+        Cell[
+         TextData["e"]], "paclet:Fretica/ref/e", "Fretica Package Symbol"},
+       "PackageLink",
+       BaseStyle->"3ColumnTableMod"]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "7cc5ec04-6322-4606-8f10-fba8a1abdae9"],
+     "ctRatio is an option for Graphics and r",
+     Cell[BoxData[
+      TemplateBox[{
+        Cell[
+         TextData["e"]], "paclet:Fretica/ref/e", "Fretica Package Symbol"},
+       "PackageLink",
+       BaseStyle->"3ColumnTableMod"]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "c7b20b31-4396-408f-aaae-c03e77ced920"],
+     "lat",
+     Cell[BoxData[
+      TemplateBox[{
+        Cell[
+         TextData["e"]], "paclet:Fretica/ref/e", "Fretica Package Symbol"},
+       "PackageLink",
+       BaseStyle->"3ColumnTableMod"]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "ba57c32d-9ba7-4e71-9f16-0038197d60e6"],
+     "d functions that sp",
+     Cell[BoxData[
+      TemplateBox[{
+        Cell[
+         TextData["e"]], "paclet:Fretica/ref/e", "Fretica Package Symbol"},
+       "PackageLink",
+       BaseStyle->"3ColumnTableMod"]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "8e0c8488-9df0-40e5-8664-cbee6edb732c"],
+     "cifi",
+     Cell[BoxData[
+      TemplateBox[{
+        Cell[
+         TextData["e"]], "paclet:Fretica/ref/e", "Fretica Package Symbol"},
+       "PackageLink",
+       BaseStyle->"3ColumnTableMod"]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "2c6e0415-9b2f-40af-8070-9b43b87a4bfa"],
+     "s th",
+     Cell[BoxData[
+      TemplateBox[{
+        Cell[
+         TextData["e"]], "paclet:Fretica/ref/e", "Fretica Package Symbol"},
+       "PackageLink",
+       BaseStyle->"3ColumnTableMod"]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "ff188d31-b1fd-4954-83e3-a95711a3c6bb"],
+     " ratio of h",
+     Cell[BoxData[
+      TemplateBox[{
+        Cell[
+         TextData["e"]], "paclet:Fretica/ref/e", "Fretica Package Symbol"},
+       "PackageLink",
+       BaseStyle->"3ColumnTableMod"]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "17d09c88-09d9-4248-b563-96cb91a7501f"],
+     "ight to width for a plot. "
+    }], "TableText",ExpressionUUID->"8a41961b-2bcf-4f8c-a694-e9ff68cf16ec"]},
+   {Cell["      ", "TableRowIcon",ExpressionUUID->
+     "a0c5634f-fa5b-4bec-81f7-61de00aaaede"], 
+    TemplateBox[{
+      Cell[
+       TextData["Axes"]], "paclet:ref/Axes"},
+     "RefLink",
+     BaseStyle->{"3ColumnTableMod"}], 
+    TemplateBox[{
+      Cell[
+       TextData["False"]], "paclet:ref/False"},
+     "RefLink",
+     BaseStyle->{"3ColumnTableMod"}], Cell[TextData[{
+     "Ax",
+     Cell[BoxData[
+      TemplateBox[{
+        Cell[
+         TextData["e"]], "paclet:Fretica/ref/e", "Fretica Package Symbol"},
+       "PackageLink",
+       BaseStyle->"3ColumnTableMod"]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "96a9879b-ea87-4798-87c2-673b864dc33b"],
+     "s is an option for graphics functions that sp",
+     Cell[BoxData[
+      TemplateBox[{
+        Cell[
+         TextData["e"]], "paclet:Fretica/ref/e", "Fretica Package Symbol"},
+       "PackageLink",
+       BaseStyle->"3ColumnTableMod"]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "8af428d4-ae78-4006-abb5-953c7ec09b9a"],
+     "cifi",
+     Cell[BoxData[
+      TemplateBox[{
+        Cell[
+         TextData["e"]], "paclet:Fretica/ref/e", "Fretica Package Symbol"},
+       "PackageLink",
+       BaseStyle->"3ColumnTableMod"]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "398f249a-3d86-4c79-9602-8d1d93f19110"],
+     "s wh",
+     Cell[BoxData[
+      TemplateBox[{
+        Cell[
+         TextData["e"]], "paclet:Fretica/ref/e", "Fretica Package Symbol"},
+       "PackageLink",
+       BaseStyle->"3ColumnTableMod"]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "7176c5b6-f9ca-47be-94f3-3179e1b0f963"],
+     "th",
+     Cell[BoxData[
+      TemplateBox[{
+        Cell[
+         TextData["e"]], "paclet:Fretica/ref/e", "Fretica Package Symbol"},
+       "PackageLink",
+       BaseStyle->"3ColumnTableMod"]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "8af78073-fc90-4145-9e1f-0d489d6288ed"],
+     "r ax",
+     Cell[BoxData[
+      TemplateBox[{
+        Cell[
+         TextData["e"]], "paclet:Fretica/ref/e", "Fretica Package Symbol"},
+       "PackageLink",
+       BaseStyle->"3ColumnTableMod"]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "fe455aa3-4515-4f05-a057-38b06f1035b5"],
+     "s should b",
+     Cell[BoxData[
+      TemplateBox[{
+        Cell[
+         TextData["e"]], "paclet:Fretica/ref/e", "Fretica Package Symbol"},
+       "PackageLink",
+       BaseStyle->"3ColumnTableMod"]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "b9134351-706d-4568-9db1-3d9d1e8cb808"],
+     " drawn. "
+    }], "TableText",ExpressionUUID->"52eefdae-e1b5-4c98-86fc-d9a5328b3c31"]},
+   {Cell["      ", "TableRowIcon",ExpressionUUID->
+     "0a4ed8f0-a904-41fe-beed-f2c2e70fb274"], 
+    TemplateBox[{
+      Cell[
+       TextData["AxesLabel"]], "paclet:ref/AxesLabel"},
+     "RefLink",
+     BaseStyle->{"3ColumnTableMod"}], 
+    TemplateBox[{
+      Cell[
+       TextData["None"]], "paclet:ref/None"},
+     "RefLink",
+     BaseStyle->{"3ColumnTableMod"}], Cell[TextData[{
+     "Ax",
+     Cell[BoxData[
+      TemplateBox[{
+        Cell[
+         TextData["e"]], "paclet:Fretica/ref/e", "Fretica Package Symbol"},
+       "PackageLink",
+       BaseStyle->"3ColumnTableMod"]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "65780c5b-4d51-4607-9cfb-4795d82bbf53"],
+     "sLab",
+     Cell[BoxData[
+      TemplateBox[{
+        Cell[
+         TextData["e"]], "paclet:Fretica/ref/e", "Fretica Package Symbol"},
+       "PackageLink",
+       BaseStyle->"3ColumnTableMod"]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "753f4bbf-28b4-4254-a627-2c33b212ec31"],
+     "l is an option for graphics functions that sp",
+     Cell[BoxData[
+      TemplateBox[{
+        Cell[
+         TextData["e"]], "paclet:Fretica/ref/e", "Fretica Package Symbol"},
+       "PackageLink",
+       BaseStyle->"3ColumnTableMod"]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "eed9d0f3-6d08-456f-ad5c-18376b5e4d02"],
+     "cifi",
+     Cell[BoxData[
+      TemplateBox[{
+        Cell[
+         TextData["e"]], "paclet:Fretica/ref/e", "Fretica Package Symbol"},
+       "PackageLink",
+       BaseStyle->"3ColumnTableMod"]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "718ddf6a-e944-49b3-8d0b-8f939dd82cd3"],
+     "s lab",
+     Cell[BoxData[
+      TemplateBox[{
+        Cell[
+         TextData["e"]], "paclet:Fretica/ref/e", "Fretica Package Symbol"},
+       "PackageLink",
+       BaseStyle->"3ColumnTableMod"]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "36410c04-58cf-414c-abed-f23ab8aaa3fb"],
+     "ls for ax",
+     Cell[BoxData[
+      TemplateBox[{
+        Cell[
+         TextData["e"]], "paclet:Fretica/ref/e", "Fretica Package Symbol"},
+       "PackageLink",
+       BaseStyle->"3ColumnTableMod"]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "fe5207ce-c6f4-49d7-8078-6823c06bb387"],
+     "s. "
+    }], "TableText",ExpressionUUID->"c9390cc7-19a4-4e6a-863f-b5634f149532"]},
+   {Cell["      ", "TableRowIcon",ExpressionUUID->
+     "7d0b545f-d7b4-41e8-8e5d-f0ea048c4d7e"], 
+    TemplateBox[{
+      Cell[
+       TextData["AxesOrigin"]], "paclet:ref/AxesOrigin"},
+     "RefLink",
+     BaseStyle->{"3ColumnTableMod"}], 
+    TemplateBox[{
+      Cell[
+       TextData["Automatic"]], "paclet:ref/Automatic"},
+     "RefLink",
+     BaseStyle->{"3ColumnTableMod"}], Cell[TextData[{
+     "Ax",
+     Cell[BoxData[
+      TemplateBox[{
+        Cell[
+         TextData["e"]], "paclet:Fretica/ref/e", "Fretica Package Symbol"},
+       "PackageLink",
+       BaseStyle->"3ColumnTableMod"]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "c2a9ccb9-5c78-4e0a-9a73-0a5a057bb1bc"],
+     "sOrigin is an option for graphics functions that sp",
+     Cell[BoxData[
+      TemplateBox[{
+        Cell[
+         TextData["e"]], "paclet:Fretica/ref/e", "Fretica Package Symbol"},
+       "PackageLink",
+       BaseStyle->"3ColumnTableMod"]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "a13b7dd1-4f4e-499f-85bc-78e6605bc075"],
+     "cifi",
+     Cell[BoxData[
+      TemplateBox[{
+        Cell[
+         TextData["e"]], "paclet:Fretica/ref/e", "Fretica Package Symbol"},
+       "PackageLink",
+       BaseStyle->"3ColumnTableMod"]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "b02bd8ac-fb90-4c47-89c9-ba2ed2a283fa"],
+     "s wh",
+     Cell[BoxData[
+      TemplateBox[{
+        Cell[
+         TextData["e"]], "paclet:Fretica/ref/e", "Fretica Package Symbol"},
+       "PackageLink",
+       BaseStyle->"3ColumnTableMod"]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "a04f624f-3813-4cfb-83ea-443a7a593b42"],
+     "r",
+     Cell[BoxData[
+      TemplateBox[{
+        Cell[
+         TextData["e"]], "paclet:Fretica/ref/e", "Fretica Package Symbol"},
+       "PackageLink",
+       BaseStyle->"3ColumnTableMod"]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "2c5340e3-2808-456d-bc28-a965c302f1e8"],
+     " any ax",
+     Cell[BoxData[
+      TemplateBox[{
+        Cell[
+         TextData["e"]], "paclet:Fretica/ref/e", "Fretica Package Symbol"},
+       "PackageLink",
+       BaseStyle->"3ColumnTableMod"]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "60aefeb1-44bc-42a1-99a5-1e604ee18d50"],
+     "s drawn should cross. "
+    }], "TableText",ExpressionUUID->"9feab78c-87a6-431e-b5d0-f451f465bfac"]},
+   {Cell["      ", "TableRowIcon",ExpressionUUID->
+     "e69f45ab-b678-4583-9086-d01134d87993"], 
+    TemplateBox[{
+      Cell[
+       TextData["AxesStyle"]], "paclet:ref/AxesStyle"},
+     "RefLink",
+     BaseStyle->{"3ColumnTableMod"}], 
+    RowBox[{"{", "}"}], Cell[TextData[{
+     "Ax",
+     Cell[BoxData[
+      TemplateBox[{
+        Cell[
+         TextData["e"]], "paclet:Fretica/ref/e", "Fretica Package Symbol"},
+       "PackageLink",
+       BaseStyle->"3ColumnTableMod"]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "cd6f6aaa-c0d8-4125-8a6e-473ca556b2a6"],
+     "sStyl",
+     Cell[BoxData[
+      TemplateBox[{
+        Cell[
+         TextData["e"]], "paclet:Fretica/ref/e", "Fretica Package Symbol"},
+       "PackageLink",
+       BaseStyle->"3ColumnTableMod"]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "94386cc7-4722-42aa-a3e8-27ff8e2fd209"],
+     " is an option for graphics functions that sp",
+     Cell[BoxData[
+      TemplateBox[{
+        Cell[
+         TextData["e"]], "paclet:Fretica/ref/e", "Fretica Package Symbol"},
+       "PackageLink",
+       BaseStyle->"3ColumnTableMod"]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "0c0c07a0-bc7f-488e-9eb0-d24c68832b46"],
+     "cifi",
+     Cell[BoxData[
+      TemplateBox[{
+        Cell[
+         TextData["e"]], "paclet:Fretica/ref/e", "Fretica Package Symbol"},
+       "PackageLink",
+       BaseStyle->"3ColumnTableMod"]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "6681e242-7a68-4be0-b6e2-386255a5f3aa"],
+     "s how ax",
+     Cell[BoxData[
+      TemplateBox[{
+        Cell[
+         TextData["e"]], "paclet:Fretica/ref/e", "Fretica Package Symbol"},
+       "PackageLink",
+       BaseStyle->"3ColumnTableMod"]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "f764e141-b114-4c91-a2ac-c9749d6d1756"],
+     "s should b",
+     Cell[BoxData[
+      TemplateBox[{
+        Cell[
+         TextData["e"]], "paclet:Fretica/ref/e", "Fretica Package Symbol"},
+       "PackageLink",
+       BaseStyle->"3ColumnTableMod"]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "d96388fa-c3f6-4f07-9a61-42b982d75af3"],
+     " r",
+     Cell[BoxData[
+      TemplateBox[{
+        Cell[
+         TextData["e"]], "paclet:Fretica/ref/e", "Fretica Package Symbol"},
+       "PackageLink",
+       BaseStyle->"3ColumnTableMod"]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "b5cf2526-522c-4fe9-9102-88636e7e910c"],
+     "nd",
+     Cell[BoxData[
+      TemplateBox[{
+        Cell[
+         TextData["e"]], "paclet:Fretica/ref/e", "Fretica Package Symbol"},
+       "PackageLink",
+       BaseStyle->"3ColumnTableMod"]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "52aec55e-69a2-4ed0-b615-ac29418e99a4"],
+     "r",
+     Cell[BoxData[
+      TemplateBox[{
+        Cell[
+         TextData["e"]], "paclet:Fretica/ref/e", "Fretica Package Symbol"},
+       "PackageLink",
+       BaseStyle->"3ColumnTableMod"]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "5a4f3bb9-958a-4f0a-8c2b-2383d0113de2"],
+     "d. "
+    }], "TableText",ExpressionUUID->"ff3ab086-d15c-4692-9ae3-93209c3c15e0"]},
+   {Cell["      ", "TableRowIcon",ExpressionUUID->
+     "14df0412-84c8-41de-a099-094e1fb58b79"], 
+    TemplateBox[{
+      Cell[
+       TextData["Background"]], "paclet:ref/Background"},
+     "RefLink",
+     BaseStyle->{"3ColumnTableMod"}], 
+    TemplateBox[{
+      Cell[
+       TextData["None"]], "paclet:ref/None"},
+     "RefLink",
+     BaseStyle->{"3ColumnTableMod"}], Cell[TextData[{
+     "Background is an option that sp",
+     Cell[BoxData[
+      TemplateBox[{
+        Cell[
+         TextData["e"]], "paclet:Fretica/ref/e", "Fretica Package Symbol"},
+       "PackageLink",
+       BaseStyle->"3ColumnTableMod"]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "17939331-38d0-4362-9f3a-b416938e5148"],
+     "cifi",
+     Cell[BoxData[
+      TemplateBox[{
+        Cell[
+         TextData["e"]], "paclet:Fretica/ref/e", "Fretica Package Symbol"},
+       "PackageLink",
+       BaseStyle->"3ColumnTableMod"]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "0546d90e-aa9e-4590-91f2-e2b9018bb88a"],
+     "s what background color to us",
+     Cell[BoxData[
+      TemplateBox[{
+        Cell[
+         TextData["e"]], "paclet:Fretica/ref/e", "Fretica Package Symbol"},
+       "PackageLink",
+       BaseStyle->"3ColumnTableMod"]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "3d7dec80-8eaf-4067-9f06-7073348001b7"],
+     ". "
+    }], "TableText",ExpressionUUID->"3ba798e3-1403-4e40-a254-b3ff7fd687a0"]},
+   {Cell["      ", "TableRowIcon",ExpressionUUID->
+     "0546fc8c-46e8-4a75-b0c3-d65d5950b58e"], 
+    TemplateBox[{
+      Cell[
+       TextData["BaselinePosition"]], "paclet:ref/BaselinePosition"},
+     "RefLink",
+     BaseStyle->{"3ColumnTableMod"}], 
+    TemplateBox[{
+      Cell[
+       TextData["Automatic"]], "paclet:ref/Automatic"},
+     "RefLink",
+     BaseStyle->{"3ColumnTableMod"}], Cell[TextData[{
+     "Bas",
+     Cell[BoxData[
+      TemplateBox[{
+        Cell[
+         TextData["e"]], "paclet:Fretica/ref/e", "Fretica Package Symbol"},
+       "PackageLink",
+       BaseStyle->"3ColumnTableMod"]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "a016e697-6d31-4af7-bd37-d0cb045bc48d"],
+     "lin",
+     Cell[BoxData[
+      TemplateBox[{
+        Cell[
+         TextData["e"]], "paclet:Fretica/ref/e", "Fretica Package Symbol"},
+       "PackageLink",
+       BaseStyle->"3ColumnTableMod"]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "26c66b7e-e640-48f2-b84a-b6100de10d8f"],
+     Cell[BoxData[
+      TemplateBox[{
+        Cell[
+         TextData["Pos"]], "paclet:Fretica/ref/Pos", "Fretica Package Symbol"},
+       "PackageLink",
+       BaseStyle->"3ColumnTableMod"]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "83c5521f-064b-4e35-82d1-3c45a655547e"],
+     "ition is an option that sp",
+     Cell[BoxData[
+      TemplateBox[{
+        Cell[
+         TextData["e"]], "paclet:Fretica/ref/e", "Fretica Package Symbol"},
+       "PackageLink",
+       BaseStyle->"3ColumnTableMod"]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "83e606c1-7429-4080-98b0-ad6ee209715f"],
+     "cifi",
+     Cell[BoxData[
+      TemplateBox[{
+        Cell[
+         TextData["e"]], "paclet:Fretica/ref/e", "Fretica Package Symbol"},
+       "PackageLink",
+       BaseStyle->"3ColumnTableMod"]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "e4ccda3f-14a4-49f5-99b3-3f6c6b2118d8"],
+     "s wh",
+     Cell[BoxData[
+      TemplateBox[{
+        Cell[
+         TextData["e"]], "paclet:Fretica/ref/e", "Fretica Package Symbol"},
+       "PackageLink",
+       BaseStyle->"3ColumnTableMod"]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "0dcbd822-1bb4-438f-a2b9-2d738199b523"],
+     "r",
+     Cell[BoxData[
+      TemplateBox[{
+        Cell[
+         TextData["e"]], "paclet:Fretica/ref/e", "Fretica Package Symbol"},
+       "PackageLink",
+       BaseStyle->"3ColumnTableMod"]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "d62599f3-a657-48fe-a29c-1ece34b4b8ca"],
+     " th",
+     Cell[BoxData[
+      TemplateBox[{
+        Cell[
+         TextData["e"]], "paclet:Fretica/ref/e", "Fretica Package Symbol"},
+       "PackageLink",
+       BaseStyle->"3ColumnTableMod"]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "296259b4-241e-4188-b496-a03244042a14"],
+     " bas",
+     Cell[BoxData[
+      TemplateBox[{
+        Cell[
+         TextData["e"]], "paclet:Fretica/ref/e", "Fretica Package Symbol"},
+       "PackageLink",
+       BaseStyle->"3ColumnTableMod"]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "5c7c7e48-54f1-4800-b8c4-3bea4db20a99"],
+     "lin",
+     Cell[BoxData[
+      TemplateBox[{
+        Cell[
+         TextData["e"]], "paclet:Fretica/ref/e", "Fretica Package Symbol"},
+       "PackageLink",
+       BaseStyle->"3ColumnTableMod"]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "32c0e812-8321-467f-b80d-93eceae6365a"],
+     " of an obj",
+     Cell[BoxData[
+      TemplateBox[{
+        Cell[
+         TextData["e"]], "paclet:Fretica/ref/e", "Fretica Package Symbol"},
+       "PackageLink",
+       BaseStyle->"3ColumnTableMod"]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "1d380b18-4c66-4633-93b1-d89fd51fb469"],
+     "ct is consid",
+     Cell[BoxData[
+      TemplateBox[{
+        Cell[
+         TextData["e"]], "paclet:Fretica/ref/e", "Fretica Package Symbol"},
+       "PackageLink",
+       BaseStyle->"3ColumnTableMod"]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "df589315-0fd8-4c83-aac4-0df0c2ae3e2f"],
+     "r",
+     Cell[BoxData[
+      TemplateBox[{
+        Cell[
+         TextData["e"]], "paclet:Fretica/ref/e", "Fretica Package Symbol"},
+       "PackageLink",
+       BaseStyle->"3ColumnTableMod"]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "2dd77bae-48eb-451b-99cc-78c52079c756"],
+     "d to b",
+     Cell[BoxData[
+      TemplateBox[{
+        Cell[
+         TextData["e"]], "paclet:Fretica/ref/e", "Fretica Package Symbol"},
+       "PackageLink",
+       BaseStyle->"3ColumnTableMod"]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "97d16854-0d54-4861-a037-483d1e6cd272"],
+     " for purpos",
+     Cell[BoxData[
+      TemplateBox[{
+        Cell[
+         TextData["e"]], "paclet:Fretica/ref/e", "Fretica Package Symbol"},
+       "PackageLink",
+       BaseStyle->"3ColumnTableMod"]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "b83a3614-dd39-45a0-9e1f-811bb38d2abf"],
+     "s of alignm",
+     Cell[BoxData[
+      TemplateBox[{
+        Cell[
+         TextData["e"]], "paclet:Fretica/ref/e", "Fretica Package Symbol"},
+       "PackageLink",
+       BaseStyle->"3ColumnTableMod"]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "88d2102a-2c97-4820-98e7-3cb42c5b1433"],
+     "nt with surrounding t",
+     Cell[BoxData[
+      TemplateBox[{
+        Cell[
+         TextData["e"]], "paclet:Fretica/ref/e", "Fretica Package Symbol"},
+       "PackageLink",
+       BaseStyle->"3ColumnTableMod"]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "e88d6af2-4e3a-420d-b7c0-5ccaab2305b8"],
+     "xt or oth",
+     Cell[BoxData[
+      TemplateBox[{
+        Cell[
+         TextData["e"]], "paclet:Fretica/ref/e", "Fretica Package Symbol"},
+       "PackageLink",
+       BaseStyle->"3ColumnTableMod"]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "2f893a83-6eb8-4f7e-861a-fca43542985f"],
+     "r ",
+     Cell[BoxData[
+      TemplateBox[{
+        Cell[
+         TextData["e"]], "paclet:Fretica/ref/e", "Fretica Package Symbol"},
+       "PackageLink",
+       BaseStyle->"3ColumnTableMod"]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "87fba2e3-4444-4316-941b-d6a4231c880e"],
+     "xpr",
+     Cell[BoxData[
+      TemplateBox[{
+        Cell[
+         TextData["e"]], "paclet:Fretica/ref/e", "Fretica Package Symbol"},
+       "PackageLink",
+       BaseStyle->"3ColumnTableMod"]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "359fe581-53d8-4bd5-a8b8-2d47441d6941"],
+     "ssions. "
+    }], "TableText",ExpressionUUID->"676b1b16-9f7b-4cab-a08e-d95daede4863"]},
+   {Cell["      ", "TableRowIcon",ExpressionUUID->
+     "5e6216b2-6d9e-4c98-b0e1-4e831d962c37"], 
+    TemplateBox[{
+      Cell[
+       TextData["BaseStyle"]], "paclet:ref/BaseStyle"},
+     "RefLink",
+     BaseStyle->{"3ColumnTableMod"}], 
+    RowBox[{"{", "}"}], Cell[TextData[{
+     "Bas",
+     Cell[BoxData[
+      TemplateBox[{
+        Cell[
+         TextData["e"]], "paclet:Fretica/ref/e", "Fretica Package Symbol"},
+       "PackageLink",
+       BaseStyle->"3ColumnTableMod"]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "a99bb920-a8f6-49b0-87d7-2efa426b0c72"],
+     "Styl",
+     Cell[BoxData[
+      TemplateBox[{
+        Cell[
+         TextData["e"]], "paclet:Fretica/ref/e", "Fretica Package Symbol"},
+       "PackageLink",
+       BaseStyle->"3ColumnTableMod"]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "afbc6657-c9a4-4e16-966e-18d3e2b44460"],
+     " is an option for formatting and r",
+     Cell[BoxData[
+      TemplateBox[{
+        Cell[
+         TextData["e"]], "paclet:Fretica/ref/e", "Fretica Package Symbol"},
+       "PackageLink",
+       BaseStyle->"3ColumnTableMod"]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "c06c63d9-e45b-4b7c-b866-64ab80001f6f"],
+     "lat",
+     Cell[BoxData[
+      TemplateBox[{
+        Cell[
+         TextData["e"]], "paclet:Fretica/ref/e", "Fretica Package Symbol"},
+       "PackageLink",
+       BaseStyle->"3ColumnTableMod"]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "8e1af26a-55c9-4e83-a58f-81386e6d5186"],
+     "d constructs that sp",
+     Cell[BoxData[
+      TemplateBox[{
+        Cell[
+         TextData["e"]], "paclet:Fretica/ref/e", "Fretica Package Symbol"},
+       "PackageLink",
+       BaseStyle->"3ColumnTableMod"]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "4bc52229-4636-4081-8c46-74acd5bebf88"],
+     "cifi",
+     Cell[BoxData[
+      TemplateBox[{
+        Cell[
+         TextData["e"]], "paclet:Fretica/ref/e", "Fretica Package Symbol"},
+       "PackageLink",
+       BaseStyle->"3ColumnTableMod"]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "94d9b93b-45f7-49cc-82e6-91b9ff119fb0"],
+     "s th",
+     Cell[BoxData[
+      TemplateBox[{
+        Cell[
+         TextData["e"]], "paclet:Fretica/ref/e", "Fretica Package Symbol"},
+       "PackageLink",
+       BaseStyle->"3ColumnTableMod"]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "b02451ab-a269-4bac-bf49-2c40417feca2"],
+     " bas",
+     Cell[BoxData[
+      TemplateBox[{
+        Cell[
+         TextData["e"]], "paclet:Fretica/ref/e", "Fretica Package Symbol"},
+       "PackageLink",
+       BaseStyle->"3ColumnTableMod"]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "72728a03-9322-4a2a-9ccd-ae516e2d0682"],
+     " styl",
+     Cell[BoxData[
+      TemplateBox[{
+        Cell[
+         TextData["e"]], "paclet:Fretica/ref/e", "Fretica Package Symbol"},
+       "PackageLink",
+       BaseStyle->"3ColumnTableMod"]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "364c50be-ee32-4ff2-b9eb-c7bf93d7cae3"],
+     " to us",
+     Cell[BoxData[
+      TemplateBox[{
+        Cell[
+         TextData["e"]], "paclet:Fretica/ref/e", "Fretica Package Symbol"},
+       "PackageLink",
+       BaseStyle->"3ColumnTableMod"]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "b5c044fd-37d9-4e5c-9041-9a5d7936821e"],
+     " for th",
+     Cell[BoxData[
+      TemplateBox[{
+        Cell[
+         TextData["e"]], "paclet:Fretica/ref/e", "Fretica Package Symbol"},
+       "PackageLink",
+       BaseStyle->"3ColumnTableMod"]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "0b983772-e3ee-411a-bdd8-e524a2ab5d98"],
+     "m. "
+    }], "TableText",ExpressionUUID->"e076b4ad-2eea-4e6b-a261-afe8d8c7358a"]},
+   {Cell["      ", "TableRowIcon",ExpressionUUID->
+     "876cd055-9e61-41b1-911d-9e66fd515bff"], 
+    TemplateBox[{
+      Cell[
+       TextData["ColorOutput"]], "paclet:ref/ColorOutput"},
+     "RefLink",
+     BaseStyle->{"3ColumnTableMod"}], 
+    TemplateBox[{
+      Cell[
+       TextData["Automatic"]], "paclet:ref/Automatic"},
+     "RefLink",
+     BaseStyle->{"3ColumnTableMod"}], Cell[TextData[{
+     "ColorOutput is an option for graphics functions that sp",
+     Cell[BoxData[
+      TemplateBox[{
+        Cell[
+         TextData["e"]], "paclet:Fretica/ref/e", "Fretica Package Symbol"},
+       "PackageLink",
+       BaseStyle->"3ColumnTableMod"]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "781e3287-1ef4-4085-bd29-2a3a8473a682"],
+     "cifi",
+     Cell[BoxData[
+      TemplateBox[{
+        Cell[
+         TextData["e"]], "paclet:Fretica/ref/e", "Fretica Package Symbol"},
+       "PackageLink",
+       BaseStyle->"3ColumnTableMod"]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "d9d8db92-a186-498e-a7b8-4dfc3934fe48"],
+     "s th",
+     Cell[BoxData[
+      TemplateBox[{
+        Cell[
+         TextData["e"]], "paclet:Fretica/ref/e", "Fretica Package Symbol"},
+       "PackageLink",
+       BaseStyle->"3ColumnTableMod"]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "0cd2e6fb-954a-4006-a662-69693805e8c0"],
+     " typ",
+     Cell[BoxData[
+      TemplateBox[{
+        Cell[
+         TextData["e"]], "paclet:Fretica/ref/e", "Fretica Package Symbol"},
+       "PackageLink",
+       BaseStyle->"3ColumnTableMod"]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "e6f143d9-6a76-43bf-9912-b10e6505fcc6"],
+     " of color output to produc",
+     Cell[BoxData[
+      TemplateBox[{
+        Cell[
+         TextData["e"]], "paclet:Fretica/ref/e", "Fretica Package Symbol"},
+       "PackageLink",
+       BaseStyle->"3ColumnTableMod"]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "92eff462-2c38-44fe-8cac-2346ba370447"],
+     ". "
+    }], "TableText",ExpressionUUID->"6037b6af-edaf-4b94-9378-b1c2604b9757"]},
+   {Cell["      ", "TableRowIcon",ExpressionUUID->
+     "6bd07dd9-130b-461d-8918-11b758855201"], 
+    TemplateBox[{
+      Cell[
+       TextData["ContentSelectable"]], "paclet:ref/ContentSelectable"},
+     "RefLink",
+     BaseStyle->{"3ColumnTableMod"}], 
+    TemplateBox[{
+      Cell[
+       TextData["Automatic"]], "paclet:ref/Automatic"},
+     "RefLink",
+     BaseStyle->{"3ColumnTableMod"}], Cell[TextData[{
+     "Cont",
+     Cell[BoxData[
+      TemplateBox[{
+        Cell[
+         TextData["e"]], "paclet:Fretica/ref/e", "Fretica Package Symbol"},
+       "PackageLink",
+       BaseStyle->"3ColumnTableMod"]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "51c0f347-89af-4169-bc57-70eadd900e3c"],
+     "ntS",
+     Cell[BoxData[
+      TemplateBox[{
+        Cell[
+         TextData["e"]], "paclet:Fretica/ref/e", "Fretica Package Symbol"},
+       "PackageLink",
+       BaseStyle->"3ColumnTableMod"]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "5906e2c9-d309-479b-89d8-9810debfc9c8"],
+     "l",
+     Cell[BoxData[
+      TemplateBox[{
+        Cell[
+         TextData["e"]], "paclet:Fretica/ref/e", "Fretica Package Symbol"},
+       "PackageLink",
+       BaseStyle->"3ColumnTableMod"]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "56cdf89a-3da5-4f39-bce3-a98c2404aef8"],
+     "ctabl",
+     Cell[BoxData[
+      TemplateBox[{
+        Cell[
+         TextData["e"]], "paclet:Fretica/ref/e", "Fretica Package Symbol"},
+       "PackageLink",
+       BaseStyle->"3ColumnTableMod"]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "605990d9-ec0d-4874-8de0-369525a0b378"],
+     " is an option to constructs such as Ins",
+     Cell[BoxData[
+      TemplateBox[{
+        Cell[
+         TextData["e"]], "paclet:Fretica/ref/e", "Fretica Package Symbol"},
+       "PackageLink",
+       BaseStyle->"3ColumnTableMod"]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "ed53e26d-da42-443e-b1e6-2339b9c4fc0d"],
+     "t, Graphics, and GraphicsGroup that sp",
+     Cell[BoxData[
+      TemplateBox[{
+        Cell[
+         TextData["e"]], "paclet:Fretica/ref/e", "Fretica Package Symbol"},
+       "PackageLink",
+       BaseStyle->"3ColumnTableMod"]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "1cf6dc8e-75f1-44b5-aaa5-37fbef67d515"],
+     "cifi",
+     Cell[BoxData[
+      TemplateBox[{
+        Cell[
+         TextData["e"]], "paclet:Fretica/ref/e", "Fretica Package Symbol"},
+       "PackageLink",
+       BaseStyle->"3ColumnTableMod"]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "fd4a503a-32a4-4671-a591-6e0d01d5a4ba"],
+     "s wh",
+     Cell[BoxData[
+      TemplateBox[{
+        Cell[
+         TextData["e"]], "paclet:Fretica/ref/e", "Fretica Package Symbol"},
+       "PackageLink",
+       BaseStyle->"3ColumnTableMod"]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "33bd5027-49db-49a5-81cb-c3f44518cf49"],
+     "th",
+     Cell[BoxData[
+      TemplateBox[{
+        Cell[
+         TextData["e"]], "paclet:Fretica/ref/e", "Fretica Package Symbol"},
+       "PackageLink",
+       BaseStyle->"3ColumnTableMod"]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "3a8da179-a75b-4c00-866c-c96b3f6fb6a8"],
+     "r and how cont",
+     Cell[BoxData[
+      TemplateBox[{
+        Cell[
+         TextData["e"]], "paclet:Fretica/ref/e", "Fretica Package Symbol"},
+       "PackageLink",
+       BaseStyle->"3ColumnTableMod"]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "0e922d28-b409-4895-a47a-ff132035a041"],
+     "nt within th",
+     Cell[BoxData[
+      TemplateBox[{
+        Cell[
+         TextData["e"]], "paclet:Fretica/ref/e", "Fretica Package Symbol"},
+       "PackageLink",
+       BaseStyle->"3ColumnTableMod"]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "0bf0b7c5-5737-4200-a631-814304000b24"],
+     "m should b",
+     Cell[BoxData[
+      TemplateBox[{
+        Cell[
+         TextData["e"]], "paclet:Fretica/ref/e", "Fretica Package Symbol"},
+       "PackageLink",
+       BaseStyle->"3ColumnTableMod"]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "c8ca5f62-a19c-4471-9db5-953f0e190b67"],
+     " s",
+     Cell[BoxData[
+      TemplateBox[{
+        Cell[
+         TextData["e"]], "paclet:Fretica/ref/e", "Fretica Package Symbol"},
+       "PackageLink",
+       BaseStyle->"3ColumnTableMod"]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "4c62c49e-bdaf-45d0-900e-23d974bd3325"],
+     "l",
+     Cell[BoxData[
+      TemplateBox[{
+        Cell[
+         TextData["e"]], "paclet:Fretica/ref/e", "Fretica Package Symbol"},
+       "PackageLink",
+       BaseStyle->"3ColumnTableMod"]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "fb8e7109-4619-4e3d-8846-bd446962efca"],
+     "ctabl",
+     Cell[BoxData[
+      TemplateBox[{
+        Cell[
+         TextData["e"]], "paclet:Fretica/ref/e", "Fretica Package Symbol"},
+       "PackageLink",
+       BaseStyle->"3ColumnTableMod"]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "378ce822-0dbb-43fd-b374-89d8b2932c5a"],
+     ". "
+    }], "TableText",ExpressionUUID->"07669c91-4a32-469c-99d5-bf2dfb10ec72"]},
+   {Cell["      ", "TableRowIcon",ExpressionUUID->
+     "208b411c-ed69-4968-887f-68a852ed5b0d"], 
+    TemplateBox[{
+      Cell[
+       TextData["CoordinatesToolOptions"]], 
+      "paclet:ref/CoordinatesToolOptions"},
+     "RefLink",
+     BaseStyle->{"3ColumnTableMod"}], 
+    TemplateBox[{
+      Cell[
+       TextData["Automatic"]], "paclet:ref/Automatic"},
+     "RefLink",
+     BaseStyle->{"3ColumnTableMod"}], Cell[TextData[{
+     "CoordinatesToolOptions is an option for Graphics that gives values of \
+options associated with the ",
+     Cell[BoxData[
+      StyleBox[
+       RowBox[{"Get", " ", "Coordinates"}], "MenuName"]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "fa1c940e-9012-4a63-aecd-a1c5b0d9ecf4"],
+     " tool."
+    }], "TableText",ExpressionUUID->"ea45f4bb-d917-4dbd-b7e9-99307c725d70"]},
+   {Cell["      ", "TableRowIcon",ExpressionUUID->
+     "31504c31-175e-4ae0-8516-83906942536a"], 
+    TemplateBox[{
+      Cell[
+       TextData["DisplayFunction"]], "paclet:ref/DisplayFunction"},
+     "RefLink",
+     BaseStyle->{"3ColumnTableMod"}], 
+    TemplateBox[{
+      Cell[
+       TextData["$DisplayFunction"]], "paclet:ref/$DisplayFunction"},
+     "RefLink",
+     BaseStyle->{"3ColumnTableMod"}], Cell[TextData[{
+     "DisplayFunction is an option for graphics and sound functions that sp",
+     Cell[BoxData[
+      TemplateBox[{
+        Cell[
+         TextData["e"]], "paclet:Fretica/ref/e", "Fretica Package Symbol"},
+       "PackageLink",
+       BaseStyle->"3ColumnTableMod"]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "31075e5d-bb92-44d8-af9a-4b330b62e905"],
+     "cifi",
+     Cell[BoxData[
+      TemplateBox[{
+        Cell[
+         TextData["e"]], "paclet:Fretica/ref/e", "Fretica Package Symbol"},
+       "PackageLink",
+       BaseStyle->"3ColumnTableMod"]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "2ac86ef5-940e-4cc7-bc1e-d2479c462921"],
+     "s a function to apply to graphics and sound obj",
+     Cell[BoxData[
+      TemplateBox[{
+        Cell[
+         TextData["e"]], "paclet:Fretica/ref/e", "Fretica Package Symbol"},
+       "PackageLink",
+       BaseStyle->"3ColumnTableMod"]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "0de68887-dc7c-472b-8d08-6a8a1a6ee2ae"],
+     "cts b",
+     Cell[BoxData[
+      TemplateBox[{
+        Cell[
+         TextData["e"]], "paclet:Fretica/ref/e", "Fretica Package Symbol"},
+       "PackageLink",
+       BaseStyle->"3ColumnTableMod"]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "eb808388-4abe-44ae-b81e-36db118ed9ec"],
+     "for",
+     Cell[BoxData[
+      TemplateBox[{
+        Cell[
+         TextData["e"]], "paclet:Fretica/ref/e", "Fretica Package Symbol"},
+       "PackageLink",
+       BaseStyle->"3ColumnTableMod"]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "968be16d-fe50-4397-b6a0-2a3ca9234acd"],
+     " r",
+     Cell[BoxData[
+      TemplateBox[{
+        Cell[
+         TextData["e"]], "paclet:Fretica/ref/e", "Fretica Package Symbol"},
+       "PackageLink",
+       BaseStyle->"3ColumnTableMod"]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "0698e0c6-467b-48ad-9c50-882806e69056"],
+     "turning th",
+     Cell[BoxData[
+      TemplateBox[{
+        Cell[
+         TextData["e"]], "paclet:Fretica/ref/e", "Fretica Package Symbol"},
+       "PackageLink",
+       BaseStyle->"3ColumnTableMod"]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "4b3e242e-ff65-474e-ad1e-426cb5094001"],
+     "m."
+    }], "TableText",ExpressionUUID->"c5bd4ae1-76de-45a0-a3a0-6c796a4b11ea"]},
+   {Cell["      ", "TableRowIcon",ExpressionUUID->
+     "7d2ef32e-8564-4cd5-b463-0c24246980ab"], 
+    TemplateBox[{
+      Cell[
+       TextData["Epilog"]], "paclet:ref/Epilog"},
+     "RefLink",
+     BaseStyle->{"3ColumnTableMod"}], 
+    RowBox[{"{", "}"}], Cell[TextData[{
+     "Epilog is an option for graphics functions that giv",
+     Cell[BoxData[
+      TemplateBox[{
+        Cell[
+         TextData["e"]], "paclet:Fretica/ref/e", "Fretica Package Symbol"},
+       "PackageLink",
+       BaseStyle->"3ColumnTableMod"]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "38d6b771-ab8a-4b51-a437-411de87b524c"],
+     "s a list of graphics primitiv",
+     Cell[BoxData[
+      TemplateBox[{
+        Cell[
+         TextData["e"]], "paclet:Fretica/ref/e", "Fretica Package Symbol"},
+       "PackageLink",
+       BaseStyle->"3ColumnTableMod"]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "796a0b68-4071-4bf5-813d-6114b2098a73"],
+     "s to b",
+     Cell[BoxData[
+      TemplateBox[{
+        Cell[
+         TextData["e"]], "paclet:Fretica/ref/e", "Fretica Package Symbol"},
+       "PackageLink",
+       BaseStyle->"3ColumnTableMod"]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "158512a9-c2e8-4802-8664-16773ae3f38f"],
+     " r",
+     Cell[BoxData[
+      TemplateBox[{
+        Cell[
+         TextData["e"]], "paclet:Fretica/ref/e", "Fretica Package Symbol"},
+       "PackageLink",
+       BaseStyle->"3ColumnTableMod"]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "28843634-ae5e-46d8-aa6f-4e643f600e33"],
+     "nd",
+     Cell[BoxData[
+      TemplateBox[{
+        Cell[
+         TextData["e"]], "paclet:Fretica/ref/e", "Fretica Package Symbol"},
+       "PackageLink",
+       BaseStyle->"3ColumnTableMod"]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "650976c2-0819-46ca-bba7-c06175fd9d52"],
+     "r",
+     Cell[BoxData[
+      TemplateBox[{
+        Cell[
+         TextData["e"]], "paclet:Fretica/ref/e", "Fretica Package Symbol"},
+       "PackageLink",
+       BaseStyle->"3ColumnTableMod"]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "a34e6f38-b8bf-4c59-8071-4c44d05514bd"],
+     "d aft",
+     Cell[BoxData[
+      TemplateBox[{
+        Cell[
+         TextData["e"]], "paclet:Fretica/ref/e", "Fretica Package Symbol"},
+       "PackageLink",
+       BaseStyle->"3ColumnTableMod"]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "c2330f3d-4852-4f76-8db5-0260242664c0"],
+     "r th",
+     Cell[BoxData[
+      TemplateBox[{
+        Cell[
+         TextData["e"]], "paclet:Fretica/ref/e", "Fretica Package Symbol"},
+       "PackageLink",
+       BaseStyle->"3ColumnTableMod"]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "12b8c1ae-16fb-40fb-9268-a011eb59e046"],
+     " main part of th",
+     Cell[BoxData[
+      TemplateBox[{
+        Cell[
+         TextData["e"]], "paclet:Fretica/ref/e", "Fretica Package Symbol"},
+       "PackageLink",
+       BaseStyle->"3ColumnTableMod"]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "2b28e874-1897-4a23-9b99-0a1f1846c6fb"],
+     " graphics is r",
+     Cell[BoxData[
+      TemplateBox[{
+        Cell[
+         TextData["e"]], "paclet:Fretica/ref/e", "Fretica Package Symbol"},
+       "PackageLink",
+       BaseStyle->"3ColumnTableMod"]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "d8d50c3d-a045-4d24-8958-3f28b7725def"],
+     "nd",
+     Cell[BoxData[
+      TemplateBox[{
+        Cell[
+         TextData["e"]], "paclet:Fretica/ref/e", "Fretica Package Symbol"},
+       "PackageLink",
+       BaseStyle->"3ColumnTableMod"]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "2b74fdc2-0766-402d-8d6d-8458ee5b78fc"],
+     "r",
+     Cell[BoxData[
+      TemplateBox[{
+        Cell[
+         TextData["e"]], "paclet:Fretica/ref/e", "Fretica Package Symbol"},
+       "PackageLink",
+       BaseStyle->"3ColumnTableMod"]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "aec4fa56-6530-4e3f-839b-9fd045aeeac8"],
+     "d. "
+    }], "TableText",ExpressionUUID->"b539586b-aa1d-4560-9c48-5be3a1e9b8af"]},
+   {Cell["      ", "TableRowIcon",ExpressionUUID->
+     "305661aa-e273-45a5-858c-c1cd6f2c5d03"], 
+    TemplateBox[{
+      Cell[
+       TextData["FormatType"]], "paclet:ref/FormatType"},
+     "RefLink",
+     BaseStyle->{"3ColumnTableMod"}], 
+    TemplateBox[{
+      Cell[
+       TextData["TraditionalForm"]], "paclet:ref/TraditionalForm"},
+     "RefLink",
+     BaseStyle->{"3ColumnTableMod"}], Cell[TextData[{
+     "FormatTyp",
+     Cell[BoxData[
+      TemplateBox[{
+        Cell[
+         TextData["e"]], "paclet:Fretica/ref/e", "Fretica Package Symbol"},
+       "PackageLink",
+       BaseStyle->"3ColumnTableMod"]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "7f31bb8e-b1d5-4c02-831f-007948cefbda"],
+     " is an option for output str",
+     Cell[BoxData[
+      TemplateBox[{
+        Cell[
+         TextData["e"]], "paclet:Fretica/ref/e", "Fretica Package Symbol"},
+       "PackageLink",
+       BaseStyle->"3ColumnTableMod"]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "c787af13-8846-4da1-aaf4-e06c08f06f88"],
+     "ams, graphics, and functions such as T",
+     Cell[BoxData[
+      TemplateBox[{
+        Cell[
+         TextData["e"]], "paclet:Fretica/ref/e", "Fretica Package Symbol"},
+       "PackageLink",
+       BaseStyle->"3ColumnTableMod"]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "0c51a9e6-5e65-4195-a74c-3839086cf0dd"],
+     "xt that sp",
+     Cell[BoxData[
+      TemplateBox[{
+        Cell[
+         TextData["e"]], "paclet:Fretica/ref/e", "Fretica Package Symbol"},
+       "PackageLink",
+       BaseStyle->"3ColumnTableMod"]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "20a94f85-7a6b-4abf-ad10-b1253f4cb337"],
+     "cifi",
+     Cell[BoxData[
+      TemplateBox[{
+        Cell[
+         TextData["e"]], "paclet:Fretica/ref/e", "Fretica Package Symbol"},
+       "PackageLink",
+       BaseStyle->"3ColumnTableMod"]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "fde487b9-4edc-4147-8c58-64d1d82a1b77"],
+     "s th",
+     Cell[BoxData[
+      TemplateBox[{
+        Cell[
+         TextData["e"]], "paclet:Fretica/ref/e", "Fretica Package Symbol"},
+       "PackageLink",
+       BaseStyle->"3ColumnTableMod"]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "dbad9b4d-d542-4827-977d-d3b76eba0bca"],
+     " d",
+     Cell[BoxData[
+      TemplateBox[{
+        Cell[
+         TextData["e"]], "paclet:Fretica/ref/e", "Fretica Package Symbol"},
+       "PackageLink",
+       BaseStyle->"3ColumnTableMod"]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "e6791fba-27e5-4616-b1d9-55685a0f5ca7"],
+     "fault format typ",
+     Cell[BoxData[
+      TemplateBox[{
+        Cell[
+         TextData["e"]], "paclet:Fretica/ref/e", "Fretica Package Symbol"},
+       "PackageLink",
+       BaseStyle->"3ColumnTableMod"]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "214243b3-93c4-49eb-975b-bcbb5fc1665d"],
+     " to us",
+     Cell[BoxData[
+      TemplateBox[{
+        Cell[
+         TextData["e"]], "paclet:Fretica/ref/e", "Fretica Package Symbol"},
+       "PackageLink",
+       BaseStyle->"3ColumnTableMod"]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "46b391fa-4aae-4a80-a814-fa90bfc813de"],
+     " wh",
+     Cell[BoxData[
+      TemplateBox[{
+        Cell[
+         TextData["e"]], "paclet:Fretica/ref/e", "Fretica Package Symbol"},
+       "PackageLink",
+       BaseStyle->"3ColumnTableMod"]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "71b3c91f-99f1-4aee-a81f-eb9d3d5aceb4"],
+     "n outputting ",
+     Cell[BoxData[
+      TemplateBox[{
+        Cell[
+         TextData["e"]], "paclet:Fretica/ref/e", "Fretica Package Symbol"},
+       "PackageLink",
+       BaseStyle->"3ColumnTableMod"]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "3228ded7-331e-4833-995d-5801534e7ee0"],
+     "xpr",
+     Cell[BoxData[
+      TemplateBox[{
+        Cell[
+         TextData["e"]], "paclet:Fretica/ref/e", "Fretica Package Symbol"},
+       "PackageLink",
+       BaseStyle->"3ColumnTableMod"]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "3c87884c-5623-4b28-968d-7c2b32cfb553"],
+     "ssions. "
+    }], "TableText",ExpressionUUID->"4f909e43-cce3-496a-ac77-7650de5f0c2d"]},
+   {Cell["      ", "TableRowIcon",ExpressionUUID->
+     "589f2a6f-fc9e-469a-bc3f-a4c1ed57eed3"], 
+    TemplateBox[{
+      Cell[
+       TextData["Frame"]], "paclet:ref/Frame"},
+     "RefLink",
+     BaseStyle->{"3ColumnTableMod"}], 
+    TemplateBox[{
+      Cell[
+       TextData["False"]], "paclet:ref/False"},
+     "RefLink",
+     BaseStyle->{"3ColumnTableMod"}], Cell[TextData[{
+     "Fram",
+     Cell[BoxData[
+      TemplateBox[{
+        Cell[
+         TextData["e"]], "paclet:Fretica/ref/e", "Fretica Package Symbol"},
+       "PackageLink",
+       BaseStyle->"3ColumnTableMod"]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "7bbd837d-95f8-4323-8069-0fc534bf4562"],
+     " is an option for Graphics, Grid, and oth",
+     Cell[BoxData[
+      TemplateBox[{
+        Cell[
+         TextData["e"]], "paclet:Fretica/ref/e", "Fretica Package Symbol"},
+       "PackageLink",
+       BaseStyle->"3ColumnTableMod"]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "2c6a64e2-e136-4814-9a8f-6560682731a3"],
+     "r constructs that sp",
+     Cell[BoxData[
+      TemplateBox[{
+        Cell[
+         TextData["e"]], "paclet:Fretica/ref/e", "Fretica Package Symbol"},
+       "PackageLink",
+       BaseStyle->"3ColumnTableMod"]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "7f60a357-ca0a-4d69-8844-42f14bf8333c"],
+     "cifi",
+     Cell[BoxData[
+      TemplateBox[{
+        Cell[
+         TextData["e"]], "paclet:Fretica/ref/e", "Fretica Package Symbol"},
+       "PackageLink",
+       BaseStyle->"3ColumnTableMod"]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "d2612608-708c-441d-b30a-27d01bd35bd6"],
+     "s wh",
+     Cell[BoxData[
+      TemplateBox[{
+        Cell[
+         TextData["e"]], "paclet:Fretica/ref/e", "Fretica Package Symbol"},
+       "PackageLink",
+       BaseStyle->"3ColumnTableMod"]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "ac0af0b6-6e16-48d4-b8c7-9ef3214bfeef"],
+     "th",
+     Cell[BoxData[
+      TemplateBox[{
+        Cell[
+         TextData["e"]], "paclet:Fretica/ref/e", "Fretica Package Symbol"},
+       "PackageLink",
+       BaseStyle->"3ColumnTableMod"]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "fb5a3c8e-a765-41dd-8fdb-d0676ad3fca2"],
+     "r to includ",
+     Cell[BoxData[
+      TemplateBox[{
+        Cell[
+         TextData["e"]], "paclet:Fretica/ref/e", "Fretica Package Symbol"},
+       "PackageLink",
+       BaseStyle->"3ColumnTableMod"]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "cb2bd891-f3b5-4d82-9629-080f06781432"],
+     " a fram",
+     Cell[BoxData[
+      TemplateBox[{
+        Cell[
+         TextData["e"]], "paclet:Fretica/ref/e", "Fretica Package Symbol"},
+       "PackageLink",
+       BaseStyle->"3ColumnTableMod"]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "b36ca393-ebc0-490b-ad78-65beb5e9112e"],
+     ". "
+    }], "TableText",ExpressionUUID->"d432cfe3-4038-4bae-9134-4ea0acc88e93"]},
+   {Cell["      ", "TableRowIcon",ExpressionUUID->
+     "e2ac4b35-bfcd-432c-b190-db9f9500996d"], 
+    TemplateBox[{
+      Cell[
+       TextData["FrameLabel"]], "paclet:ref/FrameLabel"},
+     "RefLink",
+     BaseStyle->{"3ColumnTableMod"}], 
+    TemplateBox[{
+      Cell[
+       TextData["None"]], "paclet:ref/None"},
+     "RefLink",
+     BaseStyle->{"3ColumnTableMod"}], Cell[TextData[{
+     "Fram",
+     Cell[BoxData[
+      TemplateBox[{
+        Cell[
+         TextData["e"]], "paclet:Fretica/ref/e", "Fretica Package Symbol"},
+       "PackageLink",
+       BaseStyle->"3ColumnTableMod"]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "81fc05fd-86e7-46e0-9fd7-15a22910a46d"],
+     "Lab",
+     Cell[BoxData[
+      TemplateBox[{
+        Cell[
+         TextData["e"]], "paclet:Fretica/ref/e", "Fretica Package Symbol"},
+       "PackageLink",
+       BaseStyle->"3ColumnTableMod"]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "9510c581-1185-4256-bcf1-fb7191319752"],
+     "l is an option for Graphics, Manipulat",
+     Cell[BoxData[
+      TemplateBox[{
+        Cell[
+         TextData["e"]], "paclet:Fretica/ref/e", "Fretica Package Symbol"},
+       "PackageLink",
+       BaseStyle->"3ColumnTableMod"]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "a5905fa5-1ce9-471b-95b0-6dd922558f56"],
+     ", and r",
+     Cell[BoxData[
+      TemplateBox[{
+        Cell[
+         TextData["e"]], "paclet:Fretica/ref/e", "Fretica Package Symbol"},
+       "PackageLink",
+       BaseStyle->"3ColumnTableMod"]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "faabb4da-db75-4436-baf3-bddf4d163262"],
+     "lat",
+     Cell[BoxData[
+      TemplateBox[{
+        Cell[
+         TextData["e"]], "paclet:Fretica/ref/e", "Fretica Package Symbol"},
+       "PackageLink",
+       BaseStyle->"3ColumnTableMod"]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "7d2f09eb-d6f6-4d54-a2bd-03ece4a73bc3"],
+     "d functions that sp",
+     Cell[BoxData[
+      TemplateBox[{
+        Cell[
+         TextData["e"]], "paclet:Fretica/ref/e", "Fretica Package Symbol"},
+       "PackageLink",
+       BaseStyle->"3ColumnTableMod"]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "99a02727-1582-433d-8502-db3836af1891"],
+     "cifi",
+     Cell[BoxData[
+      TemplateBox[{
+        Cell[
+         TextData["e"]], "paclet:Fretica/ref/e", "Fretica Package Symbol"},
+       "PackageLink",
+       BaseStyle->"3ColumnTableMod"]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "9e2a47d6-0e70-41b5-a69d-4ad6377d5704"],
+     "s lab",
+     Cell[BoxData[
+      TemplateBox[{
+        Cell[
+         TextData["e"]], "paclet:Fretica/ref/e", "Fretica Package Symbol"},
+       "PackageLink",
+       BaseStyle->"3ColumnTableMod"]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "ad540060-a637-463f-9a72-fbff047bb9c8"],
+     "ls to b",
+     Cell[BoxData[
+      TemplateBox[{
+        Cell[
+         TextData["e"]], "paclet:Fretica/ref/e", "Fretica Package Symbol"},
+       "PackageLink",
+       BaseStyle->"3ColumnTableMod"]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "95475164-b50b-4780-8114-58dc4a5c53d4"],
+     " plac",
+     Cell[BoxData[
+      TemplateBox[{
+        Cell[
+         TextData["e"]], "paclet:Fretica/ref/e", "Fretica Package Symbol"},
+       "PackageLink",
+       BaseStyle->"3ColumnTableMod"]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "508f0cb0-aac4-41ba-9b2f-4ff1efe010cb"],
+     "d on th",
+     Cell[BoxData[
+      TemplateBox[{
+        Cell[
+         TextData["e"]], "paclet:Fretica/ref/e", "Fretica Package Symbol"},
+       "PackageLink",
+       BaseStyle->"3ColumnTableMod"]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "58e8c5b3-45bd-49e3-a1c4-e05bcfd42a49"],
+     " ",
+     Cell[BoxData[
+      TemplateBox[{
+        Cell[
+         TextData["e"]], "paclet:Fretica/ref/e", "Fretica Package Symbol"},
+       "PackageLink",
+       BaseStyle->"3ColumnTableMod"]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "7cab3d43-64ac-40bd-945e-8a81e5bf5a37"],
+     "dg",
+     Cell[BoxData[
+      TemplateBox[{
+        Cell[
+         TextData["e"]], "paclet:Fretica/ref/e", "Fretica Package Symbol"},
+       "PackageLink",
+       BaseStyle->"3ColumnTableMod"]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "714a7b3c-750f-4bc8-95c8-33dff54e374e"],
+     "s of a fram",
+     Cell[BoxData[
+      TemplateBox[{
+        Cell[
+         TextData["e"]], "paclet:Fretica/ref/e", "Fretica Package Symbol"},
+       "PackageLink",
+       BaseStyle->"3ColumnTableMod"]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "ec338dc6-d998-4c31-a9a7-cbe5d035820e"],
+     ". "
+    }], "TableText",ExpressionUUID->"389b7765-9190-45d8-9441-5bbd322b8245"]},
+   {Cell["      ", "TableRowIcon",ExpressionUUID->
+     "8824d44b-53c5-42d2-af61-e32553158db3"], 
+    TemplateBox[{
+      Cell[
+       TextData["FrameStyle"]], "paclet:ref/FrameStyle"},
+     "RefLink",
+     BaseStyle->{"3ColumnTableMod"}], 
+    RowBox[{"{", "}"}], Cell[TextData[{
+     "Fram",
+     Cell[BoxData[
+      TemplateBox[{
+        Cell[
+         TextData["e"]], "paclet:Fretica/ref/e", "Fretica Package Symbol"},
+       "PackageLink",
+       BaseStyle->"3ColumnTableMod"]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "c48595ec-055b-494e-a478-f2db613af114"],
+     "Styl",
+     Cell[BoxData[
+      TemplateBox[{
+        Cell[
+         TextData["e"]], "paclet:Fretica/ref/e", "Fretica Package Symbol"},
+       "PackageLink",
+       BaseStyle->"3ColumnTableMod"]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "e2beed66-9b35-4c8d-a2d0-7e879282a528"],
+     " is an option for Graphics, Grid, and oth",
+     Cell[BoxData[
+      TemplateBox[{
+        Cell[
+         TextData["e"]], "paclet:Fretica/ref/e", "Fretica Package Symbol"},
+       "PackageLink",
+       BaseStyle->"3ColumnTableMod"]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "7daab52c-c4a0-448e-976d-afad2764fdbb"],
+     "r constructs that sp",
+     Cell[BoxData[
+      TemplateBox[{
+        Cell[
+         TextData["e"]], "paclet:Fretica/ref/e", "Fretica Package Symbol"},
+       "PackageLink",
+       BaseStyle->"3ColumnTableMod"]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "9be8e242-e104-4923-a3ee-34da4534a076"],
+     "cifi",
+     Cell[BoxData[
+      TemplateBox[{
+        Cell[
+         TextData["e"]], "paclet:Fretica/ref/e", "Fretica Package Symbol"},
+       "PackageLink",
+       BaseStyle->"3ColumnTableMod"]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "55f14d53-494b-4004-bd05-0eda04109f9e"],
+     "s th",
+     Cell[BoxData[
+      TemplateBox[{
+        Cell[
+         TextData["e"]], "paclet:Fretica/ref/e", "Fretica Package Symbol"},
+       "PackageLink",
+       BaseStyle->"3ColumnTableMod"]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "c6849a49-adeb-44c7-a5e9-9aaf6833f5c1"],
+     " styl",
+     Cell[BoxData[
+      TemplateBox[{
+        Cell[
+         TextData["e"]], "paclet:Fretica/ref/e", "Fretica Package Symbol"},
+       "PackageLink",
+       BaseStyle->"3ColumnTableMod"]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "6f48357d-2c6e-4876-b4b7-412d4fbe27bd"],
+     " in which to draw fram",
+     Cell[BoxData[
+      TemplateBox[{
+        Cell[
+         TextData["e"]], "paclet:Fretica/ref/e", "Fretica Package Symbol"},
+       "PackageLink",
+       BaseStyle->"3ColumnTableMod"]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "5cc68d4c-14b4-43c6-a193-96c0445280d6"],
+     "s."
+    }], "TableText",ExpressionUUID->"7d654caf-f5e0-4ee8-8716-25adf75b266c"]},
+   {Cell["      ", "TableRowIcon",ExpressionUUID->
+     "3820316a-b1d7-4a61-a7f7-8ecfc71820bf"], 
+    TemplateBox[{
+      Cell[
+       TextData["FrameTicks"]], "paclet:ref/FrameTicks"},
+     "RefLink",
+     BaseStyle->{"3ColumnTableMod"}], 
+    TemplateBox[{
+      Cell[
+       TextData["Automatic"]], "paclet:ref/Automatic"},
+     "RefLink",
+     BaseStyle->{"3ColumnTableMod"}], Cell[TextData[{
+     "Fram",
+     Cell[BoxData[
+      TemplateBox[{
+        Cell[
+         TextData["e"]], "paclet:Fretica/ref/e", "Fretica Package Symbol"},
+       "PackageLink",
+       BaseStyle->"3ColumnTableMod"]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "18567f46-04fe-493c-902f-67ee4aff27b1"],
+     "Ticks is an option for 2",
+     Cell[BoxData[
+      TemplateBox[{
+        Cell[
+         TextData["D"]], "paclet:ref/D"},
+       "RefLink",
+       BaseStyle->{"3ColumnTableMod"}]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "bd38057a-a9a9-4b10-aef1-a90a65c0c16b"],
+     " graphics functions that sp",
+     Cell[BoxData[
+      TemplateBox[{
+        Cell[
+         TextData["e"]], "paclet:Fretica/ref/e", "Fretica Package Symbol"},
+       "PackageLink",
+       BaseStyle->"3ColumnTableMod"]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "60c29914-14e1-4f17-9a94-4fa66d0d2811"],
+     "cifi",
+     Cell[BoxData[
+      TemplateBox[{
+        Cell[
+         TextData["e"]], "paclet:Fretica/ref/e", "Fretica Package Symbol"},
+       "PackageLink",
+       BaseStyle->"3ColumnTableMod"]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "b52b058d-5648-485d-83b3-6e472ff36a01"],
+     "s tick marks for th",
+     Cell[BoxData[
+      TemplateBox[{
+        Cell[
+         TextData["e"]], "paclet:Fretica/ref/e", "Fretica Package Symbol"},
+       "PackageLink",
+       BaseStyle->"3ColumnTableMod"]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "c17a2f24-7390-4eea-aed3-f27c2d369689"],
+     " ",
+     Cell[BoxData[
+      TemplateBox[{
+        Cell[
+         TextData["e"]], "paclet:Fretica/ref/e", "Fretica Package Symbol"},
+       "PackageLink",
+       BaseStyle->"3ColumnTableMod"]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "81aaeb2d-b428-44bc-b997-19d600a4b475"],
+     "dg",
+     Cell[BoxData[
+      TemplateBox[{
+        Cell[
+         TextData["e"]], "paclet:Fretica/ref/e", "Fretica Package Symbol"},
+       "PackageLink",
+       BaseStyle->"3ColumnTableMod"]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "ef64fd87-54bf-4474-94bb-fffd13df20a3"],
+     "s of a fram",
+     Cell[BoxData[
+      TemplateBox[{
+        Cell[
+         TextData["e"]], "paclet:Fretica/ref/e", "Fretica Package Symbol"},
+       "PackageLink",
+       BaseStyle->"3ColumnTableMod"]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "c6689130-f4f8-4992-a7a1-200cb10b8d32"],
+     ". "
+    }], "TableText",ExpressionUUID->"883e8873-ede6-4409-b0ec-c2a864e109bc"]},
+   {Cell["      ", "TableRowIcon",ExpressionUUID->
+     "0bec1f73-22a9-483b-ba07-e0f7649dd1fe"], 
+    TemplateBox[{
+      Cell[
+       TextData["FrameTicksStyle"]], "paclet:ref/FrameTicksStyle"},
+     "RefLink",
+     BaseStyle->{"3ColumnTableMod"}], 
+    RowBox[{"{", "}"}], Cell[TextData[{
+     "Fram",
+     Cell[BoxData[
+      TemplateBox[{
+        Cell[
+         TextData["e"]], "paclet:Fretica/ref/e", "Fretica Package Symbol"},
+       "PackageLink",
+       BaseStyle->"3ColumnTableMod"]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "f7de774b-2efe-4862-afbb-dfdefaf290e3"],
+     "TicksStyl",
+     Cell[BoxData[
+      TemplateBox[{
+        Cell[
+         TextData["e"]], "paclet:Fretica/ref/e", "Fretica Package Symbol"},
+       "PackageLink",
+       BaseStyle->"3ColumnTableMod"]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "12689f10-6fc1-422a-8753-4489c01919c6"],
+     " is an option for 2",
+     Cell[BoxData[
+      TemplateBox[{
+        Cell[
+         TextData["D"]], "paclet:ref/D"},
+       "RefLink",
+       BaseStyle->{"3ColumnTableMod"}]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "6271f692-1ad0-4b37-9551-fc21e7c5d3a5"],
+     " graphics functions that sp",
+     Cell[BoxData[
+      TemplateBox[{
+        Cell[
+         TextData["e"]], "paclet:Fretica/ref/e", "Fretica Package Symbol"},
+       "PackageLink",
+       BaseStyle->"3ColumnTableMod"]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "832a6937-d531-41b1-a1d6-5ceaab9d6888"],
+     "cifi",
+     Cell[BoxData[
+      TemplateBox[{
+        Cell[
+         TextData["e"]], "paclet:Fretica/ref/e", "Fretica Package Symbol"},
+       "PackageLink",
+       BaseStyle->"3ColumnTableMod"]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "5f873148-7aaf-46ff-8790-3dd92dffde29"],
+     "s how fram",
+     Cell[BoxData[
+      TemplateBox[{
+        Cell[
+         TextData["e"]], "paclet:Fretica/ref/e", "Fretica Package Symbol"},
+       "PackageLink",
+       BaseStyle->"3ColumnTableMod"]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "5f0d11db-9296-408f-815e-ff3f444aa869"],
+     " ticks should b",
+     Cell[BoxData[
+      TemplateBox[{
+        Cell[
+         TextData["e"]], "paclet:Fretica/ref/e", "Fretica Package Symbol"},
+       "PackageLink",
+       BaseStyle->"3ColumnTableMod"]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "cc5e08d1-d5e9-4a6b-bcf0-2aa1d2e8916f"],
+     " r",
+     Cell[BoxData[
+      TemplateBox[{
+        Cell[
+         TextData["e"]], "paclet:Fretica/ref/e", "Fretica Package Symbol"},
+       "PackageLink",
+       BaseStyle->"3ColumnTableMod"]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "2e12a993-3795-41c4-ac15-1a4ac00a390b"],
+     "nd",
+     Cell[BoxData[
+      TemplateBox[{
+        Cell[
+         TextData["e"]], "paclet:Fretica/ref/e", "Fretica Package Symbol"},
+       "PackageLink",
+       BaseStyle->"3ColumnTableMod"]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "e789d6e6-f2ac-4089-9b9f-3340d2725b7b"],
+     "r",
+     Cell[BoxData[
+      TemplateBox[{
+        Cell[
+         TextData["e"]], "paclet:Fretica/ref/e", "Fretica Package Symbol"},
+       "PackageLink",
+       BaseStyle->"3ColumnTableMod"]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "956f481d-4ba8-47ab-8f90-eaaf6d43a9e1"],
+     "d."
+    }], "TableText",ExpressionUUID->"96db137f-c00d-4e7f-8282-4b10e7101d95"]},
+   {Cell["      ", "TableRowIcon",ExpressionUUID->
+     "d2e9d361-bcec-4db2-80c6-9fd9a920cbac"], 
+    TemplateBox[{
+      Cell[
+       TextData["GridLines"]], "paclet:ref/GridLines"},
+     "RefLink",
+     BaseStyle->{"3ColumnTableMod"}], 
+    TemplateBox[{
+      Cell[
+       TextData["None"]], "paclet:ref/None"},
+     "RefLink",
+     BaseStyle->{"3ColumnTableMod"}], Cell[TextData[{
+     "GridLin",
+     Cell[BoxData[
+      TemplateBox[{
+        Cell[
+         TextData["e"]], "paclet:Fretica/ref/e", "Fretica Package Symbol"},
+       "PackageLink",
+       BaseStyle->"3ColumnTableMod"]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "3a9934d2-3ce3-46fd-8bcf-85248f68d5af"],
+     "s is an option for two-dim",
+     Cell[BoxData[
+      TemplateBox[{
+        Cell[
+         TextData["e"]], "paclet:Fretica/ref/e", "Fretica Package Symbol"},
+       "PackageLink",
+       BaseStyle->"3ColumnTableMod"]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "9125790d-28d3-4385-8d95-80a4561f43a4"],
+     "nsional graphics functions that sp",
+     Cell[BoxData[
+      TemplateBox[{
+        Cell[
+         TextData["e"]], "paclet:Fretica/ref/e", "Fretica Package Symbol"},
+       "PackageLink",
+       BaseStyle->"3ColumnTableMod"]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "b70a0b9d-dc1a-4b06-ac5f-fbaf3eefdaf1"],
+     "cifi",
+     Cell[BoxData[
+      TemplateBox[{
+        Cell[
+         TextData["e"]], "paclet:Fretica/ref/e", "Fretica Package Symbol"},
+       "PackageLink",
+       BaseStyle->"3ColumnTableMod"]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "925cd7e2-3224-4d3d-9d58-f24d0121eb2e"],
+     "s grid lin",
+     Cell[BoxData[
+      TemplateBox[{
+        Cell[
+         TextData["e"]], "paclet:Fretica/ref/e", "Fretica Package Symbol"},
+       "PackageLink",
+       BaseStyle->"3ColumnTableMod"]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "dea9a301-826b-4291-afb2-09c7559e0974"],
+     "s. "
+    }], "TableText",ExpressionUUID->"6de8910c-ea1d-4492-ae93-6df39a2b6752"]},
+   {Cell["      ", "TableRowIcon",ExpressionUUID->
+     "647b4c26-b2bb-4832-841b-40feeaeb84d3"], 
+    TemplateBox[{
+      Cell[
+       TextData["GridLinesStyle"]], "paclet:ref/GridLinesStyle"},
+     "RefLink",
+     BaseStyle->{"3ColumnTableMod"}], 
+    RowBox[{"{", "}"}], Cell[TextData[{
+     "GridLin",
+     Cell[BoxData[
+      TemplateBox[{
+        Cell[
+         TextData["e"]], "paclet:Fretica/ref/e", "Fretica Package Symbol"},
+       "PackageLink",
+       BaseStyle->"3ColumnTableMod"]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "9262961e-decc-429c-ad8c-309a19550b10"],
+     "sStyl",
+     Cell[BoxData[
+      TemplateBox[{
+        Cell[
+         TextData["e"]], "paclet:Fretica/ref/e", "Fretica Package Symbol"},
+       "PackageLink",
+       BaseStyle->"3ColumnTableMod"]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "dd5f4358-b044-446b-9b89-05dee130fe55"],
+     " is an option for 2",
+     Cell[BoxData[
+      TemplateBox[{
+        Cell[
+         TextData["D"]], "paclet:ref/D"},
+       "RefLink",
+       BaseStyle->{"3ColumnTableMod"}]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "0797ecb9-d2d8-4135-a76d-bcb24b5cba45"],
+     " graphics functions that sp",
+     Cell[BoxData[
+      TemplateBox[{
+        Cell[
+         TextData["e"]], "paclet:Fretica/ref/e", "Fretica Package Symbol"},
+       "PackageLink",
+       BaseStyle->"3ColumnTableMod"]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "43cf5b64-e94f-41fd-b999-32fd6f0c5d29"],
+     "cifi",
+     Cell[BoxData[
+      TemplateBox[{
+        Cell[
+         TextData["e"]], "paclet:Fretica/ref/e", "Fretica Package Symbol"},
+       "PackageLink",
+       BaseStyle->"3ColumnTableMod"]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "12286f60-7210-4e93-91b1-61b5dfeab9de"],
+     "s how grid lin",
+     Cell[BoxData[
+      TemplateBox[{
+        Cell[
+         TextData["e"]], "paclet:Fretica/ref/e", "Fretica Package Symbol"},
+       "PackageLink",
+       BaseStyle->"3ColumnTableMod"]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "9a9f2e32-b1b6-4126-8cfb-4f0c99a39580"],
+     "s should b",
+     Cell[BoxData[
+      TemplateBox[{
+        Cell[
+         TextData["e"]], "paclet:Fretica/ref/e", "Fretica Package Symbol"},
+       "PackageLink",
+       BaseStyle->"3ColumnTableMod"]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "9755d223-0694-4bee-ad94-01fbbed34201"],
+     " r",
+     Cell[BoxData[
+      TemplateBox[{
+        Cell[
+         TextData["e"]], "paclet:Fretica/ref/e", "Fretica Package Symbol"},
+       "PackageLink",
+       BaseStyle->"3ColumnTableMod"]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "8bfa7473-2d8e-4128-961b-4bd7e5e89148"],
+     "nd",
+     Cell[BoxData[
+      TemplateBox[{
+        Cell[
+         TextData["e"]], "paclet:Fretica/ref/e", "Fretica Package Symbol"},
+       "PackageLink",
+       BaseStyle->"3ColumnTableMod"]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "ba1529aa-20c4-4ba6-b148-ff83b820b823"],
+     "r",
+     Cell[BoxData[
+      TemplateBox[{
+        Cell[
+         TextData["e"]], "paclet:Fretica/ref/e", "Fretica Package Symbol"},
+       "PackageLink",
+       BaseStyle->"3ColumnTableMod"]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "3d33e323-7129-4d59-8872-4d6af487ad55"],
+     "d."
+    }], "TableText",ExpressionUUID->"223cb9a3-e2f6-4510-a438-3d4c843c2f97"]},
+   {Cell["      ", "TableRowIcon",ExpressionUUID->
+     "bc83ff8f-16c5-4ba9-85f6-5b77dbbea602"], 
+    TemplateBox[{
+      Cell[
+       TextData["ImageMargins"]], "paclet:ref/ImageMargins"},
+     "RefLink",
+     BaseStyle->{"3ColumnTableMod"}], "0.", Cell[TextData[{
+     "Imag",
+     Cell[BoxData[
+      TemplateBox[{
+        Cell[
+         TextData["e"]], "paclet:Fretica/ref/e", "Fretica Package Symbol"},
+       "PackageLink",
+       BaseStyle->"3ColumnTableMod"]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "b973a54d-d7fb-480d-a55e-a5415dcd6ce7"],
+     "Margins is an option that sp",
+     Cell[BoxData[
+      TemplateBox[{
+        Cell[
+         TextData["e"]], "paclet:Fretica/ref/e", "Fretica Package Symbol"},
+       "PackageLink",
+       BaseStyle->"3ColumnTableMod"]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "ea9721de-11a9-4961-a2b9-77a983c6f942"],
+     "cifi",
+     Cell[BoxData[
+      TemplateBox[{
+        Cell[
+         TextData["e"]], "paclet:Fretica/ref/e", "Fretica Package Symbol"},
+       "PackageLink",
+       BaseStyle->"3ColumnTableMod"]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "9798a65b-938f-4895-91a3-1685d4c49ae2"],
+     "s th",
+     Cell[BoxData[
+      TemplateBox[{
+        Cell[
+         TextData["e"]], "paclet:Fretica/ref/e", "Fretica Package Symbol"},
+       "PackageLink",
+       BaseStyle->"3ColumnTableMod"]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "89b9f29a-7df9-472f-a323-3e7a1f5c62c7"],
+     " absolut",
+     Cell[BoxData[
+      TemplateBox[{
+        Cell[
+         TextData["e"]], "paclet:Fretica/ref/e", "Fretica Package Symbol"},
+       "PackageLink",
+       BaseStyle->"3ColumnTableMod"]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "c05eeef4-be08-43ce-9a5d-75ea785f2e28"],
+     " margins to l",
+     Cell[BoxData[
+      TemplateBox[{
+        Cell[
+         TextData["e"]], "paclet:Fretica/ref/e", "Fretica Package Symbol"},
+       "PackageLink",
+       BaseStyle->"3ColumnTableMod"]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "6030df3a-3bfa-47d8-89c0-1340ac1d7fbb"],
+     "av",
+     Cell[BoxData[
+      TemplateBox[{
+        Cell[
+         TextData["e"]], "paclet:Fretica/ref/e", "Fretica Package Symbol"},
+       "PackageLink",
+       BaseStyle->"3ColumnTableMod"]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "8ae47fc4-1a64-4618-807e-15eba65e449e"],
+     " around th",
+     Cell[BoxData[
+      TemplateBox[{
+        Cell[
+         TextData["e"]], "paclet:Fretica/ref/e", "Fretica Package Symbol"},
+       "PackageLink",
+       BaseStyle->"3ColumnTableMod"]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "b47ce4ad-b9a5-4a60-907b-14337e233df6"],
+     " imag",
+     Cell[BoxData[
+      TemplateBox[{
+        Cell[
+         TextData["e"]], "paclet:Fretica/ref/e", "Fretica Package Symbol"},
+       "PackageLink",
+       BaseStyle->"3ColumnTableMod"]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "11e955f1-fcf2-4490-8ef6-f9b12a216a3d"],
+     " display",
+     Cell[BoxData[
+      TemplateBox[{
+        Cell[
+         TextData["e"]], "paclet:Fretica/ref/e", "Fretica Package Symbol"},
+       "PackageLink",
+       BaseStyle->"3ColumnTableMod"]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "d4da0712-aca8-48e7-8eaf-8bf7e0099e8f"],
+     "d for an obj",
+     Cell[BoxData[
+      TemplateBox[{
+        Cell[
+         TextData["e"]], "paclet:Fretica/ref/e", "Fretica Package Symbol"},
+       "PackageLink",
+       BaseStyle->"3ColumnTableMod"]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "8cadd61d-a883-450f-85f6-ba6b4ad39d89"],
+     "ct. "
+    }], "TableText",ExpressionUUID->"04bf2220-c984-460f-8246-6c53b78c42b8"]},
+   {Cell["      ", "TableRowIcon",ExpressionUUID->
+     "7da9b82c-9f8b-4be1-8bd1-4ba1497d1c5e"], 
+    TemplateBox[{
+      Cell[
+       TextData["ImagePadding"]], "paclet:ref/ImagePadding"},
+     "RefLink",
+     BaseStyle->{"3ColumnTableMod"}], 
+    TemplateBox[{
+      Cell[
+       TextData["All"]], "paclet:ref/All"},
+     "RefLink",
+     BaseStyle->{"3ColumnTableMod"}], Cell[TextData[{
+     "Imag",
+     Cell[BoxData[
+      TemplateBox[{
+        Cell[
+         TextData["e"]], "paclet:Fretica/ref/e", "Fretica Package Symbol"},
+       "PackageLink",
+       BaseStyle->"3ColumnTableMod"]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "2877356c-e3ad-4e85-99df-a6b2a92daca3"],
+     "Padding is an option for graphics functions that sp",
+     Cell[BoxData[
+      TemplateBox[{
+        Cell[
+         TextData["e"]], "paclet:Fretica/ref/e", "Fretica Package Symbol"},
+       "PackageLink",
+       BaseStyle->"3ColumnTableMod"]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "1d5d7fda-418c-4913-a6cd-502b3b3911aa"],
+     "cifi",
+     Cell[BoxData[
+      TemplateBox[{
+        Cell[
+         TextData["e"]], "paclet:Fretica/ref/e", "Fretica Package Symbol"},
+       "PackageLink",
+       BaseStyle->"3ColumnTableMod"]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "65ef6f6f-b2e2-4c04-8356-481b0622c001"],
+     "s what absolut",
+     Cell[BoxData[
+      TemplateBox[{
+        Cell[
+         TextData["e"]], "paclet:Fretica/ref/e", "Fretica Package Symbol"},
+       "PackageLink",
+       BaseStyle->"3ColumnTableMod"]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "6e7c0c84-3c14-42d8-9b5c-6c4e09bf5ef5"],
+     " ",
+     Cell[BoxData[
+      TemplateBox[{
+        Cell[
+         TextData["e"]], "paclet:Fretica/ref/e", "Fretica Package Symbol"},
+       "PackageLink",
+       BaseStyle->"3ColumnTableMod"]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "7afbdf61-297d-48da-94ff-3045c48ae67e"],
+     "xtra padding should b",
+     Cell[BoxData[
+      TemplateBox[{
+        Cell[
+         TextData["e"]], "paclet:Fretica/ref/e", "Fretica Package Symbol"},
+       "PackageLink",
+       BaseStyle->"3ColumnTableMod"]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "a9c1c705-df72-43c5-88a8-7b66060c7520"],
+     " l",
+     Cell[BoxData[
+      TemplateBox[{
+        Cell[
+         TextData["e"]], "paclet:Fretica/ref/e", "Fretica Package Symbol"},
+       "PackageLink",
+       BaseStyle->"3ColumnTableMod"]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "7c70cc6a-05a8-48b9-8f72-e2f496d52d8e"],
+     "ft for ",
+     Cell[BoxData[
+      TemplateBox[{
+        Cell[
+         TextData["e"]], "paclet:Fretica/ref/e", "Fretica Package Symbol"},
+       "PackageLink",
+       BaseStyle->"3ColumnTableMod"]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "c7da4eae-3092-43a7-a38e-245d01028589"],
+     "xt",
+     Cell[BoxData[
+      TemplateBox[{
+        Cell[
+         TextData["e"]], "paclet:Fretica/ref/e", "Fretica Package Symbol"},
+       "PackageLink",
+       BaseStyle->"3ColumnTableMod"]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "2e9c2f12-7d2a-4abc-a717-edae4052b9e4"],
+     "nd",
+     Cell[BoxData[
+      TemplateBox[{
+        Cell[
+         TextData["e"]], "paclet:Fretica/ref/e", "Fretica Package Symbol"},
+       "PackageLink",
+       BaseStyle->"3ColumnTableMod"]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "01fd9c2c-8f51-4829-8897-4792cdd94ff8"],
+     "d obj",
+     Cell[BoxData[
+      TemplateBox[{
+        Cell[
+         TextData["e"]], "paclet:Fretica/ref/e", "Fretica Package Symbol"},
+       "PackageLink",
+       BaseStyle->"3ColumnTableMod"]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "02f95c4c-dd45-48e0-9880-48df43b255d8"],
+     "cts such as thick lin",
+     Cell[BoxData[
+      TemplateBox[{
+        Cell[
+         TextData["e"]], "paclet:Fretica/ref/e", "Fretica Package Symbol"},
+       "PackageLink",
+       BaseStyle->"3ColumnTableMod"]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "497d29b8-0639-4847-b07c-95aacbb2781a"],
+     "s and annotations such as tick and axis lab",
+     Cell[BoxData[
+      TemplateBox[{
+        Cell[
+         TextData["e"]], "paclet:Fretica/ref/e", "Fretica Package Symbol"},
+       "PackageLink",
+       BaseStyle->"3ColumnTableMod"]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "2e432125-f241-47b0-913b-86d59f7cdfc0"],
+     "ls."
+    }], "TableText",ExpressionUUID->"36975cf9-379c-4c48-887f-178c5b3638c7"]},
+   {Cell["      ", "TableRowIcon",ExpressionUUID->
+     "79082fec-7cdc-414c-a373-d03c311e2a76"], 
+    TemplateBox[{
+      Cell[
+       TextData["ImageSize"]], "paclet:ref/ImageSize"},
+     "RefLink",
+     BaseStyle->{"3ColumnTableMod"}], 
+    TemplateBox[{
+      Cell[
+       TextData["Automatic"]], "paclet:ref/Automatic"},
+     "RefLink",
+     BaseStyle->{"3ColumnTableMod"}], Cell[TextData[{
+     "Imag",
+     Cell[BoxData[
+      TemplateBox[{
+        Cell[
+         TextData["e"]], "paclet:Fretica/ref/e", "Fretica Package Symbol"},
+       "PackageLink",
+       BaseStyle->"3ColumnTableMod"]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "cbb8946c-9d96-4c76-b515-413d6789c870"],
+     "Siz",
+     Cell[BoxData[
+      TemplateBox[{
+        Cell[
+         TextData["e"]], "paclet:Fretica/ref/e", "Fretica Package Symbol"},
+       "PackageLink",
+       BaseStyle->"3ColumnTableMod"]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "1f178863-e06f-45fd-9184-d166941f90f4"],
+     " is an option that sp",
+     Cell[BoxData[
+      TemplateBox[{
+        Cell[
+         TextData["e"]], "paclet:Fretica/ref/e", "Fretica Package Symbol"},
+       "PackageLink",
+       BaseStyle->"3ColumnTableMod"]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "0e966895-ef68-43f3-a233-ca6732488e7a"],
+     "cifi",
+     Cell[BoxData[
+      TemplateBox[{
+        Cell[
+         TextData["e"]], "paclet:Fretica/ref/e", "Fretica Package Symbol"},
+       "PackageLink",
+       BaseStyle->"3ColumnTableMod"]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "20227bb8-93c7-4162-b1ed-aa3a3f7cfd0d"],
+     "s th",
+     Cell[BoxData[
+      TemplateBox[{
+        Cell[
+         TextData["e"]], "paclet:Fretica/ref/e", "Fretica Package Symbol"},
+       "PackageLink",
+       BaseStyle->"3ColumnTableMod"]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "65149b70-0135-4cbe-9c7e-e26aa2cae4f1"],
+     " ov",
+     Cell[BoxData[
+      TemplateBox[{
+        Cell[
+         TextData["e"]], "paclet:Fretica/ref/e", "Fretica Package Symbol"},
+       "PackageLink",
+       BaseStyle->"3ColumnTableMod"]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "26c8d97c-e8b4-482c-8e86-656e7b4bc96b"],
+     "rall siz",
+     Cell[BoxData[
+      TemplateBox[{
+        Cell[
+         TextData["e"]], "paclet:Fretica/ref/e", "Fretica Package Symbol"},
+       "PackageLink",
+       BaseStyle->"3ColumnTableMod"]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "1d01c718-2ed2-4a2f-badb-ff02caa38af5"],
+     " of an imag",
+     Cell[BoxData[
+      TemplateBox[{
+        Cell[
+         TextData["e"]], "paclet:Fretica/ref/e", "Fretica Package Symbol"},
+       "PackageLink",
+       BaseStyle->"3ColumnTableMod"]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "e5911e64-567c-40c2-a106-73c0f7964ca7"],
+     " to display for an obj",
+     Cell[BoxData[
+      TemplateBox[{
+        Cell[
+         TextData["e"]], "paclet:Fretica/ref/e", "Fretica Package Symbol"},
+       "PackageLink",
+       BaseStyle->"3ColumnTableMod"]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "d3404b83-d6d0-4f21-aaac-025ad451dc54"],
+     "ct. "
+    }], "TableText",ExpressionUUID->"852aff68-6496-4c14-95e5-cf5342dc3f3e"]},
+   {Cell["      ", "TableRowIcon",ExpressionUUID->
+     "6c78b39d-a295-478d-b727-5ffd7123de7d"], 
+    TemplateBox[{
+      Cell[
+       TextData["LabelStyle"]], "paclet:ref/LabelStyle"},
+     "RefLink",
+     BaseStyle->{"3ColumnTableMod"}], 
+    RowBox[{"{", "}"}], Cell[TextData[{
+     "Lab",
+     Cell[BoxData[
+      TemplateBox[{
+        Cell[
+         TextData["e"]], "paclet:Fretica/ref/e", "Fretica Package Symbol"},
+       "PackageLink",
+       BaseStyle->"3ColumnTableMod"]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "f3461c0b-33a6-4128-9798-0bde53268827"],
+     "lStyl",
+     Cell[BoxData[
+      TemplateBox[{
+        Cell[
+         TextData["e"]], "paclet:Fretica/ref/e", "Fretica Package Symbol"},
+       "PackageLink",
+       BaseStyle->"3ColumnTableMod"]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "65579471-7bb1-4a28-907f-58e2a8d52e44"],
+     " is an option for formatting and r",
+     Cell[BoxData[
+      TemplateBox[{
+        Cell[
+         TextData["e"]], "paclet:Fretica/ref/e", "Fretica Package Symbol"},
+       "PackageLink",
+       BaseStyle->"3ColumnTableMod"]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "6555c5ba-9029-41d8-8b38-f32d94e4545e"],
+     "lat",
+     Cell[BoxData[
+      TemplateBox[{
+        Cell[
+         TextData["e"]], "paclet:Fretica/ref/e", "Fretica Package Symbol"},
+       "PackageLink",
+       BaseStyle->"3ColumnTableMod"]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "51854162-2d0a-4f41-8129-37becb7152b1"],
+     "d constructs that sp",
+     Cell[BoxData[
+      TemplateBox[{
+        Cell[
+         TextData["e"]], "paclet:Fretica/ref/e", "Fretica Package Symbol"},
+       "PackageLink",
+       BaseStyle->"3ColumnTableMod"]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "464390af-68b6-4093-8882-6c88c4b54ce4"],
+     "cifi",
+     Cell[BoxData[
+      TemplateBox[{
+        Cell[
+         TextData["e"]], "paclet:Fretica/ref/e", "Fretica Package Symbol"},
+       "PackageLink",
+       BaseStyle->"3ColumnTableMod"]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "91fc89c1-36c7-41bd-8342-6a44e6afe77a"],
+     "s th",
+     Cell[BoxData[
+      TemplateBox[{
+        Cell[
+         TextData["e"]], "paclet:Fretica/ref/e", "Fretica Package Symbol"},
+       "PackageLink",
+       BaseStyle->"3ColumnTableMod"]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "d6b8da68-2bfb-4169-a67d-0e12fc60c429"],
+     " styl",
+     Cell[BoxData[
+      TemplateBox[{
+        Cell[
+         TextData["e"]], "paclet:Fretica/ref/e", "Fretica Package Symbol"},
+       "PackageLink",
+       BaseStyle->"3ColumnTableMod"]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "9c9a9101-5891-4894-876c-cfe14a136d37"],
+     " to us",
+     Cell[BoxData[
+      TemplateBox[{
+        Cell[
+         TextData["e"]], "paclet:Fretica/ref/e", "Fretica Package Symbol"},
+       "PackageLink",
+       BaseStyle->"3ColumnTableMod"]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "10c8a551-c241-47ca-8d61-6ec773b327f3"],
+     " in displaying th",
+     Cell[BoxData[
+      TemplateBox[{
+        Cell[
+         TextData["e"]], "paclet:Fretica/ref/e", "Fretica Package Symbol"},
+       "PackageLink",
+       BaseStyle->"3ColumnTableMod"]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "eb822d66-fc98-4dd6-bdeb-9ab546256c47"],
+     "ir lab",
+     Cell[BoxData[
+      TemplateBox[{
+        Cell[
+         TextData["e"]], "paclet:Fretica/ref/e", "Fretica Package Symbol"},
+       "PackageLink",
+       BaseStyle->"3ColumnTableMod"]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "ceca943d-6def-4a92-bf59-9c9e29bd1148"],
+     "l-lik",
+     Cell[BoxData[
+      TemplateBox[{
+        Cell[
+         TextData["e"]], "paclet:Fretica/ref/e", "Fretica Package Symbol"},
+       "PackageLink",
+       BaseStyle->"3ColumnTableMod"]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "0d1a06f0-7f30-415c-97a6-d5d50a1e7051"],
+     " ",
+     Cell[BoxData[
+      TemplateBox[{
+        Cell[
+         TextData["e"]], "paclet:Fretica/ref/e", "Fretica Package Symbol"},
+       "PackageLink",
+       BaseStyle->"3ColumnTableMod"]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "0cc77df0-e971-40e6-a052-090ad59a24d4"],
+     "l",
+     Cell[BoxData[
+      TemplateBox[{
+        Cell[
+         TextData["e"]], "paclet:Fretica/ref/e", "Fretica Package Symbol"},
+       "PackageLink",
+       BaseStyle->"3ColumnTableMod"]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "ba65602d-4c43-46e3-a752-855c8a79c426"],
+     "m",
+     Cell[BoxData[
+      TemplateBox[{
+        Cell[
+         TextData["e"]], "paclet:Fretica/ref/e", "Fretica Package Symbol"},
+       "PackageLink",
+       BaseStyle->"3ColumnTableMod"]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "a27ac18f-f274-46e9-80f9-7a7ca58c8f0b"],
+     "nts. "
+    }], "TableText",ExpressionUUID->"f62127f6-154a-4e0b-b4b9-97fc084dd036"]},
+   {Cell["      ", "TableRowIcon",ExpressionUUID->
+     "a8a44fc1-5ec5-4cec-9992-9a816ecbad1f"], 
+    TemplateBox[{
+      Cell[
+       TextData["Method"]], "paclet:ref/Method"},
+     "RefLink",
+     BaseStyle->{"3ColumnTableMod"}], 
+    TemplateBox[{
+      Cell[
+       TextData["Automatic"]], "paclet:ref/Automatic"},
+     "RefLink",
+     BaseStyle->{"3ColumnTableMod"}], Cell[TextData[{
+     "M",
+     Cell[BoxData[
+      TemplateBox[{
+        Cell[
+         TextData["e"]], "paclet:Fretica/ref/e", "Fretica Package Symbol"},
+       "PackageLink",
+       BaseStyle->"3ColumnTableMod"]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "0885780d-56bd-4c9c-abf6-83b4c7156a34"],
+     "thod is an option for various algorithm-int",
+     Cell[BoxData[
+      TemplateBox[{
+        Cell[
+         TextData["e"]], "paclet:Fretica/ref/e", "Fretica Package Symbol"},
+       "PackageLink",
+       BaseStyle->"3ColumnTableMod"]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "b31e094b-b93f-4b49-b2fc-32f2b530847f"],
+     "nsiv",
+     Cell[BoxData[
+      TemplateBox[{
+        Cell[
+         TextData["e"]], "paclet:Fretica/ref/e", "Fretica Package Symbol"},
+       "PackageLink",
+       BaseStyle->"3ColumnTableMod"]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "3c3cea95-f278-47cc-8ed9-0d83cdeac0d2"],
+     " functions that sp",
+     Cell[BoxData[
+      TemplateBox[{
+        Cell[
+         TextData["e"]], "paclet:Fretica/ref/e", "Fretica Package Symbol"},
+       "PackageLink",
+       BaseStyle->"3ColumnTableMod"]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "a634c7be-03ff-4762-a5cf-a5ba2540def1"],
+     "cifi",
+     Cell[BoxData[
+      TemplateBox[{
+        Cell[
+         TextData["e"]], "paclet:Fretica/ref/e", "Fretica Package Symbol"},
+       "PackageLink",
+       BaseStyle->"3ColumnTableMod"]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "e7b0d513-4935-474f-b0c5-7e2cbaddb941"],
+     "s what int",
+     Cell[BoxData[
+      TemplateBox[{
+        Cell[
+         TextData["e"]], "paclet:Fretica/ref/e", "Fretica Package Symbol"},
+       "PackageLink",
+       BaseStyle->"3ColumnTableMod"]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "e4112d01-221d-4582-b473-e899c21bb6a5"],
+     "rnal m",
+     Cell[BoxData[
+      TemplateBox[{
+        Cell[
+         TextData["e"]], "paclet:Fretica/ref/e", "Fretica Package Symbol"},
+       "PackageLink",
+       BaseStyle->"3ColumnTableMod"]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "3b34dabc-3424-4983-a98d-4d6b2e5a05cd"],
+     "thods th",
+     Cell[BoxData[
+      TemplateBox[{
+        Cell[
+         TextData["e"]], "paclet:Fretica/ref/e", "Fretica Package Symbol"},
+       "PackageLink",
+       BaseStyle->"3ColumnTableMod"]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "2357627b-8e4e-4c96-b62c-9f338c0359b5"],
+     "y should us",
+     Cell[BoxData[
+      TemplateBox[{
+        Cell[
+         TextData["e"]], "paclet:Fretica/ref/e", "Fretica Package Symbol"},
+       "PackageLink",
+       BaseStyle->"3ColumnTableMod"]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "bb36abb7-c263-4ef0-bc0f-65a64baf3322"],
+     "."
+    }], "TableText",ExpressionUUID->"9b02a6f9-a5ae-4245-9b42-a99a6399c206"]},
+   {Cell["      ", "TableRowIcon",ExpressionUUID->
+     "8e155329-dbdc-4fe0-aa99-a7f4ba8b257d"], 
+    TemplateBox[{
+      Cell[
+       TextData["PlotLabel"]], "paclet:ref/PlotLabel"},
+     "RefLink",
+     BaseStyle->{"3ColumnTableMod"}], 
+    TemplateBox[{
+      Cell[
+       TextData["None"]], "paclet:ref/None"},
+     "RefLink",
+     BaseStyle->{"3ColumnTableMod"}], Cell[TextData[{
+     "PlotLab",
+     Cell[BoxData[
+      TemplateBox[{
+        Cell[
+         TextData["e"]], "paclet:Fretica/ref/e", "Fretica Package Symbol"},
+       "PackageLink",
+       BaseStyle->"3ColumnTableMod"]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "644c63a5-7703-40ac-87a7-2603ce7ae4a8"],
+     "l is an option for graphics functions that sp",
+     Cell[BoxData[
+      TemplateBox[{
+        Cell[
+         TextData["e"]], "paclet:Fretica/ref/e", "Fretica Package Symbol"},
+       "PackageLink",
+       BaseStyle->"3ColumnTableMod"]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "0be645c6-3d3e-43c3-abae-2b605a4ed974"],
+     "cifi",
+     Cell[BoxData[
+      TemplateBox[{
+        Cell[
+         TextData["e"]], "paclet:Fretica/ref/e", "Fretica Package Symbol"},
+       "PackageLink",
+       BaseStyle->"3ColumnTableMod"]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "b92be7c9-5be2-4b2c-ade5-fd5020233bf9"],
+     "s an ov",
+     Cell[BoxData[
+      TemplateBox[{
+        Cell[
+         TextData["e"]], "paclet:Fretica/ref/e", "Fretica Package Symbol"},
+       "PackageLink",
+       BaseStyle->"3ColumnTableMod"]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "55273c6d-9eff-464b-be45-aff379e0f42a"],
+     "rall lab",
+     Cell[BoxData[
+      TemplateBox[{
+        Cell[
+         TextData["e"]], "paclet:Fretica/ref/e", "Fretica Package Symbol"},
+       "PackageLink",
+       BaseStyle->"3ColumnTableMod"]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "c7d05ae7-c947-4df0-99cb-09e47d5c762a"],
+     "l for a plot. "
+    }], "TableText",ExpressionUUID->"43ac2bf1-4abf-496c-867f-0110e33b0798"]},
+   {Cell["      ", "TableRowIcon",ExpressionUUID->
+     "23f5d007-b093-4407-92a0-b1cd05cf95dc"], 
+    TemplateBox[{
+      Cell[
+       TextData["PlotRange"]], "paclet:ref/PlotRange"},
+     "RefLink",
+     BaseStyle->{"3ColumnTableMod"}], 
+    TemplateBox[{
+      Cell[
+       TextData["All"]], "paclet:ref/All"},
+     "RefLink",
+     BaseStyle->{"3ColumnTableMod"}], Cell[TextData[{
+     "PlotRang",
+     Cell[BoxData[
+      TemplateBox[{
+        Cell[
+         TextData["e"]], "paclet:Fretica/ref/e", "Fretica Package Symbol"},
+       "PackageLink",
+       BaseStyle->"3ColumnTableMod"]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "9325ee82-21b9-4e55-a854-54f3a5a01ac0"],
+     " is an option for graphics functions that sp",
+     Cell[BoxData[
+      TemplateBox[{
+        Cell[
+         TextData["e"]], "paclet:Fretica/ref/e", "Fretica Package Symbol"},
+       "PackageLink",
+       BaseStyle->"3ColumnTableMod"]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "31094852-9252-4070-8dac-c4ec617fe1f3"],
+     "cifi",
+     Cell[BoxData[
+      TemplateBox[{
+        Cell[
+         TextData["e"]], "paclet:Fretica/ref/e", "Fretica Package Symbol"},
+       "PackageLink",
+       BaseStyle->"3ColumnTableMod"]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "76f5d84f-db91-4746-8880-fa3661406ee0"],
+     "s what rang",
+     Cell[BoxData[
+      TemplateBox[{
+        Cell[
+         TextData["e"]], "paclet:Fretica/ref/e", "Fretica Package Symbol"},
+       "PackageLink",
+       BaseStyle->"3ColumnTableMod"]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "dda748a3-8f20-41a5-8257-218bda5e4df2"],
+     " of coordinat",
+     Cell[BoxData[
+      TemplateBox[{
+        Cell[
+         TextData["e"]], "paclet:Fretica/ref/e", "Fretica Package Symbol"},
+       "PackageLink",
+       BaseStyle->"3ColumnTableMod"]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "4cb051ef-4abc-454b-85f8-dfe45018c435"],
+     "s to includ",
+     Cell[BoxData[
+      TemplateBox[{
+        Cell[
+         TextData["e"]], "paclet:Fretica/ref/e", "Fretica Package Symbol"},
+       "PackageLink",
+       BaseStyle->"3ColumnTableMod"]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "c2d88c6e-1b01-4b07-9614-867c23f9c4d8"],
+     " in a plot. "
+    }], "TableText",ExpressionUUID->"949ab27e-a9c8-4523-9f87-cfa156b8f631"]},
+   {Cell["      ", "TableRowIcon",ExpressionUUID->
+     "1d077c53-5ebc-478b-b971-5c93739eddec"], 
+    TemplateBox[{
+      Cell[
+       TextData["PlotRangeClipping"]], "paclet:ref/PlotRangeClipping"},
+     "RefLink",
+     BaseStyle->{"3ColumnTableMod"}], 
+    TemplateBox[{
+      Cell[
+       TextData["False"]], "paclet:ref/False"},
+     "RefLink",
+     BaseStyle->{"3ColumnTableMod"}], Cell[TextData[{
+     "PlotRang",
+     Cell[BoxData[
+      TemplateBox[{
+        Cell[
+         TextData["e"]], "paclet:Fretica/ref/e", "Fretica Package Symbol"},
+       "PackageLink",
+       BaseStyle->"3ColumnTableMod"]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "a1a13bbb-89e0-4f95-bae8-0c36767d66ae"],
+     "Clipping is an option for graphics functions that sp",
+     Cell[BoxData[
+      TemplateBox[{
+        Cell[
+         TextData["e"]], "paclet:Fretica/ref/e", "Fretica Package Symbol"},
+       "PackageLink",
+       BaseStyle->"3ColumnTableMod"]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "cffcd9c1-ac94-4096-ad8c-764b86818893"],
+     "cifi",
+     Cell[BoxData[
+      TemplateBox[{
+        Cell[
+         TextData["e"]], "paclet:Fretica/ref/e", "Fretica Package Symbol"},
+       "PackageLink",
+       BaseStyle->"3ColumnTableMod"]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "77d2d95a-4653-447e-afda-55524bb609ab"],
+     "s wh",
+     Cell[BoxData[
+      TemplateBox[{
+        Cell[
+         TextData["e"]], "paclet:Fretica/ref/e", "Fretica Package Symbol"},
+       "PackageLink",
+       BaseStyle->"3ColumnTableMod"]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "bcf8a283-506c-4dfa-aaa9-55022769c04e"],
+     "th",
+     Cell[BoxData[
+      TemplateBox[{
+        Cell[
+         TextData["e"]], "paclet:Fretica/ref/e", "Fretica Package Symbol"},
+       "PackageLink",
+       BaseStyle->"3ColumnTableMod"]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "0ebf9f2a-637a-470d-8e73-c8f6506f54cb"],
+     "r graphics obj",
+     Cell[BoxData[
+      TemplateBox[{
+        Cell[
+         TextData["e"]], "paclet:Fretica/ref/e", "Fretica Package Symbol"},
+       "PackageLink",
+       BaseStyle->"3ColumnTableMod"]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "e7a3cedd-4571-4d51-bb58-c43c6c2acdca"],
+     "cts should b",
+     Cell[BoxData[
+      TemplateBox[{
+        Cell[
+         TextData["e"]], "paclet:Fretica/ref/e", "Fretica Package Symbol"},
+       "PackageLink",
+       BaseStyle->"3ColumnTableMod"]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "6e2cab1c-026d-429a-b57f-76b4483dbe50"],
+     " clipp",
+     Cell[BoxData[
+      TemplateBox[{
+        Cell[
+         TextData["e"]], "paclet:Fretica/ref/e", "Fretica Package Symbol"},
+       "PackageLink",
+       BaseStyle->"3ColumnTableMod"]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "4242f85b-e351-4f21-9acb-bc881ebff525"],
+     "d at th",
+     Cell[BoxData[
+      TemplateBox[{
+        Cell[
+         TextData["e"]], "paclet:Fretica/ref/e", "Fretica Package Symbol"},
+       "PackageLink",
+       BaseStyle->"3ColumnTableMod"]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "278f2267-966a-49c0-9983-42cc34dc459e"],
+     " ",
+     Cell[BoxData[
+      TemplateBox[{
+        Cell[
+         TextData["e"]], "paclet:Fretica/ref/e", "Fretica Package Symbol"},
+       "PackageLink",
+       BaseStyle->"3ColumnTableMod"]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "166e91a7-e98b-4a29-90f4-a7f9abd511e4"],
+     "dg",
+     Cell[BoxData[
+      TemplateBox[{
+        Cell[
+         TextData["e"]], "paclet:Fretica/ref/e", "Fretica Package Symbol"},
+       "PackageLink",
+       BaseStyle->"3ColumnTableMod"]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "ece2e8d7-12ad-4999-9326-51b39c0fa541"],
+     " of th",
+     Cell[BoxData[
+      TemplateBox[{
+        Cell[
+         TextData["e"]], "paclet:Fretica/ref/e", "Fretica Package Symbol"},
+       "PackageLink",
+       BaseStyle->"3ColumnTableMod"]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "b5573bda-5756-4457-95f9-7abab6a28cdd"],
+     " r",
+     Cell[BoxData[
+      TemplateBox[{
+        Cell[
+         TextData["e"]], "paclet:Fretica/ref/e", "Fretica Package Symbol"},
+       "PackageLink",
+       BaseStyle->"3ColumnTableMod"]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "21ee290a-ab5d-4515-a5ad-d17a401fdaff"],
+     "gion d",
+     Cell[BoxData[
+      TemplateBox[{
+        Cell[
+         TextData["e"]], "paclet:Fretica/ref/e", "Fretica Package Symbol"},
+       "PackageLink",
+       BaseStyle->"3ColumnTableMod"]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "782ad2fa-34ef-4d75-909d-4115bdf53c14"],
+     "fin",
+     Cell[BoxData[
+      TemplateBox[{
+        Cell[
+         TextData["e"]], "paclet:Fretica/ref/e", "Fretica Package Symbol"},
+       "PackageLink",
+       BaseStyle->"3ColumnTableMod"]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "b9f88e81-91d1-4c2e-b8db-aec66f194b16"],
+     "d by PlotRang",
+     Cell[BoxData[
+      TemplateBox[{
+        Cell[
+         TextData["e"]], "paclet:Fretica/ref/e", "Fretica Package Symbol"},
+       "PackageLink",
+       BaseStyle->"3ColumnTableMod"]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "01327c3f-da7e-4e21-817b-11d37bc5d5ff"],
+     ", or should b",
+     Cell[BoxData[
+      TemplateBox[{
+        Cell[
+         TextData["e"]], "paclet:Fretica/ref/e", "Fretica Package Symbol"},
+       "PackageLink",
+       BaseStyle->"3ColumnTableMod"]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "13785e23-f8bd-4882-a069-133a469b4090"],
+     " allow",
+     Cell[BoxData[
+      TemplateBox[{
+        Cell[
+         TextData["e"]], "paclet:Fretica/ref/e", "Fretica Package Symbol"},
+       "PackageLink",
+       BaseStyle->"3ColumnTableMod"]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "12a7f536-dcbb-4b3e-a632-4b13da86afa5"],
+     "d to ",
+     Cell[BoxData[
+      TemplateBox[{
+        Cell[
+         TextData["e"]], "paclet:Fretica/ref/e", "Fretica Package Symbol"},
+       "PackageLink",
+       BaseStyle->"3ColumnTableMod"]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "a2e1df6e-380f-4753-9e5e-d75b81dfa348"],
+     "xt",
+     Cell[BoxData[
+      TemplateBox[{
+        Cell[
+         TextData["e"]], "paclet:Fretica/ref/e", "Fretica Package Symbol"},
+       "PackageLink",
+       BaseStyle->"3ColumnTableMod"]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "5951716f-4121-4b67-88f0-3509b4f3e3a4"],
+     "nd to th",
+     Cell[BoxData[
+      TemplateBox[{
+        Cell[
+         TextData["e"]], "paclet:Fretica/ref/e", "Fretica Package Symbol"},
+       "PackageLink",
+       BaseStyle->"3ColumnTableMod"]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "d702a138-2cbb-4ff5-b4b7-6bbb0ca36bc8"],
+     " actual ",
+     Cell[BoxData[
+      TemplateBox[{
+        Cell[
+         TextData["e"]], "paclet:Fretica/ref/e", "Fretica Package Symbol"},
+       "PackageLink",
+       BaseStyle->"3ColumnTableMod"]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "6c3d75bf-61a6-443a-b44b-e4ff474d8e66"],
+     "dg",
+     Cell[BoxData[
+      TemplateBox[{
+        Cell[
+         TextData["e"]], "paclet:Fretica/ref/e", "Fretica Package Symbol"},
+       "PackageLink",
+       BaseStyle->"3ColumnTableMod"]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "fe175d67-a1af-4073-bf51-4537fb7cc435"],
+     " of th",
+     Cell[BoxData[
+      TemplateBox[{
+        Cell[
+         TextData["e"]], "paclet:Fretica/ref/e", "Fretica Package Symbol"},
+       "PackageLink",
+       BaseStyle->"3ColumnTableMod"]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "7d2bfbc2-ca81-4912-9950-2bcbe33c3e6f"],
+     " imag",
+     Cell[BoxData[
+      TemplateBox[{
+        Cell[
+         TextData["e"]], "paclet:Fretica/ref/e", "Fretica Package Symbol"},
+       "PackageLink",
+       BaseStyle->"3ColumnTableMod"]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "31f9915d-4e4a-492d-af1d-28a23cdbc57f"],
+     ". "
+    }], "TableText",ExpressionUUID->"f87885c8-4fc6-4c39-9c6a-15e834d6f560"]},
+   {Cell["      ", "TableRowIcon",ExpressionUUID->
+     "56602126-46bf-40f5-8ea8-5155aba7915a"], 
+    TemplateBox[{
+      Cell[
+       TextData["PlotRangePadding"]], "paclet:ref/PlotRangePadding"},
+     "RefLink",
+     BaseStyle->{"3ColumnTableMod"}], 
+    TemplateBox[{
+      Cell[
+       TextData["Automatic"]], "paclet:ref/Automatic"},
+     "RefLink",
+     BaseStyle->{"3ColumnTableMod"}], Cell[TextData[{
+     "PlotRang",
+     Cell[BoxData[
+      TemplateBox[{
+        Cell[
+         TextData["e"]], "paclet:Fretica/ref/e", "Fretica Package Symbol"},
+       "PackageLink",
+       BaseStyle->"3ColumnTableMod"]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "b55d2758-cb51-4bf9-a1da-da9b209998ea"],
+     "Padding is an option for graphics functions that sp",
+     Cell[BoxData[
+      TemplateBox[{
+        Cell[
+         TextData["e"]], "paclet:Fretica/ref/e", "Fretica Package Symbol"},
+       "PackageLink",
+       BaseStyle->"3ColumnTableMod"]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "fa6b9d90-3676-481b-b14a-f8216044bd68"],
+     "cifi",
+     Cell[BoxData[
+      TemplateBox[{
+        Cell[
+         TextData["e"]], "paclet:Fretica/ref/e", "Fretica Package Symbol"},
+       "PackageLink",
+       BaseStyle->"3ColumnTableMod"]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "c6910071-80ad-4f12-aa7b-dd855b21dc6c"],
+     "s how much furth",
+     Cell[BoxData[
+      TemplateBox[{
+        Cell[
+         TextData["e"]], "paclet:Fretica/ref/e", "Fretica Package Symbol"},
+       "PackageLink",
+       BaseStyle->"3ColumnTableMod"]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "dac33bbc-d698-4647-bb7e-c302578ca88b"],
+     "r ax",
+     Cell[BoxData[
+      TemplateBox[{
+        Cell[
+         TextData["e"]], "paclet:Fretica/ref/e", "Fretica Package Symbol"},
+       "PackageLink",
+       BaseStyle->"3ColumnTableMod"]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "e54eea73-34ef-4058-9eed-e0e1834f5035"],
+     "s ",
+     Cell[BoxData[
+      TemplateBox[{
+        Cell[
+         TextData["e"]], "paclet:Fretica/ref/e", "Fretica Package Symbol"},
+       "PackageLink",
+       BaseStyle->"3ColumnTableMod"]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "26660917-18f5-4d7c-8065-26f195c96d73"],
+     "tc. should ",
+     Cell[BoxData[
+      TemplateBox[{
+        Cell[
+         TextData["e"]], "paclet:Fretica/ref/e", "Fretica Package Symbol"},
+       "PackageLink",
+       BaseStyle->"3ColumnTableMod"]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "0a504beb-8a54-4ab4-a8c0-2d9856d473e8"],
+     "xt",
+     Cell[BoxData[
+      TemplateBox[{
+        Cell[
+         TextData["e"]], "paclet:Fretica/ref/e", "Fretica Package Symbol"},
+       "PackageLink",
+       BaseStyle->"3ColumnTableMod"]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "9c77e500-3677-439e-bc70-d0bb666cc19b"],
+     "nd b",
+     Cell[BoxData[
+      TemplateBox[{
+        Cell[
+         TextData["e"]], "paclet:Fretica/ref/e", "Fretica Package Symbol"},
+       "PackageLink",
+       BaseStyle->"3ColumnTableMod"]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "21ce1fdb-baa8-40b9-b4b4-bfbe3e6d9391"],
+     "yond th",
+     Cell[BoxData[
+      TemplateBox[{
+        Cell[
+         TextData["e"]], "paclet:Fretica/ref/e", "Fretica Package Symbol"},
+       "PackageLink",
+       BaseStyle->"3ColumnTableMod"]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "6490171e-bcbb-45d5-9efd-a40eeb10751a"],
+     " rang",
+     Cell[BoxData[
+      TemplateBox[{
+        Cell[
+         TextData["e"]], "paclet:Fretica/ref/e", "Fretica Package Symbol"},
+       "PackageLink",
+       BaseStyle->"3ColumnTableMod"]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "5c74eb84-42ff-42d2-83f2-993adbda800f"],
+     " of coordinat",
+     Cell[BoxData[
+      TemplateBox[{
+        Cell[
+         TextData["e"]], "paclet:Fretica/ref/e", "Fretica Package Symbol"},
+       "PackageLink",
+       BaseStyle->"3ColumnTableMod"]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "0ecd11a4-b647-4a7f-b7db-ff692521a4f5"],
+     "s sp",
+     Cell[BoxData[
+      TemplateBox[{
+        Cell[
+         TextData["e"]], "paclet:Fretica/ref/e", "Fretica Package Symbol"},
+       "PackageLink",
+       BaseStyle->"3ColumnTableMod"]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "0856ae54-ae5c-4fd4-9cf4-6232eb36da76"],
+     "cifi",
+     Cell[BoxData[
+      TemplateBox[{
+        Cell[
+         TextData["e"]], "paclet:Fretica/ref/e", "Fretica Package Symbol"},
+       "PackageLink",
+       BaseStyle->"3ColumnTableMod"]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "22c2bc39-23aa-44d9-8fbd-882b9d3adaec"],
+     "d by PlotRang",
+     Cell[BoxData[
+      TemplateBox[{
+        Cell[
+         TextData["e"]], "paclet:Fretica/ref/e", "Fretica Package Symbol"},
+       "PackageLink",
+       BaseStyle->"3ColumnTableMod"]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "26a0d8e0-1ec5-47a6-8a3e-12ddece8895e"],
+     ". "
+    }], "TableText",ExpressionUUID->"5aed40bd-1900-4737-8a96-7a660812a211"]},
+   {Cell["      ", "TableRowIcon",ExpressionUUID->
+     "1bd8b481-7497-4477-a0d3-4ea733be6c27"], 
+    TemplateBox[{
+      Cell[
+       TextData["PlotRegion"]], "paclet:ref/PlotRegion"},
+     "RefLink",
+     BaseStyle->{"3ColumnTableMod"}], 
+    TemplateBox[{
+      Cell[
+       TextData["Automatic"]], "paclet:ref/Automatic"},
+     "RefLink",
+     BaseStyle->{"3ColumnTableMod"}], Cell[TextData[{
+     "PlotR",
+     Cell[BoxData[
+      TemplateBox[{
+        Cell[
+         TextData["e"]], "paclet:Fretica/ref/e", "Fretica Package Symbol"},
+       "PackageLink",
+       BaseStyle->"3ColumnTableMod"]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "d6916c58-8df2-4cdc-8236-7f52324948a7"],
+     "gion is an option for graphics functions that sp",
+     Cell[BoxData[
+      TemplateBox[{
+        Cell[
+         TextData["e"]], "paclet:Fretica/ref/e", "Fretica Package Symbol"},
+       "PackageLink",
+       BaseStyle->"3ColumnTableMod"]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "8dd78ea9-6370-4bb7-b1ec-1ca8816ec5fb"],
+     "cifi",
+     Cell[BoxData[
+      TemplateBox[{
+        Cell[
+         TextData["e"]], "paclet:Fretica/ref/e", "Fretica Package Symbol"},
+       "PackageLink",
+       BaseStyle->"3ColumnTableMod"]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "0378546f-c2c1-4229-aa28-32d438b33295"],
+     "s what r",
+     Cell[BoxData[
+      TemplateBox[{
+        Cell[
+         TextData["e"]], "paclet:Fretica/ref/e", "Fretica Package Symbol"},
+       "PackageLink",
+       BaseStyle->"3ColumnTableMod"]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "60143515-b809-4ed4-a680-92debd2421ca"],
+     "gion of th",
+     Cell[BoxData[
+      TemplateBox[{
+        Cell[
+         TextData["e"]], "paclet:Fretica/ref/e", "Fretica Package Symbol"},
+       "PackageLink",
+       BaseStyle->"3ColumnTableMod"]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "de12a2fb-6036-42b1-acd8-d6efa93ca5a3"],
+     " final display ar",
+     Cell[BoxData[
+      TemplateBox[{
+        Cell[
+         TextData["e"]], "paclet:Fretica/ref/e", "Fretica Package Symbol"},
+       "PackageLink",
+       BaseStyle->"3ColumnTableMod"]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "d7f81b4d-81bc-44aa-be13-3978b96feb27"],
+     "a a plot should fill. "
+    }], "TableText",ExpressionUUID->"885a7c95-e60a-442b-b6dc-bd5d2d66cb6a"]},
+   {Cell["      ", "TableRowIcon",ExpressionUUID->
+     "a22eb810-7d2f-4900-b718-bdb275d054ce"], 
+    TemplateBox[{
+      Cell[
+       TextData["PreserveImageOptions"]], "paclet:ref/PreserveImageOptions"},
+     "RefLink",
+     BaseStyle->{"3ColumnTableMod"}], 
+    TemplateBox[{
+      Cell[
+       TextData["Automatic"]], "paclet:ref/Automatic"},
+     "RefLink",
+     BaseStyle->{"3ColumnTableMod"}], Cell[TextData[{
+     "Pr",
+     Cell[BoxData[
+      TemplateBox[{
+        Cell[
+         TextData["e"]], "paclet:Fretica/ref/e", "Fretica Package Symbol"},
+       "PackageLink",
+       BaseStyle->"3ColumnTableMod"]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "11fe41a3-0ed9-4184-ada4-6798d2f9ab93"],
+     "s",
+     Cell[BoxData[
+      TemplateBox[{
+        Cell[
+         TextData["e"]], "paclet:Fretica/ref/e", "Fretica Package Symbol"},
+       "PackageLink",
+       BaseStyle->"3ColumnTableMod"]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "b33323cf-5e3f-4dd1-aff5-d039a241d898"],
+     "rv",
+     Cell[BoxData[
+      TemplateBox[{
+        Cell[
+         TextData["e"]], "paclet:Fretica/ref/e", "Fretica Package Symbol"},
+       "PackageLink",
+       BaseStyle->"3ColumnTableMod"]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "42deb8e1-26bd-48fd-b990-3a7bc75f8a02"],
+     "Imag",
+     Cell[BoxData[
+      TemplateBox[{
+        Cell[
+         TextData["e"]], "paclet:Fretica/ref/e", "Fretica Package Symbol"},
+       "PackageLink",
+       BaseStyle->"3ColumnTableMod"]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "528b1ef1-7e0a-47ac-9b9a-24f7631f6e04"],
+     Cell[BoxData[
+      TemplateBox[{
+        Cell[
+         TextData["Options"]], "paclet:ref/Options"},
+       "RefLink",
+       BaseStyle->{"3ColumnTableMod"}]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "a49348ec-f3ab-4a3a-9b85-a6caa8bee7f5"],
+     " is an option to graphics and r",
+     Cell[BoxData[
+      TemplateBox[{
+        Cell[
+         TextData["e"]], "paclet:Fretica/ref/e", "Fretica Package Symbol"},
+       "PackageLink",
+       BaseStyle->"3ColumnTableMod"]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "a84f6d94-0596-4ccb-a084-a47c61cfdfdf"],
+     "lat",
+     Cell[BoxData[
+      TemplateBox[{
+        Cell[
+         TextData["e"]], "paclet:Fretica/ref/e", "Fretica Package Symbol"},
+       "PackageLink",
+       BaseStyle->"3ColumnTableMod"]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "97877cf0-59f9-4ce4-b48b-d731782a218a"],
+     "d functions that sp",
+     Cell[BoxData[
+      TemplateBox[{
+        Cell[
+         TextData["e"]], "paclet:Fretica/ref/e", "Fretica Package Symbol"},
+       "PackageLink",
+       BaseStyle->"3ColumnTableMod"]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "a367d0b1-9dfa-4b26-a15f-7d26f66e04bd"],
+     "cifi",
+     Cell[BoxData[
+      TemplateBox[{
+        Cell[
+         TextData["e"]], "paclet:Fretica/ref/e", "Fretica Package Symbol"},
+       "PackageLink",
+       BaseStyle->"3ColumnTableMod"]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "6d657e99-dbbd-4780-8d10-5121bc1b2b52"],
+     "s wh",
+     Cell[BoxData[
+      TemplateBox[{
+        Cell[
+         TextData["e"]], "paclet:Fretica/ref/e", "Fretica Package Symbol"},
+       "PackageLink",
+       BaseStyle->"3ColumnTableMod"]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "6c5e6be8-6118-4721-be3d-3bbe3e43864b"],
+     "th",
+     Cell[BoxData[
+      TemplateBox[{
+        Cell[
+         TextData["e"]], "paclet:Fretica/ref/e", "Fretica Package Symbol"},
+       "PackageLink",
+       BaseStyle->"3ColumnTableMod"]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "840785c7-1112-4d24-932d-2a4d766d1352"],
+     "r imag",
+     Cell[BoxData[
+      TemplateBox[{
+        Cell[
+         TextData["e"]], "paclet:Fretica/ref/e", "Fretica Package Symbol"},
+       "PackageLink",
+       BaseStyle->"3ColumnTableMod"]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "215344f3-8daa-43c8-a370-01ce28a8b841"],
+     " siz",
+     Cell[BoxData[
+      TemplateBox[{
+        Cell[
+         TextData["e"]], "paclet:Fretica/ref/e", "Fretica Package Symbol"},
+       "PackageLink",
+       BaseStyle->"3ColumnTableMod"]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "d1960e8f-c53a-4b22-8e6b-464590366a5c"],
+     " and c",
+     Cell[BoxData[
+      TemplateBox[{
+        Cell[
+         TextData["e"]], "paclet:Fretica/ref/e", "Fretica Package Symbol"},
+       "PackageLink",
+       BaseStyle->"3ColumnTableMod"]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "810a4a0d-85f3-4a73-afa3-10a77288024d"],
+     "rtain oth",
+     Cell[BoxData[
+      TemplateBox[{
+        Cell[
+         TextData["e"]], "paclet:Fretica/ref/e", "Fretica Package Symbol"},
+       "PackageLink",
+       BaseStyle->"3ColumnTableMod"]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "d5f4d5dd-8ac4-4985-afbf-96dbfc590706"],
+     "r options should b",
+     Cell[BoxData[
+      TemplateBox[{
+        Cell[
+         TextData["e"]], "paclet:Fretica/ref/e", "Fretica Package Symbol"},
+       "PackageLink",
+       BaseStyle->"3ColumnTableMod"]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "fa81034d-caee-4822-8b76-fc7399fcf69d"],
+     " pr",
+     Cell[BoxData[
+      TemplateBox[{
+        Cell[
+         TextData["e"]], "paclet:Fretica/ref/e", "Fretica Package Symbol"},
+       "PackageLink",
+       BaseStyle->"3ColumnTableMod"]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "107dab57-d133-4f63-89c3-9dbfd4a0483b"],
+     "s",
+     Cell[BoxData[
+      TemplateBox[{
+        Cell[
+         TextData["e"]], "paclet:Fretica/ref/e", "Fretica Package Symbol"},
+       "PackageLink",
+       BaseStyle->"3ColumnTableMod"]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "0e73c956-0213-4d5d-a50e-26bfa9b4b346"],
+     "rv",
+     Cell[BoxData[
+      TemplateBox[{
+        Cell[
+         TextData["e"]], "paclet:Fretica/ref/e", "Fretica Package Symbol"},
+       "PackageLink",
+       BaseStyle->"3ColumnTableMod"]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "50101188-999a-48bd-b057-29c4b69b9db2"],
+     "d from th",
+     Cell[BoxData[
+      TemplateBox[{
+        Cell[
+         TextData["e"]], "paclet:Fretica/ref/e", "Fretica Package Symbol"},
+       "PackageLink",
+       BaseStyle->"3ColumnTableMod"]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "b94c5fa0-8b50-41ca-8d1e-0b6246469326"],
+     " pr",
+     Cell[BoxData[
+      TemplateBox[{
+        Cell[
+         TextData["e"]], "paclet:Fretica/ref/e", "Fretica Package Symbol"},
+       "PackageLink",
+       BaseStyle->"3ColumnTableMod"]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "a3cb658f-c030-445f-b432-8ac43c4306d6"],
+     "vious v",
+     Cell[BoxData[
+      TemplateBox[{
+        Cell[
+         TextData["e"]], "paclet:Fretica/ref/e", "Fretica Package Symbol"},
+       "PackageLink",
+       BaseStyle->"3ColumnTableMod"]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "fefb30e9-fc7d-410c-b9be-6653f52f0f64"],
+     "rsion of a graphic if th",
+     Cell[BoxData[
+      TemplateBox[{
+        Cell[
+         TextData["e"]], "paclet:Fretica/ref/e", "Fretica Package Symbol"},
+       "PackageLink",
+       BaseStyle->"3ColumnTableMod"]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "9b80162e-665c-4a1c-a5ce-4963f2783236"],
+     " graphic is r",
+     Cell[BoxData[
+      TemplateBox[{
+        Cell[
+         TextData["e"]], "paclet:Fretica/ref/e", "Fretica Package Symbol"},
+       "PackageLink",
+       BaseStyle->"3ColumnTableMod"]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "356b427e-af95-46b3-9846-5921cd8146a7"],
+     "plac",
+     Cell[BoxData[
+      TemplateBox[{
+        Cell[
+         TextData["e"]], "paclet:Fretica/ref/e", "Fretica Package Symbol"},
+       "PackageLink",
+       BaseStyle->"3ColumnTableMod"]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "b92c9ced-d6b0-4d7b-a05e-49e2e8485e64"],
+     "d by a n",
+     Cell[BoxData[
+      TemplateBox[{
+        Cell[
+         TextData["e"]], "paclet:Fretica/ref/e", "Fretica Package Symbol"},
+       "PackageLink",
+       BaseStyle->"3ColumnTableMod"]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "c1085af9-1952-456b-83d5-30c25624ec9a"],
+     "w on",
+     Cell[BoxData[
+      TemplateBox[{
+        Cell[
+         TextData["e"]], "paclet:Fretica/ref/e", "Fretica Package Symbol"},
+       "PackageLink",
+       BaseStyle->"3ColumnTableMod"]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "a5649904-ee01-455f-9a88-7142718aa46a"],
+     " in output."
+    }], "TableText",ExpressionUUID->"b28794df-793a-419c-b85c-517d839691e7"]},
+   {Cell["      ", "TableRowIcon",ExpressionUUID->
+     "5a2747d1-f84d-4434-8933-81a9d79b15ab"], 
+    TemplateBox[{
+      Cell[
+       TextData["Prolog"]], "paclet:ref/Prolog"},
+     "RefLink",
+     BaseStyle->{"3ColumnTableMod"}], 
+    RowBox[{"{", "}"}], Cell[TextData[{
+     "Prolog is an option for graphics functions which giv",
+     Cell[BoxData[
+      TemplateBox[{
+        Cell[
+         TextData["e"]], "paclet:Fretica/ref/e", "Fretica Package Symbol"},
+       "PackageLink",
+       BaseStyle->"3ColumnTableMod"]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "05a4e109-7df4-4a39-b56a-e4420e0da311"],
+     "s a list of graphics primitiv",
+     Cell[BoxData[
+      TemplateBox[{
+        Cell[
+         TextData["e"]], "paclet:Fretica/ref/e", "Fretica Package Symbol"},
+       "PackageLink",
+       BaseStyle->"3ColumnTableMod"]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "9a0506eb-cc95-4181-bd1c-ee115365dc4e"],
+     "s to b",
+     Cell[BoxData[
+      TemplateBox[{
+        Cell[
+         TextData["e"]], "paclet:Fretica/ref/e", "Fretica Package Symbol"},
+       "PackageLink",
+       BaseStyle->"3ColumnTableMod"]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "4b853bb5-223a-42b8-af3d-8d74f1fabc89"],
+     " r",
+     Cell[BoxData[
+      TemplateBox[{
+        Cell[
+         TextData["e"]], "paclet:Fretica/ref/e", "Fretica Package Symbol"},
+       "PackageLink",
+       BaseStyle->"3ColumnTableMod"]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "2a175c39-8a72-48f2-9343-b0c7b02b8a49"],
+     "nd",
+     Cell[BoxData[
+      TemplateBox[{
+        Cell[
+         TextData["e"]], "paclet:Fretica/ref/e", "Fretica Package Symbol"},
+       "PackageLink",
+       BaseStyle->"3ColumnTableMod"]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "40233e7e-5032-4ede-8977-191db307f234"],
+     "r",
+     Cell[BoxData[
+      TemplateBox[{
+        Cell[
+         TextData["e"]], "paclet:Fretica/ref/e", "Fretica Package Symbol"},
+       "PackageLink",
+       BaseStyle->"3ColumnTableMod"]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "1a57c8ac-2f63-46e3-b3bc-2ec923c08a85"],
+     "d b",
+     Cell[BoxData[
+      TemplateBox[{
+        Cell[
+         TextData["e"]], "paclet:Fretica/ref/e", "Fretica Package Symbol"},
+       "PackageLink",
+       BaseStyle->"3ColumnTableMod"]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "9a61caba-3cee-4fa6-a522-8e53a68e7e76"],
+     "for",
+     Cell[BoxData[
+      TemplateBox[{
+        Cell[
+         TextData["e"]], "paclet:Fretica/ref/e", "Fretica Package Symbol"},
+       "PackageLink",
+       BaseStyle->"3ColumnTableMod"]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "4a9987bf-a445-4c28-8cd4-650203bf484c"],
+     " th",
+     Cell[BoxData[
+      TemplateBox[{
+        Cell[
+         TextData["e"]], "paclet:Fretica/ref/e", "Fretica Package Symbol"},
+       "PackageLink",
+       BaseStyle->"3ColumnTableMod"]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "75a6920f-6cea-47d9-b5b4-c25d4d4cf5f6"],
+     " main part of th",
+     Cell[BoxData[
+      TemplateBox[{
+        Cell[
+         TextData["e"]], "paclet:Fretica/ref/e", "Fretica Package Symbol"},
+       "PackageLink",
+       BaseStyle->"3ColumnTableMod"]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "02077019-d524-4620-ad01-8d7e4c249678"],
+     " graphics is r",
+     Cell[BoxData[
+      TemplateBox[{
+        Cell[
+         TextData["e"]], "paclet:Fretica/ref/e", "Fretica Package Symbol"},
+       "PackageLink",
+       BaseStyle->"3ColumnTableMod"]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "4589542b-e676-43bc-adbc-d42f7e74b717"],
+     "nd",
+     Cell[BoxData[
+      TemplateBox[{
+        Cell[
+         TextData["e"]], "paclet:Fretica/ref/e", "Fretica Package Symbol"},
+       "PackageLink",
+       BaseStyle->"3ColumnTableMod"]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "b046e132-82d7-4622-8857-33e84d6890f4"],
+     "r",
+     Cell[BoxData[
+      TemplateBox[{
+        Cell[
+         TextData["e"]], "paclet:Fretica/ref/e", "Fretica Package Symbol"},
+       "PackageLink",
+       BaseStyle->"3ColumnTableMod"]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "645a4378-3d11-4d49-be4f-3f45ac056516"],
+     "d. "
+    }], "TableText",ExpressionUUID->"34bb20bd-4d30-42fd-bc2e-aa7a4d5464b7"]},
+   {Cell["      ", "TableRowIcon",ExpressionUUID->
+     "d6eac369-7e16-4bb5-9aba-f0199d41ee87"], 
+    TemplateBox[{
+      Cell[
+       TextData["RotateLabel"]], "paclet:ref/RotateLabel"},
+     "RefLink",
+     BaseStyle->{"3ColumnTableMod"}], 
+    TemplateBox[{
+      Cell[
+       TextData["True"]], "paclet:ref/True"},
+     "RefLink",
+     BaseStyle->{"3ColumnTableMod"}], Cell[TextData[{
+     "Rotat",
+     Cell[BoxData[
+      TemplateBox[{
+        Cell[
+         TextData["e"]], "paclet:Fretica/ref/e", "Fretica Package Symbol"},
+       "PackageLink",
+       BaseStyle->"3ColumnTableMod"]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "3473f07f-434c-4dd0-8ed6-7cf2868d69cb"],
+     "Lab",
+     Cell[BoxData[
+      TemplateBox[{
+        Cell[
+         TextData["e"]], "paclet:Fretica/ref/e", "Fretica Package Symbol"},
+       "PackageLink",
+       BaseStyle->"3ColumnTableMod"]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "ba1eb1d2-a6e2-41d8-a58e-14f94918c646"],
+     "l is an option for graphics and r",
+     Cell[BoxData[
+      TemplateBox[{
+        Cell[
+         TextData["e"]], "paclet:Fretica/ref/e", "Fretica Package Symbol"},
+       "PackageLink",
+       BaseStyle->"3ColumnTableMod"]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "5983c952-8e2b-4184-a0a0-a74adfe678af"],
+     "lat",
+     Cell[BoxData[
+      TemplateBox[{
+        Cell[
+         TextData["e"]], "paclet:Fretica/ref/e", "Fretica Package Symbol"},
+       "PackageLink",
+       BaseStyle->"3ColumnTableMod"]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "39f84b37-d946-4e5b-93aa-a60c6ec10b53"],
+     "d functions that sp",
+     Cell[BoxData[
+      TemplateBox[{
+        Cell[
+         TextData["e"]], "paclet:Fretica/ref/e", "Fretica Package Symbol"},
+       "PackageLink",
+       BaseStyle->"3ColumnTableMod"]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "7180f708-33f0-4033-9afa-f0f880331f14"],
+     "cifi",
+     Cell[BoxData[
+      TemplateBox[{
+        Cell[
+         TextData["e"]], "paclet:Fretica/ref/e", "Fretica Package Symbol"},
+       "PackageLink",
+       BaseStyle->"3ColumnTableMod"]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "b20b34a2-dd43-4c93-8776-02c6d38b7bfd"],
+     "s wh",
+     Cell[BoxData[
+      TemplateBox[{
+        Cell[
+         TextData["e"]], "paclet:Fretica/ref/e", "Fretica Package Symbol"},
+       "PackageLink",
+       BaseStyle->"3ColumnTableMod"]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "e4fccc7b-24f0-43d9-a084-e88ae238e099"],
+     "th",
+     Cell[BoxData[
+      TemplateBox[{
+        Cell[
+         TextData["e"]], "paclet:Fretica/ref/e", "Fretica Package Symbol"},
+       "PackageLink",
+       BaseStyle->"3ColumnTableMod"]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "931cd9c5-077f-4dc1-a08e-98e93ad0652b"],
+     "r lab",
+     Cell[BoxData[
+      TemplateBox[{
+        Cell[
+         TextData["e"]], "paclet:Fretica/ref/e", "Fretica Package Symbol"},
+       "PackageLink",
+       BaseStyle->"3ColumnTableMod"]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "57cf5b0f-4709-4a8b-be10-55f756915836"],
+     "ls on v",
+     Cell[BoxData[
+      TemplateBox[{
+        Cell[
+         TextData["e"]], "paclet:Fretica/ref/e", "Fretica Package Symbol"},
+       "PackageLink",
+       BaseStyle->"3ColumnTableMod"]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "7439bd66-d501-478e-a530-ac61a4ba0c0d"],
+     "rtical fram",
+     Cell[BoxData[
+      TemplateBox[{
+        Cell[
+         TextData["e"]], "paclet:Fretica/ref/e", "Fretica Package Symbol"},
+       "PackageLink",
+       BaseStyle->"3ColumnTableMod"]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "8c2de58e-adeb-49b3-a185-d5ba1d4e0f7b"],
+     " ax",
+     Cell[BoxData[
+      TemplateBox[{
+        Cell[
+         TextData["e"]], "paclet:Fretica/ref/e", "Fretica Package Symbol"},
+       "PackageLink",
+       BaseStyle->"3ColumnTableMod"]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "6a5eaf4b-4288-49b4-95a8-d62a59340a70"],
+     "s should b",
+     Cell[BoxData[
+      TemplateBox[{
+        Cell[
+         TextData["e"]], "paclet:Fretica/ref/e", "Fretica Package Symbol"},
+       "PackageLink",
+       BaseStyle->"3ColumnTableMod"]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "adfd087c-1e04-4e99-a6f0-2e901ad816d0"],
+     " rotat",
+     Cell[BoxData[
+      TemplateBox[{
+        Cell[
+         TextData["e"]], "paclet:Fretica/ref/e", "Fretica Package Symbol"},
+       "PackageLink",
+       BaseStyle->"3ColumnTableMod"]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "1b261823-a9c7-45e3-a9ad-372a18ef9a7c"],
+     "d to b",
+     Cell[BoxData[
+      TemplateBox[{
+        Cell[
+         TextData["e"]], "paclet:Fretica/ref/e", "Fretica Package Symbol"},
+       "PackageLink",
+       BaseStyle->"3ColumnTableMod"]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "f27c9ec5-fd93-4d60-a1cf-3ad76fc37a98"],
+     " v",
+     Cell[BoxData[
+      TemplateBox[{
+        Cell[
+         TextData["e"]], "paclet:Fretica/ref/e", "Fretica Package Symbol"},
+       "PackageLink",
+       BaseStyle->"3ColumnTableMod"]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "e606af1d-22d6-4291-b84d-81f74f822613"],
+     "rtical. "
+    }], "TableText",ExpressionUUID->"35b5807a-6866-4339-b3b1-374e27f4c1d4"]},
+   {Cell["      ", "TableRowIcon",ExpressionUUID->
+     "4658a01c-a69d-4762-9eec-c89cb75d41b4"], 
+    TemplateBox[{
+      Cell[
+       TextData["Ticks"]], "paclet:ref/Ticks"},
+     "RefLink",
+     BaseStyle->{"3ColumnTableMod"}], 
+    TemplateBox[{
+      Cell[
+       TextData["Automatic"]], "paclet:ref/Automatic"},
+     "RefLink",
+     BaseStyle->{"3ColumnTableMod"}], Cell[TextData[{
+     "Ticks is an option for graphics functions that sp",
+     Cell[BoxData[
+      TemplateBox[{
+        Cell[
+         TextData["e"]], "paclet:Fretica/ref/e", "Fretica Package Symbol"},
+       "PackageLink",
+       BaseStyle->"3ColumnTableMod"]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "371456d1-9144-424d-8bf3-7c74453c9546"],
+     "cifi",
+     Cell[BoxData[
+      TemplateBox[{
+        Cell[
+         TextData["e"]], "paclet:Fretica/ref/e", "Fretica Package Symbol"},
+       "PackageLink",
+       BaseStyle->"3ColumnTableMod"]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "aef08c7f-290f-4848-b276-1e341052ad0e"],
+     "s tick marks for ax",
+     Cell[BoxData[
+      TemplateBox[{
+        Cell[
+         TextData["e"]], "paclet:Fretica/ref/e", "Fretica Package Symbol"},
+       "PackageLink",
+       BaseStyle->"3ColumnTableMod"]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "1ab2e758-ed1d-43dd-b982-d15a510b4158"],
+     "s. "
+    }], "TableText",ExpressionUUID->"c79da7a8-df28-458b-a002-c96e1b573020"]},
+   {Cell["      ", "TableRowIcon",ExpressionUUID->
+     "332933f2-01d3-48b3-9af1-7fc81d1c87f1"], 
+    TemplateBox[{
+      Cell[
+       TextData["TicksStyle"]], "paclet:ref/TicksStyle"},
+     "RefLink",
+     BaseStyle->{"3ColumnTableMod"}], 
+    RowBox[{"{", "}"}], Cell[TextData[{
+     "TicksStyl",
+     Cell[BoxData[
+      TemplateBox[{
+        Cell[
+         TextData["e"]], "paclet:Fretica/ref/e", "Fretica Package Symbol"},
+       "PackageLink",
+       BaseStyle->"3ColumnTableMod"]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "a39912ca-fdc1-489d-b90c-f1c2aaf5e05d"],
+     " is an option for graphics functions which sp",
+     Cell[BoxData[
+      TemplateBox[{
+        Cell[
+         TextData["e"]], "paclet:Fretica/ref/e", "Fretica Package Symbol"},
+       "PackageLink",
+       BaseStyle->"3ColumnTableMod"]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "08188900-58a3-4602-882e-82a4dae307ea"],
+     "cifi",
+     Cell[BoxData[
+      TemplateBox[{
+        Cell[
+         TextData["e"]], "paclet:Fretica/ref/e", "Fretica Package Symbol"},
+       "PackageLink",
+       BaseStyle->"3ColumnTableMod"]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "94381650-6b57-404b-956c-181b45ec0d5f"],
+     "s how ticks should b",
+     Cell[BoxData[
+      TemplateBox[{
+        Cell[
+         TextData["e"]], "paclet:Fretica/ref/e", "Fretica Package Symbol"},
+       "PackageLink",
+       BaseStyle->"3ColumnTableMod"]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "1ffd3cff-1c5a-4584-9fa8-c547a6b45523"],
+     " r",
+     Cell[BoxData[
+      TemplateBox[{
+        Cell[
+         TextData["e"]], "paclet:Fretica/ref/e", "Fretica Package Symbol"},
+       "PackageLink",
+       BaseStyle->"3ColumnTableMod"]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "055a655a-5419-47d1-8330-c0068583506b"],
+     "nd",
+     Cell[BoxData[
+      TemplateBox[{
+        Cell[
+         TextData["e"]], "paclet:Fretica/ref/e", "Fretica Package Symbol"},
+       "PackageLink",
+       BaseStyle->"3ColumnTableMod"]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "92964ba5-2218-4bbf-bff6-9f07a6eaccc5"],
+     "r",
+     Cell[BoxData[
+      TemplateBox[{
+        Cell[
+         TextData["e"]], "paclet:Fretica/ref/e", "Fretica Package Symbol"},
+       "PackageLink",
+       BaseStyle->"3ColumnTableMod"]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "b5257482-fbd3-41e8-b08e-1e66091ef6e1"],
+     "d."
+    }], "TableText",ExpressionUUID->"e373e741-ac68-4b4c-a60b-3ef9833ce7e6"]}
+  }]], "3ColumnTableMod",
+ GridBoxOptions->{
+ GridBoxBackground->{
+  "Columns" -> {{None}}, 
+   "Rows" -> {
+    None, None, None, None, None, None, None, None, None, None, None, None, 
+     None, None, None, None, None, None, None, None, None, None, None, None, 
+     None, None, None, None, None, None, None, None, None, None, None, None, 
+     None, {None}}},
+ GridBoxDividers->{
+  "Rows" -> {{
+     True, True, True, True, True, True, True, True, True, True, True, True, 
+      True, True, True, True, True, True, True, True, True, True, True, True, 
+      True, True, True, True, True, True, True, True, True, True, True, True, 
+      True, True, True}}}},
+ CellID->316357667,ExpressionUUID->"929bc169-525a-4263-a1b8-a5c8ff89aad3"]
+}, Dynamic[CurrentValue[
+ EvaluationNotebook[], {TaggingRules, "Openers", "NotesSection"}, Closed]]]],
+
+Cell[BoxData[GridBox[{
+   {
+    DynamicBox[FEPrivate`ImportImage[
+      FrontEnd`FileName[{"Documentation", "FooterIcons"}, "RelatedGuide.png"]],
+     ImageSizeCache->{50., {27., 33.}}], GridBox[{
+      {
+       StyleBox[
+        RowBox[{"Related", " ", "Guides"}], "MoreAboutSection"]},
+      {
+       RowBox[{"\[FilledVerySmallSquare]", Cell[BoxData[
+         TemplateBox[{
+           Cell[
+            TextData["Fretica"]], "paclet:Fretica/guide/Fretica"},
+          "RefLinkPlain",
+          BaseStyle->{"MoreAbout"}]], "MoreAbout",ExpressionUUID->
+         "b78679f5-5e6d-4232-9561-ead2aa3b5b6b"]}]}
+     }]}
+  }]], "MoreAboutSection",ExpressionUUID->"e15d7d35-8988-47ae-bbe4-\
+5a0ab1963dbb"],
+
+Cell[BoxData[GridBox[{
+   {
+    TemplateBox[{29},
+     "Spacer1"], GridBox[{
+      {
+       RowBox[{
+        TemplateBox[{17},
+         "Spacer1"], 
+        StyleBox[
+         RowBox[{"Related", " ", "Links"}], "RelatedLinksSection"]}]},
+      {Cell[TextData[Cell[BoxData[
+        RowBox[{
+         TemplateBox[{16},
+          "Spacer1"], "\[FilledVerySmallSquare]", Cell[BoxData[
+          TemplateBox[{
+            Cell[
+             TextData[
+              Cell[
+               TextData[{
+                 Cell[
+                  BoxData[
+                   TemplateBox[{2}, "Spacer1"]]], "Schuler Lab"}]]]], 
+            "https://schuler.bioc.uzh.ch/programs/"},
+           "WebLink",
+           BaseStyle->{"RelatedLinks"}]],ExpressionUUID->
+          "ce6e7f8f-85a4-42e3-a74d-133a1d352801"]}]],ExpressionUUID->
+        "a23ff351-7985-4a99-b8f9-6ef425797b2b"]], "RelatedLinks",
+        ExpressionUUID->"810a46d7-ea68-4b50-a629-29fdd2a7273e"]}
+     }]}
+  }]], "RelatedLinksSection",ExpressionUUID->"b475f90d-3c1e-48a4-b695-\
+a83f92ef3ed5"],
+
+Cell[" ", "FooterCell",ExpressionUUID->"22099fd0-3f4a-4715-9cbd-832f0d573c63"]
+},
+Saveable->False,
+ScreenStyleEnvironment->"Working",
+WindowSize->{900., 604.8},
+WindowMargins->{{0, Automatic}, {Automatic, 0}},
+WindowTitle->"FScanImage",
+TaggingRules->{
+ "ModificationHighlight" -> False, "ColorType" -> "", "LinkTrails" -> "", 
+  "HasOptions" -> True, "ExampleCounter" -> 1, 
+  "Openers" -> {
+   "PrimaryExamplesSection" -> Open, "ExampleSection" -> {"0" -> Open}, 
+    "NotesSection" -> Closed}, "NewStyles" -> True, 
+  "CitationPopupData" -> $Failed, "ShowCitation" -> False, "RootCaptions" -> 
+  "", "Metadata" -> {
+   "built" -> "{2023, 3, 6, 14, 31, 42.6902616}", 
+    "history" -> {"XX", "", "", ""}, "context" -> "Fretica`", 
+    "keywords" -> {}, "specialkeywords" -> {}, 
+    "tutorialcollectionlinks" -> {}, "index" -> True, "label" -> 
+    "Fretica Symbol", "language" -> "en", "paclet" -> "Fretica", "status" -> 
+    "None", "summary" -> 
+    "FScanImage[intensityarray,{i1 , i2},opt] or \
+FScanImage[intensityarray,{i1 , i2},{x0 , y0, \\[CapitalDelta] x, \
+\\[CapitalDelta] y}, opt] or FScanImage[parameterarray,{i1, i2} , {p1, \
+p2},opt] or FScanImage[parameterarray,{i1, i2} , {p 1, p 2}, {x0, y0, \
+\\[CapitalDelta] x, \\[CapitalDelta] y},opt] FScanImage is used to display \
+data returned by FGetFromPiezoScan. The array data need to match one of two \
+possible forms denoted above as intensityarray or parameterarray. \
+intensityarray must be a two-dimensional array of numbers, typically obtained \
+from expressions like FGetFromPiezoScan[\"n1\"+\"n2\"]. parameterarray must \
+be a two-dimensional array of pairs of numbers of the form {i , p}, typically \
+obtained from expressions like FGetFromPiezoScan[Hold@{ \\[Null] \
+\"n1\"+\"n2\",\"E\"}^T]. If an intensity array is supplied, FScanImage \
+displays a grayscale image of the pixels in the array. In case of a parameter \
+array, the image is colored. i and p are displayed as brightness and color \
+hue, respectively. {i1 , i2} defines the brightness range from darkest \
+(black) to brightest. All intensity values below i1 are displayed in black, \
+all intensities above i2 are displayed with maximal brightness. {p1 , p2} \
+defines the hue range from blue to red. All pixels with a parameter value \
+below p1 are displayed in blue, all values above p2 are displayed in red. The \
+values of i and p for each pixel can be read with the coordinate tool. \
+(Select the image and press the \".\"-key.) {x0, y0, \\[CapitalDelta] x, \
+\\[CapitalDelta] y} is used to label the axes ticks. x0 and y0 define the \
+bottom left corner of the image. \\[CapitalDelta] x and\\[CapitalDelta] y are \
+the pixel resolution in x and y direction, respectively. These numbers are \
+automatically taken from the TTTR file header in case they are not given \
+explicitly. The graphical output of FScanImage can be changed by applying the \
+options of Graphics. A color legend can be obtained from \
+FScanImageColorLegend. ", "synonyms" -> {}, "tabletags" -> {}, "title" -> 
+    "FScanImage", "titlemodifier" -> "", "windowtitle" -> "FScanImage", 
+    "type" -> "Symbol", "uri" -> "Fretica/ref/FScanImage"}},
+CellContext->"Global`",
+FrontEndVersion->"13.2 for Microsoft Windows (64-bit) (January 30, 2023)",
+StyleDefinitions->Notebook[{
+   Cell[
+    StyleData[
+    StyleDefinitions -> FrontEnd`FileName[{"Wolfram"}, "Reference.nb"]]], 
+   Cell[
+    StyleData["Input"], CellContext -> "Global`"], 
+   Cell[
+    StyleData["Output"], CellContext -> "Global`"]}, Visible -> False, 
+  FrontEndVersion -> "13.2 for Microsoft Windows (64-bit) (January 30, 2023)",
+   StyleDefinitions -> "Default.nb"],
+ExpressionUUID->"2a05d6e9-ec37-4b41-a4d4-a5fbc6809949"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[582, 21, 4315, 103, 70, "AnchorBarGrid",ExpressionUUID->"24276ea8-3ecc-4bd0-aafc-7ba1c82f4052",
+ CellID->1],
+Cell[4900, 126, 90, 0, 70, "ContextNameCell",ExpressionUUID->"d1e28e24-299d-40b6-8038-1d76532111a7"],
+Cell[CellGroupData[{
+Cell[5015, 130, 553, 14, 70, "ObjectNameGrid",ExpressionUUID->"8f17eeac-a58c-47ec-b0b0-150d3132d8a9"],
+Cell[5571, 146, 10930, 293, 70, "Usage",ExpressionUUID->"5106d2b1-8851-4013-b5ad-9a3428fb535b",
+ CellID->26973841]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[16538, 444, 1919, 48, 70, "NotesSection",ExpressionUUID->"e4bf21fa-3089-4fb9-8c63-3993f70ae6f9",
+ CellGroupingRules->{"SectionGrouping", 50},
+ CellID->196672564],
+Cell[18460, 494, 127, 1, 70, "Notes",ExpressionUUID->"b29492cc-015c-46fe-b2e5-465f7c72ecb7",
+ CellID->79584015],
+Cell[18590, 497, 140942, 3891, 70, "3ColumnTableMod",ExpressionUUID->"929bc169-525a-4263-a1b8-a5c8ff89aad3",
+ CellID->316357667]
+}, Dynamic[CurrentValue[EvaluationNotebook[], {TaggingRules, "Openers", "NotesSection"}, Closed]]]],
+Cell[159637, 4392, 697, 18, 70, "MoreAboutSection",ExpressionUUID->"e15d7d35-8988-47ae-bbe4-5a0ab1963dbb"],
+Cell[160337, 4412, 1043, 30, 70, "RelatedLinksSection",ExpressionUUID->"b475f90d-3c1e-48a4-b695-a83f92ef3ed5"],
+Cell[161383, 4444, 78, 0, 70, "FooterCell",ExpressionUUID->"22099fd0-3f4a-4715-9cbd-832f0d573c63"]
+}
+]
+*)
+
+(* End of internal cache information *)
+

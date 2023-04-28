@@ -1,0 +1,316 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 13.2' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     11899,        306]
+NotebookOptionsPosition[      9216,        248]
+NotebookOutlinePosition[     11262,        298]
+CellTagsIndexPosition[     11219,        295]
+WindowTitle->FSetFRETRoutes
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[GridBox[{
+   {GridBox[{
+      {
+       ItemBox[Cell[BoxData[
+         RowBox[{
+          TemplateBox[{12},
+           "Spacer1"], Cell["FRETICA SYMBOL", "PacletNameCell",
+           TextAlignment->Center,ExpressionUUID->
+           "01035813-064b-4d25-a383-508af58a167c"], 
+          TemplateBox[{8},
+           "Spacer1"]}]],
+         TextAlignment->Center,ExpressionUUID->
+         "50208325-80bc-4f00-8306-6759dd9fd336"],
+        Background->RGBColor[0.490196, 0.576471, 0.690196],
+        ItemSize->Full], ""}
+     },
+     GridBoxAlignment->{"Rows" -> {{Center}}},
+     GridBoxItemSize->{"Columns" -> {Full, 
+         Scaled[0.02]}, "Rows" -> {{2.5}}}], Cell[TextData[{
+     Cell[BoxData[
+      TagBox[
+       ActionMenuBox[
+        FrameBox[Cell[TextData[{
+          "Related Guides",
+          " ",
+          Cell[BoxData[
+           GraphicsBox[
+            {GrayLevel[0.66667], Thickness[0.13], 
+             LineBox[{{-1.8, 0.5}, {0, 0}, {1.8, 0.5}}]},
+            AspectRatio->1,
+            ImageSize->20,
+            PlotRange->{{-3, 4}, {-1, 1}}]],ExpressionUUID->
+           "89b4ea25-725c-44bb-ab29-9a1cebd66a42"]
+         }],ExpressionUUID->"6d350e95-243e-4ac6-9672-9042f7c36118"],
+         StripOnInput->False], {"\<\"Fretica\"\>":>Documentation`HelpLookup[
+        "paclet:Fretica/guide/Fretica"]},
+        Appearance->None,
+        MenuAppearance->Automatic,
+        MenuStyle->"MoreAbout"],
+       MouseAppearanceTag["LinkHand"]]],
+      LineSpacing->{1.4, 0},ExpressionUUID->
+      "4fcef6f1-8075-484f-ba72-75bdf0f901b5"],
+     "\[ThickSpace]\[ThickSpace]\[ThickSpace]\[ThickSpace]\[ThickSpace]\
+\[ThickSpace]",
+     Cell[BoxData[
+      TagBox[
+       ActionMenuBox[
+        FrameBox[Cell[TextData[{
+          "URL",
+          " ",
+          Cell[BoxData[
+           GraphicsBox[
+            {GrayLevel[0.66667], Thickness[0.13], 
+             LineBox[{{-1.8, 0.5}, {0, 0}, {1.8, 0.5}}]},
+            AspectRatio->1,
+            ImageSize->20,
+            PlotRange->{{-3, 4}, {-1, 1}}]],ExpressionUUID->
+           "ad2b7b0d-19f5-4678-9fd9-cd611f0d7b79"]
+         }],ExpressionUUID->"495fc937-9d9e-401b-ba0e-3b2e6d13a1f1"],
+         StripOnInput->False], {"\<\"Fretica/ref/FSetFRETRoutes\"\>":>
+        None, "\<\"Copy Wolfram Documentation Center URL\"\>":>
+        Module[{DocumentationSearch`Private`nb$}, 
+         DocumentationSearch`Private`nb$ = NotebookPut[
+            Notebook[{
+              Cell["Fretica/ref/FSetFRETRoutes"]}, Visible -> False]]; 
+         SelectionMove[DocumentationSearch`Private`nb$, All, Notebook]; 
+         FrontEndTokenExecute[DocumentationSearch`Private`nb$, "Copy"]; 
+         NotebookClose[DocumentationSearch`Private`nb$]; Null], 
+        Delimiter, "\<\"Copy web URL\"\>":>
+        Module[{DocumentationSearch`Private`nb$}, 
+         DocumentationSearch`Private`nb$ = NotebookPut[
+            Notebook[{
+              Cell[
+               BoxData[
+                MakeBoxes[
+                 Hyperlink[
+                 "http://reference.wolfram.com/language/Fretica/ref/\
+FSetFRETRoutes.html"], StandardForm]], "Input", TextClipboardType -> 
+               "PlainText"]}, Visible -> False]]; 
+         SelectionMove[DocumentationSearch`Private`nb$, All, Notebook]; 
+         FrontEndTokenExecute[DocumentationSearch`Private`nb$, "Copy"]; 
+         NotebookClose[DocumentationSearch`Private`nb$]; 
+         Null], "\<\"Go to web URL\"\>":>FrontEndExecute[{
+          NotebookLocate[{
+            URL[If[
+               TrueQ[DocumentationBuild`Make`Private`wsmlinkQ$231186], 
+               "http://reference.wolfram.com/system-modeler/", 
+               "http://reference.wolfram.com/language/"] <> 
+             "Fretica/ref/FSetFRETRoutes" <> ".html"], None}]}]},
+        Appearance->None,
+        MenuAppearance->Automatic,
+        MenuStyle->"URLMenu"],
+       MouseAppearanceTag["LinkHand"]]],
+      LineSpacing->{1.4, 0},ExpressionUUID->
+      "9dd92879-afa1-4456-900b-4f290a67be18"]
+    }], "AnchorBar",
+     CacheGraphics->False,ExpressionUUID->
+     "7b202ef3-85fb-4457-94b8-276d6669aec0"]}
+  }]], "AnchorBarGrid",
+ GridBoxOptions->{GridBoxItemSize->{"Columns" -> {
+     Scaled[0.65], {
+      Scaled[0.34]}}, "ColumnsIndexed" -> {}, "Rows" -> {{1.}}, 
+   "RowsIndexed" -> {}}},
+ CellID->1,ExpressionUUID->"cc119e80-2489-467c-b476-623ed3121721"],
+
+Cell["Fretica`", "ContextNameCell",ExpressionUUID->"590b1c1e-cbd6-4a2b-b4f1-c3292452ca3f"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[GridBox[{
+   {Cell[TextData[{
+     Cell[
+     "FSetFRETRoutes", "ObjectName",ExpressionUUID->
+      "0fd9ccee-b0d5-439b-9e3d-a3b4d6ce0966"],
+     Cell[BoxData[
+      TemplateBox[{8},
+       "Spacer1"]],ExpressionUUID->"a761f77f-c917-4f25-9c83-2f9f29d55a18"],
+     Cell[BoxData[
+     ""], "ObjectNameTranslation",ExpressionUUID->
+      "5c676013-5de1-46bb-8081-a2ebea9c253e"]
+    }],ExpressionUUID->"ee15eba4-6b3b-477d-93ff-4f31bf7344bf"], 
+    "\[SpanFromLeft]"}
+  }]], "ObjectNameGrid",ExpressionUUID->"32304f3e-a335-425a-b8ce-\
+29eada18ec16"],
+
+Cell[BoxData[GridBox[{
+   {"", Cell[TextData[{
+     "FSetFRETRoutes[",
+     Cell[BoxData[
+      FormBox[
+       RowBox[{"{", 
+        RowBox[{
+         SubscriptBox[
+          StyleBox["r", "TI"], "1"], " ", ",", 
+         SubscriptBox[
+          StyleBox["r", "TI"], "2"], ",", 
+         SubscriptBox[
+          StyleBox["r", "TI"], "3"], ",", "\[Ellipsis]"}], "}"}], 
+       TraditionalForm]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "d331060d-59cf-4774-9eca-a0fa9ae1bde1"],
+     "] sets which detection routes are used as donor or acceptor detection \
+routes in a FRET measurement. For each detection channel ",
+     Cell[BoxData[
+      FormBox[
+       StyleBox["i", "TI"], TraditionalForm]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "5b022792-34bf-43c9-a3b0-f46406105481"],
+     " the possible values of ",
+     Cell[BoxData[
+      FormBox[
+       SubscriptBox[
+        StyleBox["r", "TI"], 
+        StyleBox["i", "TI"]], TraditionalForm]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "9c4ef587-25ab-4e71-b8b0-412b46a491cf"],
+     " are: \"D\", \"A\", or 0. Example: FSetFRETRoutes[",
+     Cell[BoxData[
+      FormBox[
+       RowBox[{"{", " ", "\[Null]"}], TraditionalForm]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "e74f9129-732f-4de5-95c7-9d02b227d9f1"],
+     "\"A\", \"D\",\"A\",\"D\",0 ,0 ",
+     Cell[BoxData[
+      FormBox["}", TraditionalForm]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "f54ff43d-50b6-4cf8-b442-40efdadb6767"],
+     "]. "
+    }],ExpressionUUID->"46592a1a-d4fb-484b-91be-0a1a556a6c92"]}
+  }]], "Usage",
+ CellID->405912270,ExpressionUUID->"08af4131-122f-4c02-af3e-6196f49a521f"]
+}, Open  ]],
+
+Cell[BoxData[GridBox[{
+   {
+    DynamicBox[FEPrivate`ImportImage[
+      FrontEnd`FileName[{"Documentation", "FooterIcons"}, "RelatedGuide.png"]],
+     ImageSizeCache->{50., {27., 33.}}], GridBox[{
+      {
+       StyleBox[
+        RowBox[{"Related", " ", "Guides"}], "MoreAboutSection"]},
+      {
+       RowBox[{"\[FilledVerySmallSquare]", Cell[BoxData[
+         TemplateBox[{
+           Cell[
+            TextData["Fretica"]], "paclet:Fretica/guide/Fretica"},
+          "RefLinkPlain",
+          BaseStyle->{"MoreAbout"}]], "MoreAbout",ExpressionUUID->
+         "8910bade-d004-4700-92c5-40f0192d7e6a"]}]}
+     }]}
+  }]], "MoreAboutSection",ExpressionUUID->"cf6e48c0-9e9d-4570-b910-\
+195dd834ea87"],
+
+Cell[BoxData[GridBox[{
+   {
+    TemplateBox[{29},
+     "Spacer1"], GridBox[{
+      {
+       RowBox[{
+        TemplateBox[{17},
+         "Spacer1"], 
+        StyleBox[
+         RowBox[{"Related", " ", "Links"}], "RelatedLinksSection"]}]},
+      {Cell[TextData[Cell[BoxData[
+        RowBox[{
+         TemplateBox[{16},
+          "Spacer1"], "\[FilledVerySmallSquare]", Cell[BoxData[
+          TemplateBox[{
+            Cell[
+             TextData[
+              Cell[
+               TextData[{
+                 Cell[
+                  BoxData[
+                   TemplateBox[{2}, "Spacer1"]]], "Schuler Lab"}]]]], 
+            "https://schuler.bioc.uzh.ch/programs/"},
+           "WebLink",
+           BaseStyle->{"RelatedLinks"}]],ExpressionUUID->
+          "f4b1f206-b2f8-4f22-90f8-5f09c949db3e"]}]],ExpressionUUID->
+        "bc36b0e9-991e-4b8e-b219-3561e02843fb"]], "RelatedLinks",
+        ExpressionUUID->"1a789d4f-5cd3-47c4-bb3d-b762ea5ff624"]}
+     }]}
+  }]], "RelatedLinksSection",ExpressionUUID->"0815f501-dca1-4d53-a8da-\
+d33fa67ffff3"],
+
+Cell[" ", "FooterCell",ExpressionUUID->"b53d9b91-cf70-431e-b2f3-b205dd2ec65a"]
+},
+Saveable->False,
+ScreenStyleEnvironment->"Working",
+WindowSize->{900., 604.8},
+WindowMargins->{{0, Automatic}, {Automatic, 0}},
+WindowTitle->"FSetFRETRoutes",
+TaggingRules->{
+ "ModificationHighlight" -> False, "ColorType" -> "", "LinkTrails" -> "", 
+  "HasOptions" -> True, "ExampleCounter" -> 1, 
+  "Openers" -> {
+   "PrimaryExamplesSection" -> Open, "ExampleSection" -> {"0" -> Open}}, 
+  "NewStyles" -> True, "CitationPopupData" -> $Failed, "ShowCitation" -> 
+  False, "RootCaptions" -> "", 
+  "Metadata" -> {
+   "built" -> "{2023, 3, 6, 14, 31, 55.5531262}", 
+    "history" -> {"XX", "", "", ""}, "context" -> "Fretica`", 
+    "keywords" -> {}, "specialkeywords" -> {}, 
+    "tutorialcollectionlinks" -> {}, "index" -> True, "label" -> 
+    "Fretica Symbol", "language" -> "en", "paclet" -> "Fretica", "status" -> 
+    "None", "summary" -> 
+    "FSetFRETRoutes[{r1 , r2, r3, ...}] sets which detection routes are used \
+as donor or acceptor detection routes in a FRET measurement. For each \
+detection channel i the possible values of ri are: \"D\", \"A\", or 0. \
+Example: FSetFRETRoutes[{ \\[Null] \"A\", \"D\",\"A\",\"D\",0 ,0 }]. ", 
+    "synonyms" -> {}, "tabletags" -> {}, "title" -> "FSetFRETRoutes", 
+    "titlemodifier" -> "", "windowtitle" -> "FSetFRETRoutes", "type" -> 
+    "Symbol", "uri" -> "Fretica/ref/FSetFRETRoutes"}},
+CellContext->"Global`",
+FrontEndVersion->"13.2 for Microsoft Windows (64-bit) (January 30, 2023)",
+StyleDefinitions->Notebook[{
+   Cell[
+    StyleData[
+    StyleDefinitions -> FrontEnd`FileName[{"Wolfram"}, "Reference.nb"]]], 
+   Cell[
+    StyleData["Input"], CellContext -> "Global`"], 
+   Cell[
+    StyleData["Output"], CellContext -> "Global`"]}, Visible -> False, 
+  FrontEndVersion -> "13.2 for Microsoft Windows (64-bit) (January 30, 2023)",
+   StyleDefinitions -> "Default.nb"],
+ExpressionUUID->"8cf08851-1075-419f-95a2-918dfa513754"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[586, 21, 4331, 103, 70, "AnchorBarGrid",ExpressionUUID->"cc119e80-2489-467c-b476-623ed3121721",
+ CellID->1],
+Cell[4920, 126, 90, 0, 70, "ContextNameCell",ExpressionUUID->"590b1c1e-cbd6-4a2b-b4f1-c3292452ca3f"],
+Cell[CellGroupData[{
+Cell[5035, 130, 557, 14, 70, "ObjectNameGrid",ExpressionUUID->"32304f3e-a335-425a-b8ce-29eada18ec16"],
+Cell[5595, 146, 1778, 45, 70, "Usage",ExpressionUUID->"08af4131-122f-4c02-af3e-6196f49a521f",
+ CellID->405912270]
+}, Open  ]],
+Cell[7388, 194, 697, 18, 70, "MoreAboutSection",ExpressionUUID->"cf6e48c0-9e9d-4570-b910-195dd834ea87"],
+Cell[8088, 214, 1043, 30, 70, "RelatedLinksSection",ExpressionUUID->"0815f501-dca1-4d53-a8da-d33fa67ffff3"],
+Cell[9134, 246, 78, 0, 70, "FooterCell",ExpressionUUID->"b53d9b91-cf70-431e-b2f3-b205dd2ec65a"]
+}
+]
+*)
+
+(* End of internal cache information *)
+

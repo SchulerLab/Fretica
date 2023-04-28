@@ -1,0 +1,281 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 13.2' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     10647,        271]
+NotebookOptionsPosition[      7967,        213]
+NotebookOutlinePosition[     10013,        263]
+CellTagsIndexPosition[      9970,        260]
+WindowTitle->FReadCoordinatesFromImage
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[GridBox[{
+   {GridBox[{
+      {
+       ItemBox[Cell[BoxData[
+         RowBox[{
+          TemplateBox[{12},
+           "Spacer1"], Cell["FRETICA SYMBOL", "PacletNameCell",
+           TextAlignment->Center,ExpressionUUID->
+           "e37ea46f-8e1c-43b1-9b27-9b53db2877ef"], 
+          TemplateBox[{8},
+           "Spacer1"]}]],
+         TextAlignment->Center,ExpressionUUID->
+         "41cd2d38-dd64-4701-a3d5-5fd8d5a9a54b"],
+        Background->RGBColor[0.490196, 0.576471, 0.690196],
+        ItemSize->Full], ""}
+     },
+     GridBoxAlignment->{"Rows" -> {{Center}}},
+     GridBoxItemSize->{"Columns" -> {Full, 
+         Scaled[0.02]}, "Rows" -> {{2.5}}}], Cell[TextData[{
+     Cell[BoxData[
+      TagBox[
+       ActionMenuBox[
+        FrameBox[Cell[TextData[{
+          "Related Guides",
+          " ",
+          Cell[BoxData[
+           GraphicsBox[
+            {GrayLevel[0.66667], Thickness[0.13], 
+             LineBox[{{-1.8, 0.5}, {0, 0}, {1.8, 0.5}}]},
+            AspectRatio->1,
+            ImageSize->20,
+            PlotRange->{{-3, 4}, {-1, 1}}]],ExpressionUUID->
+           "b59a9fb0-f513-4310-b0e7-dd30d5274d79"]
+         }],ExpressionUUID->"b4ff5fd4-6f42-40b5-9fb1-2c7bbf047ef3"],
+         StripOnInput->False], {"\<\"Fretica\"\>":>Documentation`HelpLookup[
+        "paclet:Fretica/guide/Fretica"]},
+        Appearance->None,
+        MenuAppearance->Automatic,
+        MenuStyle->"MoreAbout"],
+       MouseAppearanceTag["LinkHand"]]],
+      LineSpacing->{1.4, 0},ExpressionUUID->
+      "795f9d25-fc35-4cbb-994e-fbf6c4e4eca6"],
+     "\[ThickSpace]\[ThickSpace]\[ThickSpace]\[ThickSpace]\[ThickSpace]\
+\[ThickSpace]",
+     Cell[BoxData[
+      TagBox[
+       ActionMenuBox[
+        FrameBox[Cell[TextData[{
+          "URL",
+          " ",
+          Cell[BoxData[
+           GraphicsBox[
+            {GrayLevel[0.66667], Thickness[0.13], 
+             LineBox[{{-1.8, 0.5}, {0, 0}, {1.8, 0.5}}]},
+            AspectRatio->1,
+            ImageSize->20,
+            PlotRange->{{-3, 4}, {-1, 1}}]],ExpressionUUID->
+           "f6e6ab40-1554-4326-af29-95e3a119c34e"]
+         }],ExpressionUUID->"7cd35828-a90e-4719-b93c-30b22e750e7e"],
+         StripOnInput->
+          False], {"\<\"Fretica/ref/FReadCoordinatesFromImage\"\>":>
+        None, "\<\"Copy Wolfram Documentation Center URL\"\>":>
+        Module[{DocumentationSearch`Private`nb$}, 
+         DocumentationSearch`Private`nb$ = NotebookPut[
+            Notebook[{
+              Cell["Fretica/ref/FReadCoordinatesFromImage"]}, Visible -> 
+             False]]; SelectionMove[
+          DocumentationSearch`Private`nb$, All, Notebook]; 
+         FrontEndTokenExecute[DocumentationSearch`Private`nb$, "Copy"]; 
+         NotebookClose[DocumentationSearch`Private`nb$]; Null], 
+        Delimiter, "\<\"Copy web URL\"\>":>
+        Module[{DocumentationSearch`Private`nb$}, 
+         DocumentationSearch`Private`nb$ = NotebookPut[
+            Notebook[{
+              Cell[
+               BoxData[
+                MakeBoxes[
+                 Hyperlink[
+                 "http://reference.wolfram.com/language/Fretica/ref/\
+FReadCoordinatesFromImage.html"], StandardForm]], "Input", TextClipboardType -> 
+               "PlainText"]}, Visible -> False]]; 
+         SelectionMove[DocumentationSearch`Private`nb$, All, Notebook]; 
+         FrontEndTokenExecute[DocumentationSearch`Private`nb$, "Copy"]; 
+         NotebookClose[DocumentationSearch`Private`nb$]; 
+         Null], "\<\"Go to web URL\"\>":>FrontEndExecute[{
+          NotebookLocate[{
+            URL[If[
+               TrueQ[DocumentationBuild`Make`Private`wsmlinkQ$212157], 
+               "http://reference.wolfram.com/system-modeler/", 
+               "http://reference.wolfram.com/language/"] <> 
+             "Fretica/ref/FReadCoordinatesFromImage" <> ".html"], None}]}]},
+        Appearance->None,
+        MenuAppearance->Automatic,
+        MenuStyle->"URLMenu"],
+       MouseAppearanceTag["LinkHand"]]],
+      LineSpacing->{1.4, 0},ExpressionUUID->
+      "c04c66e1-62a7-4be7-8291-7119b2dadc56"]
+    }], "AnchorBar",
+     CacheGraphics->False,ExpressionUUID->
+     "9dda8657-a341-40d0-8bd2-b01cce6acb54"]}
+  }]], "AnchorBarGrid",
+ GridBoxOptions->{GridBoxItemSize->{"Columns" -> {
+     Scaled[0.65], {
+      Scaled[0.34]}}, "ColumnsIndexed" -> {}, "Rows" -> {{1.}}, 
+   "RowsIndexed" -> {}}},
+ CellID->1,ExpressionUUID->"990a3a13-6aa6-4c48-b044-4b618e3f618a"],
+
+Cell["Fretica`", "ContextNameCell",ExpressionUUID->"52787d2f-04a5-4443-8d5f-9313c48c14fb"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[GridBox[{
+   {Cell[TextData[{
+     Cell[
+     "FReadCoordinatesFromImage", "ObjectName",ExpressionUUID->
+      "f98111d2-7702-49e2-ae31-fe5b1b44335f"],
+     Cell[BoxData[
+      TemplateBox[{8},
+       "Spacer1"]],ExpressionUUID->"5c878e85-5283-41e5-97dc-52f15ec3dff1"],
+     Cell[BoxData[
+     ""], "ObjectNameTranslation",ExpressionUUID->
+      "56a8aaed-09e9-4b1f-83aa-999e885c7420"]
+    }],ExpressionUUID->"5c2dc2ff-7991-4129-8140-117d205a4e8e"], 
+    "\[SpanFromLeft]"}
+  }]], "ObjectNameGrid",ExpressionUUID->"f496e619-fac8-47ef-acf1-\
+c05ac5ff0325"],
+
+Cell[BoxData[GridBox[{
+   {"", Cell["\<\
+FReadCoordinatesFromImage[outputcurve,diagramimage] opens interactive control \
+for reading coordinates from an image (e.g. a scanned plot from a \
+publication). The coordinates are stored in outputcurve, which must be a \
+valid variable name. \
+\>",ExpressionUUID->"50b7d2c3-d025-4d97-8dfd-6b81a0e651f5"]}
+  }]], "Usage",
+ CellID->29453922,ExpressionUUID->"9a82a9a0-e7a5-4768-9353-76467bb3677c"]
+}, Open  ]],
+
+Cell[BoxData[GridBox[{
+   {
+    DynamicBox[FEPrivate`ImportImage[
+      FrontEnd`FileName[{"Documentation", "FooterIcons"}, "RelatedGuide.png"]],
+     ImageSizeCache->{50., {27., 33.}}], GridBox[{
+      {
+       StyleBox[
+        RowBox[{"Related", " ", "Guides"}], "MoreAboutSection"]},
+      {
+       RowBox[{"\[FilledVerySmallSquare]", Cell[BoxData[
+         TemplateBox[{
+           Cell[
+            TextData["Fretica"]], "paclet:Fretica/guide/Fretica"},
+          "RefLinkPlain",
+          BaseStyle->{"MoreAbout"}]], "MoreAbout",ExpressionUUID->
+         "273ef1ac-1218-4f3b-b049-bc216354ccf3"]}]}
+     }]}
+  }]], "MoreAboutSection",ExpressionUUID->"b531e512-4563-407e-80cf-\
+fcc3f49d9042"],
+
+Cell[BoxData[GridBox[{
+   {
+    TemplateBox[{29},
+     "Spacer1"], GridBox[{
+      {
+       RowBox[{
+        TemplateBox[{17},
+         "Spacer1"], 
+        StyleBox[
+         RowBox[{"Related", " ", "Links"}], "RelatedLinksSection"]}]},
+      {Cell[TextData[Cell[BoxData[
+        RowBox[{
+         TemplateBox[{16},
+          "Spacer1"], "\[FilledVerySmallSquare]", Cell[BoxData[
+          TemplateBox[{
+            Cell[
+             TextData[
+              Cell[
+               TextData[{
+                 Cell[
+                  BoxData[
+                   TemplateBox[{2}, "Spacer1"]]], "Schuler Lab"}]]]], 
+            "https://schuler.bioc.uzh.ch/programs/"},
+           "WebLink",
+           BaseStyle->{"RelatedLinks"}]],ExpressionUUID->
+          "28a08c4f-6f5e-4876-a57f-71a7a748b899"]}]],ExpressionUUID->
+        "7c2ce0d6-cc4f-46a1-ad89-f0325422aa32"]], "RelatedLinks",
+        ExpressionUUID->"ea18e431-cad5-4873-9268-62148cf5d03c"]}
+     }]}
+  }]], "RelatedLinksSection",ExpressionUUID->"14e164c4-8467-4e93-9f54-\
+88875200d9b5"],
+
+Cell[" ", "FooterCell",ExpressionUUID->"6d28a477-ef6b-4b91-8fa6-bf4f0dfad4f4"]
+},
+Saveable->False,
+ScreenStyleEnvironment->"Working",
+WindowSize->{900., 604.8},
+WindowMargins->{{0, Automatic}, {Automatic, 0}},
+WindowTitle->"FReadCoordinatesFromImage",
+TaggingRules->{
+ "ModificationHighlight" -> False, "ColorType" -> "", "LinkTrails" -> "", 
+  "HasOptions" -> True, "ExampleCounter" -> 1, 
+  "Openers" -> {
+   "PrimaryExamplesSection" -> Open, "ExampleSection" -> {"0" -> Open}}, 
+  "NewStyles" -> True, "CitationPopupData" -> $Failed, "ShowCitation" -> 
+  False, "RootCaptions" -> "", 
+  "Metadata" -> {
+   "built" -> "{2023, 3, 6, 14, 31, 26.7767825}", 
+    "history" -> {"XX", "", "", ""}, "context" -> "Fretica`", 
+    "keywords" -> {}, "specialkeywords" -> {}, 
+    "tutorialcollectionlinks" -> {}, "index" -> True, "label" -> 
+    "Fretica Symbol", "language" -> "en", "paclet" -> "Fretica", "status" -> 
+    "None", "summary" -> 
+    "FReadCoordinatesFromImage[outputcurve,diagramimage] opens interactive \
+control for reading coordinates from an image (e.g. a scanned plot from a \
+publication). The coordinates are stored in outputcurve, which must be a \
+valid variable name. ", "synonyms" -> {}, "tabletags" -> {}, "title" -> 
+    "FReadCoordinatesFromImage", "titlemodifier" -> "", "windowtitle" -> 
+    "FReadCoordinatesFromImage", "type" -> "Symbol", "uri" -> 
+    "Fretica/ref/FReadCoordinatesFromImage"}},
+CellContext->"Global`",
+FrontEndVersion->"13.2 for Microsoft Windows (64-bit) (January 30, 2023)",
+StyleDefinitions->Notebook[{
+   Cell[
+    StyleData[
+    StyleDefinitions -> FrontEnd`FileName[{"Wolfram"}, "Reference.nb"]]], 
+   Cell[
+    StyleData["Input"], CellContext -> "Global`"], 
+   Cell[
+    StyleData["Output"], CellContext -> "Global`"]}, Visible -> False, 
+  FrontEndVersion -> "13.2 for Microsoft Windows (64-bit) (January 30, 2023)",
+   StyleDefinitions -> "Default.nb"],
+ExpressionUUID->"c2dff439-5dc8-4140-a8c2-e488dd0edff6"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[597, 21, 4401, 105, 70, "AnchorBarGrid",ExpressionUUID->"990a3a13-6aa6-4c48-b044-4b618e3f618a",
+ CellID->1],
+Cell[5001, 128, 90, 0, 70, "ContextNameCell",ExpressionUUID->"52787d2f-04a5-4443-8d5f-9313c48c14fb"],
+Cell[CellGroupData[{
+Cell[5116, 132, 568, 14, 70, "ObjectNameGrid",ExpressionUUID->"f496e619-fac8-47ef-acf1-c05ac5ff0325"],
+Cell[5687, 148, 437, 8, 70, "Usage",ExpressionUUID->"9a82a9a0-e7a5-4768-9353-76467bb3677c",
+ CellID->29453922]
+}, Open  ]],
+Cell[6139, 159, 697, 18, 70, "MoreAboutSection",ExpressionUUID->"b531e512-4563-407e-80cf-fcc3f49d9042"],
+Cell[6839, 179, 1043, 30, 70, "RelatedLinksSection",ExpressionUUID->"14e164c4-8467-4e93-9f54-88875200d9b5"],
+Cell[7885, 211, 78, 0, 70, "FooterCell",ExpressionUUID->"6d28a477-ef6b-4b91-8fa6-bf4f0dfad4f4"]
+}
+]
+*)
+
+(* End of internal cache information *)
+

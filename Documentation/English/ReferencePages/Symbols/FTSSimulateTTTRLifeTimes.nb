@@ -1,0 +1,455 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 13.2' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     17413,        445]
+NotebookOptionsPosition[     14013,        378]
+NotebookOutlinePosition[     16773,        437]
+CellTagsIndexPosition[     16730,        434]
+WindowTitle->FTSSimulateTTTRLifeTimes
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[GridBox[{
+   {GridBox[{
+      {
+       ItemBox[Cell[BoxData[
+         RowBox[{
+          TemplateBox[{12},
+           "Spacer1"], Cell["FRETICA SYMBOL", "PacletNameCell",
+           TextAlignment->Center,ExpressionUUID->
+           "ba9572ce-a4d5-425f-8962-3f49e2ab3ab7"], 
+          TemplateBox[{8},
+           "Spacer1"]}]],
+         TextAlignment->Center,ExpressionUUID->
+         "c6203334-2c24-4444-a887-bba46ebb920c"],
+        Background->RGBColor[0.490196, 0.576471, 0.690196],
+        ItemSize->Full], ""}
+     },
+     GridBoxAlignment->{"Rows" -> {{Center}}},
+     GridBoxItemSize->{"Columns" -> {Full, 
+         Scaled[0.02]}, "Rows" -> {{2.5}}}], Cell[TextData[{
+     Cell[BoxData[
+      TagBox[
+       ActionMenuBox[
+        FrameBox[Cell[TextData[{
+          "Related Guides",
+          " ",
+          Cell[BoxData[
+           GraphicsBox[
+            {GrayLevel[0.66667], Thickness[0.13], 
+             LineBox[{{-1.8, 0.5}, {0, 0}, {1.8, 0.5}}]},
+            AspectRatio->1,
+            ImageSize->20,
+            PlotRange->{{-3, 4}, {-1, 1}}]],ExpressionUUID->
+           "e0b1624d-c0cd-4914-b772-545fb7f1af12"]
+         }],ExpressionUUID->"085e7207-6eaa-45c0-b8ed-bf5a5ba089d9"],
+         StripOnInput->False], {"\<\"Fretica\"\>":>Documentation`HelpLookup[
+        "paclet:Fretica/guide/Fretica"]},
+        Appearance->None,
+        MenuAppearance->Automatic,
+        MenuStyle->"MoreAbout"],
+       MouseAppearanceTag["LinkHand"]]],
+      LineSpacing->{1.4, 0},ExpressionUUID->
+      "63dcec9e-1538-496b-b9c1-41e47b62a4ee"],
+     "\[ThickSpace]\[ThickSpace]\[ThickSpace]\[ThickSpace]\[ThickSpace]\
+\[ThickSpace]",
+     Cell[BoxData[
+      TagBox[
+       ActionMenuBox[
+        FrameBox[Cell[TextData[{
+          "URL",
+          " ",
+          Cell[BoxData[
+           GraphicsBox[
+            {GrayLevel[0.66667], Thickness[0.13], 
+             LineBox[{{-1.8, 0.5}, {0, 0}, {1.8, 0.5}}]},
+            AspectRatio->1,
+            ImageSize->20,
+            PlotRange->{{-3, 4}, {-1, 1}}]],ExpressionUUID->
+           "d2b565e0-0880-4392-962c-958aca10df90"]
+         }],ExpressionUUID->"07ab0197-99e4-4855-9bae-b8e08c687fcb"],
+         StripOnInput->
+          False], {"\<\"Fretica/ref/FTSSimulateTTTRLifeTimes\"\>":>
+        None, "\<\"Copy Wolfram Documentation Center URL\"\>":>
+        Module[{DocumentationSearch`Private`nb$}, 
+         DocumentationSearch`Private`nb$ = NotebookPut[
+            Notebook[{
+              Cell["Fretica/ref/FTSSimulateTTTRLifeTimes"]}, Visible -> 
+             False]]; SelectionMove[
+          DocumentationSearch`Private`nb$, All, Notebook]; 
+         FrontEndTokenExecute[DocumentationSearch`Private`nb$, "Copy"]; 
+         NotebookClose[DocumentationSearch`Private`nb$]; Null], 
+        Delimiter, "\<\"Copy web URL\"\>":>
+        Module[{DocumentationSearch`Private`nb$}, 
+         DocumentationSearch`Private`nb$ = NotebookPut[
+            Notebook[{
+              Cell[
+               BoxData[
+                MakeBoxes[
+                 Hyperlink[
+                 "http://reference.wolfram.com/language/Fretica/ref/\
+FTSSimulateTTTRLifeTimes.html"], StandardForm]], "Input", TextClipboardType -> 
+               "PlainText"]}, Visible -> False]]; 
+         SelectionMove[DocumentationSearch`Private`nb$, All, Notebook]; 
+         FrontEndTokenExecute[DocumentationSearch`Private`nb$, "Copy"]; 
+         NotebookClose[DocumentationSearch`Private`nb$]; 
+         Null], "\<\"Go to web URL\"\>":>FrontEndExecute[{
+          NotebookLocate[{
+            URL[If[
+               TrueQ[DocumentationBuild`Make`Private`wsmlinkQ$253146], 
+               "http://reference.wolfram.com/system-modeler/", 
+               "http://reference.wolfram.com/language/"] <> 
+             "Fretica/ref/FTSSimulateTTTRLifeTimes" <> ".html"], None}]}]},
+        Appearance->None,
+        MenuAppearance->Automatic,
+        MenuStyle->"URLMenu"],
+       MouseAppearanceTag["LinkHand"]]],
+      LineSpacing->{1.4, 0},ExpressionUUID->
+      "690d17e1-954d-46c3-8338-4f881c5bca0f"]
+    }], "AnchorBar",
+     CacheGraphics->False,ExpressionUUID->
+     "0a898cc3-ff8e-458f-a772-e3d068e00228"]}
+  }]], "AnchorBarGrid",
+ GridBoxOptions->{GridBoxItemSize->{"Columns" -> {
+     Scaled[0.65], {
+      Scaled[0.34]}}, "ColumnsIndexed" -> {}, "Rows" -> {{1.}}, 
+   "RowsIndexed" -> {}}},
+ CellID->1,ExpressionUUID->"18a0884b-ef61-4282-88b4-629571e3bd99"],
+
+Cell["Fretica`", "ContextNameCell",ExpressionUUID->"81f0e717-3b21-4fc2-85a0-ccd6367f5e87"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[GridBox[{
+   {Cell[TextData[{
+     Cell[
+     "FTSSimulateTTTRLifeTimes", "ObjectName",ExpressionUUID->
+      "ec99e76e-712a-4cc0-ac11-33efb4edc617"],
+     Cell[BoxData[
+      TemplateBox[{8},
+       "Spacer1"]],ExpressionUUID->"0204932c-e967-45a4-b983-42423a4d4618"],
+     Cell[BoxData[
+     ""], "ObjectNameTranslation",ExpressionUUID->
+      "c5d5f0d5-57ad-475f-aea0-652b7718df00"]
+    }],ExpressionUUID->"e8fac479-144a-4541-a838-17feef29cdec"], 
+    "\[SpanFromLeft]"}
+  }]], "ObjectNameGrid",ExpressionUUID->"5bef8f2c-05d8-45c8-a404-\
+4f5c93992f27"],
+
+Cell[BoxData[GridBox[{
+   {"", Cell[TextData[{
+     Cell[BoxData[
+      StyleBox["FTSSimulateTTTRLifeTimes", "TB"]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "ea015bdf-20ee-4ecf-a831-3dc8eb625313"],
+     " [",
+     Cell[BoxData[
+      FormBox[
+       RowBox[{
+        SubscriptBox[
+         StyleBox["n", "TI"], "bg"], ",", 
+        SubscriptBox[
+         StyleBox["r", "TI"], "max"], ",", 
+        SubscriptBox[
+         StyleBox["w", "TI"], "0"], ",", 
+        SubscriptBox[
+         StyleBox["z", "TI"], "0"], ","}], TraditionalForm]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "cd99a35c-7ca3-4493-b566-75b362a17971"],
+     " chdis, bgdis] simulates microtimes (lifetime channels) for the photons \
+simulated beforehand with FTSSimulateTTTR."
+    }],ExpressionUUID->"5fca12e1-eea2-4c74-a43d-6b0298bf3dd1"]},
+   {"", Cell[TextData[{
+     Cell[BoxData[
+      FormBox[
+       SubscriptBox[
+        StyleBox["n", "TI"], "bg"], TraditionalForm]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "8f57542a-4ba6-4f42-97f6-07dcf3d77ee0"],
+     " :   List of mean background rates of the detection channels: ",
+     Cell[BoxData[
+      FormBox[
+       RowBox[{"{", 
+        RowBox[{
+         SubscriptBox[
+          StyleBox["n", "TI"], 
+          RowBox[{"bg", ",", "1"}]], ",", "...", ",", 
+         SubscriptBox[
+          StyleBox["n", "TI"], 
+          RowBox[{"bg", ",", 
+           SubscriptBox[
+            StyleBox["N", "TI"], 
+            StyleBox["d", "TI"]]}]]}], "}"}], TraditionalForm]], 
+      "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "11aad61a-0e64-45b7-97b7-2da5bada4e03"]
+    }],ExpressionUUID->"622e2b58-aa21-426e-9ed1-62960a11fa35"]},
+   {"", Cell[TextData[{
+     Cell[BoxData[
+      FormBox[
+       SubscriptBox[
+        StyleBox["r", "TI"], "max"], TraditionalForm]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "ec68ef31-dc25-4674-83bb-bac73fc0e53a"],
+     " :   For distances to the origin with ",
+     Cell[BoxData[
+      FormBox[
+       RowBox[{"|", 
+        RowBox[{"StyleBox", "[", 
+         RowBox[{"\"\<r\>\"", ",", 
+          RowBox[{"FontSlant", "->", "\"\<Bold\>\""}]}], "]"}], "|", ">", 
+        SubscriptBox[
+         StyleBox["r", "TI"], "max"]}], TraditionalForm]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "182100a0-38a4-47c0-92e1-53cd05b2013f"],
+     " the excitation intensity is set to zero ",
+     Cell[BoxData[
+      FormBox[
+       RowBox[{
+        RowBox[{
+         StyleBox["I", "TI"], 
+         RowBox[{"(", 
+          StyleBox["r",
+           FontSlant->"Bold"], ")"}]}], "\[LongEqual]", "0"}], 
+       TraditionalForm]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "3e04e158-4272-4359-a85e-7f21793004ab"],
+     "."
+    }],ExpressionUUID->"8bc9f5fa-2fce-4f39-b84e-9c62ce2b9c37"]},
+   {"", Cell[TextData[{
+     Cell[BoxData[
+      FormBox[
+       SubscriptBox[
+        StyleBox["w", "TI"], "0"], TraditionalForm]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "7f0d69cd-3595-4e53-9f21-b10aa82dad0f"],
+     " :   Lateral dimension (semi\[Hyphen]minor axis) of the confocal volume \
+in micrometers."
+    }],ExpressionUUID->"690e2164-7cb2-4b57-ba9e-0ef6013452d0"]},
+   {"", Cell[TextData[{
+     Cell[BoxData[
+      FormBox[
+       SubscriptBox[
+        StyleBox["z", "TI"], "0"], TraditionalForm]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "845cf213-e104-4f86-9dda-ef0beb52cbbb"],
+     " :   Axial dimension (semi\[Hyphen]major axis) of the confocal volume \
+in micrometers."
+    }],ExpressionUUID->"e4245882-7d50-4637-a129-6216ab727050"]},
+   {"", Cell[TextData[{
+     "chdis:   Nested list, where chdis",
+     Cell[BoxData[
+      FormBox[
+       RowBox[{"[", 
+        RowBox[{"[", 
+         RowBox[{
+          SubscriptBox[
+           StyleBox["i", "TI"], 
+           StyleBox["s", "TI"]], " ", ",", 
+          SubscriptBox[
+           StyleBox["i", "TI"], 
+           StyleBox[
+            RowBox[{"s", "t"}], "TI"]], ",", 
+          StyleBox["d", "TI"]}], "]"}], "]"}], TraditionalForm]], 
+      "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "c9f8def6-0423-491a-98e5-ccd519e08563"],
+     " is a list of numbers representing the lifetime\[Hyphen]channel \
+distribution on detector ",
+     Cell[BoxData[
+      FormBox[
+       StyleBox["d", "TI"], TraditionalForm]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "2203e3ee-cb85-496e-ae11-158a1c17db10"],
+     " of fluorescence photons from a particle of species ",
+     Cell[BoxData[
+      FormBox[
+       SubscriptBox[
+        StyleBox["i", "TI"], 
+        StyleBox["s", "TI"]], TraditionalForm]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "589014c1-4f3c-48a9-a7f1-5d00029082d8"],
+     " being in state ",
+     Cell[BoxData[
+      FormBox[
+       SubscriptBox[
+        StyleBox["i", "TI"], 
+        StyleBox[
+         RowBox[{"s", " ", "t"}], "TI"]], TraditionalForm]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "c0df739c-2b77-4981-b6e1-b7e3e9209756"],
+     "."
+    }],ExpressionUUID->"ea555071-0148-40d2-b018-42853709438a"]},
+   {"", Cell[TextData[{
+     "bgdis:   List of length ",
+     Cell[BoxData[
+      FormBox[
+       SubscriptBox[
+        StyleBox["N", "TI"], 
+        StyleBox["d", "TI"]], TraditionalForm]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "7a4a7517-2716-4383-86c4-3cece0c827c5"],
+     ", where bgdis",
+     Cell[BoxData[
+      FormBox[
+       RowBox[{"[", 
+        RowBox[{"[", 
+         RowBox[{"StyleBox", " ", "[", 
+          RowBox[{"\"\<d\>\"", ",", "\"\<TI\>\""}], "]"}], "]"}], "]"}], 
+       TraditionalForm]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "f1ce0376-4e7c-46ac-84f3-0a708747b8c8"],
+     " is a list of numbers representing the lifetime\[Hyphen]channel \
+distribution of background photons on detector ",
+     Cell[BoxData[
+      FormBox[
+       StyleBox["d", "TI"], TraditionalForm]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "24aa4149-8b3e-4312-b42f-41d2d990e1e6"],
+     ". "
+    }],ExpressionUUID->"7b414922-0baa-4975-9cb4-1d6da074df2c"]}
+  }]], "Usage",
+ CellID->29132491,ExpressionUUID->"f71c5a1e-9a69-4e57-b778-811558c083f7"]
+}, Open  ]],
+
+Cell[BoxData[GridBox[{
+   {
+    DynamicBox[FEPrivate`ImportImage[
+      FrontEnd`FileName[{"Documentation", "FooterIcons"}, "RelatedGuide.png"]],
+     ImageSizeCache->{50., {27., 33.}}], GridBox[{
+      {
+       StyleBox[
+        RowBox[{"Related", " ", "Guides"}], "MoreAboutSection"]},
+      {
+       RowBox[{"\[FilledVerySmallSquare]", Cell[BoxData[
+         TemplateBox[{
+           Cell[
+            TextData["Fretica"]], "paclet:Fretica/guide/Fretica"},
+          "RefLinkPlain",
+          BaseStyle->{"MoreAbout"}]], "MoreAbout",ExpressionUUID->
+         "14b69419-4f15-4651-82db-d5337fbbe1bf"]}]}
+     }]}
+  }]], "MoreAboutSection",ExpressionUUID->"b27143af-aa97-4a4e-ad0d-\
+f5b82772c6c7"],
+
+Cell[BoxData[GridBox[{
+   {
+    TemplateBox[{29},
+     "Spacer1"], GridBox[{
+      {
+       RowBox[{
+        TemplateBox[{17},
+         "Spacer1"], 
+        StyleBox[
+         RowBox[{"Related", " ", "Links"}], "RelatedLinksSection"]}]},
+      {Cell[TextData[Cell[BoxData[
+        RowBox[{
+         TemplateBox[{16},
+          "Spacer1"], "\[FilledVerySmallSquare]", Cell[BoxData[
+          TemplateBox[{
+            Cell[
+             TextData[
+              Cell[
+               TextData[{
+                 Cell[
+                  BoxData[
+                   TemplateBox[{2}, "Spacer1"]]], "Schuler Lab"}]]]], 
+            "https://schuler.bioc.uzh.ch/programs/"},
+           "WebLink",
+           BaseStyle->{"RelatedLinks"}]],ExpressionUUID->
+          "7b09ac36-3d1d-48de-ae05-9996b5fec556"]}]],ExpressionUUID->
+        "a84e1a7f-b313-48f6-aa73-6d00a693fa05"]], "RelatedLinks",
+        ExpressionUUID->"c124ff60-0656-411f-9de6-f6c6d56b6a4b"]}
+     }]}
+  }]], "RelatedLinksSection",ExpressionUUID->"b3ece2ff-306a-4fb2-849d-\
+f3bc05100517"],
+
+Cell[" ", "FooterCell",ExpressionUUID->"cfa63e47-14fa-4ddc-9aa5-b3318e57b2fd"]
+},
+Saveable->False,
+ScreenStyleEnvironment->"Working",
+WindowSize->{900., 604.8},
+WindowMargins->{{0, Automatic}, {Automatic, 0}},
+WindowTitle->"FTSSimulateTTTRLifeTimes",
+TaggingRules->{
+ "ModificationHighlight" -> False, "ColorType" -> "", "LinkTrails" -> "", 
+  "HasOptions" -> True, "ExampleCounter" -> 1, 
+  "Openers" -> {
+   "PrimaryExamplesSection" -> Open, "ExampleSection" -> {"0" -> Open}}, 
+  "NewStyles" -> True, "CitationPopupData" -> $Failed, "ShowCitation" -> 
+  False, "RootCaptions" -> "", 
+  "Metadata" -> {
+   "built" -> "{2023, 3, 6, 14, 32, 45.6999702}", 
+    "history" -> {"XX", "", "", ""}, "context" -> "Fretica`", 
+    "keywords" -> {}, "specialkeywords" -> {}, 
+    "tutorialcollectionlinks" -> {}, "index" -> True, "label" -> 
+    "Fretica Symbol", "language" -> "en", "paclet" -> "Fretica", "status" -> 
+    "None", "summary" -> 
+    "FTSSimulateTTTRLifeTimes [nbg, rmax, w0, z0, chdis, bgdis] simulates \
+microtimes (lifetime channels) for the photons simulated beforehand with \
+FTSSimulateTTTR. nbg : List of mean background rates of the detection \
+channels: {n bg, 1, ..., n bg, Subscript[N, d]} rmax : For distances to the \
+origin with | StyleBox[\"r\", FontSlant -> \"Bold\"] | > rmax the excitation \
+intensity is set to zero I (r) == 0. w0 : Lateral dimension (semi-minor axis) \
+of the confocal volume in micrometers. z0 : Axial dimension (semi-major axis) \
+of the confocal volume in micrometers. chdis: Nested list, where chdis[[is , \
+i s t, d]] is a list of numbers representing the lifetime-channel \
+distribution on detector d of fluorescence photons from a particle of species \
+is being in state i s t. bgdis: List of length Nd, where bgdis[[StyleBox [\"d\
+\", \"TI\"]]] is a list of numbers representing the lifetime-channel \
+distribution of background photons on detector d. ", "synonyms" -> {}, 
+    "tabletags" -> {}, "title" -> "FTSSimulateTTTRLifeTimes", "titlemodifier" -> 
+    "", "windowtitle" -> "FTSSimulateTTTRLifeTimes", "type" -> "Symbol", 
+    "uri" -> "Fretica/ref/FTSSimulateTTTRLifeTimes"}},
+CellContext->"Global`",
+FrontEndVersion->"13.2 for Microsoft Windows (64-bit) (January 30, 2023)",
+StyleDefinitions->Notebook[{
+   Cell[
+    StyleData[
+    StyleDefinitions -> FrontEnd`FileName[{"Wolfram"}, "Reference.nb"]]], 
+   Cell[
+    StyleData["Input"], CellContext -> "Global`"], 
+   Cell[
+    StyleData["Output"], CellContext -> "Global`"]}, Visible -> False, 
+  FrontEndVersion -> "13.2 for Microsoft Windows (64-bit) (January 30, 2023)",
+   StyleDefinitions -> "Default.nb"],
+ExpressionUUID->"8c01f7f3-9fc9-44d1-ab1c-f2a390ad274c"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[596, 21, 4397, 105, 70, "AnchorBarGrid",ExpressionUUID->"18a0884b-ef61-4282-88b4-629571e3bd99",
+ CellID->1],
+Cell[4996, 128, 90, 0, 70, "ContextNameCell",ExpressionUUID->"81f0e717-3b21-4fc2-85a0-ccd6367f5e87"],
+Cell[CellGroupData[{
+Cell[5111, 132, 567, 14, 70, "ObjectNameGrid",ExpressionUUID->"5bef8f2c-05d8-45c8-a404-4f5c93992f27"],
+Cell[5681, 148, 6489, 173, 70, "Usage",ExpressionUUID->"f71c5a1e-9a69-4e57-b778-811558c083f7",
+ CellID->29132491]
+}, Open  ]],
+Cell[12185, 324, 697, 18, 70, "MoreAboutSection",ExpressionUUID->"b27143af-aa97-4a4e-ad0d-f5b82772c6c7"],
+Cell[12885, 344, 1043, 30, 70, "RelatedLinksSection",ExpressionUUID->"b3ece2ff-306a-4fb2-849d-f3bc05100517"],
+Cell[13931, 376, 78, 0, 70, "FooterCell",ExpressionUUID->"cfa63e47-14fa-4ddc-9aa5-b3318e57b2fd"]
+}
+]
+*)
+
+(* End of internal cache information *)
+

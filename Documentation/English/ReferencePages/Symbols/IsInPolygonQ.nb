@@ -1,0 +1,289 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 13.2' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     10914,        279]
+NotebookOptionsPosition[      8202,        220]
+NotebookOutlinePosition[     10278,        271]
+CellTagsIndexPosition[     10235,        268]
+WindowTitle->IsInPolygonQ
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[GridBox[{
+   {GridBox[{
+      {
+       ItemBox[Cell[BoxData[
+         RowBox[{
+          TemplateBox[{12},
+           "Spacer1"], Cell["FRETICA SYMBOL", "PacletNameCell",
+           TextAlignment->Center,ExpressionUUID->
+           "1b9b2aad-0e8a-44a1-9307-535c25b94c59"], 
+          TemplateBox[{8},
+           "Spacer1"]}]],
+         TextAlignment->Center,ExpressionUUID->
+         "8e0b72f8-dc76-4604-8af0-23c71be36079"],
+        Background->RGBColor[0.490196, 0.576471, 0.690196],
+        ItemSize->Full], ""}
+     },
+     GridBoxAlignment->{"Rows" -> {{Center}}},
+     GridBoxItemSize->{"Columns" -> {Full, 
+         Scaled[0.02]}, "Rows" -> {{2.5}}}], Cell[TextData[{
+     Cell[BoxData[
+      TagBox[
+       ActionMenuBox[
+        FrameBox[Cell[TextData[{
+          "Related Guides",
+          " ",
+          Cell[BoxData[
+           GraphicsBox[
+            {GrayLevel[0.66667], Thickness[0.13], 
+             LineBox[{{-1.8, 0.5}, {0, 0}, {1.8, 0.5}}]},
+            AspectRatio->1,
+            ImageSize->20,
+            PlotRange->{{-3, 4}, {-1, 1}}]],ExpressionUUID->
+           "b4a9caff-7742-47d6-965d-8dc4e036866a"]
+         }],ExpressionUUID->"75ee197c-2115-43d8-b44b-fd56c2ad9584"],
+         StripOnInput->False], {"\<\"Fretica\"\>":>Documentation`HelpLookup[
+        "paclet:Fretica/guide/Fretica"]},
+        Appearance->None,
+        MenuAppearance->Automatic,
+        MenuStyle->"MoreAbout"],
+       MouseAppearanceTag["LinkHand"]]],
+      LineSpacing->{1.4, 0},ExpressionUUID->
+      "cc82f86e-aa79-4681-831d-7ee9d24c94da"],
+     "\[ThickSpace]\[ThickSpace]\[ThickSpace]\[ThickSpace]\[ThickSpace]\
+\[ThickSpace]",
+     Cell[BoxData[
+      TagBox[
+       ActionMenuBox[
+        FrameBox[Cell[TextData[{
+          "URL",
+          " ",
+          Cell[BoxData[
+           GraphicsBox[
+            {GrayLevel[0.66667], Thickness[0.13], 
+             LineBox[{{-1.8, 0.5}, {0, 0}, {1.8, 0.5}}]},
+            AspectRatio->1,
+            ImageSize->20,
+            PlotRange->{{-3, 4}, {-1, 1}}]],ExpressionUUID->
+           "375a77d4-e200-47fa-9143-3f94833ae73e"]
+         }],ExpressionUUID->"c5d2fd91-23e1-496d-9db6-9d4ef6195fdf"],
+         StripOnInput->False], {"\<\"Fretica/ref/IsInPolygonQ\"\>":>
+        None, "\<\"Copy Wolfram Documentation Center URL\"\>":>
+        Module[{DocumentationSearch`Private`nb$}, 
+         DocumentationSearch`Private`nb$ = NotebookPut[
+            Notebook[{
+              Cell["Fretica/ref/IsInPolygonQ"]}, Visible -> False]]; 
+         SelectionMove[DocumentationSearch`Private`nb$, All, Notebook]; 
+         FrontEndTokenExecute[DocumentationSearch`Private`nb$, "Copy"]; 
+         NotebookClose[DocumentationSearch`Private`nb$]; Null], 
+        Delimiter, "\<\"Copy web URL\"\>":>
+        Module[{DocumentationSearch`Private`nb$}, 
+         DocumentationSearch`Private`nb$ = NotebookPut[
+            Notebook[{
+              Cell[
+               BoxData[
+                MakeBoxes[
+                 Hyperlink[
+                 "http://reference.wolfram.com/language/Fretica/ref/\
+IsInPolygonQ.html"], StandardForm]], "Input", TextClipboardType -> 
+               "PlainText"]}, Visible -> False]]; 
+         SelectionMove[DocumentationSearch`Private`nb$, All, Notebook]; 
+         FrontEndTokenExecute[DocumentationSearch`Private`nb$, "Copy"]; 
+         NotebookClose[DocumentationSearch`Private`nb$]; 
+         Null], "\<\"Go to web URL\"\>":>FrontEndExecute[{
+          NotebookLocate[{
+            URL[If[
+               TrueQ[DocumentationBuild`Make`Private`wsmlinkQ$266140], 
+               "http://reference.wolfram.com/system-modeler/", 
+               "http://reference.wolfram.com/language/"] <> 
+             "Fretica/ref/IsInPolygonQ" <> ".html"], None}]}]},
+        Appearance->None,
+        MenuAppearance->Automatic,
+        MenuStyle->"URLMenu"],
+       MouseAppearanceTag["LinkHand"]]],
+      LineSpacing->{1.4, 0},ExpressionUUID->
+      "3aee8b8d-1202-44b4-a989-ccff6bd4f400"]
+    }], "AnchorBar",
+     CacheGraphics->False,ExpressionUUID->
+     "324fd8e6-2003-4624-87c5-305e074f9319"]}
+  }]], "AnchorBarGrid",
+ GridBoxOptions->{GridBoxItemSize->{"Columns" -> {
+     Scaled[0.65], {
+      Scaled[0.34]}}, "ColumnsIndexed" -> {}, "Rows" -> {{1.}}, 
+   "RowsIndexed" -> {}}},
+ CellID->1,ExpressionUUID->"dca4ebc5-7022-427b-bcc9-40c24d287b3f"],
+
+Cell["Fretica`", "ContextNameCell",ExpressionUUID->"60016f84-8001-4213-8f47-f82ea1bccbdb"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[GridBox[{
+   {Cell[TextData[{
+     Cell[
+     "IsInPolygonQ", "ObjectName",ExpressionUUID->
+      "b8c5b859-b930-427a-8434-f2071f69bee5"],
+     Cell[BoxData[
+      TemplateBox[{8},
+       "Spacer1"]],ExpressionUUID->"fd376cee-c80d-4bd6-a44c-bfe4ee9273c0"],
+     Cell[BoxData[
+     ""], "ObjectNameTranslation",ExpressionUUID->
+      "7dbac585-f6f2-4610-bc89-4930f9d4d5ed"]
+    }],ExpressionUUID->"fa14264f-b832-4bf0-be7e-062b1c4078f6"], 
+    "\[SpanFromLeft]"}
+  }]], "ObjectNameGrid",ExpressionUUID->"86f06a62-c192-4370-a989-\
+3768deb8ba0e"],
+
+Cell[BoxData[GridBox[{
+   {"", Cell["\<\
+  IsInPolygonQ[{testx,testy},{{x1,y1},{x2,y2},...}] return true if \
+{testx,testy} in inside polygon.\
+\>",ExpressionUUID->"0882f051-85bf-4dd2-87a8-27b846ec2874"]},
+   {"", Cell["\<\
+  Polygon can be closed or not. A point will be inside exactly one member of \
+a polygonal partitioning.\
+\>",ExpressionUUID->"c41d6ee4-f94d-42f8-9a0d-a30380172ea8"]},
+   {"", Cell["\<\
+  C-code by W. Randolph Franklin \
+(http://www.ecse.rpi.edu/Homepages/wrf/Research/Short_Notes/pnpoly.html).\
+\>",ExpressionUUID->"7d40427b-3f40-4b1c-9726-bed8704ba0f7"]},
+   {"", Cell[
+    "  J. Wesenberg, 2008",ExpressionUUID->
+     "19980ad4-9435-480c-9066-acd36d1e25d4"]}
+  }]], "Usage",
+ CellID->625531610,ExpressionUUID->"9c23a69a-69de-47a1-b4da-483da45274f1"]
+}, Open  ]],
+
+Cell[BoxData[GridBox[{
+   {
+    DynamicBox[FEPrivate`ImportImage[
+      FrontEnd`FileName[{"Documentation", "FooterIcons"}, "RelatedGuide.png"]],
+     ImageSizeCache->{50., {27., 33.}}], GridBox[{
+      {
+       StyleBox[
+        RowBox[{"Related", " ", "Guides"}], "MoreAboutSection"]},
+      {
+       RowBox[{"\[FilledVerySmallSquare]", Cell[BoxData[
+         TemplateBox[{
+           Cell[
+            TextData["Fretica"]], "paclet:Fretica/guide/Fretica"},
+          "RefLinkPlain",
+          BaseStyle->{"MoreAbout"}]], "MoreAbout",ExpressionUUID->
+         "6aad05e7-1763-4324-bbd5-c59155eb1c0f"]}]}
+     }]}
+  }]], "MoreAboutSection",ExpressionUUID->"29396d7d-ceb0-42ac-96df-\
+443da6ca868c"],
+
+Cell[BoxData[GridBox[{
+   {
+    TemplateBox[{29},
+     "Spacer1"], GridBox[{
+      {
+       RowBox[{
+        TemplateBox[{17},
+         "Spacer1"], 
+        StyleBox[
+         RowBox[{"Related", " ", "Links"}], "RelatedLinksSection"]}]},
+      {Cell[TextData[Cell[BoxData[
+        RowBox[{
+         TemplateBox[{16},
+          "Spacer1"], "\[FilledVerySmallSquare]", Cell[BoxData[
+          TemplateBox[{
+            Cell[
+             TextData[
+              Cell[
+               TextData[{
+                 Cell[
+                  BoxData[
+                   TemplateBox[{2}, "Spacer1"]]], "Schuler Lab"}]]]], 
+            "https://schuler.bioc.uzh.ch/programs/"},
+           "WebLink",
+           BaseStyle->{"RelatedLinks"}]],ExpressionUUID->
+          "186c5feb-8093-4d97-8d3e-7739ff064007"]}]],ExpressionUUID->
+        "8a2efc5a-d797-40e0-8cb2-723210e62c35"]], "RelatedLinks",
+        ExpressionUUID->"9abbd5c9-a603-4312-846e-c1bf7701bef7"]}
+     }]}
+  }]], "RelatedLinksSection",ExpressionUUID->"be97e2b5-4a62-49cf-9cd7-\
+7f3c2a35c477"],
+
+Cell[" ", "FooterCell",ExpressionUUID->"5736324b-2341-4460-a598-41d9070fbf26"]
+},
+Saveable->False,
+ScreenStyleEnvironment->"Working",
+WindowSize->{900., 604.8},
+WindowMargins->{{0, Automatic}, {Automatic, 0}},
+WindowTitle->"IsInPolygonQ",
+TaggingRules->{
+ "ModificationHighlight" -> False, "ColorType" -> "", "LinkTrails" -> "", 
+  "HasOptions" -> True, "ExampleCounter" -> 1, 
+  "Openers" -> {
+   "PrimaryExamplesSection" -> Open, "ExampleSection" -> {"0" -> Open}}, 
+  "NewStyles" -> True, "CitationPopupData" -> $Failed, "ShowCitation" -> 
+  False, "RootCaptions" -> "", 
+  "Metadata" -> {
+   "built" -> "{2023, 3, 6, 14, 33, 6.7108836}", 
+    "history" -> {"XX", "", "", ""}, "context" -> "Fretica`", 
+    "keywords" -> {}, "specialkeywords" -> {}, 
+    "tutorialcollectionlinks" -> {}, "index" -> True, "label" -> 
+    "Fretica Symbol", "language" -> "en", "paclet" -> "Fretica", "status" -> 
+    "None", "summary" -> 
+    "IsInPolygonQ[{testx,testy},{{x1,y1},{x2,y2},...}] return true if \
+{testx,testy} in inside polygon. Polygon can be closed or not. A point will \
+be inside exactly one member of a polygonal partitioning. C-code by W. \
+Randolph Franklin \
+(http://www.ecse.rpi.edu/Homepages/wrf/Research/Short_Notes/pnpoly.html). J. \
+Wesenberg, 2008", "synonyms" -> {}, "tabletags" -> {}, "title" -> 
+    "IsInPolygonQ", "titlemodifier" -> "", "windowtitle" -> "IsInPolygonQ", 
+    "type" -> "Symbol", "uri" -> "Fretica/ref/IsInPolygonQ"}},
+CellContext->"Global`",
+FrontEndVersion->"13.2 for Microsoft Windows (64-bit) (January 30, 2023)",
+StyleDefinitions->Notebook[{
+   Cell[
+    StyleData[
+    StyleDefinitions -> FrontEnd`FileName[{"Wolfram"}, "Reference.nb"]]], 
+   Cell[
+    StyleData["Input"], CellContext -> "Global`"], 
+   Cell[
+    StyleData["Output"], CellContext -> "Global`"]}, Visible -> False, 
+  FrontEndVersion -> "13.2 for Microsoft Windows (64-bit) (January 30, 2023)",
+   StyleDefinitions -> "Default.nb"],
+ExpressionUUID->"e6ead030-635a-4b0c-8e68-2080f2a184c7"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[584, 21, 4323, 103, 70, "AnchorBarGrid",ExpressionUUID->"dca4ebc5-7022-427b-bcc9-40c24d287b3f",
+ CellID->1],
+Cell[4910, 126, 90, 0, 70, "ContextNameCell",ExpressionUUID->"60016f84-8001-4213-8f47-f82ea1bccbdb"],
+Cell[CellGroupData[{
+Cell[5025, 130, 555, 14, 70, "ObjectNameGrid",ExpressionUUID->"86f06a62-c192-4370-a989-3768deb8ba0e"],
+Cell[5583, 146, 776, 17, 70, "Usage",ExpressionUUID->"9c23a69a-69de-47a1-b4da-483da45274f1",
+ CellID->625531610]
+}, Open  ]],
+Cell[6374, 166, 697, 18, 70, "MoreAboutSection",ExpressionUUID->"29396d7d-ceb0-42ac-96df-443da6ca868c"],
+Cell[7074, 186, 1043, 30, 70, "RelatedLinksSection",ExpressionUUID->"be97e2b5-4a62-49cf-9cd7-7f3c2a35c477"],
+Cell[8120, 218, 78, 0, 70, "FooterCell",ExpressionUUID->"5736324b-2341-4460-a598-41d9070fbf26"]
+}
+]
+*)
+
+(* End of internal cache information *)
+

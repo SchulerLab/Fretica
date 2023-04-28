@@ -1,0 +1,296 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 13.2' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     11140,        286]
+NotebookOptionsPosition[      8583,        230]
+NotebookOutlinePosition[     10503,        278]
+CellTagsIndexPosition[     10460,        275]
+WindowTitle->FTSRandomPositionInSphere
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[GridBox[{
+   {GridBox[{
+      {
+       ItemBox[Cell[BoxData[
+         RowBox[{
+          TemplateBox[{12},
+           "Spacer1"], Cell["FRETICA SYMBOL", "PacletNameCell",
+           TextAlignment->Center,ExpressionUUID->
+           "c6281d45-0187-489f-b330-04a405be16bf"], 
+          TemplateBox[{8},
+           "Spacer1"]}]],
+         TextAlignment->Center,ExpressionUUID->
+         "a72d46b5-4c8d-4485-a2be-9d17ae617a8c"],
+        Background->RGBColor[0.490196, 0.576471, 0.690196],
+        ItemSize->Full], ""}
+     },
+     GridBoxAlignment->{"Rows" -> {{Center}}},
+     GridBoxItemSize->{"Columns" -> {Full, 
+         Scaled[0.02]}, "Rows" -> {{2.5}}}], Cell[TextData[{
+     Cell[BoxData[
+      TagBox[
+       ActionMenuBox[
+        FrameBox[Cell[TextData[{
+          "Related Guides",
+          " ",
+          Cell[BoxData[
+           GraphicsBox[
+            {GrayLevel[0.66667], Thickness[0.13], 
+             LineBox[{{-1.8, 0.5}, {0, 0}, {1.8, 0.5}}]},
+            AspectRatio->1,
+            ImageSize->20,
+            PlotRange->{{-3, 4}, {-1, 1}}]],ExpressionUUID->
+           "f65fb2d4-e7e9-4fcb-a3c1-0a0df0403218"]
+         }],ExpressionUUID->"2eca2184-296a-4bfb-9f00-558f9246cf74"],
+         StripOnInput->False], {"\<\"Fretica\"\>":>Documentation`HelpLookup[
+        "paclet:Fretica/guide/Fretica"]},
+        Appearance->None,
+        MenuAppearance->Automatic,
+        MenuStyle->"MoreAbout"],
+       MouseAppearanceTag["LinkHand"]]],
+      LineSpacing->{1.4, 0},ExpressionUUID->
+      "2e52234c-19f2-47a7-9f0e-129c1277e926"],
+     "\[ThickSpace]\[ThickSpace]\[ThickSpace]\[ThickSpace]\[ThickSpace]\
+\[ThickSpace]",
+     Cell[BoxData[
+      TagBox[
+       ActionMenuBox[
+        FrameBox[Cell[TextData[{
+          "URL",
+          " ",
+          Cell[BoxData[
+           GraphicsBox[
+            {GrayLevel[0.66667], Thickness[0.13], 
+             LineBox[{{-1.8, 0.5}, {0, 0}, {1.8, 0.5}}]},
+            AspectRatio->1,
+            ImageSize->20,
+            PlotRange->{{-3, 4}, {-1, 1}}]],ExpressionUUID->
+           "1d690c58-45e8-41d5-afdc-cbde817afc5b"]
+         }],ExpressionUUID->"3901e42b-7dc3-419e-b35e-cbbedc50e766"],
+         StripOnInput->
+          False], {"\<\"Fretica/ref/FTSRandomPositionInSphere\"\>":>
+        None, "\<\"Copy Wolfram Documentation Center URL\"\>":>
+        Module[{DocumentationSearch`Private`nb$}, 
+         DocumentationSearch`Private`nb$ = NotebookPut[
+            Notebook[{
+              Cell["Fretica/ref/FTSRandomPositionInSphere"]}, Visible -> 
+             False]]; SelectionMove[
+          DocumentationSearch`Private`nb$, All, Notebook]; 
+         FrontEndTokenExecute[DocumentationSearch`Private`nb$, "Copy"]; 
+         NotebookClose[DocumentationSearch`Private`nb$]; Null], 
+        Delimiter, "\<\"Copy web URL\"\>":>
+        Module[{DocumentationSearch`Private`nb$}, 
+         DocumentationSearch`Private`nb$ = NotebookPut[
+            Notebook[{
+              Cell[
+               BoxData[
+                MakeBoxes[
+                 Hyperlink[
+                 "http://reference.wolfram.com/language/Fretica/ref/\
+FTSRandomPositionInSphere.html"], StandardForm]], "Input", TextClipboardType -> 
+               "PlainText"]}, Visible -> False]]; 
+         SelectionMove[DocumentationSearch`Private`nb$, All, Notebook]; 
+         FrontEndTokenExecute[DocumentationSearch`Private`nb$, "Copy"]; 
+         NotebookClose[DocumentationSearch`Private`nb$]; 
+         Null], "\<\"Go to web URL\"\>":>FrontEndExecute[{
+          NotebookLocate[{
+            URL[If[
+               TrueQ[DocumentationBuild`Make`Private`wsmlinkQ$248842], 
+               "http://reference.wolfram.com/system-modeler/", 
+               "http://reference.wolfram.com/language/"] <> 
+             "Fretica/ref/FTSRandomPositionInSphere" <> ".html"], None}]}]},
+        Appearance->None,
+        MenuAppearance->Automatic,
+        MenuStyle->"URLMenu"],
+       MouseAppearanceTag["LinkHand"]]],
+      LineSpacing->{1.4, 0},ExpressionUUID->
+      "f19ccab0-e04f-47bf-b757-7b3925c3fedb"]
+    }], "AnchorBar",
+     CacheGraphics->False,ExpressionUUID->
+     "3c5d74c9-a3a3-4db4-8419-e515de887b93"]}
+  }]], "AnchorBarGrid",
+ GridBoxOptions->{GridBoxItemSize->{"Columns" -> {
+     Scaled[0.65], {
+      Scaled[0.34]}}, "ColumnsIndexed" -> {}, "Rows" -> {{1.}}, 
+   "RowsIndexed" -> {}}},
+ CellID->1,ExpressionUUID->"7a5c180d-1c9c-446a-842a-dc47cb2fb586"],
+
+Cell["Fretica`", "ContextNameCell",ExpressionUUID->"dced4ca9-b3ce-47e9-8b17-e21206a31b89"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[GridBox[{
+   {Cell[TextData[{
+     Cell[
+     "FTSRandomPositionInSphere", "ObjectName",ExpressionUUID->
+      "7a0db177-6038-4471-9ff2-e6e54f2530b8"],
+     Cell[BoxData[
+      TemplateBox[{8},
+       "Spacer1"]],ExpressionUUID->"914423e9-1d45-43bc-9c76-fa4b987af318"],
+     Cell[BoxData[
+     ""], "ObjectNameTranslation",ExpressionUUID->
+      "196c3db0-9edf-4aa6-bbec-422ebfd5c498"]
+    }],ExpressionUUID->"cc39cda2-7190-4545-8871-d3ac7aef4c8a"], 
+    "\[SpanFromLeft]"}
+  }]], "ObjectNameGrid",ExpressionUUID->"79152a40-af56-4f03-ad9a-\
+5a234cef3967"],
+
+Cell[BoxData[GridBox[{
+   {"", Cell[TextData[{
+     "FTSRandomPositionInSphere[SphereRadius",
+     Cell[BoxData[
+      FormBox["_", TraditionalForm]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "97d4e268-ef85-4ab8-8241-21e2561457bd"],
+     "?NumberQ,DiffConstant",
+     Cell[BoxData[
+      FormBox["_", TraditionalForm]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "5f6fe02a-2b4b-45d7-9ec6-976bd40b5aa9"],
+     "?NumberQ,ParticleConcentration",
+     Cell[BoxData[
+      FormBox["_", TraditionalForm]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "ff087626-3d65-43a7-b6d4-607ae6aa1348"],
+     "?NumberQ,time",
+     Cell[BoxData[
+      FormBox["_", TraditionalForm]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "fe41d57d-2a82-4de3-a0f9-2aa38e94ffab"],
+     "?NumberQ] "
+    }],ExpressionUUID->"ab0d1039-c8a2-45c2-a812-9e2ab4440400"]}
+  }]], "Usage",
+ CellID->372588840,ExpressionUUID->"900c59e9-da16-4c47-aecd-6f6714822b04"]
+}, Open  ]],
+
+Cell[BoxData[GridBox[{
+   {
+    DynamicBox[FEPrivate`ImportImage[
+      FrontEnd`FileName[{"Documentation", "FooterIcons"}, "RelatedGuide.png"]],
+     ImageSizeCache->{50., {27., 33.}}], GridBox[{
+      {
+       StyleBox[
+        RowBox[{"Related", " ", "Guides"}], "MoreAboutSection"]},
+      {
+       RowBox[{"\[FilledVerySmallSquare]", Cell[BoxData[
+         TemplateBox[{
+           Cell[
+            TextData["Fretica"]], "paclet:Fretica/guide/Fretica"},
+          "RefLinkPlain",
+          BaseStyle->{"MoreAbout"}]], "MoreAbout",ExpressionUUID->
+         "17dd763a-68b0-419d-98f7-564add27d313"]}]}
+     }]}
+  }]], "MoreAboutSection",ExpressionUUID->"54e3a7d9-67d5-4960-901d-\
+9995895958a8"],
+
+Cell[BoxData[GridBox[{
+   {
+    TemplateBox[{29},
+     "Spacer1"], GridBox[{
+      {
+       RowBox[{
+        TemplateBox[{17},
+         "Spacer1"], 
+        StyleBox[
+         RowBox[{"Related", " ", "Links"}], "RelatedLinksSection"]}]},
+      {Cell[TextData[Cell[BoxData[
+        RowBox[{
+         TemplateBox[{16},
+          "Spacer1"], "\[FilledVerySmallSquare]", Cell[BoxData[
+          TemplateBox[{
+            Cell[
+             TextData[
+              Cell[
+               TextData[{
+                 Cell[
+                  BoxData[
+                   TemplateBox[{2}, "Spacer1"]]], "Schuler Lab"}]]]], 
+            "https://schuler.bioc.uzh.ch/programs/"},
+           "WebLink",
+           BaseStyle->{"RelatedLinks"}]],ExpressionUUID->
+          "4ff3d79d-26b9-400e-bd67-9ef98d34751f"]}]],ExpressionUUID->
+        "85fab6e6-0b0c-4892-94f8-556bfdedeafb"]], "RelatedLinks",
+        ExpressionUUID->"67c87cfe-7ca7-40a0-ab67-c7d52851f650"]}
+     }]}
+  }]], "RelatedLinksSection",ExpressionUUID->"37bcdf7e-b4d5-4d18-8b6a-\
+7c90869c294f"],
+
+Cell[" ", "FooterCell",ExpressionUUID->"59632b59-f415-4bce-a313-242d7b0ff34b"]
+},
+Saveable->False,
+ScreenStyleEnvironment->"Working",
+WindowSize->{900., 604.8},
+WindowMargins->{{0, Automatic}, {Automatic, 0}},
+WindowTitle->"FTSRandomPositionInSphere",
+TaggingRules->{
+ "ModificationHighlight" -> False, "ColorType" -> "", "LinkTrails" -> "", 
+  "HasOptions" -> True, "ExampleCounter" -> 1, 
+  "Openers" -> {
+   "PrimaryExamplesSection" -> Open, "ExampleSection" -> {"0" -> Open}}, 
+  "NewStyles" -> True, "CitationPopupData" -> $Failed, "ShowCitation" -> 
+  False, "RootCaptions" -> "", 
+  "Metadata" -> {
+   "built" -> "{2023, 3, 6, 14, 32, 35.9057631}", 
+    "history" -> {"XX", "", "", ""}, "context" -> "Fretica`", 
+    "keywords" -> {}, "specialkeywords" -> {}, 
+    "tutorialcollectionlinks" -> {}, "index" -> True, "label" -> 
+    "Fretica Symbol", "language" -> "en", "paclet" -> "Fretica", "status" -> 
+    "None", "summary" -> 
+    "FTSRandomPositionInSphere[SphereRadius_?NumberQ,DiffConstant_?NumberQ,\
+ParticleConcentration_?NumberQ,time_?NumberQ] ", "synonyms" -> {}, 
+    "tabletags" -> {}, "title" -> "FTSRandomPositionInSphere", 
+    "titlemodifier" -> "", "windowtitle" -> "FTSRandomPositionInSphere", 
+    "type" -> "Symbol", "uri" -> "Fretica/ref/FTSRandomPositionInSphere"}},
+CellContext->"Global`",
+FrontEndVersion->"13.2 for Microsoft Windows (64-bit) (January 30, 2023)",
+StyleDefinitions->Notebook[{
+   Cell[
+    StyleData[
+    StyleDefinitions -> FrontEnd`FileName[{"Wolfram"}, "Reference.nb"]]], 
+   Cell[
+    StyleData["Input"], CellContext -> "Global`"], 
+   Cell[
+    StyleData["Output"], CellContext -> "Global`"]}, Visible -> False, 
+  FrontEndVersion -> "13.2 for Microsoft Windows (64-bit) (January 30, 2023)",
+   StyleDefinitions -> "Default.nb"],
+ExpressionUUID->"5f2f94da-ba66-4de9-bb70-d74abb356dc8"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[597, 21, 4401, 105, 70, "AnchorBarGrid",ExpressionUUID->"7a5c180d-1c9c-446a-842a-dc47cb2fb586",
+ CellID->1],
+Cell[5001, 128, 90, 0, 70, "ContextNameCell",ExpressionUUID->"dced4ca9-b3ce-47e9-8b17-e21206a31b89"],
+Cell[CellGroupData[{
+Cell[5116, 132, 568, 14, 70, "ObjectNameGrid",ExpressionUUID->"79152a40-af56-4f03-ad9a-5a234cef3967"],
+Cell[5687, 148, 1053, 25, 70, "Usage",ExpressionUUID->"900c59e9-da16-4c47-aecd-6f6714822b04",
+ CellID->372588840]
+}, Open  ]],
+Cell[6755, 176, 697, 18, 70, "MoreAboutSection",ExpressionUUID->"54e3a7d9-67d5-4960-901d-9995895958a8"],
+Cell[7455, 196, 1043, 30, 70, "RelatedLinksSection",ExpressionUUID->"37bcdf7e-b4d5-4d18-8b6a-7c90869c294f"],
+Cell[8501, 228, 78, 0, 70, "FooterCell",ExpressionUUID->"59632b59-f415-4bce-a313-242d7b0ff34b"]
+}
+]
+*)
+
+(* End of internal cache information *)
+
